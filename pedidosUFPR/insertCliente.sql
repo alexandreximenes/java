@@ -1,0 +1,1 @@
+INSERT INTO cliente (cpf, nome, sobrenome) values ('99999999999', 'alexandre', 'ximenes');

@@ -33,11 +33,11 @@ public class Aluno implements Comparable<Aluno>{
 		Aluno outro = (Aluno) obj;
 		
 		//if(this.matricula.equals(outro.matricula) && this.nome.equals(outro.nome)) {
-		if(this.matricula.equals(outro.matricula)) {
+		if(this.nome.equals(outro.nome)) {
 			return true;
+		}else {
+			return false;
 		}
-		
-		return false;
 	}
 	
 	@Override

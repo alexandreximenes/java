@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
@@ -19,7 +20,7 @@ public class Aula_Map {
 	private String instrutor;
 	private List<Aula> aulas = new ArrayList<>();
 	private Set<Aluno> alunos = new TreeSet<>(Comparator.comparing(Aluno::getNota));
-	private Map<Integer, Aluno> mAlunos = new HashMap<>();
+	private Map<Integer, Aluno> mAlunos = new LinkedHashMap<>();//new HashMap<>();
 	
 	public Aula_Map(String nome, String instrutor) {
 		this.nome = nome;

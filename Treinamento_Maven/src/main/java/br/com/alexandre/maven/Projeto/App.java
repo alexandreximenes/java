@@ -52,7 +52,6 @@ public class App
 
         System.out.println("Tempo gasto: " + tempoDeExecucao);
         System.out.println(35 / tempoDeExecucao);
-        System.out.println(tempoDeExecucao / 35);
-
+        
     }
 }

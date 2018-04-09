@@ -1,0 +1,436 @@
+*, html, body{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	/*transition: 1s;*/
+}
+
+/* LINHA 1 - menu e slider */
+.slide{
+	position: relative;
+}
+.logo{
+	position: absolute;
+	z-index: 1;
+	width: 20%;
+	top:6%;
+	left: 3%;
+}
+
+.menu{
+	font-family: 'Special Elite', cursive;
+	position: absolute;
+	top: 10%;
+	right: 5%;
+	padding-top:10px;
+	font-weight: bold;
+	z-index: 2;
+	background: rgba(0,0,0,0.7);
+}
+.icon{
+	margin-left: 1%;
+	width: 4%;
+	margin-right: 15px;
+}
+nav ul li{
+	display: inline;
+	position: relative;
+
+}
+
+#menu-slicknav {
+	display:none;
+}
+
+.slicknav_menu {
+	display:none;
+}
+
+/*.logotype{
+	width: 100%;
+}
+*/
+/* LINHA 2 - principais personagens */
+/*imagens da classe personagens*/
+.col1, .col2, .col3{
+	padding-top: 10px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 15px;
+
+}
+.col1 h3, .col2 h3, .col3 h3{
+	font-family: 'Cookie', cursive;
+	font-size: 3rem;
+}
+.col1 p, .col2 p, .col3 p{
+	font-family: 'Rochester', cursive;
+	font-size: 2.0rem;
+}
+
+.col1:hover, .col2:hover, .col3:hover{
+	background: black;
+	color: #bfa100;
+}
+
+.personage{
+	width: 40%;
+}
+
+.personage:hover{
+	padding:5px;
+	background: red;
+	transform: scale(1.50);
+}
+
+.resumo-persons{
+	height: 200px;
+	
+}
+.serie{
+	border-radius: 10px;
+}
+.serie:hover{
+	border: 3px solid white;
+	transform: scale(1.1);
+}
+.resumo-about{
+	font-family: 'Rochester', cursive;
+	font-size: 2.0rem;
+	color:lightgray;
+}
+
+.resumo-about:hover{
+	color:white;
+}
+
+.leia-mais{
+	font-size: 2ch;
+	padding: 10px 35px 10px 35px;
+	width: 100px; 
+}
+
+.actor{
+	background: white;
+	margin-top: -10px;
+}
+
+/* LINHA 3 - estreia e video*/
+.about{
+	font-family: 'Rochester', cursive;
+	background: black;
+	font-family: arial;
+	color:white;
+	font-size: 2rem;
+}
+span{
+	color: #bfa100;
+}
+h2{
+	color:white;
+}
+.espaco{
+	height: 25px;
+	background:white;
+}
+.about-col1{
+	padding: 20px 0px 20px 0px;
+	text-align: justify;
+}
+
+/* LINHA 4 - Contact e map*/
+
+/* width="450" height="450" frameborder="0" style="border:0 */
+.map{
+	text-align: justify;
+}
+.iframe-map{
+	width: 100%;
+	border: 0px;
+}
+
+td{
+	padding-right: 50px;
+	height: 80px;
+}
+.contact{
+	font-family: 'Cookie', cursive;
+	font-size: 2.5rem;
+}
+
+/* LINHA 5 - ajuda ? */
+.questions{
+	font-size: 2.5ch;
+	font-family: 'Rochester', cursive;
+	padding-top: 30px;
+	text-align: center;
+	line-height: 4ch; 
+	background: #ffd700;
+	/*width: 350px;*/
+}
+.formulario{
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 50px;
+}
+input[type="text"], input[type="email"], input[type="date"], input[type="number"], textarea, input[type="submit"]{
+	padding-left: 10px;	
+	border: 2px solid #bfa100;
+	background: transparent;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.modal-footer button{
+	color: #bfa100;
+	font-weight: bold;
+	border: 2px solid #bfa100;
+	background: white;
+}
+.modal-footer button:hover{
+	background: #bfa100;
+	color: white;
+}
+
+textarea{
+	height: 150px;
+}
+
+input[type="text"]:focus, textarea:focus{
+	background: rgba(255,255,255, 0.3);
+}
+#enviar{
+	font-weight: bold;
+	border-radius: 8px;
+	padding:12px;
+	width: 100%;
+	font-family: arial;
+	border: 2px solid black;
+	background: transparent;
+}
+#enviar:hover, #enviar:active{
+	background: black;
+	color: #bfa100;
+}
+::placeholder{
+	color: #bfa100;
+}
+
+/* LINHA 6 - ajuda ? */
+.footer{
+	position: relative;
+	width: 100%;
+	background: black;
+	height: auto;
+	padding-top: 50px;
+	text-align: center;
+	padding-bottom: 50px;
+}
+
+.footer ul li {
+	list-style-type: none;
+}
+
+/*-----------------------------------*/
+a{
+	color: #FFFFFF;
+}
+a:hover{
+		text-decoration: none;
+		color: #ffd700; 
+}
+
+/*width="560" height="315"*/
+iframe{
+	width: 100%;
+	height: 300px;
+}
+
+@media screen and (max-width: 40em) {
+	#menu {
+		display:none;
+	}
+	.menu{
+		display: none;
+	}
+	
+	.slicknav_menu {
+		display:block;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.slide{
+	 	margin-top: -40px;
+	 }
+	.about-col1{
+		padding: 50px;
+	}
+	.video{
+		padding-top: 80px;
+	}
+	.contact1{
+		padding: 25px 50px 50px 50px;
+		line-height: 4ch; 
+	}
+	.map{
+		padding:50px;
+	}
+}
+@media screen and (max-width: 950px){
+	.slide{
+	 	margin-top: -40px;
+	 }
+	.icon{
+		display: none;
+	}
+	a{
+		padding-left: 10px;
+		content: "\27A4";
+	}
+	.separador{
+		padding-bottom: 40px;
+	}
+
+	.personage{
+		width: 25%;
+	}
+
+	iframe{
+		width: 100%;
+	/*	height: 300px;*/
+	}
+}
+
+/*.youtube{
+	background: url(../img/networks/social-media.png) -280px -369.3px;
+    display: block;
+    height: 44px;
+    width: 43px;
+    text-indent: -999px;
+    overflow: hidden;
+    position: absolute;
+	left: 0px;
+	top : 0px;
+}
+.facebook{
+    background: url(../img/networks/social-media.png) 185px -965.3px;
+    display: block;
+    height: 44px;
+    width: 43px;
+    text-indent: -999px;
+    overflow: hidden;
+    position: absolute;
+    left: 50px;
+    top: 0px;
+}
+.instagram{
+    background: url(../img/networks/social-media.png) 1152px 734.7px;
+    display: block;
+    height: 44px;
+    width: 43px;
+    text-indent: -999px;
+    overflow: hidden;
+    position: absolute;
+    left: 100px;
+    top: 0px;
+}
+.twitter{
+	background: url(../img/networks/social-media.png) 1471px 734.7px;
+    display: block;
+    height: 44px;
+    width: 43px;
+    text-indent: -999px;
+    overflow: hidden;
+    position: absolute;
+    left: 150px;
+    top: 0px;
+}
+.snapchat{
+	background: url(../img/networks/social-media.png) 2160px 783.7px;
+    display: block;
+    height: 44px;
+    width: 43px;
+    text-indent: -999px;
+    overflow: hidden;
+    position: absolute;
+    left: 200px;
+    top: 0px;
+}
+*/
+
+h1{
+	font-size: 2em;
+}
+
+.titulo{
+	font-weight: bold;
+}
+/* apagando configurações padrao do bootstrap*/
+
+.row{
+	margin-right: 0px;
+    margin-left: 0px;
+}
+
+.top{
+	display: inline-block;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+}
+/*Apagando configurações padrao do slider*/
+.bx-wrapper {
+	border:0px;
+}
+.container, .about, .contact, .questions, .about-col1, .video, .contact, .map, .footer, 
+.slide, .sword, .icon, .menu, .actor, .col1, .col2, .col3, #enviar, input, textarea, .resumo-about, .serie{
+	transition: .5s;
+}
+.personage, a{
+	transition: .3s;
+	border-radius: 50%;
+}
+.slide{
+	 	margin-top: -40px;
+	 }
+.modal-fundo{
+	top:0;
+	left: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: rgba(0,0,0,.7);
+	z-index: 5;
+}
+.modal-center{
+	text-align: justify;
+	padding: .5em .5em;
+	position: relative;
+	top: 50px;
+	margin: 0 auto;
+	width: 90%;
+	height: 85%;
+	background: white;
+	transition: 1s;
+}
+
+.modal-center p{
+	line-height: 155%;
+}
+.modal-center img{
+	padding: 0px 10px 0px 0px;
+	float:left;
+}
+hr{
+	border: 2px solid #bfa100;
+}
+.modal-fundo{
+	transition: 1s;
+}
+body ul li img {
+	width: 100%;
+}

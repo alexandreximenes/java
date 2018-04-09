@@ -1,0 +1,760 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	
+<h:head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Game of Thrones</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link href="css/slicknav.min.css" rel="stylesheet" />
+<link href="css/jquery.bxslider.min.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+<link
+	href="https://fonts.googleapis.com/css?family=Cookie|Rochester|Special+Elite|UnifrakturMaguntia"
+	rel="stylesheet" />
+	
+	<style>
+	.tema-textarea, .tema-select{
+			border: 2px solid #bfa100;
+			background: transparent;
+		    width: 100%;
+		    display: block;
+		    margin-bottom: 10px;
+		    border-radius: 8px;"
+			}
+	</style>
+
+</h:head>
+<h:body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="index.html">Home</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active" />
+				<li class="nav-item">
+					<a class="nav-link" href="#" data-toggle="modal" data-target="#modal-cadastro">Novo Episódio</a>
+					<span class="sr-only"></span>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#"
+					data-toggle="modal" data-target="#modal-cadastro-elenco">Novo ator</a> 
+					<span class="sr-only"></span>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="#"
+					data-toggle="modal" data-target="#modal-contato">Contato</a></li>
+					<li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+				<li class="nav-item"><a class="nav-link disabled" href="#">sair</a></li>
+			</ul>
+		</div>
+	</nav>
+
+<div class="bd-cadastro">
+  <div class="modal fade" id="modal-cadastro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document" style="padding-top: 160px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel">Cadastre um novo episódio</h4>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+	            <form action="" method="post">
+	            <div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<label for="titulo" class="col-form-label">Titulo</label>
+						<input autofocus="autofocus" required="required" type="text" name="titulo" class="form-control" placeholder="titulo original" data-toggle="tooltip" data-placement="right"
+										title="Informe seu nome completo" />
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<label for="duracao" class="col-form-label">Duração</label>
+						<input type="number" name="duracao" class="form-control" placeholder="duração do serie em minutos" />
+					</div>
+					
+					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+						<label for="tipo" class="col-form-label">Tipo</label> 
+							<select name="tipo" style="height: 35px;" class="form-control tema-select" id="tipo">
+								<option value=""></option>
+								<option value="1">Filme</option>
+								<option value="2">Serie</option>
+								<option value="3"></option>
+							</select>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<label for="pais" class="col-form-label">Pais de origem</label> 
+						<select name="pais" style="height: 35px;" class="form-control tema-select" id="pais">
+							<option value=""></option>
+							<option value="1">Brasil</option>
+							<option value="2">Estados Unidos</option>
+							<option value="3">Reino Unido</option>
+						</select>
+					</div>
+					
+						<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+							<label for="idioma" class="col-form-label">Lingua</label>
+							<input type="text" name="idioma" class="form-control" placeholder="idioma" />
+						
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<label for="elenco" class="col-form-label">Elenco</label> 
+						<select name="elenco" style="height: 35px;" class="form-control tema-select" id="elenco">
+							<option value=""></option>
+							<option value="1">Emilia Clarke</option>
+							<option value="2">Kit Harington</option>
+							<option value="3">Lena Headey</option>
+							<option value="4">Peter Dinklage</option>
+						</select>
+						
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<label for="classificacao" class="col-form-label">Classificação</label>
+						<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+						<input type="number" min="1" max="10" name="classificacao" class="form-control" />
+					</div>
+					
+					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+							<label for="foto-capa">Capa</label>
+    						<input type="file" class="form-control-file" id="foto-capa" />
+					</div>
+				</div>
+					
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<label for="foto-capa">Descrição</label>
+						<textarea name="mensagem" cols="15" rows="5" class="form-control tema-textarea" data-toggle="tooltip" data-placement="right"
+										title="Descrição do episódio, pode ser sinopse ou parte da história envolvida nos capitulos">
+						</textarea>
+				</div>
+				
+					<div class="modal-footer">
+			          <button type="reset" class="btn">limpar</button>
+			          <button type="submit" class="btn">Salvar</button>
+			     	  <button type="button" class="btn" data-dismiss="modal">Sair</button>
+			        </div>
+				</form>
+        	</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="bd-contato">
+  <div class="modal fade" id="modal-contato" tabindex="-1" role="dialog" aria-labelledby="contatoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document" style="padding-top: 140px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="contatoLabel">Mensagem</h4>
+        </div>
+        <div class="modal-body">
+        		<div class="form-group">
+	            <form action="" method="post">
+					<label for="nome" class="col-form-label">Nome</label>
+					<input autofocus="autofocus" required="required" type="text" name="nome" class="form-control" />
+					
+					<label for="email" class="col-form-label">Email</label>
+					<input required="required" type="email" name="email" class="form-control" placeholder="nome@exemplo.com.br" />
+					
+					<label for="mensagem" class="col-form-label">Mensagem</label>
+					<textarea name="mensagem" cols="15" rows="5" class="form-control tema-textarea">
+					 </textarea>
+														
+					<div class="modal-footer">
+			          <button type="reset" class="btn">limpar</button>
+			          <button type="submit" class="btn">Enviar</button>
+			       	  <button type="button" class="btn" data-dismiss="modal">Sair</button>
+			        </div>
+				</form>
+        	</div>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="bd-elenco">
+  <div class="modal fade" id="modal-cadastro-elenco" tabindex="-1" role="dialog" aria-labelledby="elencoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document" style="padding-top: 180px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="elencoLabel">Fale sobre você</h4>
+        </div>
+        <div class="modal-body">
+        		<div class="form-group">
+	            <form method="post">
+	            <div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<label for="nome" class="col-form-label">Nome</label>
+						<input autofocus="autofocus" required="required" type="text" name="nome" class="form-control" data-toggle="tooltip" data-placement="right"
+										title="Informe seu nome completo" />
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<label for="data-nascimento" class="col-form-label">Data de Nascimento</label> 
+						<input type="date" name="data-nascimento"
+							id="data-nascimento" placeholder="dia/mes/ano __/__/____"
+							class="form-control data-nascimento" />
+					</div>
+					
+					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+						<label for="email" class="col-form-label">E-mail</label> 
+						<input type="email" name="email"
+							id="email" placeholder="seuemail@dominio.com.br"
+							class="form-control" />
+					</div>
+					
+				</div>
+				
+				<div class="row">
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<label for="telefone-residencial" class="col-form-label">Telefone
+							Residencial</label> <input type="text" name="telefone-residencial"
+							id="telefone-residencial"
+							class="form-control telefone-residencial" placeholder="(00) 00000-0000"/>
+					</div>
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<label for="telefone-celular" class="col-form-label">Telefone
+							Celular</label> <input type="text" name="telefone-celular"
+							id="telefone-celular" class="form-control telefone-celular" placeholder="(00) 00000-0000"/>
+					</div>
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<label for="telefone-recado" class="col-form-label">Telefone
+							Recado</label> <input type="text" name="telefone-recado"
+							id="telefone-recado" class="form-control telefone-recado"
+							placeholder="Informe o telefone e o nome do contato"/>
+					</div>
+				</div>
+			
+				<div class="row">
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+							<label for="altura" class="col-form-label">Altura</label> 
+							<input type="text" name="altura"
+								id="altura" placeholder=""
+								class="form-control" />
+								
+								<label for="peso" class="col-form-label">Peso</label> 
+							<input type="text" name="peso"
+								id="peso" placeholder=""
+								class="form-control" />
+						</div>
+						
+						<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+							<label for="habilidades" class="col-form-label">Habilidades</label>
+							<textarea name="habilidades" cols="15" rows="5" class="form-control tema-textarea" data-toggle="tooltip" data-placement="right"
+										title="Informe todas as suas habilidades, informe com detalhes, diga algo relevante sobre você!">
+						    </textarea>
+						</div>
+							
+				</div>
+					
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<label for="foto">Envie uma foto</label>
+    						<input type="file" class="form-control-file" id="foto" />
+					</div>
+				</div>
+				
+					<div class="modal-footer">
+			          <button type="reset" class="btn">limpar</button>
+			          <button type="submit" class="btn">Salvar</button>
+			     	  <button type="button" class="btn" data-dismiss="modal">Sair</button>
+			     	</div>
+				</form>
+        	</div>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+	<div class="logotype">
+		<ul id="menu-slicknav">
+			<li><a class="info" href="#">Informações da 7º Temporada</a></li>
+			<li><a class="actors" href="#">Atores</a></li>
+			<li><a class="adress" href="#">escritório</a></li>
+			<li><a class="networks" href="#">Redes Sociais</a></li>
+			<li><a class="contacts" href="#">Contato</a></li>
+		</ul>
+
+		<div class="slide" style="margin-top: -20px;">
+			<a href="http://www.hbo.com/game-of-thrones/episodes/index.html">
+			<img class="logo" src="img/logo/logo.jpg" alt="logotipo Game of Thrones" /></a>
+			<div class="menu">
+				<nav>
+					<ul>
+						<li><a class="actors" href="#"><img class="icon" src="img/icons/1.png" alt="" />ATORES</a></li>
+						<li><a class="info" href="#"><img class="icon"
+								src="img/icons/2.png" alt="" />7º TEMPORADA</a></li>
+						<li><a class="adress" href="#"><img class="icon"
+								src="img/icons/3.png" alt="" />ESCRITÓRIO</a></li>
+						<li><a class="networks" href="#"><img class="icon"
+								src="img/icons/5.png" alt="" />REDES</a></li>
+						<li><a class="contacts" href="#"><img class="icon"
+								src="img/icons/4.png" alt="" />CONTATO</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<ul class="bxslider">
+				<li><img src="img/0.jpg" /></li>
+				<li><img src="img/1.jpg" /></li>
+				<li><img src="img/2 (2).jpg" /></li>
+				<li><img src="img/2.jpg" /></li>
+				<li><img src="img/3.1.jpg" /></li>
+				<li><img src="img/3.jpg" /></li>
+				<li><img src="img/3.png" /></li>
+				<li><img src="img/4 (2).jpg" /></li>
+				<li><img src="img/4.jpg" /></li>
+				<li><img src="img/6 (2).jpg" /></li>
+				<li><img src="img/6.jpg" /></li>
+				<li><img src="img/7.jpg" /></li>
+				<li><img src="img/7.png" /></li>
+				<li><img src="img/8.jpg" /></li>
+<!-- 				<li><img src="img/9.jpg" /></li> -->
+<!-- 				<li><img src="img/11.jpg" /></li> -->
+<!-- 				<li><img src="img/13.jpg" /></li> -->
+<!-- 				<li><img src="img/15.jpg" /></li> -->
+<!-- 				<li><img src="img/16.jpg" /></li> -->
+<!-- 				<li><img src="img/22 (2).jpg" /></li> -->
+<!-- 				<li><img src="img/22.jpg" /></li> -->
+<!-- 				<li><img src="img/26.jpg" /></li> -->
+<!-- 				<li><img src="img/27.jpg" /></li> -->
+<!-- 				<li><img src="img/34.jpg" /></li> -->
+<!-- 				<li><img src="img/35.png" /></li> -->
+<!-- 				<li><img src="img/36.png" /></li> -->
+<!-- 				<li><img src="img/37.jpg" /></li> -->
+<!-- 				<li><img src="img/39.png" /></li> -->
+<!-- 				<li><img src="img/40.jpg" /></li> -->
+<!-- 				<li><img src="img/41 (2).jpg" /></li> -->
+<!-- 				<li><img src="img/41.jpg" /></li> -->
+<!-- 				<li><img src="img/42 (2).jpg" /></li> -->
+<!-- 				<li><img src="img/42.jpg" /></li> -->
+<!-- 				<li><img src="img/43.jpg" /></li> -->
+<!-- 				<li><img src="img/44.jpg" /></li> -->
+<!-- 				<li><img src="img/48.jpg" /></li> -->
+<!-- 				<li><img src="img/49.jpg" /></li> -->
+<!-- 				<li><img src="img/51.jpg" /></li> -->
+			</ul>
+
+		</div>
+	</div>
+	
+	<div class="modal-fundo">
+		<div class="modal-center">
+			<h1>7º Temporada </h1><hr />
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+			<figure>
+						<img class="" src="img/series/7.jpg" alt="Setima temporada de Game of Thrones" />
+					</figure>
+					
+				<p>
+					Depois de uma temporada irregular em que observamos a trama de Game of Thrones se afunilar, delineando os rumos finais da história, fomos todos presenteados com um último episódio espetacular. Alguns erros cometidos em momentos anteriores dessa temporada 7 parecem ter sido corrigidos e tivemos um finale equilibrado, com as doses certas de ação, drama, suspense. Ou seja, com o que essa série tem de melhor.
+				</p>
+				
+				<p>
+						Foram 80 minutos explosivos: a impressionante virada de Sansa e Arya e a consequente morte de Mindinho, Cersei mostrando toda a sua inteligência estratégica, o começo da invasão dos mortos com o rei da noite dominando a versão zumbi de Viserion, a consolidação de Jon Snow como herdeiro legítimo do trono de ferro e a destruição de partes da Muralha. Não há mais dúvidas de que a 8ª e última temporada será monumental.
+				</p>
+				
+				<p>	
+					“O Dragão e o Lobo” começa em Porto Real. Vemos Bron e Jaime se preparando para um possível confronto com os Unsullied e os Dothraki. Uma bela de uma demonstração de força que não passou despercebida e ficou ainda mais evidente na entrada triunfal da mãe dos dragões e seu primeiro encontro com Cersei: ela chega casualmente atrasada e em cima de um de seus dragões. Xeque-mate?
+					
+					Depois das introduções, Clegane vai até o local onde está o morto que trouxeram como prova da existência desse exército para a atual rainha.
+										
+				</p>
+
+			</div>
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+				<h1>Episódio</h1>
+				<p><strong>Classificação:</strong> 9.5/10  
+						<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></p>
+				<br/>
+				<p><strong>Título original:</strong> Game of Thrones <br/></p>
+				<p><strong>Duração:</strong> 56 min<br/></p>
+				<p><strong>Duração:</strong> 56 min<br/></p>
+				<p><strong>Ano:</strong> 2011<br/></p>
+				<p><strong>Estreia:</strong> 17 Apr 2011<br/></p>
+				<p><strong>País:</strong> USA<br/></p>
+				<p><strong>Pais:</strong> 56 min<br/></p>
+				<p><strong>Elenco:</strong> Emilia Clarke, Kit Harington, Lena Headey, Peter Dinklage<br/></p>
+			</div>
+		
+			<div class="modal-footer">
+		     	  <button type="button" class="btn voltar" data-dismiss="modal">Voltar</button>
+			</div>	
+		</div>
+		
+	</div>
+	
+
+		<div class="actor">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+				<div class="col1">
+					<figure>
+						<img class="serie" src="img/series/7.jpg" alt="john snow de Game of Thrones" />
+					</figure>
+					<h3>7º Temporada</h3>
+					<p class="resumo-persons">Temporada 7 de Game of Thrones chegou ao fim na noite deste domingo. Confira aqui todos..."</p>
+<!-- 					 os detalhes do explosivo episódio "O Dragão e o Lobo -->
+					<a class="leia-mais" href="#">Leia mais</a>
+				</div>
+			</div>
+
+
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+				<div class="col2">
+					<figure>
+						<img class="serie" src="img/series/6.jpg" alt="daenarys de Game of Thrones" />
+					</figure>
+					<h3>6º Temporada</h3>
+					<p class="resumo-persons">Bran treina com o Corvo de Três Olhos. Em Porto Real, Jaime aconselha Tommen. Tyrion ...</p>
+<!-- 					exige boas notícias, mas terá que fazê-las por si mesmo. Em Castelo Negro, a Patrulha da Noite apoia Thorne. Ramsay Bolton propõe um plano, e Balon Greyjoy cogita outras propostas. -->
+					<a class="leia-mais" href="#">Leia mais...</a>
+				</div>
+			</div>
+			
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+				<div class="col2">
+					<figure>
+						<img class="serie" src="img/series/5.jpg" alt="daenarys de Game of Thrones" />
+					</figure>
+					<h3>5º Temporada</h3>
+					<p class="resumo-persons">Cersei e Jaime tentam se ajustar em um mundo sem Tywin. Varys revela uma conspiração à ...</p>
+<!-- 					Tyrion. Dany enfrenta uma nova ameaça ao seu governo. Jon se encontra no meio de dois reis -->
+					<a class="leia-mais" href="#">Leia mais...</a>
+				</div>
+			</div>
+			
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+				<div class="col3">
+					<figure>
+						<img class="serie" src="img/series/4.jpg" alt="cersei lannister de Game of Thrones" />
+					</figure>
+					<h3>4º Temporada</h3>
+					<p class="resumo-persons">Tyrion recebe um convidado em Porto Real. Em Castelo Negro, Jon Snow percebe que não é ...</p>
+<!-- 					mais bem-vindo. Daenerys parte para Meeren, a principal cidade escravagista de Essos. Arya encontra alguém do seu passado -->
+					<a class="leia-mais" href="#">Leia mais...</a>
+				</div>
+			</div>
+			
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+				<div class="col3">
+					<figure>
+						<img class="serie" src="img/series/3.jpg" alt="cersei lannister de Game of Thrones" />
+					</figure>
+					<h3>3º Temporada</h3>
+					<p class="resumo-persons">Jon é trazido perante o Rei Para Lá da Muralha; Os sobreviventes da Patrulha da Noite...</p>
+<!-- 					 recuam para o sul; Tyrion pede a sua recompensa; Mindinho oferece a Sansa uma saída; Cersei é anfitriã de um jantar para a família real; Dany navega para a Baía dos Escravos -->
+					<a class="leia-mais" href="#">Leia mais...</a>
+				</div>
+			</div>
+			
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+				<div class="col3">
+					<figure>
+						<img class="serie" src="img/series/2.jpg" alt="cersei lannister de Game of Thrones" />
+					</figure>
+					<h3>2º Temporada</h3>
+					<p class="resumo-persons">Como Robb Stark e seu exército no norte continuam em guerra contra os Lannisters...</p>
+<!-- 					Tyrion vai à Porto Real para aconselhar Joffrey e moderar os excessos do jovem rei. Na Ilha de Pedra do Dragão, Stannis Baratheon, planeja uma invasão para reivindicar o trono de seu falecido irmão, aliando-se com Melisandre, uma  misteriosa sacerdotisa de um deus misterioso. Do outro lado do mar, Daenerys, seus três jovens dragões e o khalasar atravessam o Deserto Vermelho em busca de aliados, ou de água. No Norte, Bran preside uma tediosa Winterfell, enquanto que para além da Muralha, Jon Snow e a Patrulha da Noite são obrigados a se abrigarem com um tortuoso selvagem. -->
+					<a class="leia-mais" href="#">Leia mais...</a>
+				</div>
+			</div>
+			
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+				<div class="col3">
+					<figure>
+						<img class="serie" src="img/series/1.jpg" alt="cersei lannister de Game of Thrones" />
+					</figure>
+					<h3>1º Temporada</h3>
+					<p class="resumo-persons">Os Stark de Winterfell recebem a visita da família real. O Rei Robert Baratheon faz a ...</p>
+<!-- 					Eddard Stark, Lorde de Winterfell, uma oferta que ele não pode recusar. Do outro lado do oceano, o exilado Príncipe Viserys Targaryen cria uma aliança para reconquistar o Trono de Ferro; ele dará sua irmã, Daenerys, em casamento para o selvagem Khal Drogo em troca de seu exército. De volta a Winterfell, Catelyn Stark recebe uma pista que pode implicar no envolvimento de membros da família real em um assassinato, enquanto o jovem Bran Stark faz uma perigosa descoberta. -->
+					<a class="leia-mais" href="#">Leia mais...</a>
+				</div>
+			</div>
+			
+
+		</div>
+	</div>
+	
+	<div class="about">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="about-col1">
+					<h1>
+						<span>Estreia da 7º temporada</span>
+					</h1>
+					<h2>Estreia da tempordada acontecerá em 16 de julho!</h2>
+					<p class="resumo-about">A série é adaptada da obra de George
+						R.R. Martin esta na sua 7º temporada. As duas primeiras temporadas
+						foram inspiradas nos dois primeiros livros, "As Crônicas de Gelo e
+						Fogo - A Guerra dos Tronos" e "As Crônicas de Gelo e Fogo - A
+						Fúria dos Reis", mas a segunda temporada também tem momentos visto
+						apenas no terceiro livro, "As Crônicas de Gelo e Fogo - A Tormenta
+						de Espadas", que ainda inspirou a terceira e a quarta temporadas,
+						agora vem surpresa por ai que estreia dia 16/07/2017 pela HBO</p>
+					<a href="#">Leia mais...</a>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="video">
+					<iframe src="https://player.vimeo.com/video/218984475" width="640" height="360" /> 
+<!-- 					frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen  -->
+					<!-- <p><a href="https://vimeo.com/218984475">Game of Thrones Season 7- Official Trailer (HBO)</a> from <a href="https://vimeo.com/user2668809">Thanasis Karadontis</a> on <a href="https://vimeo.com">Vimeo</a>.</p> -->
+					<!-- <iframe src="https://www.youtube.com/embed/1Mlhnt0jMlg" frameborder="0" allowfullscreen></iframe> -->
+				</div>
+			</div>
+		</div>
+
+	</div>
+	
+	<div class="espaco"></div>
+	
+	<div class="actor">
+		<div class="row">
+		<div class="col-md-3">
+				<div class="col3">
+					<figure>
+						<img class="personage" src="img/persons/cersei-lannister.jpg"
+							alt="cersei lannister de Game of Thrones" />
+					</figure>
+					<h3>Cersei</h3>
+					<p class="resumo-persons">Rainha Regente dos Sete Reinos,
+						Cersei é ferozmente protetora de seus três filhos. Mesmo antes de
+						casada com Robert Baratheon, ela estava envolvida em um
+						relacionamento com seu irmão gêmeo, Jaime. Como seu pai, Cersei
+						está interessado em manter sua posição de poder.</p>
+					<a class="leia-mais" href="#">Leia mais...</a>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="col1">
+					<figure>
+						<img class="personage" src="img/persons/john-snow.jpg"
+							alt="john snow de Game of Thrones" />
+					</figure>
+					<h3>John Snow</h3>
+					<p class="resumo-persons">O filho bastardo de Ned Stark, Jon se
+						juntou ao Night's Watch. Em uma missão para o Senhor Comandante
+						Mormont, Jon infiltrou os selvagens fingindo abandonar seus irmãos
+						Night Watch. Ao fazê-lo, ele se apaixonou por Ygritte, uma mulher
+						brava</p>
+					<a class="leia-mais" href="#">Leia mais</a>
+				</div>
+			</div>
+
+
+			<div class="col-md-3">
+				<div class="col2">
+					<figure>
+						<img class="personage" src="img/persons/daenarys.jpg"
+							alt="daenarys de Game of Thrones" />
+					</figure>
+					<h3>Daenerys</h3>
+					<p class="resumo-persons">Princesa da Casa Targaryen, Daenerys
+						vive no exílio em Essos com seus conselheiros e dragões. Dany
+						reuniu o Sublime de Astapor com a causa dela e continua a crescer
+						o exército que precisa para reter o trono.</p>
+					<a class="leia-mais" href="#">Leia mais...</a>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="col3">
+					<figure>
+						<img class="personage" src="img/persons/cersei-lannister.jpg"
+							alt="cersei lannister de Game of Thrones" />
+					</figure>
+					<h3>Cersei</h3>
+					<p class="resumo-persons">Rainha Regente dos Sete Reinos,
+						Cersei é ferozmente protetora de seus três filhos. Mesmo antes de
+						casada com Robert Baratheon, ela estava envolvida em um
+						relacionamento com seu irmão gêmeo, Jaime. Como seu pai, Cersei
+						está interessado em manter sua posição de poder.</p>
+					<a class="leia-mais" href="#">Leia mais...</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	<div class="contact">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="contact1">
+					<h1>
+						<span>Entre em contato</span>
+					</h1>
+					<table>
+						<tr>
+							<td class="titulo">Endereço</td>
+							<td>Avenida Brigadeiro Faria Lima, 1309</td>
+						</tr>
+
+						<tr>
+							<td class="titulo">Email</td>
+							<td>contato@gameofthrones</td>
+						</tr>
+
+						<tr>
+							<td class="titulo">Telefone</td>
+							<td>( 41 ) 0800 111 222</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="map">
+					<iframe class="iframe-map"
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9527.614015452618!2d-6.238229422884599!3d53.34498353424085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670ec51b7251ef%3A0xb3e0f9b089b42666!2sGame+of+Thrones+Tours!5e0!3m2!1spt-BR!2sbr!4v1498779030625"/>
+<!-- 						allowfullscreen  -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="questions">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+					<h1>Ajuda ?</h1>
+					<h3>Entre em contato quando quiser</h3>
+					<div class="formulario">
+						<form action="contato.php" method="post">
+							<input type="text" name="nome" placeholder="nome: John Snow" />
+							<input type="text" name="email"
+								placeholder="email : example@email.com" />
+							<textarea name="observacoes"
+								placeholder="digite aqui sua mensagem"></textarea>
+							<button id="enviar" type="submit" class="btn btn-default">Enviar</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="footer">
+		<div class="row">
+			<div class="separador">
+				<div class="col-md-4">
+					<p>© Copyright 2017, Todos os direitos reservados. Todos os
+						textos, imagens, gráficos, animações, vídeos, músicas, sons</p>
+				</div>
+			</div>
+
+			<div class="separador">
+				<div class="col-md-4">
+					<nav>
+						<ul>
+							<li><a
+								href="https://www.facebook.com/GameofThronesBR/?ref=br_rs"
+								target="_blank"> <img src="img/networks/facebook.png" alt="" /></a>
+							</li>
+							<li><a
+								href="https://www.instagram.com/gameofthrones.brasil/"
+								target="_blank"> <img src="img/networks/instagram.png"
+									alt="" /></a></li>
+							<li><a href="https://twitter.com/gameofthrones"
+								target="_blank"> <img src="img/networks/twitter.png" alt="" /></a>
+							</li>
+							<li><a href="https://www.youtube.com/user/GameofThrones"
+								target="_blank"> <img src="img/networks/youtube.png" alt="" /></a>
+							</li>
+							<li><a href="https://www.snapchat.com/" target="_blank">
+									<img src="img/networks/snapchat.png" alt="" />
+							</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<div class="separador">
+				<div class="col-md-4">
+					<ul>
+						<li><a href="http://www.hbo.com/game-of-thrones"
+							target="_blank"> <img src="img/logo/hbo.png" />
+						</a></li>
+						<!--  <p>Canal de televisão por assinatura norte-americano oficial da Game Of Thrones, de propriedade da Time Warner.</p>   -->
+					</ul>
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li><a class="top" href="#"><img src="img/icons/top.png" alt="" /></a></li>
+		</ul>
+	</div>
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<!-- <script src="js/bootstrap.min.js"></script> -->
+	<!-- <script src="js/popper.min.js"></script> -->
+
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script src="js/jquery.bxslider.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/jquery.mask.min.js"></script>
+	<script>
+		$(function() {
+			$('[data-toggle="tooltip"]').tooltip()
+		});
+	</script>
+	<script>
+		$(function() {
+			$('.idade').mask('000');
+			$('.telefone-residencial').mask('(99) 9999-9999');
+			//$('.data-nascimento').mask('__ /__ /_____');
+			$('.telefone-celular').mask('(99) 99999-9999');
+			$('.telefone-recado').mask('(99) 99999-9999');
+		});
+	</script>
+
+</h:body>
+</html>
+
+<!-- http://slicknav.com/# -->
+<!-- https://up.blackboard.com/bbcswebdav/pid-986025-dt-content-rid-2566594_1/courses/194967/wireframe.jpg -->
+<!-- http://www.hbo.com/game-of-thrones -->
+<!-- http://www.hbo.com/game-of-thrones/cast-and-crew/index.html -->
+<!-- http://getbootstrap.com/getting-started/ -->

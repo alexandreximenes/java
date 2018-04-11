@@ -43,7 +43,15 @@ public class OrdenaStrings {
 		Comparator<String> comparador = new ComparadorPorTamanho();
 		palavras.sort(comparador);
 		
-		System.out.println(palavras);
+		//for antigo
+		/*
+		for(String s : palavras) {
+			System.out.println(s);
+		}*/
+		
+		palavras.forEach( p -> System.out.println(p) );
+		
+		//System.out.println(palavras);
 	}
 
 }

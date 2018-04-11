@@ -37,8 +37,7 @@ public class OrdenaStrings {
 		
 		
 		/**
-		 * Ordena lexicograficamente
-		 * esperado [string cinco, string dois, string quatro, string seis, string tres, string um]
+		 * Ordena por tamanho da string
 		 */ 
 		Comparator<String> comparador = new ComparadorPorTamanho();
 		palavras.sort(comparador);
@@ -49,6 +48,7 @@ public class OrdenaStrings {
 			System.out.println(s);
 		}*/
 		
+		//Usando lambda
 		palavras.forEach( p -> System.out.println(p) );
 		
 		//System.out.println(palavras);

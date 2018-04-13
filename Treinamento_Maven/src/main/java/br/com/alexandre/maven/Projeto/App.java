@@ -22,8 +22,6 @@ public class App
     {
         System.out.println( "Hello World!" );
         Collection<Integer> numeros = new HashSet<Integer>();
-        
-        double inicio, fim;
 		
 		adicionando(numeros);
 		procurando(numeros);
@@ -44,7 +42,6 @@ public class App
         fim = System.currentTimeMillis();
         tempoDeExecucao = (fim - inicio);
         System.out.println("Tempo gasto: " + tempoDeExecucao);
-        
 	}
 
 	private static void adicionando(Collection<Integer> numeros) {
@@ -57,6 +54,5 @@ public class App
         double fim = System.currentTimeMillis();
         double tempoDeExecucao = (fim - inicio);
         System.out.println("Tempo gasto: " + tempoDeExecucao);
-
 	}
 }

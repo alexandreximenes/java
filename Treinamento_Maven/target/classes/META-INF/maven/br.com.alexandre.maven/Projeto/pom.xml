@@ -18,7 +18,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.thoughtworks.xstream/xstream -->
@@ -27,8 +27,38 @@
 			<artifactId>xstream</artifactId>
 			<version>1.4.10</version>
 		</dependency>
-
-
-
 	</dependencies>
+	
+	<build>
+    <plugins>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>3.9.0</version>
+        <executions>
+        	<execution>
+	        	<phase>verify</phase>
+	        	<goals>
+        			<goal>check</goal>
+        		</goals>	
+        	</execution>
+        </executions>
+      </plugin>
+      
+      <plugin>
+		  <groupId>org.jacoco</groupId>
+		  <artifactId>jacoco-maven-plugin</artifactId>
+		  <version>0.8.1</version>
+		  <executions>
+		  	<execution>
+		  		<goals>
+		  			<goal>prepare-agent</goal>
+		  			<goal>report</goal>
+		  		</goals>
+		  	</execution>
+		  </executions>
+	</plugin>
+    </plugins>
+  </build>
 </project>

@@ -21,6 +21,7 @@ public class App
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
+        //String variavelNaoUsada = "";
         Collection<Integer> numeros = new HashSet<Integer>();
 		
 		adicionando(numeros);
@@ -40,19 +41,19 @@ public class App
         
         //numeros.forEach(System.out::println);
         fim = System.currentTimeMillis();
-        tempoDeExecucao = (fim - inicio);
+        tempoDeExecucao = fim - inicio;
         System.out.println("Tempo gasto: " + tempoDeExecucao);
 	}
 
 	private static void adicionando(Collection<Integer> numeros) {
 		double inicio = System.currentTimeMillis();
 
-        for (int i = 1; i <= 50_000; i++) {
+        for (int i = 1; i <= 50000; i++) {
             numeros.add(i);
         }
 
         double fim = System.currentTimeMillis();
-        double tempoDeExecucao = (fim - inicio);
+        double tempoDeExecucao = fim - inicio;
         System.out.println("Tempo gasto: " + tempoDeExecucao);
 	}
 }

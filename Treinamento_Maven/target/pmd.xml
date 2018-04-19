@@ -2,13 +2,5 @@
 <pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
-    version="6.0.1" timestamp="2018-04-12T22:03:33.923">
-<file name="G:\DESENVOLVIMENTO\java\Treinamento_Maven\src\main\java\br\com\alexandre\maven\Projeto\App.java">
-<violation beginline="43" endline="43" begincolumn="28" endcolumn="39" rule="UselessParentheses" ruleset="Code Style" package="br.com.alexandre.maven.Projeto" class="App" method="procurando" externalInfoUrl="https://pmd.github.io/pmd-6.0.1/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
-Useless parentheses.
-</violation>
-<violation beginline="55" endline="55" begincolumn="35" endcolumn="46" rule="UselessParentheses" ruleset="Code Style" package="br.com.alexandre.maven.Projeto" class="App" method="adicionando" externalInfoUrl="https://pmd.github.io/pmd-6.0.1/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
-Useless parentheses.
-</violation>
-</file>
+    version="6.0.1" timestamp="2018-04-19T12:03:06.342">
 </pmd>

@@ -16,6 +16,10 @@ public class Produto {
 	public double getPreco() {
 		return preco;
 	}
+
+	public Object getPrecoProduto() {
+		return preco * 1.0;
+	}
 	
 	
 

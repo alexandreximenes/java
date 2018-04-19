@@ -2,6 +2,9 @@
 
 ### Se for a primeira vez que você executa esse comando, pode ser que o Maven baixe as dependencias necessárias para realizar a tarefa que você solicitou
 #### É altamente recomendavel sempre consultar a documentação oficial do <a href="https://maven.apache.org">Maven</a>
+
+#### Encontrar uma biblioteca que você precisa <a href="https://mvnrepository.com/">mvn repository</a>
+
 #### Para executar o projeto
 ````
 mvn compile

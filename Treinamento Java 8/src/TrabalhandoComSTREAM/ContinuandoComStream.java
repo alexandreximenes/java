@@ -3,12 +3,9 @@ package TrabalhandoComSTREAM;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
-import java.util.OptionalDouble;
 import java.util.Set;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class ContinuandoComStream {
 
@@ -38,7 +35,7 @@ public class ContinuandoComStream {
 		Optional<Curso> first = cursos.stream()
 			.filter(c -> c.getAlunos() > 1000)
 			.findFirst();
-		//imprime(first);
+		imprime(first);
 		
 		
 		cursos.stream()
@@ -57,7 +54,7 @@ public class ContinuandoComStream {
 		Set<Curso> setCursos = cursos.stream()
 				.filter(c -> c.getAlunos() > 1000)
 				.collect(Collectors.toSet());
-		//setCursos.forEach(c -> System.out.println(c));
+		setCursos.forEach(c -> System.out.println(c));
 		
 		
 		

@@ -3,3 +3,14 @@
 /.recommenders/
 /RemoteSystemsTempFiles/
 /Treinamento_Maven/target/classes/.gitignore/Treinamento_Collections/bin/.gitig
+/Treinamento_Servlet/apache-tomcat-7.0.86/
+/Treinamento_Servlet/webapps/
+/Treinamento_Servlet/lib/
+/Treinamento_Servlet/conf/
+/Treinamento_Servlet/bin/
+/Treinamento_Servlet/logs/
+/Treinamento_Servlet/temp/
+/Treinamento_Servlet/LICENSE
+/Treinamento_Servlet/NOTICE
+/Treinamento_Servlet/RELEASE-NOTES
+/Treinamento_Servlet/RUNNING.txt

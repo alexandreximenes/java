@@ -45,9 +45,10 @@ public class PrincipalCursos {
 		.forEach(c -> System.out.println(c.getNome()));
 		
 		//Usando map para saber quanto 
+		System.out.println("\nusando map");
 		cursos.stream()
 		.filter(c -> c.getAlunos() >= 1000)
-		.map(Curso::getAlunos)
+		.map(Curso::getNome)
 		.forEach(System.out::println);
 				
 		

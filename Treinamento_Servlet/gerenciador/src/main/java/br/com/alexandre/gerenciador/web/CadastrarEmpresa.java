@@ -25,6 +25,6 @@ public class CadastrarEmpresa extends HttpServlet {
 		Empresa empresa = new Empresa(nome);
 		new EmpresaDAO().adiciona(empresa);
 		PrintWriter writer = resp.getWriter();
-		writer.println(nome + " cadastrada com sucesso");
+		writer.println("<html><body>"+nome + " cadastrada com sucesso</html></body>");
 	}
 }

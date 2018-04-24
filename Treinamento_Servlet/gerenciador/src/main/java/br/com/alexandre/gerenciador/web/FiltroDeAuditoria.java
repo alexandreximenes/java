@@ -1,11 +1,8 @@
 package br.com.alexandre.gerenciador.web;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Enumeration;
 
-import javax.servlet.AsyncContext;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -27,13 +24,15 @@ public class FiltroDeAuditoria implements Filter {
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain filterChain)
 			throws IOException, ServletException {
+		
 
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpServletResponse resp = (HttpServletResponse) response;
-
+		
 		System.out.println(req.getRequestURI());
 
-		getUsuario(resp, req);
+		String usuario = getUsuario(resp, req);
+		System.out.println(usuario + " no sistema.");
 
 		/*
 		 * String requestURI = req.getRequestURI(); StringBuffer requestURL =
@@ -71,27 +70,17 @@ public class FiltroDeAuditoria implements Filter {
 		filterChain.doFilter(request, response);
 	}
 
-	private void getUsuario(HttpServletResponse response, HttpServletRequest req) throws IOException {
+	private String getUsuario(HttpServletResponse response, HttpServletRequest request) throws IOException {
 		String usuario = "<deslogado>";
 		PrintWriter writer = response.getWriter();
-		Cookie[] cookies = req.getCookies();
-		if (cookies != null) {
-
-			for (Cookie cookie : cookies) {
-				String name = cookie.getName();
-				String value = cookie.getValue();
-				int maxAge = cookie.getMaxAge();
-
-				System.out.println(name + " " + value + " " + maxAge);
-
-				if (name.equals("usuario.logado")) {
-					usuario = value;
-					writer.println(usuario + "logado no sistema");
-				} else {
-					writer.println(usuario + "logado no sistema");
-				}
-			}
+		Cookie cookie = new Cookies(request.getCookies()).getUsuarioLogado();
+		if(cookie == null ) {
+			return usuario;
 		}
+		usuario = cookie.getValue();
+		writer.println(usuario + " no sistema.");
+		return usuario;
+		
 	}
 
 	@Override

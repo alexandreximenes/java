@@ -10,9 +10,11 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import br.com.alexandre.gerenciador.Usuario;
 
 @WebFilter(urlPatterns = "/*")
 public class FiltroDeAuditoria implements Filter {
@@ -31,8 +33,10 @@ public class FiltroDeAuditoria implements Filter {
 		
 		System.out.println(req.getRequestURI());
 
-		String usuario = getUsuario(resp, req);
-		System.out.println(usuario + " no sistema.");
+		//Capturando o usuario da sessao
+		
+		String usuarioEmail = getUsuario(resp, req);
+		System.out.println(usuarioEmail + " no sistema.");
 
 		/*
 		 * String requestURI = req.getRequestURI(); StringBuffer requestURL =
@@ -72,17 +76,26 @@ public class FiltroDeAuditoria implements Filter {
 
 	private String getUsuario(HttpServletResponse response, HttpServletRequest request) throws IOException {
 		String usuario = "<deslogado>";
-		PrintWriter writer = response.getWriter();
-		Cookie cookie = new Cookies(request.getCookies()).getUsuarioLogado();
-		if(cookie == null ) {
-			return usuario;
-		}
-		usuario = cookie.getValue();
-		writer.println(usuario + " no sistema.");
-		return usuario;
 		
+		HttpSession session = request.getSession();
+		String id = session.getId();
+		int maxInactiveInterval = session.getMaxInactiveInterval();
+		Usuario usuarioSessao = (Usuario) session.getAttribute("usuario.logado");
+		if(usuarioSessao == null) {
+			return usuario;
+		}else {
+			return usuarioSessao.getEmail() + " e id = " + id + " e maxInactiveInterval " + maxInactiveInterval;
+		}
 	}
 
+	//metodo ficava dentro do getUsurio
+
+	//		Cookie cookie = new Cookies(request.getCookies()).getUsuarioLogado();
+	//		if(cookie == null ) {
+	//			return usuario;
+	//		}
+	//		usuario = cookie.getValue();
+	//		writer.println(usuario + " no sistema.");
 	@Override
 	public void init(FilterConfig arg0) throws ServletException {
 	}

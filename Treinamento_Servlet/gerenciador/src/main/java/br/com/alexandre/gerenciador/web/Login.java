@@ -9,6 +9,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import br.com.alexandre.gerenciador.Usuario;
 import br.com.alexandre.gerenciador.dao.UsuarioDAO;
@@ -32,12 +33,26 @@ public class Login extends HttpServlet {
 		String email = req.getParameter("email");
 		String senha = req.getParameter("senha");
 
+		PrintWriter writer = resp.getWriter();
+		
 		Usuario usuario = new UsuarioDAO().buscaPorEmailESenha(email, senha);
-		getCookie(resp, email, usuario);
+		if(usuario == null) { 
+			writer.println("<html><body> Usuario invalido ! </body></html>"); 
+		}else {
+			//Trabalhando com Session
+			HttpSession session = req.getSession();
+			session.setMaxInactiveInterval(60*10);		
+			session.setAttribute("usuario.logado", usuario);
+			writer.println("<html><body> "+ usuario.getEmail() +" logado com sucesso ! </body></html>");
+		}
+	}		
+		
+		
 
-	}
-
-	private void getCookie(HttpServletResponse resp, String email, Usuario usuario) throws IOException {
+	//cookies
+	
+	//getCookie(resp, email, usuario);
+	/*private void getCookie(HttpServletResponse resp, String email, Usuario usuario) throws IOException {
 		PrintWriter writer = resp.getWriter();
 		if (usuario != null) {
 			Cookie cookie = new Cookie("usuario.logado", email);
@@ -48,5 +63,5 @@ public class Login extends HttpServlet {
 		} else {
 			writer.println("<html><body> usuario invalido! </body></html>");
 		}
-	}
+	}*/
 }

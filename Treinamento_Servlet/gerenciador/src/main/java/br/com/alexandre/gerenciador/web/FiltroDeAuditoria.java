@@ -79,12 +79,11 @@ public class FiltroDeAuditoria implements Filter {
 		
 		HttpSession session = request.getSession();
 		String id = session.getId();
-		int maxInactiveInterval = session.getMaxInactiveInterval();
 		Usuario usuarioSessao = (Usuario) session.getAttribute("usuarioLogado");
 		if(usuarioSessao == null) {
 			return usuario;
 		}else {
-			return usuarioSessao.getEmail() + " e id = " + id + " e maxInactiveInterval " + maxInactiveInterval;
+			return usuarioSessao.getEmail() + " | sessão : " + id;
 		}
 	}
 

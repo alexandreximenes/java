@@ -4,7 +4,7 @@
 </hr>
 
 	
-	<form action="nova-empresa" method="POST">
+	<form action="executa?tarefa=CadastrarEmpresa" method="POST">
 		<label for="empresa">Empresa: </label>
 		<input type="text" name="empresa" required="required"></br>
 		<button type="submit">Cadastrar</button>

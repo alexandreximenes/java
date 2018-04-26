@@ -41,8 +41,7 @@ public class Login extends HttpServlet {
 		}else {
 			//Trabalhando com Session
 			HttpSession session = req.getSession();
-			session.setMaxInactiveInterval(60*10);		
-			session.setAttribute("usuario.logado", usuario);
+			session.setAttribute("usuarioLogado", usuario);
 			writer.println("<html><body> "+ usuario.getEmail() +" logado com sucesso ! </body></html>");
 		}
 	}		

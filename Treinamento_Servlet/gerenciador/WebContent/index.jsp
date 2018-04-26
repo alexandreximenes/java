@@ -1,13 +1,15 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <body>
 Bem vindo ao nosso gerenciador de empresas!<br/>
 
-	<form action="nova-empresa" method="POST">
-		<label for="empresa">Empresa: </label>
-		<input type="text" name="empresa" required="required"></br>
-		<button type="submit">Cadastrar</button>
-	</form>
+<c:if test="${not empty usuarioLogado}">
+	Acessando a pagina como ${usuarioLogado.email}
+</c:if>
 
+</br>
+<a href="nova-empresa" >nova empresa</a>
+</br>
 <form action="login" method="POST">
 		EMAIL: <input type="text" name="email" required="required"></br>
 		SENHA: <input type="password" name="senha" required="required"></br>

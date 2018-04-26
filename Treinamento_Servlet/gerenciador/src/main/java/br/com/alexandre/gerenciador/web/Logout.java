@@ -26,17 +26,22 @@ public class Logout extends HttpServlet{
 		
 		HttpSession session = req.getSession();
 		
-		Usuario usuario = (Usuario) session.getAttribute("usuario.logado");
+		Usuario usuario = (Usuario) session.getAttribute("usuarioLogado");
 		if(usuario == null) {
 			writer.println("<html><body>O usuario não estava logado</body></html>");
 		}else {
 			//remove o usuario da sessão.
-			session.removeAttribute("usuario.logado");
+			session.removeAttribute("usuarioLogado");
 		
+			req.getRequestDispatcher("/WEB-INF/paginas/logout.html").forward(req, resp);
+			
+			//Redirecionando paginas
+			//resp.sendRedirect("paginas/logout.html");
+			
 			// Tira tudo que existe na sessão
 			//session.invalidate();
 		
-			writer.println("<html><body> Usuario desgado com sucesso! </body></html>");
+			//writer.println("<html><body> Usuario desgado com sucesso! </body></html>");
 		}
 		
 		/*Cookie cookie = new Cookies(req.getCookies()).getUsuarioLogado();

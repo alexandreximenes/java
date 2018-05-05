@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="1 Spring MVC/projeto-spring4/src"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/commons-dbcp-1.4.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/commons-pool-1.5.4.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/hibernate-validator-4.1.0.Final.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/hsqldb.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/jcl-over-slf4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/joda-time-2.0.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/jstl-api-1.2.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/jstl-impl-1.2.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/mysql-connector-java-5.1.17.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/slf4j-log4j12-1.6.1.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/spring-aop-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/spring-aspects-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/spring-beans-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/spring-build-src-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/spring-context-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/spring-context-support-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/spring-core-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/spring-expression-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/spring-framework-bom-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/spring-instrument-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/spring-instrument-tomcat-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/spring-jdbc-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/spring-jms-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/spring-messaging-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/spring-orm-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/spring-oxm-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/spring-test-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/spring-tx-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/spring-web-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/spring-webmvc-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/spring-webmvc-portlet-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/spring-websocket-4.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="1 Spring MVC/projeto-spring4/WebContent/WEB-INF/lib/validation-api-1.0.0.GA.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

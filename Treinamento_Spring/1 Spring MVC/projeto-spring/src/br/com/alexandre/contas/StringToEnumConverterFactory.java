@@ -1,4 +1,4 @@
-package br.com.caelum.contas;
+package br.com.alexandre.contas;
 
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.convert.converter.ConverterFactory;

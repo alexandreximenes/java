@@ -1,4 +1,4 @@
-package br.com.caelum.contas.interceptor;
+package br.com.alexandre.contas.interceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

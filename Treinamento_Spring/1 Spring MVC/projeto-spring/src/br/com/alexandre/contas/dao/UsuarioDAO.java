@@ -1,12 +1,12 @@
-package br.com.caelum.contas.dao;
+package br.com.alexandre.contas.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import br.com.caelum.contas.ConnectionFactory;
-import br.com.caelum.contas.modelo.Usuario;
+import br.com.alexandre.contas.ConnectionFactory;
+import br.com.alexandre.contas.modelo.Usuario;
 
 public class UsuarioDAO {
 	private Connection connection;

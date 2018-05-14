@@ -1,4 +1,4 @@
-package br.com.caelum.contas.modelo;
+package br.com.alexandre.contas.modelo;
 
 public enum TipoDaConta {
 	ENTRADA,

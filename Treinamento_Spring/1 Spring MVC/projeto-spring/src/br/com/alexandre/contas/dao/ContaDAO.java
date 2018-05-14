@@ -1,4 +1,4 @@
-package br.com.caelum.contas.dao;
+package br.com.alexandre.contas.dao;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import br.com.caelum.contas.ConnectionFactory;
-import br.com.caelum.contas.modelo.Conta;
-import br.com.caelum.contas.modelo.TipoDaConta;
+import br.com.alexandre.contas.ConnectionFactory;
+import br.com.alexandre.contas.modelo.Conta;
+import br.com.alexandre.contas.modelo.TipoDaConta;
 
 public class ContaDAO {
 	private Connection connection;

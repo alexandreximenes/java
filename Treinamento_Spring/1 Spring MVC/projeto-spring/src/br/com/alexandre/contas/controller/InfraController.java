@@ -1,4 +1,4 @@
-package br.com.caelum.contas.controller;
+package br.com.alexandre.contas.controller;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import br.com.caelum.contas.ConnectionFactory;
+import br.com.alexandre.contas.ConnectionFactory;
 
 @Controller
 public class InfraController {

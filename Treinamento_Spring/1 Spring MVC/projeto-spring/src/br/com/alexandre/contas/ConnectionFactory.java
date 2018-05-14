@@ -1,4 +1,4 @@
-package br.com.caelum.contas;
+package br.com.alexandre.contas;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

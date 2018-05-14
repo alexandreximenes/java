@@ -1,4 +1,4 @@
-package br.com.caelum.contas.modelo;
+package br.com.alexandre.contas.modelo;
 
 import java.util.Calendar;
 
@@ -63,5 +63,11 @@ public class Conta {
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
+	
 
+	@Override
+	public String toString() {
+		return "\nDescrição : "+descricao + "\nPaga ? " + paga + "\nValor : " + valor + "\nData de Pagamento : " + dataPagamento + "\nTipo conta : " + tipo;
+	}
+	
 }

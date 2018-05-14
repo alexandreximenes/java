@@ -2,10 +2,14 @@ package br.com.alexandre.contas.modelo;
 
 import java.util.Calendar;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class Conta {
 	
 	private Long id;
 
+	@NotNull @Size(min=5, message="{conta.descricao.tamanho}")
 	private String descricao;
 
 	private boolean paga;

@@ -7,10 +7,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
 </head>
-<body>
+<body class="container">
 Listagem de contas
-	<table style="height: 10px; width: 775px;" border="1">
+	<table class="table table-hover table-bordered">
         <tr>
 			<th>ID</th>
 			<th>Descrição</th>
@@ -18,6 +24,7 @@ Listagem de contas
 			<th>Valor</th>
 			<th>Data de pagamento</th>
 			<th>Tipo</th>
+			<th>Ações</th>
 		</tr>
 		
 		<c:forEach var="conta" items="${contas}">
@@ -36,8 +43,8 @@ Listagem de contas
 				<td><fmt:formatDate value="${conta.dataPagamento.time}" pattern="dd/MM/yyyy" /></td>
 				<td>${conta.tipo}</td>
 				<td>
-					<a href="removeConta?id=${conta.id}">Remover </a>| 
-					<a href="pagaConta?id=${conta.id}">Pagar</a>
+ 					<a href="removeConta?id=${conta.id}"><span class="glyphicon glyphicon-trash" aria-hidden="true" title="Remover"></span> </a>|
+					<a href="pagaConta?id=${conta.id}"><span class="glyphicon glyphicon-usd" aria-hidden="true" title="Pagar"></span></a>
 				</td>
 			</tr>
 		</c:forEach>
@@ -45,5 +52,7 @@ Listagem de contas
 	
 	
 	<a href="formulario"> Cadastrar contas </a>
+	<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>

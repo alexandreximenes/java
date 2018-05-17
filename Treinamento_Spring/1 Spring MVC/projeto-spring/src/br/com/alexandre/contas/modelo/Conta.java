@@ -9,7 +9,8 @@ public class Conta {
 	
 	private Long id;
 
-	@NotNull @Size(min=5, message="{conta.descricao.tamanho}")
+	@NotNull 
+	@Size(min=5, message="{conta.descricao.tamanho}")
 	private String descricao;
 
 	private boolean paga;

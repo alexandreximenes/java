@@ -25,7 +25,7 @@ public class FormularioContaController {
 	public String adicionaConta(@Valid Conta conta, BindingResult result) {
 
 		if(result.hasErrors()) {
-			return "formulario";
+			return "formulario-conta";
 		}
 		
 		System.out.println(conta.getDescricao() + " adiciona com sucesso");
@@ -34,8 +34,16 @@ public class FormularioContaController {
 		
 		System.out.println(conta);
 		
-		return "adiciona-conta";
+		return "redirect:listaContas";
 		
+	}
+	
+	@RequestMapping("pagaConta")
+	public String pagar(Conta conta) {
+		
+		new ContaDAO().paga(conta.getId());
+		
+		return "redirect:listaContas";
 	}
 	
 	@RequestMapping("removeConta")
@@ -43,8 +51,11 @@ public class FormularioContaController {
 		
 		new ContaDAO().remove(conta);
 		System.out.println(conta.getId() + " removida com sucesso!");
+		//return "forward:listaContas";
 		return "redirect:listaContas";
 	}
+	
+	
 	@RequestMapping("/listaContas")
 	public String listaTodos(Model mv) {
 		

@@ -10,10 +10,12 @@
 <body>
 <h3>Adicionar Contas</h3>
     <form action="adicionaConta" method="post">
-    	<span>
+    	
+        Descrição: <br/>
+        <span style="color:red;">
 			<form:errors path="conta.descricao" />
 		</span>
-        Descrição: <br/>
+		<br/>
         <textarea name="descricao" rows="5" cols="100"></textarea>
         <br/>
         Valor: <input type="text" name="valor" /></br>

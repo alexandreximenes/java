@@ -35,7 +35,10 @@ Listagem de contas
 				<td>${conta.valor }</td>
 				<td><fmt:formatDate value="${conta.dataPagamento.time}" pattern="dd/MM/yyyy" /></td>
 				<td>${conta.tipo}</td>
-				<td><a href="removeConta?id=${conta.id}">remover</td>
+				<td>
+					<a href="removeConta?id=${conta.id}">Remover </a>| 
+					<a href="pagaConta?id=${conta.id}">Pagar</a>
+				</td>
 			</tr>
 		</c:forEach>
 	</table>

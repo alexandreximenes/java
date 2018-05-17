@@ -13,6 +13,23 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+<script src="resources/js/jquery.js"></script>
+
+<script>
+	function pagaConta(id){
+		return fetch('pagaConta?id='+id)
+			.then(r => {
+				if(r.ok){
+					alert(`Conta paga com sucesso!`); 
+				}else{
+					alert(`Não foi possivel pagar [erro ${r.statusText} ]`);
+				}
+			});
+	}
+</script>
+
+
+
 </head>
 <body class="container">
 Listagem de contas
@@ -43,15 +60,17 @@ Listagem de contas
 				<td><fmt:formatDate value="${conta.dataPagamento.time}" pattern="dd/MM/yyyy" /></td>
 				<td>${conta.tipo}</td>
 				<td>
- 					<a href="removeConta?id=${conta.id}"><span class="glyphicon glyphicon-trash" aria-hidden="true" title="Remover"></span> </a>|
-					<a href="pagaConta?id=${conta.id}"><span class="glyphicon glyphicon-usd" aria-hidden="true" title="Pagar"></span></a>
+ 					<a href="removeConta?id=${conta.id}"><span class="glyphicon glyphicon-trash" aria-hidden="true" title="Remover"></span> </a>
+					<c:if test="${conta.paga eq false }">
+						| <a onclick="pagaConta(${conta.id})" ><span class="glyphicon glyphicon-usd" aria-hidden="true" title="Pagar"></span></a>
+					</c:if>
 				</td>
 			</tr>
 		</c:forEach>
 	</table>
 	
 	
-	<a href="formulario"> Cadastrar contas </a>
+	<a href="formulario" class="btn btn-default"> Cadastrar contas </a>
 	<!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>

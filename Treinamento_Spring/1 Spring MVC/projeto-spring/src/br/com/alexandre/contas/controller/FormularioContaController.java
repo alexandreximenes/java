@@ -39,9 +39,9 @@ public class FormularioContaController {
 	}
 	
 	@RequestMapping("pagaConta")
-	public String pagar(Conta conta) {
+	public String pagar(Long id) {
 		
-		new ContaDAO().paga(conta.getId());
+		new ContaDAO().paga(id);
 		
 		return "redirect:listaContas";
 	}

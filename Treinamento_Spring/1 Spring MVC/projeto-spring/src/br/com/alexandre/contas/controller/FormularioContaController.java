@@ -2,6 +2,7 @@ package br.com.alexandre.contas.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
@@ -39,9 +40,11 @@ public class FormularioContaController {
 	}
 	
 	@RequestMapping("pagaConta")
-	public String pagar(Long id) {
+	public String pagar(Long id, HttpServletResponse response) {
 		
 		new ContaDAO().paga(id);
+		
+		response.setStatus(200);
 		
 		return "redirect:listaContas";
 	}

@@ -32,12 +32,12 @@
 
 </head>
 <body class="container">
-Listagem de contas
+<h1> Listagem de contas </h1>
 	<table class="table table-hover table-bordered">
         <tr>
 			<th>ID</th>
 			<th>Descrição</th>
-			<th>Paga ?</th>
+			<th>Status Pgto</th>
 			<th>Valor</th>
 			<th>Data de pagamento</th>
 			<th>Tipo</th>
@@ -73,5 +73,7 @@ Listagem de contas
 	<a href="formulario" class="btn btn-default"> Cadastrar contas </a>
 	<!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<hr/>
+<p>Bem vindo, ${usuarioLogado.login} <a href="logout" class="btn btn-default">deslogar</a> </p>
 </body>
 </html>

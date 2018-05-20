@@ -25,8 +25,8 @@ public class JPAConfiguration {
 
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setUsername("root");
-		dataSource.setPassword("root");
-		dataSource.setUrl("jdbc:mysql://localhost:3306/loja");
+		dataSource.setPassword("");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/loja_spring");
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 
 		factoryBean.setDataSource(dataSource);
@@ -38,7 +38,7 @@ public class JPAConfiguration {
 
 		factoryBean.setJpaProperties(props);
 
-		factoryBean.setPackagesToScan("br.com.alexandre.livraria.models");
+		factoryBean.setPackagesToScan("br.alexandre.livraria.models");
 
 		return factoryBean;
 

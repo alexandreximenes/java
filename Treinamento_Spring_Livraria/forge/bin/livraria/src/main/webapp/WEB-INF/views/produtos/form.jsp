@@ -1,10 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>CADASTRO DE PRODUTOS</title>
 <!--Import Google Icon Font-->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -26,7 +25,7 @@
 	<div class="row">
 		<h1>Cadastro de Produtos</h1>
 		${msg}
-		<form action="produtos" method="post" class="col s12">
+		<form action="cadastrar" method="post" class="col s12">
 			<div class="row">
 				<div class="input-field col s12">
 					<input name="id" id="id" type="text"
@@ -44,7 +43,7 @@
 			<div class="row">
 				<div class="input-field col s12">
 					<input  name="preco" id="preco"
-						type="text" class="validate"> <label for="preco">Preço</label>
+						type="text" class="validate"> <label for="preco">PreÃ§o</label>
 				</div>
 			</div>
 			
@@ -52,7 +51,7 @@
 				<div class="input-field col s12">
 					<textarea name="descricao" id="descricao"
 						class="materialize-textarea" class="validate"></textarea>
-					<label for="descricao">Descrição</label>
+					<label for="descricao">DescriÃ§Ã£o</label>
 				</div>
 			</div>
 

@@ -13,16 +13,16 @@ public class ProdutoController {
 	@Autowired
 	private ProdutoDAO dao;
 	
-	@RequestMapping("/produtos/form")
+	@RequestMapping("/produtos")
 	public String salvaProduto(Produto produto) {
 		return "produtos/form";
 	}
 	
-	@RequestMapping("/produtos")
+	@RequestMapping("/cadastrar")
 	public String gravar(Produto produto) {
-		dao.gravar(produto);
 		System.out.println(produto);
-		
+		dao.gravar(produto);
+	
 		return "produtos/ok";
 	}
 }

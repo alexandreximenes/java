@@ -29,11 +29,25 @@
 		<form action="produtos" method="post" class="col s12">
 			<div class="row">
 				<div class="input-field col s12">
-					<input name="titulo" id="titulo" type="text"
-						class="validate"> <label for="titulo">Titulo</label>
+					<input name="id" id="id" type="text"
+						class="validate" disabled="disabled"> <label for="id">Codigo</label>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="input-field col s12">
+					<input name="nome" id="nome" type="text"
+						class="validate"> <label for="nome">Nome</label>
 				</div>
 			</div>
 
+			<div class="row">
+				<div class="input-field col s12">
+					<input  name="preco" id="preco"
+						type="text" class="validate"> <label for="preco">Preço</label>
+				</div>
+			</div>
+			
 			<div class="row">
 				<div class="input-field col s12">
 					<textarea name="descricao" id="descricao"
@@ -42,12 +56,6 @@
 				</div>
 			</div>
 
-			<div class="row">
-				<div class="input-field col s12">
-					<input  name="paginas" id="paginas"
-						type="text" class="validate"> <label for="paginas">Paginas</label>
-				</div>
-			</div>
 			
 			<button class="btn waves-effect waves-light #d81b60 pink darken-1" type="submit"
 				name="salvar">

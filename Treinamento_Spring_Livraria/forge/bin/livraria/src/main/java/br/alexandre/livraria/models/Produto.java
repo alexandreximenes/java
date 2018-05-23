@@ -1,5 +1,8 @@
 package br.alexandre.livraria.models;
 
+import java.util.List;
+
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,8 +15,10 @@ public class Produto {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String nome;
-	private double preco;
 	private String descricao;
+	
+	@ElementCollection
+	private List<Preco> precos;
 	
 	public int getId() {
 		return id;
@@ -22,29 +27,29 @@ public class Produto {
 		this.id = id;
 	}
 	
-	public String getnome() {
+	public String getNome() {
 		return nome;
 	}
-	public void setnome(String nome) {
+	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
 	public String getDescricao() {
 		return descricao;
 	}
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
+	public List<Preco> getPrecos() {
+		return precos;
+	}
+	public void setPrecos(List<Preco> precos) {
+		this.precos = precos;
+	}
 	
-	public double getpreco() {
-		return preco;
-	}
-	public void setpreco(double preco) {
-		this.preco = preco;
-	}
-
 	@Override
 	public String toString() {
-		return "\n"+ id + " - "+ nome + ", " + preco + ", " + descricao;
+		return "\n"+ id + " - "+ nome + ", " + precos + ", " + descricao;
 	}
 
 }

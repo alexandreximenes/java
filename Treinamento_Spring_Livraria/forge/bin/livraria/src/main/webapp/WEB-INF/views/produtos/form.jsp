@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+	
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,18 +36,10 @@
 			
 			<div class="row">
 				<div class="input-field col s12">
-					<input name="nome" id="nome" type="text"
-						class="validate"> <label for="nome">Nome</label>
+					<input name="nome" id="nome" type="text" class="validate" autofocus> <label for="nome">Nome</label>
 				</div>
 			</div>
 
-			<div class="row">
-				<div class="input-field col s12">
-					<input  name="preco" id="preco"
-						type="text" class="validate"> <label for="preco">Preço</label>
-				</div>
-			</div>
-			
 			<div class="row">
 				<div class="input-field col s12">
 					<textarea name="descricao" id="descricao"
@@ -54,7 +47,17 @@
 					<label for="descricao">Descrição</label>
 				</div>
 			</div>
-
+			<div class="row">
+				<c:forEach items="${tipos}" var="opcao" varStatus="status">
+					<div class="s12">
+						<div class="input-field col s4">
+							<input  name="precos[${status.index}].valor" id="precos[${status.index}].valor" type="text" class="validate"> 
+							<input  name="precos[${status.index}].opcao" type="hidden" value="${opcao }"> 
+							<label for="precos[${status.index}].valor">${opcao }</label>	
+						</div>
+					</div>
+				</c:forEach>
+			</div>
 			
 			<button class="btn waves-effect waves-light #d81b60 pink darken-1" type="submit"
 				name="salvar">

@@ -26,7 +26,7 @@
 	<div class="row">
 		<h1>Cadastro de Produtos</h1>
 		${msg}
-		<form action="cadastrar" method="post" class="col s12">
+		<form action="/livraria/produtos" method="POST" class="col s12">
 			<div class="row">
 				<div class="input-field col s12">
 					<input name="id" id="id" type="text"

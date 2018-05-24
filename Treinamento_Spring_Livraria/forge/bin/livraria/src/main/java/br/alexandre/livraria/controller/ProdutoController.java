@@ -13,34 +13,31 @@ import br.alexandre.livraria.models.Opcao;
 import br.alexandre.livraria.models.Produto;
 
 @Controller
+@RequestMapping("produtos")
 public class ProdutoController {
 	
 	@Autowired
 	private ProdutoDAO dao;
 	
-	@RequestMapping("/cadastrar")
-	public String gravar(Produto produto) {
-		System.out.println(produto);
-		dao.gravar(produto);
-	
-		return "produtos/ok";
-	}
-	
-	@RequestMapping(value="/produtos", method=RequestMethod.POST)
-	public ModelAndView salvaProduto() {
+	@RequestMapping("/form")
+	public ModelAndView form() {
 		ModelAndView mav = new ModelAndView("produtos/form");
 		mav.addObject("tipos", Opcao.values());
-		
 		return mav;
 	}
 	
-	@RequestMapping(value="/produtos", method=RequestMethod.GET)
+	@RequestMapping(method=RequestMethod.POST)
+	public String gravar(Produto produto) {
+		System.out.println(produto);
+		dao.gravar(produto);
+		return "redirect:produtos";
+	}
+	
+	@RequestMapping(method=RequestMethod.GET)
 	public ModelAndView listar() {
 		ModelAndView mav = new ModelAndView("produtos/lista");
-		
 		List<Produto> produtos = dao.listar();
 		mav.addObject("produtos", produtos);
-		
 		return mav;
 		
 	}

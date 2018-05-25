@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.alexandre.livraria.daos.ProdutoDAO;
 import br.alexandre.livraria.models.Opcao;
@@ -27,10 +28,11 @@ public class ProdutoController {
 	}
 	
 	@RequestMapping(method=RequestMethod.POST)
-	public String gravar(Produto produto) {
+	public ModelAndView gravar(Produto produto, RedirectAttributes redirectAttributes) {
 		System.out.println(produto);
 		dao.gravar(produto);
-		return "redirect:produtos";
+		redirectAttributes.addFlashAttribute("sucesso", "Produto adicionado com sucesso!");
+		return new ModelAndView("redirect:produtos");
 	}
 	
 	@RequestMapping(method=RequestMethod.GET)
@@ -39,6 +41,5 @@ public class ProdutoController {
 		List<Produto> produtos = dao.listar();
 		mav.addObject("produtos", produtos);
 		return mav;
-		
 	}
 }

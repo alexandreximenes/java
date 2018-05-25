@@ -45,6 +45,9 @@
 	<!-- Compiled and minified JavaScript -->
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-
+	<script>
+		let message = '${sucesso}';
+		if(message != '') M.toast({html: message})
+	</script>
 </body>
 </html>

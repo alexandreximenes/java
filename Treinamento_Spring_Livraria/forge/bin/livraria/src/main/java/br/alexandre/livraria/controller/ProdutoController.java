@@ -2,8 +2,12 @@ package br.alexandre.livraria.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -12,6 +16,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import br.alexandre.livraria.daos.ProdutoDAO;
 import br.alexandre.livraria.models.Opcao;
 import br.alexandre.livraria.models.Produto;
+import br.alexandre.livraria.validation.ProdutoValidation;
 
 @Controller
 @RequestMapping("produtos")
@@ -20,6 +25,11 @@ public class ProdutoController {
 	@Autowired
 	private ProdutoDAO dao;
 	
+	@org.springframework.web.bind.annotation.InitBinder
+	public void InitBinder(WebDataBinder binder) {
+		binder.addValidators(new ProdutoValidation());
+		
+	}
 	@RequestMapping("/form")
 	public ModelAndView form() {
 		ModelAndView mav = new ModelAndView("produtos/form");
@@ -28,8 +38,11 @@ public class ProdutoController {
 	}
 	
 	@RequestMapping(method=RequestMethod.POST)
-	public ModelAndView gravar(Produto produto, RedirectAttributes redirectAttributes) {
-		System.out.println(produto);
+	public ModelAndView gravar(@Valid Produto produto, BindingResult results, RedirectAttributes redirectAttributes) {
+		//System.out.println(produto);
+		if(results.hasErrors()) {
+			return form();
+		}
 		dao.gravar(produto);
 		redirectAttributes.addFlashAttribute("sucesso", "Produto adicionado com sucesso!");
 		return new ModelAndView("redirect:produtos");

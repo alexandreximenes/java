@@ -1,12 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymelead.org">
 <head>
-<meta charset="ISO-8859-1" />
-<title>Insert title here</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>ListaVIP</title>
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-	
-	<h1>Lista de Convidados</h1>
+
+	<div class="container">
+
+		<h1>Lista de Convidados</h1>
+		
+		<div id="listaDeConvidados">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Nome</th>
+						<th>Email</th>
+						<th>Nome</th>
+					</tr>
+				</thead>
+				<tr th:each="convidado : ${convidados}">
+						<td><span th:text="${convidado.nome}"></span></td>
+						<td><span th:text="${convidado.email}"></span></td>
+						<td><span th:text="${convidado.telefone}"></span></td>
+				</tr>
+
+			</table>
+		</div>
+
+		<hr />
+
+		<form action="salvar" method="POST">
+			<div class="form-group">
+				<label for="nome">Nome</label> <input type="text"
+					class="form-control" id="nome" name="nome" placeholder="Nome" />
+			</div>
+			<div class="form-group">
+				<label for="email">Email</label> <input type="email"
+					class="form-control" id="email" name="email" placeholder="Email" />
+			</div>
+			<div class="form-group">
+				<label for="telefone">Telefone</label> <input
+					type="text" max="10" maxlength="10" class="form-control" id="telefone" name="telefone" placeholder="Telefone" />
+			</div>
+			<button type="submit" class="btn btn-success">Convidar</button>
+			<button type="button" class="btn btn-warning">
+				<a href="/">Voltar</a>
+			</button>
+		</form>
+
+	</div>
+
+
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>

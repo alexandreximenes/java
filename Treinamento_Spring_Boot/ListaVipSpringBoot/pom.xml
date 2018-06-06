@@ -38,6 +38,12 @@
 		    <artifactId>spring-boot-devtools</artifactId>
 		    <version>1.3.6.RELEASE</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>com.alexandre.enviadoremail</groupId>
+			<artifactId>EnviadorDeEmail</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 				
 
 <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->

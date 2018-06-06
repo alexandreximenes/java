@@ -1,6 +1,5 @@
 package br.com.alexandre.listaVip.Controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,24 +9,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import br.com.alexandre.listaVip.Model.Convidado;
-import br.com.alexandre.listaVip.Repository.ConvidadoRepository;
+import br.com.alexandre.listaVip.Service.ConvidadoService;
 
 @Controller
 public class ConvidadoController {
 
 	@Autowired
-	private ConvidadoRepository repository;
-
+	private ConvidadoService service;
+	
 	@RequestMapping("/")
 	public String index() {
 		return "index";
 	} 
 	
 	@RequestMapping("listaconvidados")
-//	@ResponseBody
 	public String listaConvidados(Model model) {
 		
-		List<Convidado> convidados = (ArrayList<Convidado>) repository.findAll();
+		List<Convidado> convidados = service.obterTodos();
 		
 		if(!convidados.isEmpty())
 			model.addAttribute("convidados", convidados);
@@ -39,7 +37,9 @@ public class ConvidadoController {
 	public String salvar(Convidado convidado) {
 		System.out.println(convidado);
 		
-		repository.save(convidado);
+		service.salvar(convidado);
+		
+		//service.EnviarEmail(convidado, "seuEmail@servidor.com", "suaSenha", "assunto", "mensagem");
 		
 		return "redirect:listaconvidados";
 		

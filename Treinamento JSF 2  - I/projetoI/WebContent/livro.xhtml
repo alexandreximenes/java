@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	  xmlns:h="http://java.sun.com/jsf/html">
+      
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Livraria JSF</title>
+</head>
+
+<h:body>
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Titulo" for="titulo" />
+			<h:inputText id="titulo" />
+			<h:outputLabel value="ISBN" for="isbn"/>
+			<h:inputText id="isbn"/>
+			<h:outputLabel value="Preço" for="preco"/>
+			<h:inputText id="preco"/>
+			<h:outputLabel value="Data de lançamento" for="dataLancamento"/>
+			<h:inputText id="dataLancamento"/>
+			<h:commandButton value="Gravar" action="#{livro.gravar}"/>
+		</h:panelGrid>
+	</h:form>	
+</h:body>
+</html>

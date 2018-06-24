@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>groupId</groupId>
+    <groupId>br.com.maratona.jsf</groupId>
     <artifactId>maratona-jsf</artifactId>
     <version>1.0.0</version>
 
@@ -27,7 +27,13 @@
             <artifactId>jsf-api</artifactId>
             <version>2.2.13</version>
         </dependency>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>7.0</version>
+            <scope>provided</scope>
+
+        </dependency>
     </dependencies>
 
-    
 </project>

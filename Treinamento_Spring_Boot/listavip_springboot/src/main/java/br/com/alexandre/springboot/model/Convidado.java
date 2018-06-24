@@ -55,7 +55,10 @@ public class Convidado {
 		this.telefone = telefone;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return "Nome: "+ nome + " - Email: " + email + " Telefone : " + telefone;
+	}
 	
 
 }

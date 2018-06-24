@@ -8,30 +8,34 @@
 <body>
 
 	<div class="container">
-
+	
 		<div id="listaDeConvidados">
 			<table class="table table-hover">
 				<thead>
 					<tr>
+						<th>Código</th>
 						<th>Nome</th>
 						<th>Email</th>
-						<th>Nome</th>
+						<th>Telefone</th>
+						<th>Acões</th>
 					</tr>
 				</thead>
-<!-- 				<c:forEach var="convidado" items="${convidados}"> -->
-					<tr>
+					<tr th:each="convidado : ${convidados}">
+						<td><span th:text="${convidado.id}"></span></td>
+						<td><span th:text="${convidado.nome}"></span></td>
+						<td><span th:text="${convidado.email}"></span></td>
+						<td><span th:text="${convidado.telefone}"></span></td>
+						<td>
+							<button type="submit" class="btn btn-info" >Editar</button>
+						</td>
 					</tr>
-<!-- 						<td>${convidado.nome}</td> -->
-<!-- 						<td>${convidado.email}</td> -->
-<!-- 						<td>${convidado.telefone}</td> -->
-<!-- 				</c:forEach> -->
 
 			</table>
 		</div>
 
 		<hr />
 
-		<form action="cadastrar">
+		<form action="cadastrar" method="post">
 			<div class="form-group">
 				<label for="nome">Nome</label> 
 				<input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" />

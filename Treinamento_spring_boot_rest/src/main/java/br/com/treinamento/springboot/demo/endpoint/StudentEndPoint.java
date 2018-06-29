@@ -7,8 +7,10 @@ import br.com.treinamento.springboot.demo.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -34,7 +36,8 @@ public class StudentEndPoint {
     }
 
     @PostMapping
-    public ResponseEntity<?> save(@RequestBody Student student) {
+    @Transactional(rollbackFor = Exception.class)
+    public ResponseEntity<?> save(@Valid @RequestBody Student student) {
         studentDAO.save(student);
         return new ResponseEntity<>(student, HttpStatus.CREATED);
     }
@@ -47,7 +50,7 @@ public class StudentEndPoint {
     }
 
     @PutMapping
-    public ResponseEntity<?> put(@RequestBody Student student) {
+    public ResponseEntity<?> put(@Valid @RequestBody Student student) {
         verifyIfStudentsExists(student.getId());
         studentDAO.save(student);
         return new ResponseEntity<>(student, HttpStatus.OK);
@@ -60,8 +63,8 @@ public class StudentEndPoint {
         return student;
     }
 
-    /*@GetMapping("findByName/{nome}")
+    @GetMapping("findByName/{nome}")
     public ResponseEntity<?> findStudentsByName(@PathVariable String nome){
-        return new ResponseEntity<>(studentDAO.findByNameIgnoreCaseContaining(nome), HttpStatus.OK);
-    }*/
+        return new ResponseEntity<>(studentDAO.findByNomeIgnoreCaseContaining(nome), HttpStatus.OK);
+    }
 }

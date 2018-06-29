@@ -7,6 +7,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="maratona-jsf" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.primefaces:primefaces:6.0" />
+        </element>
       </element>
     </root>
   </artifact>

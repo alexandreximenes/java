@@ -4,8 +4,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
    <f:view>
-      <h:outputLabel value="#{estudanteRegistrarBean.nome}"/>
+       <p:importEnum type="model.enums.Turno" var="turno" allSuffix="ALL_ENUM_VALUES" />
+
+       <h:outputLabel value="#{EBean.estudante.nome}"/><br/>
+       <h:outputLabel value="#{EBean.estudante.nota1 eq EBean.estudante.nota2}" /><br/>
+       <h:outputLabel value="#{EBean.estudante.nota1 eq EBean.estudante.nota2 and EBean.estudante.nome.equals('Alexandre')}" /><br/>
+       <h:outputLabel value="TURNO"/><br/>
+       <h:outputLabel value="#{EBean.estudante.turno eq turno.MATUTINO}"/><br/>
+       <input type="text" jsf:id="id_input"></input>
+       <input type="text" jsf:value="${EBean.estudante.nome}"></input>
+       <input jsf:name="pas" jsf:id="id_password" type="password" ></input>
    </f:view>
 </html>

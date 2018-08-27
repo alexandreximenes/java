@@ -1,0 +1,23 @@
+<project name="Treinamento_ANT" default="empacotar">
+
+	<target name="limpar">
+		<delete dir="build" />
+		<mkdir dir="build" />
+	</target>
+	
+	<target name="compilar">
+		<javac srcdir="src" destdir="build">
+			<classpath>
+				<fileset dir="lib">
+					<include name="*.jar">
+					</include>
+				</fileset>
+			</classpath>
+		</javac>
+	</target>
+	
+	<target name="empacotar" depends="compilar">
+		<jar destfile="treinamento.jar" basedir="build">
+		</jar>
+	</target>
+</project>

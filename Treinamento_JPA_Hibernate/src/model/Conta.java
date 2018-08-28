@@ -7,7 +7,16 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
+
+@NamedQuery(name = "consultaMediaValorMovimentacoes", 
+			query = "select avg(m.valor) from movimentacoes m"
+				 + " where m.conta = :pConta and m.tipoMovimentacao = :pTipo")
+//
+//@NamedQuery(name = "consultaSomaValorMovimentacoes",
+//			query = "select sum(m.valor) from movimentacoes m"
+//				 + " where m.conta = :pConta and m.tipoMovimentacoes = :pTipo")
 
 @Entity(name = "conta")
 public class Conta {

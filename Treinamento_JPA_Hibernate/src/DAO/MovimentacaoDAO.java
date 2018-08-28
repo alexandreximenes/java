@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NamedQuery;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
@@ -149,13 +150,19 @@ public class MovimentacaoDAO {
 		try {
 			em.getTransaction().begin();
 			
-			//consulta normal com JPQL
+			/**
+			 * consulta normal com JPQL
+			 */
 //			Query query = em.createQuery("select sum(m.valor) from movimentacoes m"
 //					+ " where m.conta = :pConta"
 //					+ " and tipoMovimentacao = :pTipo");
 //			soma = (BigDecimal) query.getSingleResult();
 			
-			//Consulta com JPA2 TypedQuery
+			//
+
+			/**
+			 * Consulta com JPA2 TypedQuery
+			 */
 //			TypedQuery<BigDecimal> query = em.createQuery("select sum(m.valor) from movimentacoes m"
 //					+ " where m.conta = :pConta"
 //					+ " and tipoMovimentacao = :pTipo", BigDecimal.class);
@@ -163,11 +170,18 @@ public class MovimentacaoDAO {
 //			query.setParameter("pConta", conta);
 //			query.setParameter("pTipo", TipoMovimentacao.SAIDA);
 			
-			//Consulta retornando Double com JPA2 TypedQuery 
-			TypedQuery<Double> query = em.createQuery("select avg(m.valor) from movimentacoes m"
-					+ " where m.conta = :pConta"
-					+ " and tipoMovimentacao = :pTipo", Double.class);
-			
+			/**
+			 * Consulta retornando Double com JPA2 TypedQuery
+			 */
+			// 
+//			TypedQuery<Double> query = em.createQuery("select avg(m.valor) from movimentacoes m"
+//					+ " where m.conta = :pConta"
+//					+ " and tipoMovimentacao = :pTipo", Double.class);
+//			
+			/**
+			 * Consulta JPQL com NamedQuery
+			 */
+			TypedQuery<Double> query = em.createNamedQuery("consultaMediaValorMovimentacoes", Double.class);
 			query.setParameter("pConta", conta);
 			query.setParameter("pTipo", TipoMovimentacao.SAIDA);
 			

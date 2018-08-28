@@ -24,7 +24,7 @@ public class ListandoMovimentacoes_Query_JPQLComFuncoes {
 		conta.setId(1);
 		
 		MovimentacaoDAO dao = new MovimentacaoDAO();
-		BigDecimal soma = dao.listarComFuncoes(conta);
+		Double soma = dao.listarComFuncoes(conta);
 		
 		System.out.println(soma);
 	}

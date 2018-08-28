@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 import model.Conta;
 import model.Movimentacao;
@@ -139,23 +140,38 @@ public class MovimentacaoDAO {
 		return movimentacoes;
 	}
 	
-	public BigDecimal listarComFuncoes(Conta conta){
-		
-		BigDecimal soma = null;
-		
+//	public BigDecimal listarComFuncoes(Conta conta){
+	public Double listarComFuncoes(Conta conta){
+//		BigDecimal soma = null;
+		Double soma = null;
 		EntityManager em = JPAUtil.getEntityManager();
 		
 		try {
 			em.getTransaction().begin();
 			
-			Query query = em.createQuery("select sum(m.valor) from movimentacoes m"
+			//consulta normal com JPQL
+//			Query query = em.createQuery("select sum(m.valor) from movimentacoes m"
+//					+ " where m.conta = :pConta"
+//					+ " and tipoMovimentacao = :pTipo");
+//			soma = (BigDecimal) query.getSingleResult();
+			
+			//Consulta com JPA2 TypedQuery
+//			TypedQuery<BigDecimal> query = em.createQuery("select sum(m.valor) from movimentacoes m"
+//					+ " where m.conta = :pConta"
+//					+ " and tipoMovimentacao = :pTipo", BigDecimal.class);
+//			
+//			query.setParameter("pConta", conta);
+//			query.setParameter("pTipo", TipoMovimentacao.SAIDA);
+			
+			//Consulta retornando Double com JPA2 TypedQuery 
+			TypedQuery<Double> query = em.createQuery("select avg(m.valor) from movimentacoes m"
 					+ " where m.conta = :pConta"
-					+ " and tipoMovimentacao = :pTipo");
+					+ " and tipoMovimentacao = :pTipo", Double.class);
 			
 			query.setParameter("pConta", conta);
-			query.setParameter("pTipo", TipoMovimentacao.ENTRADA);
+			query.setParameter("pTipo", TipoMovimentacao.SAIDA);
 			
-			soma = (BigDecimal) query.getSingleResult();
+			soma = query.getSingleResult();
 		
 		} catch (Exception e) {
 			em.getTransaction().rollback();

@@ -1,8 +1,10 @@
 package DAO;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 import model.Conta;
 
@@ -99,15 +101,18 @@ public class ContaDAO {
 	}
 
 	public List<Conta> listar() {
-		List<Conta> contas = null;
+		List<Conta> contas = new ArrayList<>();
 		EntityManager em = JPAUtil.getEntityManager();
 		try {
+			em.getTransaction().begin();
 
-			if(!em.getTransaction().isActive()) {
-				em.getTransaction().begin();
-			}
+//			if(!em.getTransaction().isActive()) {
+//			}
 			
-
+			Query query = em.createQuery("select c from conta c join fetch c.movimentacoes");
+			
+			contas = query.getResultList();
+			
 			em.getTransaction().commit();
 
 		} catch (Exception e) {

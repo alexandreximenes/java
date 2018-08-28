@@ -2,7 +2,9 @@ package run;
 
 import java.util.List;
 
+import DAO.ContaDAO;
 import DAO.MovimentacaoDAO;
+import model.Conta;
 import model.Movimentacao;
 
 /**
@@ -22,5 +24,6 @@ public class ListandoMovimentacoes_Query_JPQL {
 		List<Movimentacao> movimentacoes = dao.listar();
 		if(movimentacoes != null) 
 			movimentacoes.forEach(System.out::println);
+		
 	}
 }

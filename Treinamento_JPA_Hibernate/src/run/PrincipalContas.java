@@ -11,7 +11,7 @@ import model.Conta;
  * @author Alexandre Ximenes
  *
  */
-public class Principal {
+public class PrincipalContas {
 	public static void main(String[] args) {
 	
 		/**
@@ -67,11 +67,15 @@ public class Principal {
 		*/
 		
 		/**
-		 * Listando os dados do banco
+		 * Listando as Contas
 		 */
-		ContaDAO dao = new ContaDAO();
-		List<Conta> contas = dao.listar();
-		contas.forEach(System.out::println);
 		
+		ContaDAO contaDao = new ContaDAO();
+		List<Conta> contas = contaDao.listar();
+//		if(contas != null) contas.forEach(System.out::println);
+
+		for (Conta conta : contas) {
+			System.out.println(conta.getMovimentacoes().size());
+		}
 	}
 }

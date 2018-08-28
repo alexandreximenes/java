@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
+import model.Conta;
 import model.Movimentacao;
 import model.TipoMovimentacao;
 
@@ -114,8 +115,15 @@ public class MovimentacaoDAO {
 				System.out.println("transação esta ativa");
 			}
 
-			Query query = em.createQuery("select m from movimentacoes m where m.TipoMovimentacao = :pTipo");
-			query.setParameter("pTipo", TipoMovimentacao.SAIDA);
+			Conta conta = new Conta();
+			conta.setId(10);
+			
+			Query query = em.createQuery("select m from movimentacoes m"
+					+ " where m.conta <> :pConta"
+//					+ " and m.tipoMovimentacao = :pTipo "
+					+ " order by m.valor");
+			query.setParameter("pConta", conta);
+//			query.setParameter("pTipo", TipoMovimentacao.SAIDA);
 			
 			movimentacoes = query.getResultList();
 

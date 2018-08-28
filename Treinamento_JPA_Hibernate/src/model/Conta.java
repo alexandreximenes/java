@@ -1,9 +1,12 @@
 package model;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity(name = "conta")
 public class Conta {
@@ -16,8 +19,10 @@ public class Conta {
 	private String banco;
 	private String agencia;
 	
+	@OneToMany
+	private List<Movimentacao> movimentacoes;
 	
-	public Conta() {
+		public Conta() {
 	}
 
 
@@ -83,6 +88,17 @@ public class Conta {
 		this.agencia = agencia;
 		return this;
 	}
+	
+	public List<Movimentacao> getMovimentacoes() {
+		return movimentacoes;
+	}
+
+
+	public Conta setMovimentacoes(List<Movimentacao> movimentacoes) {
+		this.movimentacoes = movimentacoes;
+		return this;
+	}
+
 	
 	@Override
 	public String toString() {

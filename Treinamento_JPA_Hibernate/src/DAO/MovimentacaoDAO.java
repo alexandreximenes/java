@@ -1,5 +1,6 @@
 package DAO;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -101,7 +102,7 @@ public class MovimentacaoDAO {
 		return id;
 	}
 
-	public List<Movimentacao> listar() {
+	public List<Movimentacao> listar(Conta conta) {
 		List<Movimentacao> movimentacoes = null;
 		
 		EntityManager em = JPAUtil.getEntityManager();
@@ -109,15 +110,12 @@ public class MovimentacaoDAO {
 
 		try {
 
-			if(!em.getTransaction().isActive()) {
-				System.out.println("transação não esta ativa");
-			}else {
-				System.out.println("transação esta ativa");
-			}
+//			if(!em.getTransaction().isActive()) {
+//				System.out.println("transação não esta ativa");
+//			}else {
+//				System.out.println("transação esta ativa");
+//			}
 
-			Conta conta = new Conta();
-			conta.setId(10);
-			
 			Query query = em.createQuery("select m from movimentacoes m"
 					+ " where m.conta <> :pConta"
 //					+ " and m.tipoMovimentacao = :pTipo "
@@ -139,5 +137,35 @@ public class MovimentacaoDAO {
 		}
 
 		return movimentacoes;
+	}
+	
+	public BigDecimal listarComFuncoes(Conta conta){
+		
+		BigDecimal soma = null;
+		
+		EntityManager em = JPAUtil.getEntityManager();
+		
+		try {
+			em.getTransaction().begin();
+			
+			Query query = em.createQuery("select sum(m.valor) from movimentacoes m"
+					+ " where m.conta = :pConta"
+					+ " and tipoMovimentacao = :pTipo");
+			
+			query.setParameter("pConta", conta);
+			query.setParameter("pTipo", TipoMovimentacao.ENTRADA);
+			
+			soma = (BigDecimal) query.getSingleResult();
+		
+		} catch (Exception e) {
+			em.getTransaction().rollback();
+		} finally {
+			em.getTransaction().commit();
+			
+			if(em.isOpen()) {
+				em.close();
+			}
+		}
+		return soma;
 	}
 }

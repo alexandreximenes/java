@@ -1,5 +1,6 @@
 package run;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import DAO.ContaDAO;
@@ -12,7 +13,7 @@ import model.Movimentacao;
  * @author Alexandre Ximenes
  *
  */
-public class ListandoMovimentacoes_Query_JPQL {
+public class ListandoMovimentacoes_Query_JPQLComFuncoes {
 	public static void main(String[] args) {
 	
 				
@@ -20,12 +21,11 @@ public class ListandoMovimentacoes_Query_JPQL {
 		 * Listando os dados do banco
 		 */
 		Conta conta = new Conta();
-		conta.setId(10);
+		conta.setId(1);
 		
 		MovimentacaoDAO dao = new MovimentacaoDAO();
-		List<Movimentacao> movimentacoes = dao.listar(conta);
-		if(movimentacoes != null) 
-			movimentacoes.forEach(System.out::println);
+		BigDecimal soma = dao.listarComFuncoes(conta);
 		
+		System.out.println(soma);
 	}
 }

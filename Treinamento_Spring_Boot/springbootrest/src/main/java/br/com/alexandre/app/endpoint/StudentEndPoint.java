@@ -40,8 +40,32 @@ public class StudentEndPoint {
     @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity<?> save(@RequestBody Student student){
         Student.getList().add(student);
-        return new ResponseEntity<>(Student.getList(), HttpStatus.OK);
+        return new ResponseEntity<>(student, HttpStatus.OK);
     }
 
+    @RequestMapping(method = RequestMethod.DELETE)
+    public ResponseEntity<?> delete (@RequestBody Student student){
+        Student.getList().remove(student);
+        return new ResponseEntity<>(new Message("Estudante "+ student +" removido com sucesso!"), HttpStatus.OK);
+    }
+
+    @RequestMapping(method = RequestMethod.DELETE, path = "/{id}")
+    public ResponseEntity<?> delete (@PathVariable("id") int id){
+        Student s = new Student();
+        int indexOf = Student.getList().indexOf(id);
+        if(indexOf == -1)
+            return new ResponseEntity<>(new Message("Não foi possivel excluir estudante com id: "+id), HttpStatus.NOT_FOUND);
+
+        s = Student.getList().get(indexOf);
+        return new ResponseEntity<>(new Message("Estudante "+ s +" removido com sucesso!"), HttpStatus.OK);
+
+    }
+
+    @RequestMapping(method = RequestMethod.PUT)
+    public ResponseEntity<?> update (@RequestBody Student student){
+        Student.getList().remove(student);
+        Student.getList().add(student);
+        return new ResponseEntity<>(new Message("Estudante "+ student +" atualizado com sucesso!"), HttpStatus.OK);
+    }
 
 }

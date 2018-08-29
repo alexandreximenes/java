@@ -1,16 +1,23 @@
 package br.com.alexandre.app.model;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 import static java.util.Arrays.asList;
 
+@Entity
 public class Student {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
+    @Column(nullable = true)
     private String name;
+
+    public static List<Student> students;
 
     public Student() {
 
@@ -37,8 +44,6 @@ public class Student {
     public void setName(String name) {
         this.name = name;
     }
-
-    public static List<Student> students;
 
     static {
         setStudents();

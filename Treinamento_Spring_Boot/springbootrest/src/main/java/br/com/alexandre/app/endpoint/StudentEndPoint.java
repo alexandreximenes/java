@@ -20,13 +20,15 @@ public class StudentEndPoint {
     @Autowired
     private FormatDateTimeToLocalDate dateUtil;
 
-    @RequestMapping(method = RequestMethod.GET, path = "/list")
+    //@RequestMapping(method = RequestMethod.GET, path = "/list")
+    @GetMapping()
     public ResponseEntity<?> students() {
         return new ResponseEntity<>(Student.getList(), HttpStatus.OK);
 
     }
 
-    @RequestMapping(method = RequestMethod.GET, path = "/{id}")
+    //@RequestMapping(method = RequestMethod.GET, path = "/{id}")
+    @GetMapping(path = "/{id}")
     public ResponseEntity<?> getStudentById(@PathVariable("id") int id) {
         Student s = new Student();
         s.setId(id);
@@ -37,19 +39,22 @@ public class StudentEndPoint {
         return new ResponseEntity<>(Student.getList().get(index), HttpStatus.OK);
     }
 
-    @RequestMapping(method = RequestMethod.POST)
+    //@RequestMapping(method = RequestMethod.POST)
+    @PostMapping()
     public ResponseEntity<?> save(@RequestBody Student student){
         Student.getList().add(student);
         return new ResponseEntity<>(student, HttpStatus.OK);
     }
 
-    @RequestMapping(method = RequestMethod.DELETE)
+    //@RequestMapping(method = RequestMethod.DELETE)
+    @DeleteMapping
     public ResponseEntity<?> delete (@RequestBody Student student){
         Student.getList().remove(student);
         return new ResponseEntity<>(new Message("Estudante "+ student +" removido com sucesso!"), HttpStatus.OK);
     }
 
-    @RequestMapping(method = RequestMethod.DELETE, path = "/{id}")
+    //@RequestMapping(method = RequestMethod.DELETE, path = "/{id}")
+    @DeleteMapping(path = "/{id}")
     public ResponseEntity<?> delete (@PathVariable("id") int id){
         Student student = new Student();
         student.setId(id);
@@ -65,7 +70,8 @@ public class StudentEndPoint {
 
     }
 
-    @RequestMapping(method = RequestMethod.PUT)
+    //@RequestMapping(method = RequestMethod.PUT)
+    @PutMapping()
     public ResponseEntity<?> update (@RequestBody Student student){
         Student.getList().remove(student);
         Student.getList().add(student);

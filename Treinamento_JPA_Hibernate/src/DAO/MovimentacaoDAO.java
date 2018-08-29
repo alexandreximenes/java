@@ -1,14 +1,12 @@
 package DAO;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import javax.persistence.NamedQuery;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
-import model.Conta;
+import model.ContaFisica;
 import model.Movimentacao;
 import model.TipoMovimentacao;
 
@@ -104,7 +102,7 @@ public class MovimentacaoDAO {
 		return id;
 	}
 
-	public List<Movimentacao> listar(Conta conta) {
+	public List<Movimentacao> listar(ContaFisica conta) {
 		List<Movimentacao> movimentacoes = null;
 		
 		EntityManager em = JPAUtil.getEntityManager();
@@ -119,7 +117,7 @@ public class MovimentacaoDAO {
 //			}
 
 			Query query = em.createQuery("select m from movimentacoes m"
-					+ " where m.conta <> :pConta"
+					+ " where m.contaFisica <> :pConta"
 //					+ " and m.tipoMovimentacao = :pTipo "
 					+ " order by m.valor");
 			query.setParameter("pConta", conta);
@@ -142,7 +140,7 @@ public class MovimentacaoDAO {
 	}
 	
 //	public BigDecimal listarComFuncoes(Conta conta){
-	public Double listarComFuncoes(Conta conta){
+	public Double listarComFuncoes(ContaFisica conta){
 //		BigDecimal soma = null;
 		Double soma = null;
 		EntityManager em = JPAUtil.getEntityManager();
@@ -181,7 +179,7 @@ public class MovimentacaoDAO {
 			/**
 			 * Consulta JPQL com NamedQuery
 			 */
-			TypedQuery<Double> query = em.createNamedQuery("consultaMediaValorMovimentacoes", Double.class);
+			TypedQuery<Double> query = em.createNamedQuery("consultaMediaValorMovimentacoesJuridica", Double.class);
 			query.setParameter("pConta", conta);
 			query.setParameter("pTipo", TipoMovimentacao.SAIDA);
 			

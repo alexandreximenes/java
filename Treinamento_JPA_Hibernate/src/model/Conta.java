@@ -7,19 +7,19 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 
-@NamedQuery(name = "consultaMediaValorMovimentacoes", 
-			query = "select avg(m.valor) from movimentacoes m"
-				 + " where m.conta = :pConta and m.tipoMovimentacao = :pTipo")
 //
 //@NamedQuery(name = "consultaSomaValorMovimentacoes",
 //			query = "select sum(m.valor) from movimentacoes m"
 //				 + " where m.conta = :pConta and m.tipoMovimentacoes = :pTipo")
 
-@Entity(name = "conta")
-public class Conta {
+@Entity()
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+public abstract class Conta {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

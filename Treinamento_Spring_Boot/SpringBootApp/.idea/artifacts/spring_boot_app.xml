@@ -1,6 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="exploded-ear" name="spring-boot-app">
-    <output-path>$PROJECT_DIR$/out/artifacts/spring_boot_app</output-path>
-    <root id="root" />
-  </artifact>
-</component>

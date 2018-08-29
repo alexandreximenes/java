@@ -7,6 +7,8 @@ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 	<persistence-unit name="contas">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<class>model.Conta</class>
+		<class>model.ContaFisica</class>
+		<class>model.ContaJuridica</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver"
 				value="com.mysql.jdbc.Driver" />
@@ -18,7 +20,7 @@ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 
 			<property name="hibernate.dialect"
 				value="org.hibernate.dialect.MySQL5InnoDBDialect" />
-			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="true" />
 		</properties>

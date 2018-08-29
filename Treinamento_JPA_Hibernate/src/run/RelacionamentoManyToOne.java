@@ -4,10 +4,11 @@ import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.List;
 
-import DAO.ContaDAO;
+import DAO.ContaFisicaDAO;
 import DAO.MovimentacaoDAO;
 import DAO.PopularBanco;
 import model.Conta;
+import model.ContaFisica;
 import model.Movimentacao;
 import model.TipoMovimentacao;
 
@@ -29,8 +30,8 @@ public class RelacionamentoManyToOne {
 		 * 
 		 */
 		//*
-		Conta conta = new Conta()
-			.setId(1);
+		ContaFisica conta = new ContaFisica();
+			conta.setId(1);
 			
 		Movimentacao movimentacao = new Movimentacao()
 				.setConta(conta)
@@ -44,7 +45,7 @@ public class RelacionamentoManyToOne {
 				.setTipoMovimentacao(TipoMovimentacao.SAIDA)
 				.setValor(new BigDecimal("540.05"));
 		
-		ContaDAO daoConta = new ContaDAO();
+		ContaFisicaDAO daoConta = new ContaFisicaDAO();
 		daoConta.salvar(conta);
 		
 		MovimentacaoDAO dao = new MovimentacaoDAO();

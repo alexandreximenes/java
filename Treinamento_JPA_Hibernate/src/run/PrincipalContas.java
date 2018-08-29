@@ -2,9 +2,10 @@ package run;
 
 import java.util.List;
 
-import DAO.ContaDAO;
+import DAO.ContaFisicaDAO;
 import DAO.PopularBanco;
 import model.Conta;
+import model.ContaFisica;
 
 /**
  * 
@@ -30,7 +31,7 @@ public class PrincipalContas {
 			.setAgencia("006")
 			.setBanco("Banco das mamaes");
 			
-		ContaDAO dao = new ContaDAO();
+		ContaFisicaDAO dao = new ContaFisicaDAO();
 		Integer id = dao.salvar(conta);
 		*/
 		
@@ -46,7 +47,7 @@ public class PrincipalContas {
 			.setAgencia("007")
 			.setBanco("Banco da mulheres");
 			
-		ContaDAO dao = new ContaDAO();
+		ContaFisicaDAO dao = new ContaFisicaDAO();
 		Integer id = dao.atualizar(conta);
 		
 		System.out.println("ID: "+id);
@@ -60,7 +61,7 @@ public class PrincipalContas {
 		Conta conta = new Conta();
 			conta.setId(7);
 			
-		ContaDAO dao = new ContaDAO();
+		ContaFisicaDAO dao = new ContaFisicaDAO();
 		Integer id = dao.remover(conta);
 		
 		System.out.println("ID: "+id);
@@ -70,11 +71,11 @@ public class PrincipalContas {
 		 * Listando as Contas
 		 */
 		
-		ContaDAO contaDao = new ContaDAO();
-		List<Conta> contas = contaDao.listar();
+		ContaFisicaDAO contaDao = new ContaFisicaDAO();
+		List<ContaFisica> contas = contaDao.listar();
 //		if(contas != null) contas.forEach(System.out::println);
 
-		for (Conta conta : contas) {
+		for (ContaFisica conta : contas) {
 			System.out.println(conta.getMovimentacoes().size());
 		}
 	}

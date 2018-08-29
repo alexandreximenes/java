@@ -3,9 +3,10 @@ package run;
 import java.math.BigDecimal;
 import java.util.List;
 
-import DAO.ContaDAO;
+import DAO.ContaFisicaDAO;
 import DAO.MovimentacaoDAO;
 import model.Conta;
+import model.ContaFisica;
 import model.Movimentacao;
 
 /**
@@ -20,12 +21,12 @@ public class ListandoMovimentacoes_Query_JPQLComFuncoes {
 		/**
 		 * Listando os dados do banco
 		 */
-		Conta conta = new Conta();
-		conta.setId(1);
-		
-		MovimentacaoDAO dao = new MovimentacaoDAO();
-		Double soma = dao.listarComFuncoes(conta);
-		
-		System.out.println(soma);
+//		ContaFisica conta = new ContaFisica();
+//		conta.setId(1);
+//		
+//		MovimentacaoDAO dao = new MovimentacaoDAO();
+//		Double soma = dao.listarComFuncoes(conta);
+//		
+//		System.out.println(soma);
 	}
 }

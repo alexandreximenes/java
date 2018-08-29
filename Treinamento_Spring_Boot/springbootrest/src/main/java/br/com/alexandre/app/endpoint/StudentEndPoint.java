@@ -51,13 +51,17 @@ public class StudentEndPoint {
 
     @RequestMapping(method = RequestMethod.DELETE, path = "/{id}")
     public ResponseEntity<?> delete (@PathVariable("id") int id){
-        Student s = new Student();
-        int indexOf = Student.getList().indexOf(id);
+        Student student = new Student();
+        student.setId(id);
+
+        int indexOf = Student.getList().indexOf(student);
         if(indexOf == -1)
             return new ResponseEntity<>(new Message("Não foi possivel excluir estudante com id: "+id), HttpStatus.NOT_FOUND);
 
-        s = Student.getList().get(indexOf);
-        return new ResponseEntity<>(new Message("Estudante "+ s +" removido com sucesso!"), HttpStatus.OK);
+        student = Student.getList().get(indexOf);
+        Student.getList().remove(student);
+
+        return new ResponseEntity<>(new Message("Estudante "+ student +" removido com sucesso!"), HttpStatus.OK);
 
     }
 

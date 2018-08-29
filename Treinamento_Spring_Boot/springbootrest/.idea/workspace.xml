@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c6c5fca-1a1c-4558-95e3-725957fcbafd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alexandre/app/model/AbstractEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alexandre/app/repository/StudentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/alexandre/app/CustomMessage/ErrorMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alexandre/app/endpoint/StudentEndPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/alexandre/app/endpoint/StudentEndPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alexandre/app/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/alexandre/app/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/alexandre/app/repository/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/alexandre/app/repository/StudentRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/alexandre/app/endpoint/StudentEndPoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/alexandre/app/model/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/alexandre/app/repository/StudentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/alexandre/app/repository/StudentRepository.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -46,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StudentEndPoint.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StudentEndPoint.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/alexandre/app/endpoint/StudentEndPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="39" column="80" selection-start-line="39" selection-start-column="80" selection-end-line="39" selection-end-column="80" />
+            <state relative-caret-position="306">
+              <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
               <folding>
                 <element signature="e#746#747#0" expanded="true" />
                 <element signature="e#825#826#0" expanded="true" />
@@ -79,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StudentRepository.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StudentRepository.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/alexandre/app/repository/StudentRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="170">
+              <caret line="10" column="60" lean-forward="true" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,14 +92,28 @@
       <file leaf-file-name="AbstractEntity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/alexandre/app/model/AbstractEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="37" column="1" lean-forward="true" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+            <state relative-caret-position="119">
+              <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#400#401#0" expanded="true" />
                 <element signature="e#425#426#0" expanded="true" />
                 <element signature="e#459#460#0" expanded="true" />
                 <element signature="e#487#488#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ErrorMessage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/alexandre/app/CustomMessage/ErrorMessage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#138#139#0" expanded="true" />
+                <element signature="e#168#169#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,6 +127,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>update</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -132,9 +149,10 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/alexandre/app/ApplicationStart.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/alexandre/app/model/AbstractEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/alexandre/app/repository/StudentRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/alexandre/app/model/Student.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/alexandre/app/repository/StudentRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/alexandre/app/CustomMessage/ErrorMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/alexandre/app/endpoint/StudentEndPoint.java" />
       </list>
     </option>
@@ -366,7 +384,7 @@
       <option name="presentableId" value="Default" />
       <updated>1535546229131</updated>
       <workItem from="1535546259321" duration="4059000" />
-      <workItem from="1535550876994" duration="10974000" />
+      <workItem from="1535550876994" duration="14090000" />
     </task>
     <task id="LOCAL-00001" summary="GET por URL e get por Body Json">
       <created>1535565146534</created>
@@ -386,7 +404,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15033000" />
+    <option name="totallyTimeSpent" value="18149000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -410,7 +428,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3286517" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34410113" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34410113" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.28792134" />
       <window_info anchor="bottom" id="Problems" order="7" />
@@ -534,16 +552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/alexandre/app/repository/StudentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -557,20 +565,6 @@
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/alexandre/app/model/AbstractEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="37" column="1" lean-forward="true" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#400#401#0" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-            <element signature="e#459#460#0" expanded="true" />
-            <element signature="e#487#488#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -593,13 +587,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/alexandre/app/model/AbstractEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#400#401#0" expanded="true" />
+            <element signature="e#425#426#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#487#488#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/alexandre/app/CustomMessage/ErrorMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#138#139#0" expanded="true" />
+            <element signature="e#168#169#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/alexandre/app/endpoint/StudentEndPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="39" column="80" selection-start-line="39" selection-start-column="80" selection-end-line="39" selection-end-column="80" />
+        <state relative-caret-position="306">
+          <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
           <folding>
             <element signature="e#746#747#0" expanded="true" />
             <element signature="e#825#826#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/alexandre/app/repository/StudentRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="60" lean-forward="true" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

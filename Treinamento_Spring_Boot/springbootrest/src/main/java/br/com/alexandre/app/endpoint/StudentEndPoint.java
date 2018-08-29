@@ -3,6 +3,7 @@ package br.com.alexandre.app.endpoint;
 import br.com.alexandre.app.CustomMessage.Message;
 import br.com.alexandre.app.dateUtil.FormatDateTimeToLocalDate;
 import br.com.alexandre.app.model.Student;
+import br.com.alexandre.app.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +19,58 @@ import static java.util.Arrays.asList;
 public class StudentEndPoint {
 
     @Autowired
+    private StudentRepository studentDAO;
+
+    @GetMapping()
+    public ResponseEntity<?> students() {
+        return new ResponseEntity<>(studentDAO.findAll(), HttpStatus.OK);
+    }
+
+    @GetMapping(path = "/{id}")
+    public ResponseEntity<?> getStudentById(@PathVariable("id") Long id) {
+        Student student = new Student();
+        student.setId(id);
+        if(student == null)
+            return new ResponseEntity<>(new Message("Não foi possivel encontrar id: " + id), HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(studentDAO.findOne(id), HttpStatus.OK);
+    }
+
+    @PostMapping()
+    public ResponseEntity<?> save(@RequestBody Student student){
+        return new ResponseEntity<>(studentDAO.save(student), HttpStatus.CREATED);
+    }
+
+    @DeleteMapping
+    public ResponseEntity<?> delete (@RequestBody Student student){
+        studentDAO.delete(student.getId());
+        return new ResponseEntity<>(new Message("Estudante "+ student +" removido com sucesso!"), HttpStatus.NO_CONTENT);
+    }
+
+    @DeleteMapping(path = "/{id}")
+    public ResponseEntity<?> delete (@PathVariable("id") Long id){
+        Student student = studentDAO.findOne(id);
+        studentDAO.delete(id);
+        return new ResponseEntity<>(new Message("Estudante "+ student +" removido com sucesso!"), HttpStatus.NO_CONTENT);
+
+    }
+
+    @PutMapping()
+    public ResponseEntity<?> update (@RequestBody Student student){
+        studentDAO.save(student);
+        return new ResponseEntity<>(new Message("Estudante "+ student +" atualizado com sucesso!"), HttpStatus.OK);
+    }
+
+
+
+    /**
+     *
+     *
+     *
+     *
+     *
+     * Projeto teste que foi substituido pelo projeto acima
+     */
+    /*@Autowired
     private FormatDateTimeToLocalDate dateUtil;
 
     //@RequestMapping(method = RequestMethod.GET, path = "/list")
@@ -76,6 +129,6 @@ public class StudentEndPoint {
         Student.getList().remove(student);
         Student.getList().add(student);
         return new ResponseEntity<>(new Message("Estudante "+ student +" atualizado com sucesso!"), HttpStatus.OK);
-    }
+    }*/
 
 }

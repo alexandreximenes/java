@@ -1,13 +1,19 @@
 package br.com.alexandre.app.model;
 
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 
 @Entity
 public class Student extends AbstractEntity{
 
-    @Column(nullable = true)
+    @NotEmpty
     private String name;
+    @Email
+    @NotEmpty
+    private String email;
 
     public Student() {
 
@@ -19,6 +25,14 @@ public class Student extends AbstractEntity{
 
     public String getName() {
         return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setName(String name) {

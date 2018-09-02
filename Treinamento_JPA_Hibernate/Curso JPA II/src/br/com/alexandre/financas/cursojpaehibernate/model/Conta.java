@@ -2,6 +2,7 @@ package br.com.alexandre.financas.cursojpaehibernate.model;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,7 +19,8 @@ public class Conta {
 	private String numero;
 	private String agencia;
 	private String banco;
-	@OneToMany(mappedBy="conta")
+	
+	@OneToMany(mappedBy="conta", cascade=CascadeType.ALL)
 	private List<Movimentacao> movimentacoes;
 	
 	public String getTitular() {

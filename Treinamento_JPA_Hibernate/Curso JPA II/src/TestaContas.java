@@ -1,6 +1,5 @@
 import java.math.BigDecimal;
 
-import br.com.alexandre.financas.cursojpaehibernate.dao.ContaDAO;
 import br.com.alexandre.financas.cursojpaehibernate.dao.MovimentacaoDAO;
 import br.com.alexandre.financas.cursojpaehibernate.model.Conta;
 import br.com.alexandre.financas.cursojpaehibernate.model.Movimentacao;

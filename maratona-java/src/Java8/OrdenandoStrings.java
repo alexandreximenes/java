@@ -26,8 +26,14 @@ public class OrdenandoStrings {
          */
         //p.sort(((o1, o2) -> Integer.compare(o1.length(), o2.length())));
         //p.sort(Comparator.comparing(s -> s.length()));
-        p.sort(Comparator.comparing(String::length));
+        //p.sort(Comparator.comparing(String::length));
 
-        System.out.println(p);
+        /**
+         * ordenando classe String
+         */
+
+        p.sort((s1, s2) -> Integer.compare(s1.length(), s2.length()));
+
+        System.out.println("-"+ p);
     }
 }

@@ -9,6 +9,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
@@ -23,6 +24,7 @@ public class Movimentacao {
 	@Column(length=65535, columnDefinition = "TEXT")
 	private String descricao;
 	@ManyToOne
+	@JoinColumn(name = "conta_______id")
 	private Conta conta;
 	
 	public Integer getId() {

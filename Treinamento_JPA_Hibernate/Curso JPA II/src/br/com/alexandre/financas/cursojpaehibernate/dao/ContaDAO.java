@@ -12,14 +12,13 @@ public class ContaDAO {
 		EntityManager em = JPAUtil.getEM();
 		em.getTransaction().begin();
 		
-		if(findById(conta) == null) { 
+		if(conta.getId() == null) { 
 			em.persist(conta);
 			System.out.println("Conta salva com sucesso!");
 		}else{
 			em.merge(conta);
 			System.out.println("Conta atualizada com sucesso!");
 		}
-		
 		
 		em.getTransaction().commit();
 		
@@ -29,10 +28,19 @@ public class ContaDAO {
 	}
 
 	public Conta findById(Conta c) {
+		
 		EntityManager em = JPAUtil.getEM();
 		em.getTransaction().begin();
 		
 		Conta conta = em.find(c.getClass(), c.getId());
+		
+		if(conta == null) {
+			if(c.getTitular() != "") {
+				conta = new ContaDAO().salvar(c);
+			}else {
+				return null;
+			}
+		}
 		
 		em.getTransaction().commit();
 		

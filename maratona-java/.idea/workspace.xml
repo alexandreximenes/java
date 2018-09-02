@@ -12,47 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OrdenandoStrings.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Java8/OrdenandoStrings.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="34" column="31" lean-forward="true" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestandoListas.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Collections/TestandoListas.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Aula.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Collections/Aula.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="22" />
-              <folding>
-                <element signature="e#678#679#0" expanded="true" />
-                <element signature="e#706#707#0" expanded="true" />
-                <element signature="e#739#740#0" expanded="true" />
-                <element signature="e#768#769#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestandoAula.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TestandoAula.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Collections/TestandoAula.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="277">
-              <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
+              <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,8 +48,9 @@
         <option value="$PROJECT_DIR$/src/Collections/TestandoAla.java" />
         <option value="$PROJECT_DIR$/src/Collections/TestandoListas.java" />
         <option value="$PROJECT_DIR$/src/Collections/Aula.java" />
-        <option value="$PROJECT_DIR$/src/Collections/TestandoAula.java" />
         <option value="$PROJECT_DIR$/src/Java8/OrdenandoStrings.java" />
+        <option value="$PROJECT_DIR$/src/Java8/Aula.java" />
+        <option value="$PROJECT_DIR$/src/Collections/TestandoAula.java" />
       </list>
     </option>
   </component>
@@ -157,6 +122,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\DESENVOLVIMENTO\java\maratona-java\src\Java8" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Treinando_atalhos_IntelliJ.model" />
     </key>
@@ -176,7 +144,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.OrdenandoStrings">
+  <component name="RunManager" selected="Application.TestandoAula">
     <configuration name="OrdenandoStrings" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Java8.OrdenandoStrings" />
       <module name="maratona-java" />
@@ -270,8 +238,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.OrdenandoStrings" />
         <item itemvalue="Application.TestandoAula" />
+        <item itemvalue="Application.OrdenandoStrings" />
         <item itemvalue="Application.TestandoListas" />
         <item itemvalue="Application.Primeiros_comandos" />
       </list>
@@ -290,12 +258,12 @@
       <workItem from="1530102924439" duration="606000" />
       <workItem from="1530141739035" duration="95000" />
       <workItem from="1535671034874" duration="3621000" />
-      <workItem from="1535894988779" duration="9120000" />
+      <workItem from="1535894988779" duration="11344000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13442000" />
+    <option name="totallyTimeSpent" value="15666000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="23" width="1550" height="848" extended-state="6" />
@@ -303,7 +271,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="8" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.3286517" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
@@ -315,7 +283,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3286517" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25603217" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25603217" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286517" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -386,26 +354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Collections/TestandoListas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Collections/Aula.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="22" />
-          <folding>
-            <element signature="e#678#679#0" expanded="true" />
-            <element signature="e#706#707#0" expanded="true" />
-            <element signature="e#739#740#0" expanded="true" />
-            <element signature="e#768#769#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/Collections.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -417,20 +365,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Collections/TestandoAula.java">
+    <entry file="file://$PROJECT_DIR$/src/Java8/TestandoAula.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
+        <state relative-caret-position="68">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Java8/OrdenandoStrings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="42" column="50" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Java8/OrdenandoStrings.java">
+    <entry file="file://$PROJECT_DIR$/src/Java8/Aula.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="34" column="31" lean-forward="true" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Collections/TestandoListas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Collections/Aula.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="e#678#679#0" expanded="true" />
+            <element signature="e#706#707#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Collections/TestandoAula.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

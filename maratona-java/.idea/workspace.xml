@@ -15,8 +15,13 @@
       <file leaf-file-name="TestandoAula.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Collections/TestandoAula.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="396">
               <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+=======
+            <state relative-caret-position="345">
+              <caret line="89" column="16" selection-start-line="89" selection-start-column="16" selection-end-line="89" selection-end-column="16" />
+>>>>>>> 1197f5cf0f2f8a7ce9906895e1444f70409a0ae5
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -247,12 +252,20 @@
       <workItem from="1530141739035" duration="95000" />
       <workItem from="1535671034874" duration="3621000" />
       <workItem from="1535894988779" duration="11677000" />
+<<<<<<< HEAD
       <workItem from="1535938514627" duration="1554000" />
+=======
+      <workItem from="1535938514627" duration="1340000" />
+>>>>>>> 1197f5cf0f2f8a7ce9906895e1444f70409a0ae5
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="17553000" />
+=======
+    <option name="totallyTimeSpent" value="17339000" />
+>>>>>>> 1197f5cf0f2f8a7ce9906895e1444f70409a0ae5
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="23" width="1550" height="848" extended-state="6" />
@@ -267,9 +280,15 @@
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" weight="0.3286517" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3286517" />
+=======
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286517" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3286517" />
+>>>>>>> 1197f5cf0f2f8a7ce9906895e1444f70409a0ae5
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25938338" />
@@ -406,8 +425,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Collections/TestandoAula.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="396">
           <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+=======
+        <state relative-caret-position="345">
+          <caret line="89" column="16" selection-start-line="89" selection-start-column="16" selection-end-line="89" selection-end-column="16" />
+>>>>>>> 1197f5cf0f2f8a7ce9906895e1444f70409a0ae5
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

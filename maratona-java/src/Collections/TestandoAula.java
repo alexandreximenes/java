@@ -9,7 +9,7 @@ import static java.util.Comparator.comparing;
 public class TestandoAula {
 
     public static void main(String[] args) {
-
+/*
         Aula a1 = new Aula("revisitando as Arrayslist", 21);
         Aula a2 = new Aula("Lista de objetos", 15);
         Aula a3 = new Aula("Relacionamento de lista e objetos", 10);
@@ -93,6 +93,8 @@ public class TestandoAula {
         System.out.println(set);
 
     }
+
+    */
 
 
 }

@@ -5,6 +5,8 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import java.util.List;
 
 @Entity
 public class Student extends AbstractEntity{
@@ -14,6 +16,17 @@ public class Student extends AbstractEntity{
     @Email
     @NotEmpty
     private String email;
+
+    @OneToMany(mappedBy = "student")
+    private List<Cursos> cursos;
+
+    public List<Cursos> getCursos() {
+        return cursos;
+    }
+
+    public void setCursos(List<Cursos> cursos) {
+        this.cursos = cursos;
+    }
 
     public Student() {
 

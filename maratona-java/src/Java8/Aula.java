@@ -20,11 +20,13 @@ public class Aula implements Comparable<Aula>{
 
     @Override
     public int compareTo(Aula o) {
+        if(!(o instanceof Aula))
+            throw new RuntimeException("Não é uma instancia da mesma classe");
+        return this.titulo.compareTo(o.titulo);
         /*if(this.tempo < o.tempo) return -1;*/
         /*if(this.tempo > o.tempo)*/
         /*    return 1;*/
         /*else return 0;*/
-        return this.titulo.compareTo(o.titulo);
     }
 
     public int getTempo() {

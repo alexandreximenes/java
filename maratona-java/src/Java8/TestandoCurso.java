@@ -1,12 +1,11 @@
 package Java8;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import static java.lang.System.out;
-import static java.util.Comparator.comparing;
 
 public class TestandoCurso {
 
@@ -32,5 +31,43 @@ public class TestandoCurso {
                 .collect(Collectors.joining("| "));
 
         System.out.println(list);
+
+
+        /**
+         * Trabalhando com Optional
+         */
+
+        //Optional<Curso> first =
+        cursos.stream()
+                .filter(c -> c.getAlunos() > 2000)
+//                findFirst()
+                .findAny()
+//                .orElse(null)
+//                .orElseThrow(() -> new RuntimeException("Ocorreu um erro"));
+                .ifPresent(c -> System.out.println(c.getNome()));
+
+        out.println("Cursos - "+cursos);
+
+
+        /***
+         * Trabalhando com Map
+         */
+
+//        Map<String, Integer> mapCursos =
+                cursos.stream()
+                .filter(c -> c.getNome().startsWith("J"))
+                .collect(Collectors.toMap(
+                        c -> c.getNome(),
+                        c -> c.getAlunos()
+                )).forEach((nome, alunos) -> System.out.println(nome + " tem " + alunos + " alunos"));
+
+
+        cursos.parallelStream()
+                .filter(c -> c.getNome().startsWith("N"))
+                .collect(Collectors.toMap(
+                        c -> c.getNome(),
+                        c -> c.getAlunos()
+                )).forEach((nome, alunos) -> System.out.println(nome + " tem " + alunos + " alunos"));
+
     }
 }

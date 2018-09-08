@@ -13,7 +13,7 @@ import br.com.alexandre.financas.cursojpaehibernate.model.Conta;
 import br.com.alexandre.financas.cursojpaehibernate.model.Movimentacao;
 import br.com.alexandre.financas.cursojpaehibernate.model.TipoMovimentacao;
 
-public class TestaContas2 {
+public class TestaMovimentacoes {
 
 	public static void main(String[] args) {
 		EntityManager em = JPAUtil.getEM();

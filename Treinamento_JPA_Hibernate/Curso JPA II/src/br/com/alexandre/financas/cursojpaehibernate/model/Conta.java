@@ -53,7 +53,12 @@ public class Conta extends AbstractEntity{
 		this.banco = banco;
 	}
 	
-	
+	public List<Movimentacao> getMovimentacoes() {
+		return movimentacoes;
+	}
+	public void setMovimentacoes(List<Movimentacao> movimentacoes) {
+		this.movimentacoes = movimentacoes;
+	}
 	@Override
 	public String toString() {
 		return numero + " - " + cliente;

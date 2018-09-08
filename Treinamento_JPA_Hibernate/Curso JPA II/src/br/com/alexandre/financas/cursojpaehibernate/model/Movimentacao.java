@@ -23,6 +23,7 @@ public class Movimentacao extends AbstractEntity{
 	private TipoMovimentacao tipoMovimentacao;
 	@Column(length=65535, columnDefinition = "TEXT")
 	private String descricao;
+
 	@ManyToOne
 	@JoinColumn(name = "conta_id")
 	private Conta conta;

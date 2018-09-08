@@ -1,9 +1,7 @@
 import javax.persistence.EntityManager;
 
 import br.com.alexandre.financas.cursojpaehibernate.infra.JPAUtil;
-import br.com.alexandre.financas.cursojpaehibernate.model.Cliente;
 import br.com.alexandre.financas.cursojpaehibernate.model.Conta;
-import br.com.alexandre.financas.cursojpaehibernate.model.Movimentacao;
 
 public class TestaMovimentacoes2 {
 
@@ -19,8 +17,11 @@ public class TestaMovimentacoes2 {
 				conta.setId(3);
 						
 				Conta contaConsultada = em.find(Conta.class, conta.getId());
-				
-				System.out.println(contaConsultada.getMovimentacoes().size());
+				if(contaConsultada != null) {
+					System.out.println(contaConsultada.getMovimentacoes().size());
+				}else {
+					System.out.println(contaConsultada.getClass().getName() + " não foi encontrada");
+				}
 				
 			}
 			em.getTransaction().commit();

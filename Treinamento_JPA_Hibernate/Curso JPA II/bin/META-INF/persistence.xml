@@ -8,6 +8,8 @@ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<class>br.com.alexandre.financas.cursojpaehibernate.model.Conta</class>
 		<class>br.com.alexandre.financas.cursojpaehibernate.model.Movimentacao</class>
+		<class>br.com.alexandre.financas.cursojpaehibernate.model.Categoria</class>
+		<class>br.com.alexandre.financas.cursojpaehibernate.model.Cliente</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver"
 				value="com.mysql.jdbc.Driver" />

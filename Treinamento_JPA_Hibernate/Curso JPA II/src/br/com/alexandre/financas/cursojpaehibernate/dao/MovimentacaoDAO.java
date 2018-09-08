@@ -17,16 +17,16 @@ public class MovimentacaoDAO {
 
 		m.setConta(conta);
 
-		if (m.getId() == null) {
+		if (m.getId() == 0) {
 			em.persist(m);
 			System.out.println("Movimentação salva com sucesso!");
 		} else {
-			if (findById(m) != null) {
+//			if (findById(m) != null) {
 				em.merge(m);
-				System.out.println("Movimentação atualizada com sucesso!");
-			} else {
-				System.out.println("Essa movimentação não existe mais no banco de dados");
-			}
+//				System.out.println("Movimentação atualizada com sucesso!");
+//			} else {
+//				System.out.println("Essa movimentação não existe mais no banco de dados");
+//			}
 
 		}
 
@@ -58,7 +58,7 @@ public class MovimentacaoDAO {
 
 			if (movimentacao == null) {
 				if (m.getValor() != null || !m.getDescricao().equals("")) {
-					return movimentacao = new MovimentacaoDAO().salvar2(m);
+					return movimentacao = new MovimentacaoDAO().salvar(m);
 				} else {
 					return null;
 				}
@@ -69,31 +69,6 @@ public class MovimentacaoDAO {
 			em.getTransaction().commit();
 			em.close();
 		}
-
-	}
-
-	private Movimentacao salvar2(Movimentacao m) {
-		EntityManager em = JPAUtil.getEM();
-
-		em.getTransaction().begin();
-
-		if (m.getId() == null) {
-			em.persist(m);
-			System.out.println("Movimentação salva com sucesso!");
-		} else {
-			if (findById(m) != null) {
-				em.merge(m);
-				System.out.println("Movimentação atualizada com sucesso!");
-			} else {
-				System.out.println("Essa movimentação não existe mais no banco de dados");
-			}
-
-		}
-
-		em.getTransaction().commit();
-
-		em.close();
-		return m;
 
 	}
 

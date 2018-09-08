@@ -7,40 +7,33 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
-public class Conta {
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Integer id;
-	private String titular;
-	private String cpf;
+public class Conta extends AbstractEntity{
+	
+	private static final long serialVersionUID = 1L;
 	private String numero;
 	private String agencia;
 	private String banco;
 	
+	@OneToOne
+	@JoinColumn(unique=true, nullable = false)
+	private Cliente cliente;
+	
+	public Cliente getCliente() {
+		return cliente;
+	}
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
+
 	@OneToMany(mappedBy="conta", cascade=CascadeType.ALL)
 	private List<Movimentacao> movimentacoes;
 	
-	public String getTitular() {
-		return titular;
-	}
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	public void setTitular(String titular) {
-		this.titular = titular;
-	}
-	public String getCpf() {
-		return cpf;
-	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
 	public String getNumero() {
 		return numero;
 	}
@@ -63,6 +56,6 @@ public class Conta {
 	
 	@Override
 	public String toString() {
-		return titular;
+		return numero + " - " + cliente;
 	}
 }

@@ -12,7 +12,7 @@ public class ContaDAO {
 		EntityManager em = JPAUtil.getEM();
 		em.getTransaction().begin();
 		
-		if(conta.getId() == null) { 
+		if(conta.getId() == 0) { 
 			em.persist(conta);
 			System.out.println("Conta salva com sucesso!");
 		}else{
@@ -35,7 +35,7 @@ public class ContaDAO {
 		Conta conta = em.find(c.getClass(), c.getId());
 		
 		if(conta == null) {
-			if(c.getTitular() != "") {
+			if(c.getNumero() != "") {
 				conta = new ContaDAO().salvar(c);
 			}else {
 				return null;

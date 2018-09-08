@@ -1,6 +1,7 @@
 package br.com.alexandre.financas.cursojpaehibernate.model;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,30 +11,25 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Movimentacao {
-	
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Integer id;
+public class Movimentacao extends AbstractEntity{
+	private static final long serialVersionUID = 1L;
 	private BigDecimal valor;
 	@Enumerated(EnumType.STRING)
 	private TipoMovimentacao tipoMovimentacao;
 	@Column(length=65535, columnDefinition = "TEXT")
 	private String descricao;
 	@ManyToOne
-	@JoinColumn(name = "conta_______id")
+	@JoinColumn(name = "conta_id")
 	private Conta conta;
 	
-	public Integer getId() {
-		return id;
-	}
-	public Movimentacao setId(Integer id) {
-		this.id = id;
-		return this;
-	}
+	@ManyToMany
+	private List<Categoria> categorias;
+	
 	public BigDecimal getValor() {
 		return valor;
 	}
@@ -65,6 +61,6 @@ public class Movimentacao {
 	
 	@Override
 	public String toString() {
-		return descricao + " = " + valor;
+		return conta.toString() +" \n "+ descricao + " = " + valor;
 	}
 }

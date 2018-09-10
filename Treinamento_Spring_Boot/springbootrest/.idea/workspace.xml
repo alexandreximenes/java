@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c6c5fca-1a1c-4558-95e3-725957fcbafd" name="Default" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/alexandre/app/model/Cursos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../maratona-java/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../maratona-java/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,11 +38,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Cursos.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Cursos.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/alexandre/app/model/Cursos.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+              <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" selection-start-line="15" selection-end-line="15" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -121,7 +131,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -204,6 +213,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -328,6 +338,7 @@
       <workItem from="1536102206553" duration="302000" />
       <workItem from="1536417565934" duration="2670000" />
       <workItem from="1536442932350" duration="537000" />
+      <workItem from="1536541124250" duration="1380000" />
     </task>
     <task id="LOCAL-00001" summary="GET por URL e get por Body Json">
       <created>1535565146534</created>
@@ -354,7 +365,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41129000" />
+    <option name="totallyTimeSpent" value="42509000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="23" width="1550" height="848" extended-state="6" />
@@ -380,7 +391,7 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.29353932" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.44522473" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22319035" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22587131" />
       <window_info anchor="bottom" id="Problems" order="11" weight="0.3286517" />
       <window_info anchor="right" id="Bean Validation" order="8" />
       <window_info id="Web" order="6" side_tool="true" />
@@ -726,13 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://1d5a9bd5-ef0c-4b3c-91c0-f5ce91842d26/schema/school/table/cursos" />
     <entry file="das://1d5a9bd5-ef0c-4b3c-91c0-f5ce91842d26/schema/school/table/student" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1d5a9bd5-ef0c-4b3c-91c0-f5ce91842d26/console.sql">
@@ -776,7 +780,14 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/alexandre/app/model/Cursos.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" selection-end-column="81" />
         </state>
       </provider>
     </entry>

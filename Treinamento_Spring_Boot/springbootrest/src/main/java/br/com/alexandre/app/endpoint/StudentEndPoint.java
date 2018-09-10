@@ -5,12 +5,14 @@ import br.com.alexandre.app.CustomMessage.Message;
 import br.com.alexandre.app.model.Student;
 import br.com.alexandre.app.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/student")
@@ -20,8 +22,8 @@ public class StudentEndPoint {
     private StudentRepository studentDAO;
 
     @GetMapping()
-    public ResponseEntity<?> students() {
-        return new ResponseEntity<>(studentDAO.findAll(), HttpStatus.OK);
+    public ResponseEntity<?> students(Pageable pageable) {
+        return new ResponseEntity<>(studentDAO.findAll(pageable), HttpStatus.OK);
     }
 
     @GetMapping(path = "findByName/{name}")
@@ -33,7 +35,7 @@ public class StudentEndPoint {
     @GetMapping(path = "/{id}")
     public ResponseEntity<?> getStudentById(@PathVariable("id") Long id) {
         verifyIfExistsStudents(id);
-        return new ResponseEntity<>(studentDAO.findOne(id), HttpStatus.OK);
+        return new ResponseEntity<>(studentDAO.findById(id), HttpStatus.OK);
     }
 
     @PostMapping()
@@ -45,15 +47,15 @@ public class StudentEndPoint {
     @DeleteMapping
     public ResponseEntity<?> delete (@RequestBody Student student){
         verifyIfExistsStudents(student.getId());
-        studentDAO.delete(student.getId());
+        studentDAO.deleteById(student.getId());
         return new ResponseEntity<>(new Message("Estudante "+ student +" removido com sucesso!"), HttpStatus.NO_CONTENT);
     }
 
     @DeleteMapping(path = "/{id}")
     public ResponseEntity<?> delete (@PathVariable("id") Long id){
         verifyIfExistsStudents(id);
-        Student student = studentDAO.findOne(id);
-        studentDAO.delete(id);
+        Optional<Student> student = studentDAO.findById(id);
+        studentDAO.deleteById(id);
         return new ResponseEntity<>(new Message("Estudante "+ student +" removido com sucesso!"), HttpStatus.NO_CONTENT);
 
     }
@@ -66,7 +68,7 @@ public class StudentEndPoint {
     }
 
     private void verifyIfExistsStudents(Long id) {
-        if(studentDAO.findOne(id) == null)
+        if(studentDAO.findById(id) == null)
             throw new ErrorMessage("Não foi possivel encontrar id: " + id);
     }
 

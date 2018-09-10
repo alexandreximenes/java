@@ -2,7 +2,6 @@ package br.com.alexandre.app.endpoint;
 
 import br.com.alexandre.app.CustomMessage.Message;
 import br.com.alexandre.app.model.Cursos;
-import br.com.alexandre.app.model.Student;
 import br.com.alexandre.app.repository.CursosRepository;
 import br.com.alexandre.app.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
 
-import static java.util.Arrays.asList;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/curso")
@@ -30,8 +29,8 @@ public class CursosEndPoint {
 
     @GetMapping(path = "/{id}")
     public ResponseEntity<?> findById(@PathVariable("id") Long id){
-        VerifyIfCursoExists(daoCurso.findOne(id));
-        Cursos curso = daoCurso.findOne(id);
+        VerifyIfCursoExists(daoCurso.findById(id));
+        Optional<Cursos> curso = daoCurso.findById(id);
         return new ResponseEntity<>(curso, HttpStatus.OK);
     }
 
@@ -44,7 +43,7 @@ public class CursosEndPoint {
 
     @PutMapping()
     public ResponseEntity<?> updateCurso(@RequestBody Cursos curso){
-        VerifyIfCursoExists(curso);
+        VerifyIfCursoExists(Optional.ofNullable(curso));
         daoCurso.save(curso);
         return new ResponseEntity(new Message("update"), HttpStatus.OK);
     }
@@ -52,14 +51,15 @@ public class CursosEndPoint {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteCurso(@PathVariable("id") Long id){
-        VerifyIfCursoExists(daoCurso.findOne(id));
-        daoCurso.delete(id);
+        VerifyIfCursoExists(daoCurso.findById(id));
+        daoCurso.deleteById(id);
         return new ResponseEntity(new Message("delete"), HttpStatus.OK);
 
     }
 
-    private void VerifyIfCursoExists(Cursos curso) {
-        Cursos responseCurso = daoCurso.findOne(curso.getId());
+    private void VerifyIfCursoExists(Optional<Cursos> curso) {
+
+        Optional<Cursos> responseCurso = daoCurso.findById(curso.get().getId());
         if(responseCurso == null) throw new RuntimeException("Curso não existe na base de dados");
     }
 }

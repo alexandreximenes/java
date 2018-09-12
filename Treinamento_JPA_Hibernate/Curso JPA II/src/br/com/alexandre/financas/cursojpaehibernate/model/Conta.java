@@ -21,7 +21,7 @@ public class Conta extends AbstractEntity{
 	private String banco;
 	
 	@OneToOne
-	@JoinColumn(unique=true, nullable = false)
+	@JoinColumn(unique=true, nullable = false, name= "cli_id")
 	private Cliente cliente;
 	
 	public Cliente getCliente() {

@@ -39,8 +39,8 @@ public class TestaMovimentacoes {
 			em.getTransaction().commit();
 	
 		}catch(Exception e) {
-			em.getTransaction().rollback();
 			if(em.isOpen()) {
+				em.getTransaction().rollback();
 				em.close();
 			}
 		}	

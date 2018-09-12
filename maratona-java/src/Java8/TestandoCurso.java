@@ -1,8 +1,8 @@
 package Java8;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 import static java.lang.System.out;
@@ -46,7 +46,7 @@ public class TestandoCurso {
 //                .orElseThrow(() -> new RuntimeException("Ocorreu um erro"));
                 .ifPresent(c -> System.out.println(c.getNome()));
 
-        out.println("Cursos - "+cursos);
+        out.println("Cursos - " + cursos);
 
 
         /***
@@ -54,7 +54,7 @@ public class TestandoCurso {
          */
 
 //        Map<String, Integer> mapCursos =
-                cursos.stream()
+        cursos.stream()
                 .filter(c -> c.getNome().startsWith("J"))
                 .collect(Collectors.toMap(
                         c -> c.getNome(),
@@ -69,5 +69,18 @@ public class TestandoCurso {
                         c -> c.getAlunos()
                 )).forEach((nome, alunos) -> System.out.println(nome + " tem " + alunos + " alunos"));
 
+        System.out.println("------------");
+        System.out.println(cursos);
+        boolean b = cursos.removeIf(curso -> curso.getAlunos() > 150);
+        System.out.println(cursos);
+        System.out.println("removeu ? " + b);
+        System.out.println("------------");
+
+        List<Curso> cursos2 = cursos.stream()
+                .sorted(Comparator.comparing(Curso::getNome))
+                .filter(curso -> curso.getAlunos() > 150)
+                .collect(Collectors.toList());
+
+        cursos.forEach(System.out::println);
     }
 }

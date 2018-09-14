@@ -1,6 +1,7 @@
 package domain;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.List;
 
@@ -15,6 +16,8 @@ public class Usuario {
     @Temporal(TemporalType.DATE)
     @Column(name = "data_nascimento")
     private Calendar nascimento;
+    @Column(name = "data_batismo")
+    private LocalDate dataBatismo;
     @Enumerated(EnumType.STRING)
     @Column(name = "estado_civil")
     private EstadoCivil estadoCivil;
@@ -31,9 +34,10 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(String nome, Calendar nascimento, EstadoCivil estadoCivil, Endereco endereco, List<PalavrasInocentes> palavrasInocentes, Integer idade) {
+    public Usuario(String nome, Calendar nascimento, LocalDate dataBatismo, EstadoCivil estadoCivil, Endereco endereco, List<PalavrasInocentes> palavrasInocentes, Integer idade) {
         this.nome = nome;
         this.nascimento = nascimento;
+        this.dataBatismo = dataBatismo;
         this.estadoCivil = estadoCivil;
         this.endereco = endereco;
         this.palavrasInocentes = palavrasInocentes;
@@ -62,6 +66,14 @@ public class Usuario {
 
     public void setNascimento(Calendar nascimento) {
         this.nascimento = nascimento;
+    }
+
+    public LocalDate getDataBatismo() {
+        return dataBatismo;
+    }
+
+    public void setDataBatismo(LocalDate dataBatismo) {
+        this.dataBatismo = dataBatismo;
     }
 
     public EstadoCivil getEstadoCivil() {
@@ -95,5 +107,6 @@ public class Usuario {
     public void setIdade(Integer idade) {
         this.idade = idade;
     }
-
 }
+
+

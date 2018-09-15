@@ -6,9 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-@Entity
+//@Entity
 public class Cursos extends AbstractEntity {
-
+/*
     private String nome;
     private String duracao;
 
@@ -55,4 +55,4 @@ public class Cursos extends AbstractEntity {
                 ", duracao='" + duracao + '\'' +
                 '}';
     }
-}
+*/}

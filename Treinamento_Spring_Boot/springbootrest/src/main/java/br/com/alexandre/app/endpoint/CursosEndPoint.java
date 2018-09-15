@@ -16,11 +16,9 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/curso")
 public class CursosEndPoint {
-
+/*
     @Autowired
     CursosRepository daoCurso;
-    @Autowired
-    StudentRepository daoStudent;
 
     @GetMapping()
     public ResponseEntity<?> lista(){
@@ -62,4 +60,4 @@ public class CursosEndPoint {
         Optional<Cursos> responseCurso = daoCurso.findById(curso.get().getId());
         if(responseCurso == null) throw new RuntimeException("Curso não existe na base de dados");
     }
-}
+*/}

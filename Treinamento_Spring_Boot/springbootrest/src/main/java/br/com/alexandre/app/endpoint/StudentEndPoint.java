@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,14 +29,14 @@ public class StudentEndPoint {
 
     @GetMapping(path = "findByName/{name}")
     public ResponseEntity<?> findByName(@PathVariable("name") String name){
-        return new ResponseEntity<>(studentDAO.findByName(name), HttpStatus.OK);
+        return new ResponseEntity<>(studentDAO.findByNameIgnoreCaseContaining(name), HttpStatus.OK);
         //return new ResponseEntity<>(studentDAO.findByNameIgnoreCaseContaining(name), HttpStatus.OK);
     }
 
     @GetMapping(path = "/{id}")
     public ResponseEntity<?> getStudentById(@PathVariable("id") Long id) {
         verifyIfExistsStudents(id);
-        return new ResponseEntity<>(studentDAO.findById(id), HttpStatus.OK);
+        return new ResponseEntity<>(studentDAO.findOne(id), HttpStatus.OK);
     }
 
     @PostMapping()
@@ -45,17 +46,18 @@ public class StudentEndPoint {
     }
 
     @DeleteMapping
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<?> delete (@RequestBody Student student){
         verifyIfExistsStudents(student.getId());
-        studentDAO.deleteById(student.getId());
+        studentDAO.delete(student.getId());
         return new ResponseEntity<>(new Message("Estudante "+ student +" removido com sucesso!"), HttpStatus.NO_CONTENT);
     }
 
     @DeleteMapping(path = "/{id}")
     public ResponseEntity<?> delete (@PathVariable("id") Long id){
         verifyIfExistsStudents(id);
-        Optional<Student> student = studentDAO.findById(id);
-        studentDAO.deleteById(id);
+        Student student = studentDAO.findOne(id);
+        studentDAO.delete(id);
         return new ResponseEntity<>(new Message("Estudante "+ student +" removido com sucesso!"), HttpStatus.NO_CONTENT);
 
     }
@@ -68,7 +70,7 @@ public class StudentEndPoint {
     }
 
     private void verifyIfExistsStudents(Long id) {
-        if(studentDAO.findById(id) == null)
+        if(studentDAO.findOne(id) == null)
             throw new ErrorMessage("Não foi possivel encontrar id: " + id);
     }
 

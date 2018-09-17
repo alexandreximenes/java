@@ -1,7 +1,9 @@
 package domain;
 
 import javax.persistence.*;
+import java.text.DateFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.List;
 
@@ -10,20 +12,24 @@ import java.util.List;
 public class Usuario {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;
     @Temporal(TemporalType.DATE)
     @Column(name = "data_nascimento")
     private Calendar nascimento;
-    @Column(name = "data_batismo")
+    @Column(name = "data_batismo", columnDefinition = "default = now()")
     private LocalDate dataBatismo;
     @Enumerated(EnumType.STRING)
     @Column(name = "estado_civil")
     private EstadoCivil estadoCivil;
 
     @Embedded
-    private Endereco endereco;
+    private Endereco enderecoEmbedded;
+
+    @ElementCollection
+    @JoinTable(name = "usuario_endereco", joinColumns = @JoinColumn(name="id_user"))
+    private List<Endereco> enderecos;
 
     @OneToMany(mappedBy = "usuario")
     private List<PalavrasInocentes> palavrasInocentes;
@@ -39,7 +45,7 @@ public class Usuario {
         this.nascimento = nascimento;
         this.dataBatismo = dataBatismo;
         this.estadoCivil = estadoCivil;
-        this.endereco = endereco;
+        this.enderecoEmbedded = endereco;
         this.palavrasInocentes = palavrasInocentes;
         this.idade = idade;
     }
@@ -84,12 +90,12 @@ public class Usuario {
         this.estadoCivil = estadoCivil;
     }
 
-    public Endereco getEndereco() {
-        return endereco;
+    public Endereco getEnderecoEmbedded() {
+        return enderecoEmbedded;
     }
 
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
+    public void setEnderecoEmbedded(Endereco endereco) {
+        this.enderecoEmbedded = endereco;
     }
 
     public List<PalavrasInocentes> getPalavrasInocentes() {
@@ -106,6 +112,20 @@ public class Usuario {
 
     public void setIdade(Integer idade) {
         this.idade = idade;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "\nid=" + id +
+                ", \nnome='" + nome + '\'' +
+                ", \nnascimento=" + DateFormat.getDateInstance().format(nascimento.getTime()) +
+                ", \ndataBatismo=" + DateTimeFormatter.ofPattern("dd/MM/yyyy").format(dataBatismo) /*Java 8*/+
+                ", \nestadoCivil=" + estadoCivil +
+                ", \nendereco=" + enderecoEmbedded +
+                ", \nenderecos=" + enderecos +
+                ", \nidade=" + idade +
+                '}';
     }
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="aulas_hibernate@localhost">
+<dataSource name="hibernate.cfg.xml/Hibernate">
   <database-model serializer="dbm" rdbms="MYSQL" format-version="4.9">
     <root id="1">
       <ServerVersion>5.7.21</ServerVersion>
@@ -948,124 +948,92 @@
     <table id="240" parent="2" name="hibernate_sequence"/>
     <table id="241" parent="2" name="palavrasinocentes"/>
     <table id="242" parent="2" name="tb_usuario"/>
-    <table id="243" parent="2" name="usuario_endereco"/>
-    <column id="244" parent="240" name="next_val">
+    <column id="243" parent="240" name="next_val">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="241" name="id">
+    <column id="244" parent="241" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="241" name="palavra">
+    <column id="245" parent="241" name="palavra">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="241" name="palavraPronunciada">
+    <column id="246" parent="241" name="palavraPronunciada">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="241" name="usuario_id">
+    <column id="247" parent="241" name="usuario_id">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="249" parent="241" name="FK4gtk96do3n83w2fhlm66kt9ps">
+    <index id="248" parent="241" name="FK4gtk96do3n83w2fhlm66kt9ps">
       <ColNames>usuario_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="250" parent="241" name="PRIMARY">
+    <key id="249" parent="241" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="251" parent="241" name="FK4gtk96do3n83w2fhlm66kt9ps">
+    <foreign-key id="250" parent="241" name="FK4gtk96do3n83w2fhlm66kt9ps">
       <ColNames>usuario_id</ColNames>
       <RefSchemaName>aulas_hibernate</RefSchemaName>
       <RefTableName>tb_usuario</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="252" parent="242" name="id">
+    <column id="251" parent="242" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="253" parent="242" name="estado_civil">
+    <column id="252" parent="242" name="estado_civil">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="242" name="data_nascimento">
+    <column id="253" parent="242" name="data_nascimento">
       <Position>3</Position>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="242" name="nome">
+    <column id="254" parent="242" name="nome">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="242" name="cidade">
+    <column id="255" parent="242" name="cidade">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="242" name="numero">
+    <column id="256" parent="242" name="numero">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="242" name="rua">
+    <column id="257" parent="242" name="rua">
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="242" name="data_batismo">
+    <column id="258" parent="242" name="data_batismo">
       <Position>8</Position>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="260" parent="242" name="PRIMARY">
+    <key id="259" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="261" parent="243" name="id_user">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="262" parent="243" name="cidade">
-      <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="263" parent="243" name="numero">
-      <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="264" parent="243" name="rua">
-      <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="265" parent="243" name="FKixlc9w09ch5grsqlic4x14wyp">
-      <ColNames>id_user</ColNames>
-      <Type>btree</Type>
-    </index>
-    <foreign-key id="266" parent="243" name="FKixlc9w09ch5grsqlic4x14wyp">
-      <ColNames>id_user</ColNames>
-      <RefSchemaName>aulas_hibernate</RefSchemaName>
-      <RefTableName>tb_usuario</RefTableName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
   </database-model>
 </dataSource>

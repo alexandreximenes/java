@@ -45,20 +45,8 @@
       <file leaf-file-name="Usuario.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/domain/Usuario.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="122" column="107" selection-start-line="122" selection-start-column="107" selection-end-line="122" selection-end-column="107" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestandoUsuario.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TestandoUsuario.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="34" column="54" lean-forward="true" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -66,8 +54,8 @@
       <file leaf-file-name="UsuarioRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/repository/UsuarioRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="57" column="91" selection-start-line="57" selection-start-column="91" selection-end-line="57" selection-end-column="91" />
+            <state relative-caret-position="139">
+              <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,8 +92,8 @@
         <option value="$PROJECT_DIR$/src/Principal.java" />
         <option value="$PROJECT_DIR$/src/domain/Endereco.java" />
         <option value="$PROJECT_DIR$/src/TestandoUsuario.java" />
-        <option value="$PROJECT_DIR$/src/repository/UsuarioRepository.java" />
         <option value="$PROJECT_DIR$/src/domain/Usuario.java" />
+        <option value="$PROJECT_DIR$/src/repository/UsuarioRepository.java" />
       </list>
     </option>
   </component>
@@ -141,18 +129,6 @@
               <item name="Projeto_com_Hibernate" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projeto_com_Hibernate" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projeto_com_Hibernate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projeto_com_Hibernate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projeto_com_Hibernate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projeto_com_Hibernate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -284,16 +260,15 @@
       <workItem from="1536881203664" duration="6445000" />
       <workItem from="1536892068151" duration="564000" />
       <workItem from="1536925287734" duration="490000" />
-      <workItem from="1537146256310" duration="3012000" />
+      <workItem from="1537146256310" duration="3926000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16702000" />
+    <option name="totallyTimeSpent" value="17616000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="23" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -313,10 +288,10 @@
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25842696" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.625" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25842696" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.30617976" />
       <window_info id="Persistence" order="2" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30026808" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30026808" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -516,8 +491,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/repository/UsuarioRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="57" column="91" selection-start-line="57" selection-start-column="91" selection-end-line="57" selection-end-column="91" />
+        <state relative-caret-position="139">
+          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -526,8 +501,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/domain/Usuario.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="122" column="107" selection-start-line="122" selection-start-column="107" selection-end-line="122" selection-end-column="107" />
+        <state relative-caret-position="238">
+          <caret line="34" column="54" lean-forward="true" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
         </state>
       </provider>
     </entry>

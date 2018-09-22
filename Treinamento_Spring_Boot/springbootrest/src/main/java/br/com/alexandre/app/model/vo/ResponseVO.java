@@ -11,6 +11,7 @@ public class ResponseVO {
     public String message;
 
     public List<UserVO> users = new ArrayList<>();
+    public User user;
 
     public ResponseVO() {
     }

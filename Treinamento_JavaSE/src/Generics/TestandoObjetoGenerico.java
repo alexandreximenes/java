@@ -10,7 +10,6 @@ public class TestandoObjetoGenerico {
         objetoG.setElemento("qualquer coisa que seja uma String neste momento");
         //objetoG.setElemento(123); // not compile
 
-
         System.out.println(
                 objetoG
                     .getElemento()

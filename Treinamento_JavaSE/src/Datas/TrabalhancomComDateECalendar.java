@@ -137,7 +137,7 @@ public class TrabalhancomComDateECalendar {
 
         Locale[] locales = Locale.getAvailableLocales();
         for (Locale l: locales) {
-            if(l.getCountry() == "BR")
+            if(l.getCountry().equals("BR"))
                 System.out.println(l.getCountry() +
                         "- "+ l.getDisplayCountry() +
                         " - "+ l.getDisplayName() +

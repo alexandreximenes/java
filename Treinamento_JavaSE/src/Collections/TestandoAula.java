@@ -16,8 +16,7 @@ public class TestandoAula {
         Aula a4 = new Aula("Aumentando a produtividade com IntelliJ", 30);
         Aula a5 = new Aula("Trabalhando com Stream", 25);
 
-        ArrayList<Aula> aulas = new ArrayList<>();
-        aulas.addAll(asList(a1, a2, a3, a4, a5));
+        ArrayList<Aula> aulas = new ArrayList<>(asList(a1, a2, a3, a4, a5));
 
         System.out.println(aulas);
 

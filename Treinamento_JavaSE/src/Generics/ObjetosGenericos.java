@@ -33,7 +33,7 @@ public class ObjetosGenericos<T> {
      * @return
      */
     public double soma(List<? extends Number> lista){
-        return lista.stream().mapToDouble(value -> ((Number) value).getColumnNumber()).sum();
+        return lista.stream().mapToDouble(value -> value.getColumnNumber()).sum();
     }
 
     public void exibeDadosOrdenados(List<? extends String> lista){

@@ -14,7 +14,6 @@ public class TestandoObjetoGenerico {
                 objetoG
                     .getElemento()
                     .toUpperCase()
-                    .toString()
         );
 
         //Testando tipo

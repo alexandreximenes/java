@@ -70,7 +70,7 @@ public class TrabalhandoComDatas {
 
         System.out.println( localDate2 );
 
-        Date saida2 = date2.from( localDate.atStartOfDay( ZoneId.systemDefault() ).toInstant() );
+        Date saida2 = Date.from( localDate.atStartOfDay( ZoneId.systemDefault() ).toInstant() );
 
         System.out.println( saida );
     }

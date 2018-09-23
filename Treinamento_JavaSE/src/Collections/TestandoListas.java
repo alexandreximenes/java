@@ -11,8 +11,7 @@ public class TestandoListas {
         String aula3 = "Trabalhando com Cursos e sets";
         String aula4 = "conhecendo mais de listas";
 
-        ArrayList<String> lista = new ArrayList<>();
-        lista.addAll(Arrays.asList(aula1, aula2, aula3, aula4));
+        ArrayList<String> lista = new ArrayList<>(Arrays.asList(aula1, aula2, aula3, aula4));
 
         /**
          * 1

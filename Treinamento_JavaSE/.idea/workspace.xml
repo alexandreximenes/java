@@ -12,23 +12,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="StringMutaveis.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Fundamental/StringMutaveis.java">
+      <file leaf-file-name="ExpressaoRegular.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Fundamental/ExpressaoRegular.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="40" column="45" lean-forward="true" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+            <state relative-caret-position="338">
+              <caret line="38" column="65" lean-forward="true" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StringBuilder.java" pinned="false" current-in-tab="true">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/StringBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="405" column="18" lean-forward="true" selection-start-line="405" selection-start-column="18" selection-end-line="405" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -71,6 +62,7 @@
         <option value="$PROJECT_DIR$/src/Generics/TestandoObjetoGenerico.java" />
         <option value="$PROJECT_DIR$/src/Fundamental/TrabalhandoComStrings.java" />
         <option value="$PROJECT_DIR$/src/Fundamental/StringMutaveis.java" />
+        <option value="$PROJECT_DIR$/src/Fundamental/ExpressaoRegular.java" />
       </list>
     </option>
   </component>
@@ -100,6 +92,29 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="maratona-java" type="1abcf292:AndroidViewProjectNode" />
+              <item name="maratona-java" type="e9137016:NonAndroidModuleNode" />
+            </path>
+            <path>
+              <item name="maratona-java" type="1abcf292:AndroidViewProjectNode" />
+              <item name="maratona-java" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="maratona-java" type="1abcf292:AndroidViewProjectNode" />
+              <item name="maratona-java" type="e9137016:NonAndroidModuleNode" />
+              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
+              <item name="io" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -138,29 +153,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="maratona-java" type="1abcf292:AndroidViewProjectNode" />
-              <item name="maratona-java" type="e9137016:NonAndroidModuleNode" />
-            </path>
-            <path>
-              <item name="maratona-java" type="1abcf292:AndroidViewProjectNode" />
-              <item name="maratona-java" type="e9137016:NonAndroidModuleNode" />
-              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="maratona-java" type="1abcf292:AndroidViewProjectNode" />
-              <item name="maratona-java" type="e9137016:NonAndroidModuleNode" />
-              <item name="java" type="f7eae187:NonAndroidSourceTypeNode" />
-              <item name="io" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -168,6 +160,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
@@ -187,7 +180,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.StringMutaveis">
+  <component name="RunManager" selected="Application.ExpressaoRegular">
+    <configuration name="ExpressaoRegular" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Fundamental.ExpressaoRegular" />
+      <module name="maratona-java" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Fundamental.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration name="StringMutaveis" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Fundamental.StringMutaveis" />
       <module name="maratona-java" />
@@ -217,17 +221,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Datas.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="TrabalhandoComDatas" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Java8.TrabalhandoComDatas" />
-      <module name="maratona-java" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Java8.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -285,19 +278,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.TrabalhandoComDatas" />
       <item itemvalue="Application.TrabalhancomComDateECalendar" />
       <item itemvalue="Application.TestandoObjetoGenerico" />
       <item itemvalue="Application.TrabalhandoComStrings" />
       <item itemvalue="Application.StringMutaveis" />
+      <item itemvalue="Application.ExpressaoRegular" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ExpressaoRegular" />
         <item itemvalue="Application.StringMutaveis" />
         <item itemvalue="Application.TrabalhandoComStrings" />
         <item itemvalue="Application.TestandoObjetoGenerico" />
         <item itemvalue="Application.TrabalhancomComDateECalendar" />
-        <item itemvalue="Application.TrabalhandoComDatas" />
       </list>
     </recent_temporary>
   </component>
@@ -322,12 +315,13 @@
       <workItem from="1537303509396" duration="604000" />
       <workItem from="1537411310736" duration="940000" />
       <workItem from="1537580650788" duration="178000" />
-      <workItem from="1537715821736" duration="4105000" />
+      <workItem from="1537715821736" duration="4844000" />
+      <workItem from="1537878940099" duration="10480000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31784000" />
+    <option name="totallyTimeSpent" value="43003000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="23" width="1550" height="848" extended-state="6" />
@@ -344,10 +338,10 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33848315" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.2991573" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.4002809" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17292225" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17493297" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -357,6 +351,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection Results" order="8" weight="0.3286517" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -370,13 +365,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Java8/OrdenandoStrings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="37" lean-forward="true" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Java8/TestandoAula.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
@@ -726,16 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Fundamental/StringMutaveis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="40" column="45" lean-forward="true" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/AbstractStringBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="389">
@@ -745,8 +723,28 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/StringBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="405" column="18" lean-forward="true" selection-start-line="405" selection-start-column="18" selection-end-line="405" selection-end-column="18" />
+        <state relative-caret-position="148">
+          <caret line="398" column="22" lean-forward="true" selection-start-line="398" selection-start-column="22" selection-end-line="398" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Fundamental/StringMutaveis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Fundamental/ExpressaoRegular.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="38" column="65" lean-forward="true" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

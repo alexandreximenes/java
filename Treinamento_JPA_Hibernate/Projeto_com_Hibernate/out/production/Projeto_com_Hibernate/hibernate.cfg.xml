@@ -18,6 +18,7 @@
         <property name="hbm2ddl.auto">update</property>
 
         <mapping class="domain.Usuario"></mapping>
+        <mapping class="domain.Veiculo.Veiculo"></mapping>
         <mapping class="domain.PalavrasInocentes"></mapping>
     </session-factory>
 </hibernate-configuration>

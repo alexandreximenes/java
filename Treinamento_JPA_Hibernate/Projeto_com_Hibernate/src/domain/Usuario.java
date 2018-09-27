@@ -1,11 +1,16 @@
 package domain;
 
+import domain.Veiculo.Veiculo;
+
 import javax.persistence.*;
+import javax.swing.text.html.Option;
+import java.sql.Date;
 import java.text.DateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Optional;
 
 @Entity
 @Table(name = "tb_usuario")
@@ -23,11 +28,13 @@ public class Usuario {
     @Enumerated(EnumType.STRING)
     @Column(name = "estado_civil")
     private EstadoCivil estadoCivil;
+    @OneToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE}, mappedBy = "usuario")
+    private Veiculo veiculo;
 
     @Embedded
     private Endereco enderecoEmbedded;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     @JoinTable(name = "usuario_endereco", joinColumns = @JoinColumn(name="id_user"))
     private List<Endereco> enderecos;
 
@@ -114,17 +121,26 @@ public class Usuario {
         this.idade = idade;
     }
 
+    public Veiculo getVeiculo() {
+        return veiculo;
+    }
+
+    public void setVeiculo(Veiculo veiculo) {
+        this.veiculo = veiculo;
+    }
+
     @Override
     public String toString() {
         return "Usuario{" +
-                "\nid=" + id +
-                ", \nnome='" + nome + '\'' +
-                ", \nnascimento=" + DateFormat.getDateInstance().format(nascimento.getTime()) +
-                ", \ndataBatismo=" + DateTimeFormatter.ofPattern("dd/MM/yyyy").format(dataBatismo) /*Java 8*/+
-                ", \nestadoCivil=" + estadoCivil +
-                ", \nendereco=" + enderecoEmbedded +
-                ", \nenderecos=" + enderecos +
-                ", \nidade=" + idade +
+                "\nid=" + Optional.ofNullable(id).orElse(0) +
+                ", \nnome='" + Optional.ofNullable(nome).orElse("") + '\'' +
+                ", \nnascimento=" +Optional.ofNullable(nascimento).map(m -> DateFormat.getDateInstance().format(m.getTime()))+
+                ", \ndataBatismo=" + Optional.ofNullable(dataBatismo) /*Java 8*/+
+                ", \nestadoCivil=" + Optional.ofNullable(estadoCivil) +
+                ", \nendereco=" + Optional.ofNullable(enderecoEmbedded) +
+                ", \nenderecos=" + Optional.ofNullable(enderecos) +
+                ", \nidade=" + Optional.ofNullable(idade) +
+                ", \nveiculo=" + Optional.ofNullable(veiculo) +
                 '}';
     }
 }

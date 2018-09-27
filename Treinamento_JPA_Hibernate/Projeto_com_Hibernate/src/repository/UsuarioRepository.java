@@ -5,21 +5,27 @@ import org.hibernate.Session;
 import org.hibernate.query.Query;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class UsuarioRepository {
     Session session = null;
 
     public Integer save(Usuario user) {
-        session = new HibernateUtil().getSession();
-        session.beginTransaction();
+        Integer id = null;
 
-        Integer id = (Integer) session.save(user);
-        System.out.println("Salvo com sucesso!");
-
-        session.getTransaction().commit();
-        session.close();
+        if(user.getId() == null){
+            session = new HibernateUtil().getSession();
+            session.beginTransaction();
+                id = (Integer) session.save(user);
+                System.out.println("Salvo com sucesso!");
+            session.getTransaction().commit();
+            session.close();
+        }else{
+            update(user);
+        }
         return id;
+
     }
 
 
@@ -58,5 +64,16 @@ public class UsuarioRepository {
                 .filter(u -> u.getEnderecoEmbedded() != null && u.getDataBatismo() != null)
                 .collect(Collectors.toList());
 
+    }
+
+    public Optional<Usuario> get(Class<Usuario> usuario, Integer id) {
+        session = new HibernateUtil().getSession();
+
+        session.beginTransaction();
+
+        Optional<Usuario> user = Optional.ofNullable(session.get(usuario, id));
+        session.getTransaction().commit();
+
+        return user;
     }
 }

@@ -52,6 +52,7 @@ public class Veiculo implements Serializable{
     }
 
     @OneToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinColumn(unique = true)
     public Usuario getUsuario() {
         return usuario;
     }

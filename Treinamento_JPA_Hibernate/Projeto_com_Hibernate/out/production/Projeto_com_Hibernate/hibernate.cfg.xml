@@ -15,7 +15,7 @@
 
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
-        <property name="hbm2ddl.auto">update</property>
+        <property name="hbm2ddl.auto">create-drop</property>
 
         <mapping class="domain.Usuario"></mapping>
         <mapping class="domain.Veiculo.Veiculo"></mapping>

@@ -37,6 +37,7 @@ public class StudentEndPoint {
     @GetMapping(path = "/{id}")
     public ResponseEntity<?> getStudentById(@PathVariable("id") Long id, @AuthenticationPrincipal UserDetails userDetails) {
         verifyIfExistsStudents(id);
+        System.out.println(userDetails);
         return new ResponseEntity<>(studentDAO.findOne(id), HttpStatus.OK);
     }
 

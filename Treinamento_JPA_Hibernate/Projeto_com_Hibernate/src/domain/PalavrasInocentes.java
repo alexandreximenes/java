@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class PalavrasInocentes {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String palavra;
     private String palavraPronunciada;

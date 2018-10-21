@@ -3,18 +3,16 @@ package domain;
 import domain.Veiculo.Veiculo;
 
 import javax.persistence.*;
-import javax.swing.text.html.Option;
-import java.sql.Date;
+import java.io.Serializable;
 import java.text.DateFormat;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Optional;
 
 @Entity
-@Table(name = "tb_usuario")
-public class Usuario {
+@Table(name = "usuario")
+public class Usuario implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,13 +21,15 @@ public class Usuario {
     @Temporal(TemporalType.DATE)
     @Column(name = "data_nascimento")
     private Calendar nascimento;
-    @Column(name = "data_batismo", columnDefinition = "default = now()")
+    @Column(name = "data_batismo")
     private LocalDate dataBatismo;
     @Enumerated(EnumType.STRING)
     @Column(name = "estado_civil")
     private EstadoCivil estadoCivil;
-    @OneToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE}, mappedBy = "usuario")
-    private Veiculo veiculo;
+
+//    @OneToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE}, mappedBy = "usuario")
+    @OneToMany(mappedBy = "usuario", cascade = { CascadeType.ALL})
+    private List<Veiculo> veiculos;
 
     @Embedded
     private Endereco enderecoEmbedded;
@@ -43,6 +43,7 @@ public class Usuario {
 
     @Transient
     private Integer idade;
+
 
     public Usuario() {
     }
@@ -121,12 +122,12 @@ public class Usuario {
         this.idade = idade;
     }
 
-    public Veiculo getVeiculo() {
-        return veiculo;
+    public List<Veiculo> getVeiculos() {
+        return veiculos;
     }
 
-    public void setVeiculo(Veiculo veiculo) {
-        this.veiculo = veiculo;
+    public void setVeiculos(List<Veiculo> veiculos) {
+        this.veiculos = veiculos;
     }
 
     @Override
@@ -140,7 +141,7 @@ public class Usuario {
                 ", \nendereco=" + Optional.ofNullable(enderecoEmbedded) +
                 ", \nenderecos=" + Optional.ofNullable(enderecos) +
                 ", \nidade=" + Optional.ofNullable(idade) +
-                ", \nveiculo=" + Optional.ofNullable(veiculo) +
+                ", \nveiculo=" + Optional.ofNullable(veiculos) +
                 '}';
     }
 }

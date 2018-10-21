@@ -66,12 +66,12 @@ public class UsuarioRepository {
 
     }
 
-    public Optional<Usuario> get(Class<Usuario> usuario, Integer id) {
+    public Usuario get(Class<Usuario> usuario, Integer id) {
         session = new HibernateUtil().getSession();
 
         session.beginTransaction();
 
-        Optional<Usuario> user = Optional.ofNullable(session.get(usuario, id));
+        Usuario user = session.get(usuario, id);
         session.getTransaction().commit();
 
         return user;

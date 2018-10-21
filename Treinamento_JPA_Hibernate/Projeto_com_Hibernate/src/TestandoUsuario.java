@@ -3,9 +3,9 @@ import domain.Veiculo.Veiculo;
 import repository.UsuarioRepository;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.List;
 import java.util.Optional;
+
+import static java.util.Arrays.asList;
 
 public class TestandoUsuario{
 
@@ -13,15 +13,19 @@ public class TestandoUsuario{
 
         UsuarioRepository ur = new UsuarioRepository();
 
-        Optional<Usuario> u = Optional.of(new Usuario());
-        u.get().setId(5);
+        Usuario u = new Usuario();
+        u.setNome("Alexandre");
+//        u.setId(5);
 
-//        Veiculo bmw = new Veiculo("BMW S", LocalDate.now().minusDays(5));
-//        u.setVeiculo(bmw);
+        Veiculo bmw = new Veiculo("BMW S", LocalDate.now().minusDays(5));
+        Veiculo fusca = new Veiculo("fusca", LocalDate.now().minusDays(365));
+        u.setVeiculos(asList(bmw, fusca));
+        bmw.setUsuario(u);
+        fusca.setUsuario(u);
 //
-//        ur.save(u);
+        ur.save(u);
 
-        u = ur.get(Usuario.class, u.get().getId());
+        u = ur.get(Usuario.class, u.getId());
 
         System.out.println(u);
 

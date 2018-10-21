@@ -35,19 +35,19 @@ public class TrabalhancomComDateECalendar {
         System.out.println("dataQualquer.compareTo(dataQualquer) -> "+dataQualquer.compareTo(dataQualquer));
         System.out.println("dataQualquer.compareTo(agora) -> "+dataQualquer.compareTo(agora));
 
-
-        Calendar c = Calendar.getInstance();
-        Calendar g = GregorianCalendar.getInstance();
-
-        System.out.println(c.getTime());
-        System.out.println(sf.format(c.getTime()));
-        System.out.println(g.getTime());
-        System.out.println(sf.format(g.getTime()));
-
-        //alterando a data para 05/06/2001 11:44:00
-        c.set(2000, Calendar.DAY_OF_MONTH, 5);
-        c.add(Calendar.YEAR, 1);
-        c.clear(Calendar.SECOND);
+*/
+//        Calendar c = Calendar.getInstance();
+//        Calendar g = GregorianCalendar.getInstance();
+//
+//        System.out.println(c.getTime());
+//        System.out.println(sf.format(c.getTime()));
+//        System.out.println(g.getTime());
+//        System.out.println(sf.format(g.getTime()));
+//
+//        //alterando a data para 05/06/2001 11:44:00
+//        c.set(2000, Calendar.DAY_OF_MONTH, 5);
+//        c.add(Calendar.YEAR, 1);
+//        c.clear(Calendar.SECOND);
 
         /**
          * c.add altera tipos maiores como dia, mes ano etc...
@@ -123,35 +123,47 @@ public class TrabalhancomComDateECalendar {
 
         */
 
-        Calendar c3 = Calendar.getInstance();
-        DateFormat df2 = DateFormat.getDateInstance(DateFormat.FULL);
+//        Calendar c3 = Calendar.getInstance();
+//        DateFormat df2 = DateFormat.getDateInstance(DateFormat.FULL);
+//
+//        System.out.println(df2.format(c3.getTime()));
+//
+//        //Locale conforme localização do Brasil
+//        Locale locale = Locale.getDefault();
+//        System.out.println(locale);
+//
+//        System.out.println(Locale.getISOCountries());
+//        System.out.println(Locale.getISOLanguages());
+//
+//        Locale[] locales = Locale.getAvailableLocales();
+//        for (Locale l: locales) {
+//            if(l.getCountry().equals("BR"))
+//                System.out.println(l.getCountry() +
+//                        "- "+ l.getDisplayCountry() +
+//                        " - "+ l.getDisplayName() +
+//                        " - "+ l.getLanguage() +
+//                        " - "+ l.getISO3Country() +
+//                        " - "+ l.getISO3Language());
+//        }
+//
+//        //Definir meu propio locale
+//        Locale us = Locale.US;
+//        DateFormat dfUS = DateFormat.getDateInstance(DateFormat.MEDIUM, us);
+//        String data = dfUS.format(c3.getTime());
+//
+//        System.out.println(data);
+        System.out.println(TimeZone.getDefault());
 
-        System.out.println(df2.format(c3.getTime()));
+        TimeZone.setDefault(TimeZone.getTimeZone("GMT"));
 
-        //Locale conforme localização do Brasil
-        Locale locale = Locale.getDefault();
-        System.out.println(locale);
+        System.out.println(TimeZone.getDefault());
 
-        System.out.println(Locale.getISOCountries());
-        System.out.println(Locale.getISOLanguages());
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.YEAR, Calendar.DAY_OF_MONTH, 5, 21, 10, 10);
 
-        Locale[] locales = Locale.getAvailableLocales();
-        for (Locale l: locales) {
-            if(l.getCountry().equals("BR"))
-                System.out.println(l.getCountry() +
-                        "- "+ l.getDisplayCountry() +
-                        " - "+ l.getDisplayName() +
-                        " - "+ l.getLanguage() +
-                        " - "+ l.getISO3Country() +
-                        " - "+ l.getISO3Language());
-        }
+        Date d = calendar.getTime();
 
-        //Definir meu propio locale
-        Locale us = Locale.US;
-        DateFormat dfUS = DateFormat.getDateInstance(DateFormat.MEDIUM, us);
-        String data = dfUS.format(c3.getTime());
-
-        System.out.println(data);
+        System.out.println("D Calendar " +d.toString());
 
 
     }

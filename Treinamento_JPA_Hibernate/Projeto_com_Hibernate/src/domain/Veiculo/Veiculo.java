@@ -9,10 +9,18 @@ import java.time.LocalDate;
 @Entity
 public class Veiculo implements Serializable{
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String modelo;
     private LocalDate ano;
+
+    @ManyToOne
+    @JoinColumn(name = "usuario_id")
     private Usuario usuario;
+
+    public Veiculo() {
+    }
 
     public Veiculo(String modelo, LocalDate ano, Usuario usuario) {
         this.modelo = modelo;
@@ -25,8 +33,6 @@ public class Veiculo implements Serializable{
     }
 
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     public Integer getId() {
         return id;
     }
@@ -51,8 +57,8 @@ public class Veiculo implements Serializable{
         this.ano = ano;
     }
 
-    @OneToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE})
-    @JoinColumn(unique = true)
+    //@OneToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE})
+    //@JoinColumn(unique = true)
     public Usuario getUsuario() {
         return usuario;
     }

@@ -19,9 +19,9 @@ public class SwaggerConfig {
     public Docket docket() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("br.com.alexandre.app.endpoint"))
-                .paths(PathSelectors.any())
-                .build()
+                    .apis(RequestHandlerSelectors.basePackage("br.com.alexandre.app.endpoint"))
+                    .paths(PathSelectors.any())
+                    .build()
                 .apiInfo(apiInfo());
     }
 

@@ -15,8 +15,8 @@
       <file leaf-file-name="Curso.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Collections/Curso.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="272">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="e#794#795#0" expanded="true" />
                 <element signature="e#852#853#0" expanded="true" />
@@ -27,15 +27,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestandoCurso.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestandoCurso.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Collections/TestandoCurso.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="43" column="11" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
+            <state relative-caret-position="663">
+              <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1217#1225#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TrabalhancomComDateECalendar.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Datas/TrabalhancomComDateECalendar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="156" column="57" selection-start-line="156" selection-start-column="8" selection-end-line="156" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -43,7 +51,7 @@
       <file leaf-file-name="Alunos.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Collections/Alunos.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
+            <state relative-caret-position="493">
               <caret line="29" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
@@ -83,7 +91,6 @@
         <option value="$PROJECT_DIR$/src/Java8/TestandoCurso.java" />
         <option value="$PROJECT_DIR$/src/Java8/TrabalhandoComDatas.java" />
         <option value="$PROJECT_DIR$/src/Java8/OrdenandoStrings.java" />
-        <option value="$PROJECT_DIR$/src/Datas/TrabalhancomComDateECalendar.java" />
         <option value="$PROJECT_DIR$/src/Generics/Generics.java" />
         <option value="$PROJECT_DIR$/src/Generics/ObjetosGenericos.java" />
         <option value="$PROJECT_DIR$/src/Generics/TestandoObjetoGenerico.java" />
@@ -100,6 +107,7 @@
         <option value="$PROJECT_DIR$/src/Collections/Curso.java" />
         <option value="$PROJECT_DIR$/src/Collections/Alunos.java" />
         <option value="$PROJECT_DIR$/src/Collections/TestandoCurso.java" />
+        <option value="$PROJECT_DIR$/src/Datas/TrabalhancomComDateECalendar.java" />
       </list>
     </option>
   </component>
@@ -163,10 +171,17 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Collections" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Treinamento_JavaSE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Treinamento_JavaSE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Datas" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -189,7 +204,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -223,20 +237,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestandoCurso">
+  <component name="RunManager" selected="Application.TrabalhancomComDateECalendar">
     <configuration name="ExemploLambda" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Java8.ExemploLambda" />
-      <module name="maratona-java" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Java8.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="ExpressaoRegular" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Fundamental.ExpressaoRegular" />
       <module name="maratona-java" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -275,6 +278,17 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Collections.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="TrabalhancomComDateECalendar" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Datas.TrabalhancomComDateECalendar" />
+      <module name="maratona-java" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Datas.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -321,19 +335,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.ExpressaoRegular" />
       <item itemvalue="Application.Lambda" />
       <item itemvalue="Application.ExemploLambda" />
       <item itemvalue="Application.SomaLambda" />
       <item itemvalue="Application.TestandoCurso" />
+      <item itemvalue="Application.TrabalhancomComDateECalendar" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TrabalhancomComDateECalendar" />
         <item itemvalue="Application.TestandoCurso" />
         <item itemvalue="Application.SomaLambda" />
         <item itemvalue="Application.ExemploLambda" />
         <item itemvalue="Application.Lambda" />
-        <item itemvalue="Application.ExpressaoRegular" />
       </list>
     </recent_temporary>
   </component>
@@ -365,12 +379,15 @@
       <workItem from="1538068676404" duration="326000" />
       <workItem from="1538134344317" duration="2415000" />
       <workItem from="1538142907560" duration="5814000" />
-      <workItem from="1538524168172" duration="5938000" />
+      <workItem from="1538524168172" duration="6608000" />
+      <workItem from="1538618342152" duration="7000" />
+      <workItem from="1538783834871" duration="1485000" />
+      <workItem from="1538786130976" duration="14000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63024000" />
+    <option name="totallyTimeSpent" value="65200000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="23" width="1550" height="848" extended-state="6" />
@@ -378,7 +395,6 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3286517" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
@@ -386,11 +402,11 @@
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.3297587" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33848315" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.22050563" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4241573" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.41713482" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1883378" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19638069" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="UML design tool window" order="9" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -399,6 +415,7 @@
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3286517" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286517" />
@@ -534,13 +551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
           <caret line="56" column="9" lean-forward="true" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Datas/TrabalhancomComDateECalendar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-892">
-          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
         </state>
       </provider>
     </entry>
@@ -742,8 +752,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Collections/Curso.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="272">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="e#794#795#0" expanded="true" />
             <element signature="e#852#853#0" expanded="true" />
@@ -762,19 +772,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Collections/Alunos.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
+        <state relative-caret-position="493">
           <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Collections/TestandoCurso.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="43" column="11" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
+        <state relative-caret-position="663">
+          <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1217#1225#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Datas/TrabalhancomComDateECalendar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="156" column="57" selection-start-line="156" selection-start-column="8" selection-end-line="156" selection-end-column="57" />
         </state>
       </provider>
     </entry>

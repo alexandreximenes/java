@@ -28,6 +28,15 @@ public class Student extends AbstractEntity {
 //        this.cursos = cursos;
 //    }
 
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
+
     public Student() {
 
     }

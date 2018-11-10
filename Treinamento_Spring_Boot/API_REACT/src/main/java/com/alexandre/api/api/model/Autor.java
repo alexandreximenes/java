@@ -1,9 +1,7 @@
-package model;
+package com.alexandre.api.api.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Autor {
@@ -12,6 +10,9 @@ public class Autor {
     private Integer id;
 
     private String nome;
+
+    @OneToMany(mappedBy = "autor")
+    private List<Livro> livros;
 
     public Integer getId() {
         return id;

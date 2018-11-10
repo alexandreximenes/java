@@ -1,4 +1,4 @@
-package model;
+package com.alexandre.api.api.model;
 
 import javax.persistence.*;
 

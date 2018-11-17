@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Index page</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+</head>
+<body>
+<div class="container">
+    <h1>Products</h1>
+
+    <div th:if="${not #lists.isEmpty(products)}">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">List of the products</div>
+
+            <!-- Table -->
+            <table class="table table-bordered ">
+                <tr>
+                    <th>Id</th>
+                    <th>Version</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Imgage URL</th>
+                    <th>View</th>
+                </tr>
+                <tr th:each="product : ${products}">
+                    <td th:text="${product.id}"></td>
+                    <td th:text="${product.version}"></td>
+                    <td th:text="${product.description}"></td>
+                    <td th:text="${product.price}"></td>
+                    <td><a th:href="${product.imageUrl}"> <span th:text="${ product.imageUrl }"> </span> </a></td>
+                    <td>
+                        <a th:href="${'/product/' + product.id}"> details </a>
+                        <a th:href="${'/product/edit/' + product.id}"> edit </a>
+                        <a th:href="${'/product/delete/' + product.id}"> delete </a>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<html lang="pt">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Index page</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Product unit</h1>
+        <div class="panel panel-default">
+            <div class="panel-heading">Product</div>
+            <div class="panel-body">
+                Product Id : <span th:text="${product.id}"></span><br>
+                Product version : <span th:text="${product.version}"></span><br>
+                Description: <span th:text="${product.description}"></span><br>
+                Price : <span th:text="${product.price}"></span><br>
+                Image URL : <span th:text="${product.imageUrl}"></span><br>
+
+                <a th:href=" ${'/product/new'} ">new Product</a>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

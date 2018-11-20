@@ -1,7 +1,7 @@
 package com.alexandre.springmvc.controllers;
 
 import com.alexandre.springmvc.domains.Product;
-import com.alexandre.springmvc.services.ProductService;
+import com.alexandre.springmvc.services.product.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

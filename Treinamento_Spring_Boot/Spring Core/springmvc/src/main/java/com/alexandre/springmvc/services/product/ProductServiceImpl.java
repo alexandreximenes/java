@@ -1,4 +1,4 @@
-package com.alexandre.springmvc.services;
+package com.alexandre.springmvc.services.product;
 
 import com.alexandre.springmvc.domains.Product;
 import org.springframework.context.annotation.Profile;

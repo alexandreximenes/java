@@ -1,7 +1,7 @@
 package com.alexandre.springmvc.Services;
 
 import com.alexandre.springmvc.domains.Product;
-import com.alexandre.springmvc.services.ProductService;
+import com.alexandre.springmvc.services.product.ProductService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

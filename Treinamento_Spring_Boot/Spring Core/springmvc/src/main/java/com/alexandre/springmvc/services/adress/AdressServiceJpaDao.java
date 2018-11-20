@@ -1,8 +1,12 @@
-package com.alexandre.springmvc.services;
+package com.alexandre.springmvc.services.adress;
 
-import com.alexandre.springmvc.domains.Product;
+import com.alexandre.springmvc.Security.EncryptionService;
+import com.alexandre.springmvc.domains.Adress;
+import com.alexandre.springmvc.domains.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -11,20 +15,26 @@ import java.util.List;
 
 @Service
 @Profile("jpadao")
-public class ProductServiceJpaDao implements ProductService {
+public class AdressServiceJpaDao implements AdressService {
     private EntityManagerFactory emf;
-    private Product productSaved;
 
     @PersistenceUnit
     public void setEmf(EntityManagerFactory emf) {
         this.emf = emf;
     }
 
+    private EncryptionService encryptionService;
+
+    @Autowired
+    public EncryptionService getEncryptionService() {
+        return encryptionService;
+    }
+
     @Override
-    public List<Product> listaAllProducts() {
+    public List<Adress> listaAllProducts() {
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
-        List<Product> list = manager.createQuery("from Product", Product.class).getResultList();
+        List<Adress> list = manager.createQuery("from Adress", Adress.class).getResultList();
         manager.getTransaction().commit();
         manager.close();
         return list;
@@ -32,42 +42,37 @@ public class ProductServiceJpaDao implements ProductService {
     }
 
     @Override
-    public Product getById(Integer id) {
+    @Transactional
+    public Adress getById(Integer id) {
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
-        Product product = manager.find(Product.class, id);
+        Adress adress = manager.find(Adress.class, id);
         manager.getTransaction().commit();
         manager.close();
-        return product;
+        return adress;
     }
 
     @Override
-    public Product saveOrUpdate(Product productRequest) {
-        System.out.println("productRequest ========== "+productRequest);
+    @Transactional
+    public Adress saveOrUpdate(Adress adressRequest) {
         EntityManager manager = emf.createEntityManager();
         manager.getTransaction().begin();
-        Product product = null;
-        if(productRequest.getId()!=null){
-            product = manager.merge(productRequest);
-        }else{
-            manager.persist(productRequest);
-            product = manager.find(Product.class, productRequest.getId());
-        }
+
+        Adress adress = manager.merge(adressRequest);
         manager.getTransaction().commit();
         manager.close();
-        return product;
+        return adress;
     }
 
     @Override
+    @Transactional
     public boolean delete(Integer id) {
         EntityManager manager = emf.createEntityManager();
+        manager.getTransaction().begin();
         try {
-            manager.getTransaction().begin();
-            Product product = manager.find(Product.class, id);
-            if(product!=null)
-                manager.remove(product);
-            else
-                System.out.println("produto não encontrado");
+            Adress adress = manager.find(Adress.class, id);
+            if (adress != null)
+                manager.remove(adress);
             manager.getTransaction().commit();
             manager.close();
             return true;

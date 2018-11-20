@@ -12,12 +12,26 @@ public class User implements DomainObject{
     @Version
     private Integer version;
 
+    private String nome;
+
     @Transient
     private String password;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    private Adress adress;
 
     private String encryptedPassword;
 
     private Boolean enabled = true;
+
+    public User() { }
+
+    public User(String nome, String password, Adress adress, Boolean enabled) {
+        this.nome = nome;
+        this.password = password;
+        this.adress = adress;
+        this.enabled = enabled;
+    }
 
     @Override
     public void setId(Integer id) {
@@ -27,6 +41,14 @@ public class User implements DomainObject{
     @Override
     public Integer getId() {
         return id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public Integer getVersion() {
@@ -59,5 +81,13 @@ public class User implements DomainObject{
 
     public void setEnabled(Boolean enabled) {
         this.enabled = enabled;
+    }
+
+    public Adress getAdress() {
+        return adress;
+    }
+
+    public void setAdress(Adress adress) {
+        this.adress = adress;
     }
 }

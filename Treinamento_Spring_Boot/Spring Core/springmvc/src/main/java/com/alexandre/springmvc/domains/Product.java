@@ -1,18 +1,11 @@
 package com.alexandre.springmvc.domains;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
 import java.math.BigDecimal;
-import java.util.Date;
 
 @Entity
-public class Product {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-    @Version
-    private Integer version;
-    @Temporal(TemporalType.DATE)
-    private Date data_insert;
+public class Product extends AbstractEntity{
+
     private String description;
     private BigDecimal price;
     private String imageUrl;
@@ -23,36 +16,11 @@ public class Product {
         this.description = description;
         this.price = price;
         this.imageUrl = imageUrl;
-        this.data_insert = new Date();
     }
 
     public Product(Integer id, String description, BigDecimal price, String imageUrl) {
         this(description, price, imageUrl);
-        this.id = id;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public Integer getVersion() {
-        return version;
-    }
-
-    public void setVersion(Integer version) {
-        this.version = version;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Date getData_insert() {
-        return data_insert;
-    }
-
-    public void setData_insert(Date data_insert) {
-        this.data_insert = data_insert;
+        this.setId(id);
     }
 
     public String getDescription() {
@@ -82,9 +50,8 @@ public class Product {
     @Override
     public String toString() {
         return "Product{" +
-                "id=" + id +
-                ", version=" + version +
-                ", data_insert=" + data_insert +
+                "id=" + this.getId() +
+                ", version=" + this.getVersion()+
                 ", description='" + description + '\'' +
                 ", price=" + price +
                 ", imageUrl='" + imageUrl + '\'' +

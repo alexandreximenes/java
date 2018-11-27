@@ -3,14 +3,7 @@ package com.alexandre.springmvc.domains;
 import javax.persistence.*;
 
 @Entity
-public class User implements DomainObject{
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-
-    @Version
-    private Integer version;
+public class User extends AbstractEntity{
 
     private String nome;
 
@@ -33,30 +26,12 @@ public class User implements DomainObject{
         this.enabled = enabled;
     }
 
-    @Override
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    @Override
-    public Integer getId() {
-        return id;
-    }
-
     public String getNome() {
         return nome;
     }
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public Integer getVersion() {
-        return version;
-    }
-
-    public void setVersion(Integer version) {
-        this.version = version;
     }
 
     public String getPassword() {

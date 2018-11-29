@@ -3,11 +3,7 @@ package com.alexandre.springmvc.domains;
 import javax.persistence.*;
 
 @Entity
-public class Adress implements DomainObject{
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+public class Adress extends AbstractEntity{
 
     @Version
     private Integer version;
@@ -21,16 +17,6 @@ public class Adress implements DomainObject{
     public Adress(String street, String number) {
         this.street = street;
         this.number = number;
-    }
-
-    @Override
-    public Integer getId() {
-        return id;
-    }
-
-    @Override
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public Integer getVersion() {

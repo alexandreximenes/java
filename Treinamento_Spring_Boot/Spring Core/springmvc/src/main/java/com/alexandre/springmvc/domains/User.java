@@ -3,11 +3,7 @@ package com.alexandre.springmvc.domains;
 import javax.persistence.*;
 
 @Entity
-public class User implements DomainObject{
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+public class User extends AbstractEntity{
 
     @Version
     private Integer version;
@@ -19,6 +15,12 @@ public class User implements DomainObject{
 
     @OneToOne(cascade = CascadeType.ALL)
     private Adress adress;
+
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Cart cart;
+
+    @OneToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST}, orphanRemoval = true)
+    private Customer customer;
 
     private String encryptedPassword;
 
@@ -33,18 +35,24 @@ public class User implements DomainObject{
         this.enabled = enabled;
     }
 
-    @Override
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    @Override
-    public Integer getId() {
-        return id;
-    }
-
     public String getNome() {
         return nome;
+    }
+
+    public Cart getCart() {
+        return cart;
+    }
+
+    public void setCart(Cart cart) {
+        this.cart = cart;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     public void setNome(String nome) {

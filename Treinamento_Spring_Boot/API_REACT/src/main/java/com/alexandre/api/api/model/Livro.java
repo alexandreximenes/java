@@ -8,11 +8,17 @@ public class Livro {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-
     private String titulo;
 
     @ManyToOne
     private Autor autor;
+
+    public Livro() {
+    }
+
+    public Livro(String titulo) {
+        this.titulo = titulo;
+    }
 
     public Integer getId() {
         return id;
@@ -37,4 +43,5 @@ public class Livro {
     public void setAutor(Autor autor) {
         this.autor = autor;
     }
+
 }

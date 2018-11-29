@@ -5,14 +5,16 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 @Entity
-public class Product {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+public class Product extends AbstractEntity{
+
     @Version
     private Integer version;
+
     @Temporal(TemporalType.DATE)
     private Date data_insert;
+
+    @OneToOne(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
+    private ItemCart itemCart;
     private String description;
     private BigDecimal price;
     private String imageUrl;
@@ -28,11 +30,15 @@ public class Product {
 
     public Product(Integer id, String description, BigDecimal price, String imageUrl) {
         this(description, price, imageUrl);
-        this.id = id;
+        this.setId(id);
     }
 
-    public Integer getId() {
-        return id;
+    public ItemCart getItemCart() {
+        return itemCart;
+    }
+
+    public void setItemCart(ItemCart itemCart) {
+        this.itemCart = itemCart;
     }
 
     public Integer getVersion() {
@@ -41,10 +47,6 @@ public class Product {
 
     public void setVersion(Integer version) {
         this.version = version;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public Date getData_insert() {
@@ -82,7 +84,6 @@ public class Product {
     @Override
     public String toString() {
         return "Product{" +
-                "id=" + id +
                 ", version=" + version +
                 ", data_insert=" + data_insert +
                 ", description='" + description + '\'' +

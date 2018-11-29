@@ -3,15 +3,11 @@ package com.alexandre.springmvc.domains;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
-import javax.persistence.Version;
 
 @Entity
 public class Customer extends AbstractEntity{
     private String nome;
     private String email;
-
-    @Version
-    private Integer version;
 
     @OneToOne
     @JoinColumn(unique = true)
@@ -24,14 +20,6 @@ public class Customer extends AbstractEntity{
         this.nome = nome;
         this.email = email;
         this.user = user;
-    }
-
-    public Integer getVersion() {
-        return version;
-    }
-
-    public void setVersion(Integer version) {
-        this.version = version;
     }
 
     public User getUser() {

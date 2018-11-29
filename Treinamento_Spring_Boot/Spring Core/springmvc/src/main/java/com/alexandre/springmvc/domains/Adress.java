@@ -5,9 +5,6 @@ import javax.persistence.*;
 @Entity
 public class Adress extends AbstractEntity{
 
-    @Version
-    private Integer version;
-
     private String street;
     private String number;
 
@@ -17,14 +14,6 @@ public class Adress extends AbstractEntity{
     public Adress(String street, String number) {
         this.street = street;
         this.number = number;
-    }
-
-    public Integer getVersion() {
-        return version;
-    }
-
-    public void setVersion(Integer version) {
-        this.version = version;
     }
 
     public String getStreet() {

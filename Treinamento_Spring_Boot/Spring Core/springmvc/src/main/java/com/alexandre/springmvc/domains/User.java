@@ -4,12 +4,6 @@ import javax.persistence.*;
 
 @Entity
 public class User extends AbstractEntity{
-<<<<<<< HEAD
-
-    @Version
-    private Integer version;
-=======
->>>>>>> c5f1c6b4b334dc7311ccd0c3cd8315a0ce8786db
 
     private String nome;
 
@@ -40,7 +34,26 @@ public class User extends AbstractEntity{
 
     public String getNome() {
         return nome;
-<<<<<<< HEAD
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Adress getAdress() {
+        return adress;
+    }
+
+    public void setAdress(Adress adress) {
+        this.adress = adress;
     }
 
     public Cart getCart() {
@@ -57,20 +70,6 @@ public class User extends AbstractEntity{
 
     public void setCustomer(Customer customer) {
         this.customer = customer;
-=======
->>>>>>> c5f1c6b4b334dc7311ccd0c3cd8315a0ce8786db
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public String getEncryptedPassword() {
@@ -87,13 +86,5 @@ public class User extends AbstractEntity{
 
     public void setEnabled(Boolean enabled) {
         this.enabled = enabled;
-    }
-
-    public Adress getAdress() {
-        return adress;
-    }
-
-    public void setAdress(Adress adress) {
-        this.adress = adress;
     }
 }

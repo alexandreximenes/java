@@ -7,13 +7,11 @@ import java.util.List;
 @Entity
 public class Cart extends AbstractEntity{
 
-    @Version
-    private Integer version;
-
     @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ItemCart> itensCart = new ArrayList<>();
 
     public Cart() {
+
     }
 
     public Cart(List<ItemCart> itensCart, User user) {
@@ -23,14 +21,6 @@ public class Cart extends AbstractEntity{
 
     @OneToOne
     private User user;
-
-    public Integer getVersion() {
-        return version;
-    }
-
-    public void setVersion(Integer version) {
-        this.version = version;
-    }
 
     public List<ItemCart> getItensCart() {
         return itensCart;

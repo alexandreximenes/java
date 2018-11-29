@@ -1,12 +1,12 @@
 package com.alexandre.springmvc.domains;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
 import java.math.BigDecimal;
-import java.util.Date;
 
 @Entity
 public class Product extends AbstractEntity{
 
+<<<<<<< HEAD
     @Version
     private Integer version;
 
@@ -15,6 +15,8 @@ public class Product extends AbstractEntity{
 
     @OneToOne(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
     private ItemCart itemCart;
+=======
+>>>>>>> c5f1c6b4b334dc7311ccd0c3cd8315a0ce8786db
     private String description;
     private BigDecimal price;
     private String imageUrl;
@@ -25,12 +27,12 @@ public class Product extends AbstractEntity{
         this.description = description;
         this.price = price;
         this.imageUrl = imageUrl;
-        this.data_insert = new Date();
     }
 
     public Product(Integer id, String description, BigDecimal price, String imageUrl) {
         this(description, price, imageUrl);
         this.setId(id);
+<<<<<<< HEAD
     }
 
     public ItemCart getItemCart() {
@@ -55,6 +57,8 @@ public class Product extends AbstractEntity{
 
     public void setData_insert(Date data_insert) {
         this.data_insert = data_insert;
+=======
+>>>>>>> c5f1c6b4b334dc7311ccd0c3cd8315a0ce8786db
     }
 
     public String getDescription() {
@@ -84,8 +88,13 @@ public class Product extends AbstractEntity{
     @Override
     public String toString() {
         return "Product{" +
+<<<<<<< HEAD
                 ", version=" + version +
                 ", data_insert=" + data_insert +
+=======
+                "id=" + this.getId() +
+                ", version=" + this.getVersion()+
+>>>>>>> c5f1c6b4b334dc7311ccd0c3cd8315a0ce8786db
                 ", description='" + description + '\'' +
                 ", price=" + price +
                 ", imageUrl='" + imageUrl + '\'' +

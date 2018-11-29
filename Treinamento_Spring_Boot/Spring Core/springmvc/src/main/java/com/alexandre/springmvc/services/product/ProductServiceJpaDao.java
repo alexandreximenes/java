@@ -69,4 +69,9 @@ public class ProductServiceJpaDao implements ProductService {
             return false;
         }
     }
+
+    @Override
+    public Product getByName(String name) {
+        return null;
+    }
 }

@@ -1,37 +1,37 @@
 package com.alexandre.springmvc.domains;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
-import java.io.Serializable;
-import java.util.Objects;
-
+import javax.persistence.*;
 @MappedSuperclass
-public abstract class AbstractEntity implements Serializable {
+public class AbstractEntity{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-
-    public Integer getId() {
-        return id;
+    {
+        updateDate();
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    @Temporal(TemporalType.TIMESTAMP)
+    private java.util.Date created_at;
+    @Temporal(TemporalType.TIMESTAMP)
+    private java.util.Date updated_at;
+
+    @PreUpdate
+    @PrePersist
+    private void updateDate(){
+        if(this.created_at != null){
+            this.created_at = new java.util.Date();
+        }else{
+            this.updated_at = new java.util.Date();
+        }
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof AbstractEntity)) return false;
-        AbstractEntity that = (AbstractEntity) o;
-        return Objects.equals(getId(), that.getId());
+    public java.util.Date getCreated_at() {
+        return created_at;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId());
+    public void setCreated_at(java.util.Date created_at) {
+        this.created_at = created_at;
+    }
+
+    public java.util.Date getUpdated_at() {
+        return updated_at;
     }
 }

@@ -1,5 +1,7 @@
 package com.alexandre.springmvc.domains;
 
+import org.springframework.context.annotation.Bean;
+
 import javax.persistence.*;
 
 @Entity

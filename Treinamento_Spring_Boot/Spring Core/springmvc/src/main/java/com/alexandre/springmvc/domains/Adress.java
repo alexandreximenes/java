@@ -1,8 +1,11 @@
 package com.alexandre.springmvc.domains;
 
+import org.springframework.stereotype.Component;
+
 import javax.persistence.*;
 
 @Entity
+@Component
 public class Adress extends AbstractEntity{
 
     private String street;
@@ -10,6 +13,7 @@ public class Adress extends AbstractEntity{
 
     public Adress() {
     }
+
 
     public Adress(String street, String number) {
         this.street = street;

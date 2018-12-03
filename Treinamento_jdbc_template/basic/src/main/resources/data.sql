@@ -13,3 +13,6 @@ values (1002, 'arthur', 'curitiba-PR', sysdate());
 
 insert into persons(id, name, location, birth_date)
 values (1003, 'dayane', 'curitiba-PR', sysdate());
+
+insert into persons(id, name, location, birth_date)
+values (1004, 'amanda', 'curitiba-PR', sysdate());

@@ -19,9 +19,9 @@ public class PersonController {
     PersonJdbcDao personJdbcDao;
 
     @GetMapping("/persons")
-    public ResponseEntity<List<Person>> all(){
-        List<Person> alexandre = Arrays.asList(new Person(1001, "alexandre", "Curitiba-PR", new Date()), new Person(1002, "dayane", "Curitiba-PR", new Date()));
-        return new ResponseEntity<List<Person>>(alexandre, HttpStatus.OK);
-        //return new ResponseEntity<Object>(personJdbcDao.findAll(), HttpStatus.OK);
+    public ResponseEntity<Object> all(){
+//        List<Person> alexandre = Arrays.asList(new Person(1001, "alexandre", "Curitiba-PR", new Date()), new Person(1002, "dayane", "Curitiba-PR", new Date()));
+//        return new ResponseEntity<List<Person>>(alexandre, HttpStatus.OK);
+        return new ResponseEntity<Object>(personJdbcDao.findAll(), HttpStatus.OK);
     }
 }

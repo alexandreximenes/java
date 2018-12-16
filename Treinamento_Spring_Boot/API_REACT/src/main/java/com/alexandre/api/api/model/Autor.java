@@ -1,8 +1,12 @@
 package com.alexandre.api.api.model;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.validation.constraints.Email;
-import java.util.List;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Autor {
@@ -10,21 +14,21 @@ public class Autor {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+
+    @NotEmpty(message = "O campo nome deve ser preenchido")
+    @Size(min = 3, message = "O campo deve ser preenchido com no minimo 3 caracteres")
     private String nome;
-    @Email private String email;
+    @Email(message = "Informe um e-mail valido")
+    private String email;
     private String senha;
 
     public Autor() { }
 
-    public Autor(String nome, @Email String email, String senha, List<Livro> livros) {
-        this.nome = nome;
+    public Autor(String nome, @Email String email, String senha) {
+        this.nome   = nome;
         this.email = email;
         this.senha = senha;
-        this.livros = livros;
     }
-
-    @OneToMany(mappedBy = "autor")
-    private List<Livro> livros;
 
     public Integer getId() {
         return id;
@@ -55,16 +59,6 @@ public class Autor {
     }
 
     public void setSenha(String senha) {
-        if(senha != null){
-            this.senha = senha; //new BCryptPasswordEncoder().encode(senha);
-        }
-    }
-
-    public List<Livro> getLivros() {
-        return livros;
-    }
-
-    public void setLivros(List<Livro> livros) {
-        this.livros = livros;
+        this.senha = senha;
     }
 }

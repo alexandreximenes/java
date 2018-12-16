@@ -1,40 +1,44 @@
 package com.alexandre.api.api.endpoints;
 
 import com.alexandre.api.api.Repository.AutorRepository;
-import com.alexandre.api.api.Repository.LivroRepository;
 import com.alexandre.api.api.model.Autor;
-import com.alexandre.api.api.model.Livro;
-import com.alexandre.api.api.model.vo.AutorVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/api")
+@RequestMapping("/api/livros")
+@Transactional
 public class AutorController {
 
     @Autowired
-    private AutorRepository autorRep;
-    @Autowired
-    private LivroRepository livroRep;
+    private AutorRepository repository;
 
-    @GetMapping("")
+    @GetMapping
     public ResponseEntity<?> all() {
-        return new ResponseEntity<>(autorRep.findAll(), HttpStatus.OK);
+        return new ResponseEntity<>(repository.findAll(), HttpStatus.OK);
     }
 
-    @PostMapping("")
-    public ResponseEntity<?> save(@RequestBody AutorVO autorVO) {
-        Autor autor = autorVO.build();
-        Autor autorSaved = autorRep.save(autor);
-//        for (Livro livro : autor.getLivros()){
-//            Livro livro1 = new Livro(livro.getTitulo(), livro.getPreco());
-//            livro1.setAutor(autorSaved);
-//            livroRep.save(livro1);
+    @PostMapping//(consumes = {"application/json"})
+    public ResponseEntity<?> save(@Valid @RequestBody Autor autor) {
+        repository.save(autor);
+        return new ResponseEntity<>(repository.findAllOrderByIdDesc(), HttpStatus.OK);
+    }
 
-//        }
+    @PutMapping
+    public ResponseEntity<?> update(@RequestBody Autor autor) {
+        Autor autorSaved = repository.save(autor);
         return new ResponseEntity<>(autorSaved, HttpStatus.OK);
+    }
+
+    @DeleteMapping(path = "/{id}")
+    public ResponseEntity<?> delete(@PathVariable("id") Integer id) {
+        repository.deleteById(id);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }

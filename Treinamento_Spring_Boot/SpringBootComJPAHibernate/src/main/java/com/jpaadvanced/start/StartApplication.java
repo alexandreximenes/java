@@ -27,13 +27,13 @@ public class StartApplication  implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Course byId = repository.findById(1L);
-        logger.info(""+byId);
-        repository.remove(1L);
-        logger.info("repository.findAll() -> "+repository.findAll());
-        logger.info("repository.findAllWhere() -> "+repository.findAllWhere());
-        logger.info("repository.findAllNativeQuery() -> "+repository.findAllNativeQuery());
-        repository.statitistics();
+//        Course byId = repository.findById(1L);
+//        logger.info(""+byId);
+//        repository.remove(1L);
+//        logger.info("repository.findAll() -> "+repository.findAll());
+//        logger.info("repository.findAllWhere() -> "+repository.findAllWhere());
+//        logger.info("repository.findAllNativeQuery() -> "+repository.findAllNativeQuery());
+//        repository.statitistics();
     }
 }
 

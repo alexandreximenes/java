@@ -24,7 +24,7 @@ public class StartApplicationTests {
     @DirtiesContext
     public void contextLoads() {
         repository.remove(2L);
-        repository.saveOrUpdate(new Course(5L, "Docker", LocalDateTime.now(), LocalDateTime.now()));
+        repository.saveOrUpdate(new Course(5L, "Docker", LocalDateTime.now(), LocalDateTime.now(), null, null));
         assertEquals(repository.findAll().size(), repository.findAll().size());
     }
 

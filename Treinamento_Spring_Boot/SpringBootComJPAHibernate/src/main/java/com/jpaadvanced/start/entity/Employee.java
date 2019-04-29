@@ -10,25 +10,15 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@NamedQuery(name = "SELECT.COURSES", query = "FROM Course")
-@NamedQuery(name = "SELECT.WHERE.COURSES", query = "FROM Course c WHERE c.name like '%a%'")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Course {
+public class Employee {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(name = "fullname", nullable = false)
     private String name;
-    @UpdateTimestamp
-    private LocalDateTime lastUpdatedDate;
-    @CreationTimestamp
-    private LocalDateTime createdDate;
-    @ManyToMany
-    private List<Student> students;
-    @OneToMany
-    private List<Review> reviews;
 
 }

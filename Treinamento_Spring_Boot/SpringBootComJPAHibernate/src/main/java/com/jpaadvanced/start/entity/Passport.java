@@ -8,13 +8,17 @@ import javax.persistence.*;
 
 @Entity
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 public class Passport {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String number;
-    @OneToOne
+    @OneToOne( fetch = FetchType.LAZY, mappedBy = "passport")
     private Student student ;
+
+    public Passport(Long id, String number) {
+        this.number = number;
+        this.id = id;
+    }
 }

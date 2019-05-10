@@ -1,7 +1,7 @@
 package com.jpaadvanced.start.repository;
 
-import com.jpaadvanced.start.entity.Course;
-import com.jpaadvanced.start.entity.Review;
+import com.jpaadvanced.start.entity.Passport;
+import com.jpaadvanced.start.entity.Student;
 import com.jpaadvanced.start.service.ServiceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -14,7 +14,7 @@ import java.util.List;
 
 @Repository
 @Transactional
-public class CourseRepository implements ServiceRepository<Course> {
+public class StudentRepository implements ServiceRepository<Student> {
 
     @Autowired
     EntityManager em;
@@ -24,52 +24,40 @@ public class CourseRepository implements ServiceRepository<Course> {
 //    Session session;
 
     @Override
-    public Course saveOrUpdate(Course course) {
-        if(course.getId()==null) {
-            em.persist(course);
-            return course;
+    public Student saveOrUpdate(Student student) {
+        if(student.getId()==null) {
+            em.persist(student);
+            return student;
         }else{
-            return em.merge(course);
+            return em.merge(student);
         }
     }
 
     @Override
-    public Course findById(Long id) {
-        return em.find(Course.class, id);
+    public Student findById(Long id) {
+        return em.find(Student.class, id);
     }
 
     @Override
     public void remove(Long id) {
-        Course byId = findById(id);
+        Student byId = findById(id);
         em.remove(byId);
     }
 
     @Override
-    public List<Course> findAll() {
-        TypedQuery<Course> courses = em.createNamedQuery("SELECT.COURSES", Course.class);
-        return courses.getResultList();
+    public List<Student> findAll() {
+        TypedQuery<Student> students = em.createNamedQuery("SELECT.STUDENTS", Student.class);
+        return students.getResultList();
     }
 
 
-    public List<Course> findAllWhere() {
-        TypedQuery<Course> courses = em.createNamedQuery("SELECT.WHERE.COURSES", Course.class);
-        return courses.getResultList();
+    public List<Student> findAllWhere() {
+        TypedQuery<Student> students = em.createNamedQuery("SELECT.WHERE.STUDENTS", Student.class);
+        return students.getResultList();
     }
-    public List<Course> findAllNativeQuery() {
-        Query query = em.createNativeQuery("SELECT * FROM COURSE", Course.class);
+    public List<Student> findAllNativeQuery() {
+        Query query = em.createNativeQuery("SELECT * FROM STUDENT", Student.class);
         return query.getResultList();
-    }
-
-    public void addCourseToListReview(Long id, List<Review> reviews) {
-        Course course = em.find(Course.class, id);
-        System.out.println("course.getReviews() " +course.getReviews());
-
-        Review review = new Review("5", "description review");
-
-        for (Review r : reviews) {
-            r.setCourse(course);
-            em.persist(r);
-        }
     }
 
     public void statitistics() {

@@ -1,25 +1,29 @@
 package com.jpaadvanced.start.entity;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
 
-@Entity
+@NamedQuery(name = "SELECT.STUDENTS", query = "FROM Student")
+@NamedQuery(name = "SELECT.WHERE.STUDENTS", query = "FROM Student s WHERE s.name like '%a%'")
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@Entity
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
-    @OneToOne(mappedBy = "student")
+    @OneToOne( fetch = FetchType.LAZY)
     @JoinColumn(unique = true)
     private Passport passport;
-    @ManyToMany(mappedBy = "studentList")
+    @ManyToMany(mappedBy = "students")
     private List<Course> couseList;
 
+    public Student(Long id, String name) {
+        this.name = name;
+        this.id = id;
+    }
 }

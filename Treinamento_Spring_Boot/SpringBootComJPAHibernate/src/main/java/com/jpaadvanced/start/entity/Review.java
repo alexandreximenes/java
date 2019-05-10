@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @NoArgsConstructor
-@AllArgsConstructor
 @Data
 @Entity
 public class Review {
@@ -19,4 +18,8 @@ public class Review {
     @ManyToOne
     private Course course;
 
+    public Review(String rating, String description) {
+        this.rating = rating;
+        this.description = description;
+    }
 }

@@ -13,13 +13,13 @@ public class SpringaopexampleApplication {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext ctx = SpringApplication.run(SpringaopexampleApplication.class, args);
-        AccountService accountService = ctx.getBean("accountServiceImpl", AccountServiceImpl.class);
+        AccountService accountService = ctx.getBean("accountService", AccountServiceImpl.class);
         accountService.updateAccountBalance(new Account("12345678910", "5000L", "Money Transfer"), 5000L);
 
 
         Account account;
         try{
-            account = accountService.getAccountByCustomerId("77888");
+            account = accountService.getAccountByCustomerId(null);
             if(account != null){
                 log.info(account.getAccountNumber() + "\t" + account.getDescription());
             }

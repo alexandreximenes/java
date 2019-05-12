@@ -7,13 +7,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-@Service
+@Service("accountService")
 @Slf4j
 public class AccountServiceImpl implements AccountService{
 
-    @Override
-    public void updateAccountBalance(Account account, Long amount) {
+    public Account updateAccountBalance(Account account, Long amount) {
         log.info("Account No.:" + account.getAccountNumber() + " Amount: " + amount);
+        return account;
     }
 
 

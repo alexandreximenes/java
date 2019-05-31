@@ -1,10 +1,13 @@
 package com.mongodbwithspring.demo.domain.user;
 
+import com.mongodbwithspring.demo.domain.post.Post;
 import lombok.*;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Setter
 @Getter
@@ -20,9 +23,12 @@ public class UserObjectDTO implements Serializable {
     @Email
     private String email;
 
+    private List<Post> posts = new ArrayList<>();
+
     public UserObjectDTO(UserObject u) {
         this.id = u.getId();
         this.nome = u.getNome();
         this.email = u.getEmail();
+        this.posts = u.getPosts();
     }
 }

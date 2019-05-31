@@ -1,11 +1,18 @@
-package com.mongodbwithspring.demo.domain.user;
+package com.mongodbwithspring.demo.domain;
 
+import com.mongodbwithspring.demo.domain.post.Post;
+import com.mongodbwithspring.demo.domain.user.UserObject;
+import com.mongodbwithspring.demo.repositories.PostRepository;
 import com.mongodbwithspring.demo.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
+
+import static java.util.Arrays.asList;
 
 @Configuration
 public class InstantiationObjects implements CommandLineRunner {
@@ -52,8 +59,33 @@ public class InstantiationObjects implements CommandLineRunner {
                 .email("regina@gmail.com")
                 .build();
 
-        List<UserObject> list = List.of(alexandreXimenes, dayaneXimenes, amanda, arthur, regina);
-        userRepository.saveAll(list);
+        List<UserObject> users = List.of(alexandreXimenes, dayaneXimenes, amanda, arthur, regina);
+        userRepository.saveAll(users);
 
+        Post post1 = Post.builder()
+                .id(null)
+                .data(LocalDateTime.now())
+                .author(alexandreXimenes)
+                .title("Na pele do sapo")
+                .body("Chove tanto hoje que estamos se sentindo como sapo no banhado")
+                .build();
+
+        Post post2 = Post.builder()
+                .id(null)
+                .data(LocalDateTime.now())
+                .author(dayaneXimenes)
+                .title("comida")
+                .body("comida chinesa mais cara do mundo")
+                .build();
+
+        List<Post> posts = List.of(post1, post2);
+
+        postRepository.saveAll(posts);
+
+        alexandreXimenes.setPosts(posts);
+        dayaneXimenes.setPosts(List.of(post2));
+
+        userRepository.save(alexandreXimenes);
+        userRepository.save(dayaneXimenes);
     }
 }

@@ -1,12 +1,16 @@
 package com.mongodbwithspring.demo.domain.user;
 
+import com.mongodbwithspring.demo.domain.post.Post;
 import lombok.*;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Setter
 @Getter
@@ -14,7 +18,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Builder
 @ToString
-@Document
+@Document(collection = "user")
 public class UserObject implements Serializable {
 
     @Id
@@ -23,6 +27,9 @@ public class UserObject implements Serializable {
     private String nome;
     @Email
     private String email;
+
+    @DBRef//(lazy = true)
+    private List<Post> posts = new ArrayList<>();
 
     public UserObject(UserObjectDTO u) {
         this.id = u.getId();

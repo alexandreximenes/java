@@ -51,4 +51,9 @@ public class UserResources implements ApiResources{
         userService.update(id, user);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/{id}/posts")
+    public ResponseEntity<Object> findByPosts(@PathVariable("id") String id) {
+        return ResponseEntity.ok().body(userService.findByIdPosts(id));
+    }
 }

@@ -31,7 +31,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserObjectDTO findById(String id) {
-        UserObjectDTO userObjectDTO = null;
         return userRepository
                 .findById(id)
                 .map(UserObjectDTO::new)
@@ -57,5 +56,13 @@ public class UserServiceImpl implements UserService {
     @Override
     public void delete(String id) {
         userRepository.deleteById(id);
+    }
+
+
+    public UserObjectDTO findByIdPosts(String id) {
+        return userRepository
+                .findById(id)
+                .map(UserObjectDTO::new)
+                .orElseThrow( () -> new ObjectNotFoundException("Nenhum post encontrado para este usuário"));
     }
 }

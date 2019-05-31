@@ -10,4 +10,5 @@ public interface UserService {
     UserObjectDTO save(UserObjectDTO user);
     void update(String id, UserObjectDTO user);
     void delete(String id);
+    UserObjectDTO findByIdPosts(String id);
 }

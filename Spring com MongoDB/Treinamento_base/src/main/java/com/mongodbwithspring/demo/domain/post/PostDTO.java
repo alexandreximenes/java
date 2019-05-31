@@ -3,7 +3,6 @@ package com.mongodbwithspring.demo.domain.post;
 import com.mongodbwithspring.demo.domain.user.UserObject;
 import lombok.*;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -14,8 +13,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Builder
 @ToString
-@Document
-public class Post implements Serializable {
+public class PostDTO implements Serializable {
 
     @Id
     private String id;
@@ -24,5 +22,7 @@ public class Post implements Serializable {
     private String body;
     private UserObject author;
 
+    public PostDTO(Post p) {
 
+    }
 }

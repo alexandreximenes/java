@@ -1,4 +1,4 @@
-package com.mongodbwithspring.demo.domain;
+package com.mongodbwithspring.demo.domain.user;
 
 import com.mongodbwithspring.demo.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,14 +8,19 @@ import org.springframework.context.annotation.Configuration;
 import java.util.List;
 
 @Configuration
-public class InstantiationUserObject implements CommandLineRunner {
+public class InstantiationObjects implements CommandLineRunner {
 
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private PostRepository postRepository;
+
     @Override
     public void run(String... args) throws Exception {
+
         userRepository.deleteAll();
+        postRepository.deleteAll();
 
         UserObject alexandreXimenes = UserObject.builder()
                 .id(null)

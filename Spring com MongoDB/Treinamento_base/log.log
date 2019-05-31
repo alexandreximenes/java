@@ -22,7 +22,7 @@
 2019-05-31 00:16:02.015  WARN 21924 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userResources' method 
 public org.springframework.http.ResponseEntity<java.lang.Object> com.mongodbwithspring.demo.resources.UserResources.findAll()
 to {GET /users}: There is already 'userResources' bean method
-public org.springframework.http.ResponseEntity<java.lang.Object> com.mongodbwithspring.demo.resources.UserResources.save(com.mongodbwithspring.demo.domain.UserObjectDTO) mapped.
+public org.springframework.http.ResponseEntity<java.lang.Object> com.mongodbwithspring.demo.resources.UserResources.save(UserObjectDTO) mapped.
 2019-05-31 00:16:02.015  INFO 21924 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2019-05-31 00:16:02.022  INFO 21924 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
 2019-05-31 00:16:02.039  INFO 21924 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
@@ -33,7 +33,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userResources' method 
 public org.springframework.http.ResponseEntity<java.lang.Object> com.mongodbwithspring.demo.resources.UserResources.findAll()
 to {GET /users}: There is already 'userResources' bean method
-public org.springframework.http.ResponseEntity<java.lang.Object> com.mongodbwithspring.demo.resources.UserResources.save(com.mongodbwithspring.demo.domain.UserObjectDTO) mapped.
+public org.springframework.http.ResponseEntity<java.lang.Object> com.mongodbwithspring.demo.resources.UserResources.save(UserObjectDTO) mapped.
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
@@ -59,7 +59,7 @@ public org.springframework.http.ResponseEntity<java.lang.Object> com.mongodbwith
 Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userResources' method 
 public org.springframework.http.ResponseEntity<java.lang.Object> com.mongodbwithspring.demo.resources.UserResources.findAll()
 to {GET /users}: There is already 'userResources' bean method
-public org.springframework.http.ResponseEntity<java.lang.Object> com.mongodbwithspring.demo.resources.UserResources.save(com.mongodbwithspring.demo.domain.UserObjectDTO) mapped.
+public org.springframework.http.ResponseEntity<java.lang.Object> com.mongodbwithspring.demo.resources.UserResources.save(UserObjectDTO) mapped.
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.assertUniqueMethodMapping(AbstractHandlerMethodMapping.java:618) ~[spring-webmvc-5.1.7.RELEASE.jar:5.1.7.RELEASE]
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:586) ~[spring-webmvc-5.1.7.RELEASE.jar:5.1.7.RELEASE]
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:312) ~[spring-webmvc-5.1.7.RELEASE.jar:5.1.7.RELEASE]
@@ -285,3 +285,5 @@ public org.springframework.http.ResponseEntity<java.lang.Object> com.mongodbwith
 2019-05-31 00:54:42.046  INFO 25092 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2019-05-31 00:54:42.056  INFO 25092 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
 2019-05-31 00:54:42.344  WARN 25092 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.mongodbwithspring.demo.exceptions.ObjectNotFoundException: Usuário não encontrado com ID: 5cf0a4944a556660cb27bea7]
+2019-05-31 01:02:37.213  INFO 25092 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-31 01:02:37.217  INFO 25092 --- [Thread-8] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:107}] to localhost:27017 because the pool has been closed.

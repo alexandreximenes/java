@@ -1,9 +1,8 @@
-package com.mongodbwithspring.demo.domain;
+package com.mongodbwithspring.demo.domain.user;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;

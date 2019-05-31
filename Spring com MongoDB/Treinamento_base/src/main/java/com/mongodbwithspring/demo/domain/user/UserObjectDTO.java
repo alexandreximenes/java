@@ -1,4 +1,4 @@
-package com.mongodbwithspring.demo.domain;
+package com.mongodbwithspring.demo.domain.user;
 
 import lombok.*;
 

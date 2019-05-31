@@ -1,7 +1,7 @@
 package com.mongodbwithspring.demo.services;
 
-import com.mongodbwithspring.demo.domain.UserObject;
-import com.mongodbwithspring.demo.domain.UserObjectDTO;
+import com.mongodbwithspring.demo.domain.user.UserObject;
+import com.mongodbwithspring.demo.domain.user.UserObjectDTO;
 import com.mongodbwithspring.demo.exceptions.ObjectNotFoundException;
 import com.mongodbwithspring.demo.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))

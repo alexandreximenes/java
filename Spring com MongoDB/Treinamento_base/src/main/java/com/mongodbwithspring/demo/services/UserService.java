@@ -1,7 +1,7 @@
 package com.mongodbwithspring.demo.services;
 import java.util.List;
-import com.mongodbwithspring.demo.domain.UserObject;
-import com.mongodbwithspring.demo.domain.UserObjectDTO;
+
+import com.mongodbwithspring.demo.domain.user.UserObjectDTO;
 
 public interface UserService {
 

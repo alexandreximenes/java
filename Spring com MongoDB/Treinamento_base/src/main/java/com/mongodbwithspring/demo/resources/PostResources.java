@@ -12,7 +12,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 //https://www.getpostman.com/collections/113fe058a51517a73087
 @RestController
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
-@RequestMapping("/users")
+@RequestMapping("/posts")
 public class PostResources implements ApiResources{
 
     @Autowired

@@ -1,0 +1,48 @@
+https://www.digitalocean.com/community/tutorials/como-instalar-o-java-no-ubuntu-com-apt-get-pt
+sudo apt-get install default-jdk &&
+sudo apt-get install default-jre &&
+sudo apt-get install oracle-java7-installer &&
+sudo apt-get install oracle-java8-installer &&
+sudo apt install oracle-java11-installer
+
+ver versoes
+sudo update-alternatives --config java
+
+
+https://www.java.com/pt_BR/download/help/path.xml
+Bash Shell
+Edite o arquivo de inicialização (~/.bashrc)
+
+Modifique a variável PATH
+PATH=/usr/local/jdk1.8.0/bin:$PATH
+export PATH
+Salve e feche o arquivo
+Carregue o arquivo de inicialização
+% . /.profile
+Verifique se o caminho está definido repetindo o comando java
+% java -version
+
+Java 7 and Netbeans
+https://www.oracle.com/technetwork/java/javase/downloads/jdk-7-netbeans-download-432126.html
+
+
+
+which java && which javac && java -version
+
+JAVA_HOME=/usr/lib/jvm/java-8-oracle
+JRE_HOME=/usr/lib/jvm/java-8-oracle/jre
+
+cd ~
+sudo gedit .bashrc
+
+caminhos
+export M3_HOME=/opt/maven
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+export JRE_HOME=/usr/lib/jvm/java-8-oracle/jre
+export PATH=$M3_HOME/bin:$PATH
+export PATH=$JRE_HOME/bin:$PATH
+export PATH=$JAVA_HOME/bin:$PATH
+
+sudo gedit /etc/environment
+JAVA_HOME=/usr/lib/jvm/java-8-oracle
+JRE_HOME=/usr/lib/jvm/java-8-oracle/jre

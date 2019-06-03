@@ -1,0 +1,28 @@
+Colocar URL nos recursos
+URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(category.getId()).toUri();
+
+
+//    @Bean
+//    public LocaleResolver localeResolver(){
+//        SessionLocaleResolver sessionLocaleResolver = new SessionLocaleResolver();
+//        sessionLocaleResolver.setDefaultLocale(new Locale("pt", "BR"));
+//        return sessionLocaleResolver;
+//    }
+
+//    @Bean
+//    public ResourceBundleMessageSource resourceBundleMessageSource(){
+//        ResourceBundleMessageSource resourceBundleMessageSource = new ResourceBundleMessageSource();
+//        resourceBundleMessageSource.setBasename("messages");
+//        return resourceBundleMessageSource;
+//    }
+
+
+//import de.codecentric.boot.admin.server.config.EnableAdminServer;
+
+//@EnableAdminServer
+
+
+RestException
+    private ErrorResponse getErrorResponse(MethodArgumentNotValidException ex, HttpStatus status, List<ResponseErrorDetails> errors) {
+        return new ErrorResponse(tituloValidacao(messageSource), status.value(), status.getReasonPhrase(), ex.getBindingResult().getObjectName(), errors);
+    }

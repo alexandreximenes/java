@@ -1,0 +1,19 @@
+dunp
+mysqldump -u admin -p dbname > arquivo.sql
+
+na pasta do projeto
+add no git da heroku
+heroku git:remote -a marketplace
+
+obter a url do banco de dados
+heroku config | grep CLEARDB_DATABASE_URL
+
+
+DB
+CLEARDB_DATABASE_URL: mysql://b97f08d275a8dc:31989483@us-cdbr-iron-east-03.cleardb.net/heroku_861efc80192c3db?reconnect=true
+
+
+mysql --host=us-cdbr-iron-east-03.cleardb.net --user=b97f08d275a8dc --password=31989483 --reconnect heroku_861efc80192c3db < arquivo.sql
+
+
+git push heroku master

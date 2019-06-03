@@ -1,0 +1,32 @@
+//Configurar banco de dados caso haja algum problema de timezone
+SET GLOBAL time_zone = '+3:00';
+
+
+//criar novo usuario
+SET GLOBAL validate_password_policy = 0
+SET GLOBAL validate_password_length = 5;
+SET GLOBAL validate_password_number_count = 0;
+uninstall plugin validate_password
+
+CREATE USER 'admin'@'localhost' IDENTIFIED BY '';
+GRANT ALL PRIVILEGES ON * . * TO 'admin'@'localhost';
+
+SHOW GRANTS FOR admin@localhost;
+
+https://www.devmedia.com.br/gerenciamento-de-usuarios-e-controle-de-acessos-do-mysql/1898
+
+
+//Remover java
+sudo apt-get update
+apt-cache search java | awk '{print($1)}' | grep -E -e '^(ia32-)?(sun|oracle)-java' -e '^openjdk-' -e '^icedtea' -e '^(default|gcj)-j(re|dk)' -e '^gcj-(.*)-j(re|dk)' -e 'java-common' | xargs sudo apt-get -y remove
+sudo apt-get -y autoremove
+dpkg -l | grep ^rc | awk '{print($2)}' | xargs sudo apt-get -y purge
+sudo bash -c 'ls -d /home/*/.java' | xargs sudo rm -rf
+sudo rm -rf /usr/lib/jvm/*
+for g in ControlPanel java java_vm javaws jcontrol jexec keytool mozilla-javaplugin.so orbd pack200 policytool rmid rmiregistry servertool tnameserv unpack200 appletviewer apt extcheck HtmlConverter idlj jar jarsigner javac javadoc javah javap jconsole jdb jhat jinfo jmap jps jrunscript jsadebugd jstack jstat jstatd native2ascii rmic schemagen serialver wsgen wsimport xjc xulrunner-1.9-javaplugin.so; do sudo update-alternatives --remove-all $g; done
+sudo updatedb
+sudo locate -b '\pack200'
+
+
+
+

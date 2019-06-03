@@ -1,12 +1,8 @@
 package com.mongodbwithspring.demo.services;
 
-import com.mongodbwithspring.demo.domain.post.Post;
 import com.mongodbwithspring.demo.domain.post.PostDTO;
-import com.mongodbwithspring.demo.domain.user.UserObject;
-import com.mongodbwithspring.demo.domain.user.UserObjectDTO;
 import com.mongodbwithspring.demo.exceptions.ObjectNotFoundException;
 import com.mongodbwithspring.demo.repositories.PostRepository;
-import com.mongodbwithspring.demo.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

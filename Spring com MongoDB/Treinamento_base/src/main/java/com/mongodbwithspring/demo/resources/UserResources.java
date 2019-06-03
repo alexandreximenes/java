@@ -1,6 +1,6 @@
 package com.mongodbwithspring.demo.resources;
 
-import com.mongodbwithspring.demo.domain.user.UserObjectDTO;
+import com.mongodbwithspring.demo.domain.user.AuthorDTO;
 import com.mongodbwithspring.demo.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ public class UserResources implements ApiResources{
     }
 
     @PostMapping
-    public ResponseEntity<Object> save(@RequestBody UserObjectDTO user) {
+    public ResponseEntity<Object> save(@RequestBody AuthorDTO user) {
         return ResponseEntity
                 .created(ServletUriComponentsBuilder
                         .fromCurrentRequest()
@@ -47,7 +47,7 @@ public class UserResources implements ApiResources{
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Object> update(@PathVariable("id") String id, @RequestBody UserObjectDTO user) {
+    public ResponseEntity<Object> update(@PathVariable("id") String id, @RequestBody AuthorDTO user) {
         userService.update(id, user);
         return ResponseEntity.noContent().build();
     }

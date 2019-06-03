@@ -1,18 +1,20 @@
 package com.mongodbwithspring.demo.domain.post;
 
-import com.mongodbwithspring.demo.domain.user.UserObject;
+import com.mongodbwithspring.demo.domain.comment.CommentDTO;
+import com.mongodbwithspring.demo.domain.user.Author;
 import lombok.*;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+import java.util.ArrayList;
+import java.util.List;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Setter
 @Getter
-@AllArgsConstructor
 @NoArgsConstructor
-@Builder
 @ToString
 @Document
 public class Post implements Serializable {
@@ -22,7 +24,6 @@ public class Post implements Serializable {
     private LocalDateTime data;
     private String title;
     private String body;
-    private UserObject author;
-
-
+    private Author author;
+    private List<CommentDTO> comments = new ArrayList<>();
 }

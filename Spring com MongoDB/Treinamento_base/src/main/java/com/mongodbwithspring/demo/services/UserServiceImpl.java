@@ -1,7 +1,7 @@
 package com.mongodbwithspring.demo.services;
 
-import com.mongodbwithspring.demo.domain.user.UserObject;
-import com.mongodbwithspring.demo.domain.user.UserObjectDTO;
+import com.mongodbwithspring.demo.domain.user.Author;
+import com.mongodbwithspring.demo.domain.user.AuthorDTO;
 import com.mongodbwithspring.demo.exceptions.ObjectNotFoundException;
 import com.mongodbwithspring.demo.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -20,32 +20,32 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
 
     @Override
-    public List<UserObjectDTO> findAll() {
+    public List<AuthorDTO> findAll() {
         return userRepository.findAll()
                 .parallelStream()
                 .filter(Objects::nonNull)
-                .map(UserObjectDTO::new)
-                .sorted(Comparator.comparing(UserObjectDTO::getNome))
+                .map(AuthorDTO::new)
+                .sorted(Comparator.comparing(AuthorDTO::getNome))
                 .collect(Collectors.toList());
     }
 
     @Override
-    public UserObjectDTO findById(String id) {
+    public AuthorDTO findById(String id) {
         return userRepository
                 .findById(id)
-                .map(UserObjectDTO::new)
+                .map(AuthorDTO::new)
                 .orElseThrow( () -> new ObjectNotFoundException("Usuario não encontrado"));
     }
 
     @Override
-    public UserObjectDTO save(UserObjectDTO user) {
-        UserObject userObject = new UserObject(user);
-        return new UserObjectDTO(userRepository.save(userObject));
+    public AuthorDTO save(AuthorDTO user) {
+        Author userObject = new Author(user);
+        return new AuthorDTO(userRepository.save(userObject));
     }
 
     @Override
-    public void update(String id, UserObjectDTO user) {
-        UserObject userObject = userRepository
+    public void update(String id, AuthorDTO user) {
+        Author userObject = userRepository
                 .findById(id)
                 .orElseThrow(() -> new ObjectNotFoundException("Usuário não encontrado com ID: " + id));
         userObject.setNome(user.getNome());
@@ -59,10 +59,10 @@ public class UserServiceImpl implements UserService {
     }
 
 
-    public UserObjectDTO findByIdPosts(String id) {
+    public AuthorDTO findByIdPosts(String id) {
         return userRepository
                 .findById(id)
-                .map(UserObjectDTO::new)
+                .map(AuthorDTO::new)
                 .orElseThrow( () -> new ObjectNotFoundException("Nenhum post encontrado para este usuário"));
     }
 }

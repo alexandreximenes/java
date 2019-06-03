@@ -1,14 +1,14 @@
 package com.mongodbwithspring.demo.services;
 import java.util.List;
 
-import com.mongodbwithspring.demo.domain.user.UserObjectDTO;
+import com.mongodbwithspring.demo.domain.user.AuthorDTO;
 
 public interface UserService {
 
-    List<UserObjectDTO> findAll();
-    UserObjectDTO findById(String id);
-    UserObjectDTO save(UserObjectDTO user);
-    void update(String id, UserObjectDTO user);
+    List<AuthorDTO> findAll();
+    AuthorDTO findById(String id);
+    AuthorDTO save(AuthorDTO user);
+    void update(String id, AuthorDTO user);
     void delete(String id);
-    UserObjectDTO findByIdPosts(String id);
+    AuthorDTO findByIdPosts(String id);
 }

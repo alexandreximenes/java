@@ -1,13 +1,10 @@
 package com.mongodbwithspring.demo.resources;
 
-import com.mongodbwithspring.demo.domain.user.UserObjectDTO;
 import com.mongodbwithspring.demo.services.PostService;
-import com.mongodbwithspring.demo.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 //https://www.getpostman.com/collections/113fe058a51517a73087
 @RestController
@@ -25,7 +22,7 @@ public class PostResources implements ApiResources{
 //    }
 //
 //    @PostMapping
-//    public ResponseEntity<Object> save(@RequestBody UserObjectDTO user) {
+//    public ResponseEntity<Object> save(@RequestBody AuthorDTO user) {
 //        return ResponseEntity
 //                .created(ServletUriComponentsBuilder
 //                        .fromCurrentRequest()
@@ -48,7 +45,7 @@ public class PostResources implements ApiResources{
 //    }
 //
 //    @PutMapping("/{id}")
-//    public ResponseEntity<Object> update(@PathVariable("id") String id, @RequestBody UserObjectDTO user) {
+//    public ResponseEntity<Object> update(@PathVariable("id") String id, @RequestBody AuthorDTO user) {
 //        userService.update(id, user);
 //        return ResponseEntity.noContent().build();
 //    }

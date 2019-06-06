@@ -6,11 +6,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 import static java.util.Objects.nonNull;
@@ -32,9 +30,14 @@ public class UserResouce {
 
     @GetMapping("/{id}")
     public ResponseEntity<Object> findById(@PathVariable("id") String id) {
-        Optional<UserDTO> user = userService.findById();
-        if (user.isPresent())
-            return ResponseEntity.ok().body(user);
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        UserDTO userDTO = userService.findById(id);
+        return ResponseEntity.ok().body(userDTO);
+    }
+
+    @PostMapping
+    public ResponseEntity<Object> save(@Valid @RequestBody UserDTO userDTO) {
+        UserDTO userSaved = userService.save(userDTO);
+        return ResponseEntity.created().build();
+
     }
 }

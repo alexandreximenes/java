@@ -32,7 +32,14 @@ public class UserService {
         return userRepository.findById(id)
                 .filter(Objects::nonNull)
                 .map(UserDTO::new)
-                .orElseThrow( Response.objectNotFound() );
+                .orElseThrow( () -> new ObjectNotFoundException("object.not.found"));
+    }
+
+    public UserDTO save(UserDTO userDTO){
+        return userRepository.save(userDTO)
+                .filter(Objects::nonNull)
+                .map(UserDTO::new)
+                .orElseThrow( () -> new ObjectNotFoundException("object.not.found"));
     }
 
 }

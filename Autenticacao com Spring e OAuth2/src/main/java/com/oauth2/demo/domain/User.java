@@ -4,6 +4,7 @@ import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.Email;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -21,7 +22,15 @@ public class User implements Serializable {
     private String id;
     private String firstName;
     private String lastName;
+    @Email
     private String email;
+
+    public User(UserDTO u) {
+        this.id = u.getId();
+        this.firstName = u.getFirstName();
+        this.lastName = u.getLastName();
+        this.email = u.getEmail();
+    }
 
     @Override
     public boolean equals(Object o) {

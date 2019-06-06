@@ -4,6 +4,8 @@ import com.oauth2.demo.domain.UserDTO;
 import com.oauth2.demo.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.Resource;
+import org.springframework.hateoas.mvc.ControllerLinkBuilder;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +14,8 @@ import javax.validation.Valid;
 import java.util.List;
 
 import static java.util.Objects.nonNull;
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
 @RestController
 @RequestMapping("/users")
@@ -35,9 +39,17 @@ public class UserResouce {
     }
 
     @PostMapping
-    public ResponseEntity<Object> save(@Valid @RequestBody UserDTO userDTO) {
+    public Resource<UserDTO> save(@Valid @RequestBody UserDTO userDTO) {
         UserDTO userSaved = userService.save(userDTO);
-        return ResponseEntity.created().build();
+        Resource<UserDTO> resource = getUriResource(userSaved);
+        return resource;//ResponseEntity.created(URI.create("/users/"+userSaved.getId())).build();
 
+    }
+
+    private Resource<UserDTO> getUriResource(UserDTO userSaved) {
+        Resource<UserDTO> resource = new Resource<>(userSaved);
+        ControllerLinkBuilder linkTo = linkTo(methodOn(this.getClass()).findById(userSaved.getId()));
+        resource.add(linkTo.withRel("/api/users/{id}"));
+        return resource;
     }
 }

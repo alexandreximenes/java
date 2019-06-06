@@ -2,6 +2,7 @@ package com.oauth2.demo.domain;
 
 import lombok.*;
 
+import javax.validation.constraints.Email;
 import java.io.Serializable;
 
 @Getter
@@ -16,6 +17,7 @@ public class UserDTO implements Serializable {
     private String id;
     private String firstName;
     private String lastName;
+    @Email
     private String email;
 
     public UserDTO(User u) {

@@ -1,22 +1,21 @@
 package com.oauth2.demo.resource.response;
 
-import com.oauth2.demo.service.exception.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Service;
 
 @Service
-public class Response {
+public class I18n {
 
     @Autowired
     private MessageSource messageSource;
 
-    public String searchOK(){
+    public String searchOk(){
         return getMessageSource("busca.ok");
     }
 
-    public String objectNotFound(){
+    public String notFound(){
         return getMessageSource("object.not.found");
     }
 

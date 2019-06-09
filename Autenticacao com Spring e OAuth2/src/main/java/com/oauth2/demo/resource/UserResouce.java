@@ -8,6 +8,7 @@ import org.springframework.hateoas.Resource;
 import org.springframework.hateoas.mvc.ControllerLinkBuilder;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.lang.NonNull;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -46,10 +47,25 @@ public class UserResouce {
 
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Object> deleteById(@PathVariable("id") String id) {
+        userService.delete(id);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
+
+    @PutMapping("/{id}")
+    public Resource<UserDTO> update(@NonNull @PathVariable("id") String id, @Valid @NonNull @RequestBody UserDTO userDTO) {
+        UserDTO userSaved = userService.update(id, userDTO);
+        Resource<UserDTO> resource = getUriResource(userSaved);
+        return resource;
+    }
+
     private Resource<UserDTO> getUriResource(UserDTO userSaved) {
         Resource<UserDTO> resource = new Resource<>(userSaved);
         ControllerLinkBuilder linkTo = linkTo(methodOn(this.getClass()).findById(userSaved.getId()));
-        resource.add(linkTo.withRel("/api/users/{id}"));
+        resource.add(linkTo.withSelfRel());
+//        resource.add(linkTo.withRel("api/users/"+resource.getContent().getId()));
+//        resource.add(new Link("/api/users/{id}", "endpoint"));
         return resource;
     }
 }

@@ -19,6 +19,10 @@ public class I18n {
         return getMessageSource("object.not.found");
     }
 
+    public String notSaved(){
+        return getMessageSource("not.saved");
+    }
+
     private String getMessageSource(String message){
         return messageSource.getMessage(message, null, LocaleContextHolder.getLocale());
     }

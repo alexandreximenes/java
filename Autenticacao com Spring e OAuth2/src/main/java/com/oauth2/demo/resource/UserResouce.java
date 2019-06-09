@@ -42,8 +42,8 @@ public class UserResouce {
     @PostMapping
     public Resource<UserDTO> save(@Valid @RequestBody UserDTO userDTO) {
         UserDTO userSaved = userService.save(userDTO);
-        Resource<UserDTO> resource = getUriResource(userSaved);
-        return resource;//ResponseEntity.created(URI.create("/users/"+userSaved.getId())).build();
+        return getUriResource(userSaved);
+        //OR ResponseEntity.created(URI.create("/users/"+userSaved.getId())).build();
 
     }
 
@@ -56,8 +56,7 @@ public class UserResouce {
     @PutMapping("/{id}")
     public Resource<UserDTO> update(@NonNull @PathVariable("id") String id, @Valid @NonNull @RequestBody UserDTO userDTO) {
         UserDTO userSaved = userService.update(id, userDTO);
-        Resource<UserDTO> resource = getUriResource(userSaved);
-        return resource;
+        return getUriResource(userSaved);
     }
 
     private Resource<UserDTO> getUriResource(UserDTO userSaved) {

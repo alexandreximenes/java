@@ -76,5 +76,4 @@ public class UserService {
         userRepository.deleteById(userFound.getId());
 
     }
-
 }

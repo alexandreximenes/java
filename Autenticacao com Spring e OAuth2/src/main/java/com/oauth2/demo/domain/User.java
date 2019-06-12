@@ -2,10 +2,12 @@ package com.oauth2.demo.domain;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.Email;
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
 
 @Getter
@@ -24,6 +26,9 @@ public class User implements Serializable {
     private String lastName;
     @Email
     private String email;
+
+    @DBRef(lazy = true)
+    private List<Role> roles;
 
     public User(UserDTO u) {
         this.id = u.getId();

@@ -1,6 +1,8 @@
 package com.oauth2.demo.resource;
 
+import com.oauth2.demo.domain.Role;
 import com.oauth2.demo.domain.UserDTO;
+import com.oauth2.demo.repository.UserRepository;
 import com.oauth2.demo.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +26,7 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 public class UserResouce {
 
     private final UserService userService;
-
+    private final UserRepository userRepository;
     @GetMapping
     public ResponseEntity<Object> findAll() {
         List<UserDTO> all = userService.findAll();
@@ -57,6 +59,12 @@ public class UserResouce {
     public Resource<UserDTO> update(@NonNull @PathVariable("id") String id, @Valid @NonNull @RequestBody UserDTO userDTO) {
         UserDTO userSaved = userService.update(id, userDTO);
         return getUriResource(userSaved);
+    }
+
+    @GetMapping("/{id}/roles")
+    public ResponseEntity<List<Role>> findRoles(@PathVariable("id") String id) {
+        UserDTO userDTO = userService.findById(id);
+        return ResponseEntity.ok().body(userDTO.getRoles());
     }
 
     private Resource<UserDTO> getUriResource(UserDTO userSaved) {

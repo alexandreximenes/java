@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.validation.constraints.Email;
 import java.io.Serializable;
+import java.util.List;
 
 @Getter
 @Setter
@@ -19,11 +20,13 @@ public class UserDTO implements Serializable {
     private String lastName;
     @Email
     private String email;
+    private List<Role> roles = null;
 
     public UserDTO(User u) {
         this.id = u.getId();
         this.firstName = u.getFirstName();
         this.lastName = u.getLastName();
         this.email = u.getEmail();
+        this.roles = u.getRoles();
     }
 }

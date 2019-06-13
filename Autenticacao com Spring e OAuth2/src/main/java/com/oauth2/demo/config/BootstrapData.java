@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.List;
 import java.util.Optional;
@@ -21,7 +22,7 @@ public class BootstrapData implements ApplicationListener<ContextRefreshedEvent>
 
     private final UserRepository userRepository;
     private final RoleRepository roleRepository;
-
+    private final BCryptPasswordEncoder bCryptPasswordEncoder;
     @Override
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
         load();
@@ -32,8 +33,8 @@ public class BootstrapData implements ApplicationListener<ContextRefreshedEvent>
         Role adminRole = getNewRole("ROLE_ADMIN");
         Role userRole = getNewRole("ROLE_USER");
 
-        User alexandre = getUser("Alexandre", "Ximenes", "xyymenes@gmail.com");
-        User dayane = getUser("Dayane", "Ximenes", "x0menes@gmail.com");
+        User alexandre = getUser("Alexandre", "Ximenes", "xyymenes@gmail.com", "admin", true);
+        User dayane = getUser("Dayane", "Ximenes", "x0menes@gmail.com", "user", true);
 
         alexandre.setRoles(List.of(adminRole));
         dayane.setRoles(List.of(userRole));
@@ -52,11 +53,13 @@ public class BootstrapData implements ApplicationListener<ContextRefreshedEvent>
                 .build();
     }
 
-    private User getUser(String firstName, String lastName, String email) {
+    private User getUser(String firstName, String lastName, String email, String password, boolean enable) {
         return User.builder()
                 .firstName(firstName)
                 .lastName(lastName)
                 .email(email)
+                .password(bCryptPasswordEncoder.encode(password))
+                .enable(enable)
                 .build();
     }
 

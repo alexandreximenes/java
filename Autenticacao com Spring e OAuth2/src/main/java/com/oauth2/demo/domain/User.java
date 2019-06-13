@@ -26,6 +26,8 @@ public class User implements Serializable {
     private String lastName;
     @Email
     private String email;
+    private String password;
+    private boolean enable;
 
     @DBRef(lazy = true)
     private List<Role> roles;
@@ -35,6 +37,16 @@ public class User implements Serializable {
         this.firstName = u.getFirstName();
         this.lastName = u.getLastName();
         this.email = u.getEmail();
+    }
+
+    public User(User u) {
+        this.id = u.getId();
+        this.firstName = u.getFirstName();
+        this.lastName = u.getLastName();
+        this.email = u.getEmail();
+        this.password = u.getPassword();
+        this.enable = u.isEnable();
+        this.roles = u.getRoles();
     }
 
     @Override

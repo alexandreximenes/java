@@ -19,6 +19,10 @@ public class I18n {
         return getMessageSource("object.not.found");
     }
 
+    public String userNotEnable() {
+        return getMessageSource("user.not.enable");
+    }
+
     public String notSaved(){
         return getMessageSource("not.saved");
     }

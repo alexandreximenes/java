@@ -20,6 +20,8 @@ public class UserDTO implements Serializable {
     private String lastName;
     @Email
     private String email;
+    private String password;
+    private boolean enable;
     private List<Role> roles = null;
 
     public UserDTO(User u) {
@@ -27,6 +29,8 @@ public class UserDTO implements Serializable {
         this.firstName = u.getFirstName();
         this.lastName = u.getLastName();
         this.email = u.getEmail();
+        this.password = u.getPassword();
+        this.enable = u.isEnable();
         this.roles = u.getRoles();
     }
 }

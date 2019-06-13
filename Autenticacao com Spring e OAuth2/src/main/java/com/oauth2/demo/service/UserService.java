@@ -11,6 +11,7 @@ import lombok.SneakyThrows;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.NonNull;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Comparator;
@@ -28,6 +29,7 @@ public class UserService {
     private final UserRepository userRepository;
     private final I18n i18n;
     private final ModelMapper modelMapper;
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     public List<UserDTO> findAll() {
         return userRepository.findAll()
@@ -66,6 +68,8 @@ public class UserService {
         if(nonNull(userDTO.getFirstName())) user.setFirstName(userDTO.getFirstName());
         if(nonNull(userDTO.getLastName())) user.setLastName(userDTO.getLastName());
         if(nonNull(userDTO.getEmail())) user.setEmail(userDTO.getEmail());
+        if (nonNull(userDTO.getPassword())) user.setPassword(bCryptPasswordEncoder.encode(userDTO.getPassword()));
+        userDTO.setEnable(userDTO.isEnable() ? true : false);
 
         return modelMapper.map(userRepository.save(user), UserDTO.class);
     }

@@ -1,0 +1,18 @@
+Um programa em Java é composto pela classe, seus atributos (estados) e seus comportamentos (metodos)
+É principalmente uma coleção de objetos falando com outros objetos por meio da invocação dos
+métodos uns dos outros.
+Cada objeto é de um tipo, e esse tipo é definido por uma classe ou uma interface.
+A maioria dos programas em Java usa uma coleção de objetos de muitos tipos diferentes.
+
+Classe - Um modelo que descreve os tipos de estado e de comportamento que os objetos do seu tipo podem ter.
+Objeto - No momento da execução,quando a Mquina Virtual Java, a Virtual Machine,ou JVM encontra a palavra
+chave new, ela usa a classe apropriada para criar um objeto que seria uma instância dessa classe.
+Esse obieto terá o seu próprio estado e terá acesso a todos os comportamentos definidos pela sua classe.
+
+Estado (variáveis de instâncias) - Cada objeto (instância de uma classe) tera o seu conjunto único de variáveis de
+instâncias conforme definido na classe. Coletivamente, os valores atribuidos ás variáveis de instâncias de um objeto
+compõem o estado do objeto.
+
+Comportamento (métodos) - Quando um programador cria uma classe, ele cria métodos para essa classe.
+É nos métodos que a lógica da classe é armazenada. Nos métodos, o verdadeiro trabalho é realizado. É neles que os
+algoritmos são executados e que os dados são manipulados.

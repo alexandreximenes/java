@@ -33,6 +33,17 @@ public class GOperadoresDeAtributos {
         System.out.println("multiplicação por 0 "+ resultado);
 
 
+        float OutroCalculoResultado = 10 + (float)10/2 + (4 - (float)2/6); //18,666666..
+        System.out.println("OutroCalculoResultado "+OutroCalculoResultado);
+        double OutroCalculoResultado2 = 10 + (10/2) + 4 - (2/6); //18,666666.. mas calcula 19.0
+        System.out.println(OutroCalculoResultado2);
+        int OutroCalculoResultadoInteiro = 10 + 10/2 + 4 - 2/6; //19
+        System.out.println(OutroCalculoResultadoInteiro);
+
+        BigDecimal bigDecimal = new BigDecimal(10 + 10/2 + 4 - 2/6);//19
+        System.out.println(bigDecimal);
+
+
         //divisão por 0 causa erro ArithmeticException e para a execução
         resultado /= 0; //0
         System.out.println("divisao por 0 "+ resultado);
@@ -41,16 +52,6 @@ public class GOperadoresDeAtributos {
          * Exception in thread "main" java.lang.ArithmeticException: / by zero
          * at A_Basic.GOperadoresDeAtributos.main(GOperadoresDeAtributos.java:37)
          * */
-
-        float OutroCalculoResultado = 10 + 10/2 + 4 - 2/6; //18,666666.. mas calcula 19.0
-        System.out.println(OutroCalculoResultado);
-        double OutroCalculoResultado2 = 10 + (10/2) + 4 - (2/6); //18,666666.. mas calcula 19.0
-        System.out.println(OutroCalculoResultado2);
-        int OutroCalculoResultadoInteiro = 10 + 10/2 + 4 - 2/6; //19
-        System.out.println(OutroCalculoResultadoInteiro);
-
-        BigDecimal bigDecimal = new BigDecimal(10 + 10/2 + 4 - 2/6);//19
-        System.out.println(bigDecimal);
 
 
     }

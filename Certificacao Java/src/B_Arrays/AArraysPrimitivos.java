@@ -64,5 +64,18 @@ public class AArraysPrimitivos {
          * 30
          * [10, 20, 30]
          */
+
+        /**
+         * 0
+         * [0, 0, 0]
+         *
+         * [ ,  , A,  ]
+         * [Z@38af3868
+         * [true, false, false]
+         * [Ljava.lang.String;@77459877
+         * [Alexandre, null, null]
+         * 30
+         * [10, 20, 30]
+         */
     }
 }

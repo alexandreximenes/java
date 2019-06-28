@@ -2,7 +2,6 @@ package com.oauth2.demo.resource;
 
 import com.oauth2.demo.domain.Role;
 import com.oauth2.demo.domain.UserDTO;
-import com.oauth2.demo.repository.UserRepository;
 import com.oauth2.demo.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +25,6 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 public class UserResouce {
 
     private final UserService userService;
-    private final UserRepository userRepository;
     @GetMapping
     public ResponseEntity<Object> findAll() {
         List<UserDTO> all = userService.findAll();

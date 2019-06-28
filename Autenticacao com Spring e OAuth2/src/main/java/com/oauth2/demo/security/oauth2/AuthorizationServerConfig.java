@@ -4,6 +4,7 @@ import com.oauth2.demo.security.UserDetailServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -22,7 +23,30 @@ import org.springframework.security.oauth2.provider.token.store.InMemoryTokenSto
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
 
-    private final AuthorizationConfigurationProperties properties;
+    @Value("${authorization-client}")
+    private String authorizationClient;
+    @Value("${authorization-secret}")
+    private String authorizationSecret;
+    @Value("${authorization-resourceId}")
+    private String authorizationResourceId;
+    @Value("${authorization-accessTokenValiditySecondsValue}")
+    private int authorizationCccessTokenValiditySecondsValue;
+    @Value("${authorization-refreshTokenValiditySecondsValue}")
+    private int authorizationRefreshTokenValiditySecondsValue;
+    @Value("${authorization-password}")
+    private String authorizationPassword;
+    @Value("${authorization-authorizationCode}")
+    private String authorizationAuthorizationCode;
+    @Value("${authorization-refreshToken}")
+    private String authorizationRefreshToken;
+    @Value("${authorization-bar}")
+    private String authorizationBar;
+    @Value("${authorization-read}")
+    private String authorizationRead;
+    @Value("${authorization-write}")
+    private String authorizationWrite;
+
+
     @Qualifier("authenticationManagerBean")
     private final AuthenticationManager authenticationManager;
     private final UserDetailServiceImpl userDetailServiceImpl;
@@ -38,13 +62,13 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
-                .withClient(this.properties.getClient())
-                .secret(new BCryptPasswordEncoder().encode(this.properties.getSecret()))
-                .authorizedGrantTypes(this.properties.getPassword(), this.properties.getAuthorizationCode(), this.properties.getRefreshToken())
-                .scopes(this.properties.getBar(), this.properties.getRead(), this.properties.getWrite())
-                .resourceIds(this.properties.getResourceId())
-                .accessTokenValiditySeconds(this.properties.getAccessTokenValiditySecondsValue())
-                .refreshTokenValiditySeconds(this.properties.getRefreshTokenValiditySecondsValue());
+                .withClient(authorizationClient)
+                .secret(new BCryptPasswordEncoder().encode(authorizationSecret))
+                .authorizedGrantTypes(authorizationPassword, authorizationAuthorizationCode, authorizationRefreshToken)
+                .scopes(authorizationBar, authorizationRead, authorizationWrite)
+                .resourceIds(authorizationResourceId)
+                .accessTokenValiditySeconds(authorizationCccessTokenValiditySecondsValue)
+                .refreshTokenValiditySeconds(authorizationRefreshTokenValiditySecondsValue);
     }
 
     @Bean

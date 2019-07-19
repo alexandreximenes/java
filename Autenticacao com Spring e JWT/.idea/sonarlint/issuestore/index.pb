@@ -1,0 +1,27 @@
+
+t
+Dsrc/main/java/br/com/perceptron/marketplace/bootstrap/DBService.java,f/4/f41c6a1a11908abcb0d73c797b5619eca069330c
+
+Osrc/main/java/br/com/perceptron/marketplace/security/UserDetailServiceImpl.java,0/5/05366af6fb317081c36bba0088ae142b277d2152
+z
+Jsrc/main/java/br/com/perceptron/marketplace/usuario/UsuarioController.java,1/8/18f9358df706221c979c7d0a7f6d5c9aa4c8fcca
+~
+Nsrc/main/java/br/com/perceptron/marketplace/categoria/CategoriaController.java,9/c/9c547afd87b788f0d413bad26fa972e90e02d3e5
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+u
+Esrc/main/java/br/com/perceptron/marketplace/response/ResponseDTO.java,c/a/ca161afd1f49f1a4dc4f53cec0f323f25d62986a
+~
+Nsrc/main/java/br/com/perceptron/marketplace/response/ResponseErrorDetails.java,a/a/aa3b11d659f709222aa977195bbc423c80c992ed
+y
+Isrc/main/java/br/com/perceptron/marketplace/response/ResponsePageDTO.java,3/d/3d8061bfbc95dcdac59e9053a1eec4669138700c
+w
+Gsrc/main/java/br/com/perceptron/marketplace/response/ResponseUtils.java,8/2/82053ad0d0732ec35eea9bc9b5f400736f7218c3
+w
+Gsrc/main/java/br/com/perceptron/marketplace/MarketplaceApplication.java,a/7/a75a9e26d6f07cfad7b090d85ce0810f18f8b52c
+}
+Msrc/main/java/br/com/perceptron/marketplace/categoria/CategoriaValidator.java,b/b/bb720c41dfd1dcb176e7789bc63a5c20aceb4126
+v
+Fsrc/main/java/br/com/perceptron/marketplace/swagger/SwaggerConfig.java,3/e/3eb161a3d75560ed2e8bdf5eee21d19270c6e223
+7
+pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec

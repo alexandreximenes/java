@@ -57,7 +57,6 @@ public class StartPedido {
             Produto produto = produtoRepository.findByNomeContainingIgnoreCase("Cadeira").orElse(null);
             List<Produto> produtos = produtoRepository.findAll().stream().limit(3).collect(Collectors.toList());
 
-
             Pedido pedido = new Pedido(LocalDateTime.now(), maria);
             pedido.setCliente(maria);
             Pedido pedidoSalvo = pedidoRepository.save(pedido);

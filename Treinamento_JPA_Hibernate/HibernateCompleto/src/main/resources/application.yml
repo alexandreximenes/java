@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/curso_hibernate?createDatabaseIfNotExist=true&serverTimezone=GMT
+    username: admin
+    password: tipmuch
+    initialization-mode: always
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        generate_statistics: true
+        hbm2ddl:
+          auto: update
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        naming:
+          physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+server:
+  servlet:
+    context-path: /api
+  http2:
+    enabled: true
+logging:
+  level:
+    org:
+      hibernate:
+        type: debug
+        stat: debug

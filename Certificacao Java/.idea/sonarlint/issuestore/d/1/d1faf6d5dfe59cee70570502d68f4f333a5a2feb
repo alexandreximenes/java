@@ -1,0 +1,5 @@
+
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(«õ¿şÿÿÿÿ8Ê¾£¿¶-
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(§¥Ú
+tsquid:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(«õ¿şÿÿÿÿ8Œ®¿¶-

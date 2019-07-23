@@ -1,0 +1,10 @@
+
+Xsquid:S2209"5Change this instance-reference to a static reference.(”ù¼æÿÿÿÿÿ8«“ë‡¿-
+isquid:S1854
+"FRemove this useless assignment to local variable "parcelamentoCarro2".(´üêÈúÿÿÿÿ8…•ø‡¿-
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(• ‰Áúÿÿÿÿ
+Usquid:S2440
+"2Remove this instantiation of "CParcelamentoCarro".(´üêÈúÿÿÿÿ8…•ø‡¿-
+Zsquid:S1481
+"7Remove this unused "parcelamentoCarro2" local variable.(´üêÈúÿÿÿÿ8…•ø‡¿-
+Osquid:S2440	"2Remove this instantiation of "CParcelamentoCarro".(ø›¦/8«“ë‡¿-

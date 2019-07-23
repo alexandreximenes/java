@@ -1,0 +1,8 @@
+
+–"squid:ClassVariableVisibilityCheck"\Make velocidadeMaxima a static final constant or non-public and provide accessors if needed.(âÛå²øÿÿÿÿ8êá•ÿ·-
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ø™×š
+V
+squid:S106
+"9Replace this use of System.out or System.err by a logger.(³‹Å´8 õ–ÿ·-
+Œ"squid:ClassVariableVisibilityCheck"RMake modelo a static final constant or non-public and provide accessors if needed.(ƒ’Õúÿÿÿÿ8•›ÿş·-
+†"squid:ClassVariableVisibilityCheck"QMake placa a static final constant or non-public and provide accessors if needed.(˜ÿ»ã8•›ÿş·-

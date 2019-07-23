@@ -1,0 +1,3 @@
+-- /*create table course(id int, name varchar);*/
+-- insert into course (id, name) values(1001, 'JPA course');
+-- insert into course (id, name) values(1002, 'Hibernate course');

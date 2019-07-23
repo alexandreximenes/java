@@ -1,0 +1,18 @@
+
+msquid:S1764"JCorrect one of the identical sub-expressions on both sides of operator ">"(ú„ÄÕüÿÿÿÿ8ßœà¾µ-
+7squid:S2178"Correct this "|" to "||".(˜¥ì8“ÃŞ¾µ-
+hsquid:S1764"JCorrect one of the identical sub-expressions on both sides of operator ">"(˜¥ì8á®Ş¾µ-
+Ksquid:S1125"(Remove the literal "true" boolean value.(ŠÃêÆşÿÿÿÿ8ÊÈÓ¾µ-
+[
+squid:S106	"9Replace this use of System.out or System.err by a logger.(ú¡ôİøÿÿÿÿ8ÜÀÑ¾µ-
+Fsquid:S1125"(Remove the literal "true" boolean value.(£üüÿ8ÆÑ¾µ-
+asquid:S1764"JCorrect one of the identical sub-expressions on both sides of operator ">"(£üüÿ
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(ú¡ôİøÿÿÿÿ8ßœà¾µ-
+msquid:S1764"JCorrect one of the identical sub-expressions on both sides of operator ">"(ŠÃêÆşÿÿÿÿ8ÊÈÓ¾µ-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(ú¡ôİøÿÿÿÿ8á®Ş¾µ-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(ú¡ôİøÿÿÿÿ8ÊÈÓ¾µ-
+<squid:S2178"Correct this "&" to "&&".(ú„ÄÕüÿÿÿÿ8ßœà¾µ-
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(§¥Ú

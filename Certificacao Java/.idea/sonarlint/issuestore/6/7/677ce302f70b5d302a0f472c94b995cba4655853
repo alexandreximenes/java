@@ -1,0 +1,30 @@
+
+usquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼‚Í‚ıÿÿÿÿ8ÄœŸ¼µ-
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÏÚ>8Şÿ¼µ-
+^squid:S2184&"@Cast one of the operands of this addition operation to a "long".(‘Õ§ë8ÆÜâ¼µ-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(àŠä€8Ú—¼µ-
+psquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö¹Ê”8—ë–¼µ-
+tsquid:S3457+"Q%n should be used in place of \n to produce the platform-specific line separator.(¡¯÷¿ùÿÿÿÿ8³„ø¼µ-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(åâ¬8Š‹¤¼µ-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(†ó†Ñûÿÿÿÿ8¶¼œ¼µ-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(Êâõûÿÿÿÿ8Şÿ¼µ-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(°³Ãşÿÿÿÿ8Şÿ¼µ-
+[
+squid:S106""9Replace this use of System.out or System.err by a logger.(“öŞàúÿÿÿÿ8µ€ø½µ-
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(§¥Ú
+V
+squid:S106$"9Replace this use of System.out or System.err by a logger.(‹’¢ß8ì¦ú½µ-
+[
+squid:S106+"9Replace this use of System.out or System.err by a logger.(¡¯÷¿ùÿÿÿÿ8¯£ñ¼µ-
+[
+squid:S106 "9Replace this use of System.out or System.err by a logger.(›÷£™üÿÿÿÿ8´ÌÉ½µ-
+^squid:S2184*"@Cast one of the operands of this addition operation to a "long".(™‰ì®8ù‰ö¼µ-
+V
+squid:S106'"9Replace this use of System.out or System.err by a logger.(ÀÈÍ¶8Ï–¦¼µ-
+isquid:S1192"KDefine a constant instead of duplicating this literal "A soma Ã© " 3 times.(àŠä€8Š‹¤¼µ-

@@ -1,0 +1,755 @@
+27-06-2019 22:48:25  INFO, 22566 --- [restartedMain] com.oauth2.demo.DemoApplication          : Starting DemoApplication on alexandreximenes with PID 22566 (started by alexandreximenes in /home/alexandreximenes/Documentos/DESENVOLVIMENTO/java/Autenticacao com Spring e OAuth2)
+27-06-2019 22:48:25  INFO, 22566 --- [restartedMain] com.oauth2.demo.DemoApplication          : The following profiles are active: dev
+27-06-2019 22:48:26  INFO, 22566 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+27-06-2019 22:48:26  INFO, 22566 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+27-06-2019 22:48:28  INFO, 22566 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+27-06-2019 22:48:28  INFO, 22566 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 134ms. Found 2 repository interfaces.
+27-06-2019 22:48:30  INFO, 22566 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+27-06-2019 22:48:30  INFO, 22566 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+27-06-2019 22:48:30  INFO, 22566 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+27-06-2019 22:48:30  INFO, 22566 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+27-06-2019 22:48:31  INFO, 22566 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+27-06-2019 22:48:31  INFO, 22566 --- [cluster-ClusterId{value='5d1571ef3132d558260ebc1f', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:6}] to localhost:27017
+27-06-2019 22:48:31  INFO, 22566 --- [cluster-ClusterId{value='5d1571ef3132d558260ebc1f', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 3]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=8368004}
+27-06-2019 22:48:32  INFO, 22566 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+27-06-2019 22:48:32  WARN, 22566 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authorizationServerConfig' defined in file [/home/alexandreximenes/Documentos/DESENVOLVIMENTO/java/Autenticacao com Spring e OAuth2/target/classes/com/oauth2/demo/security/oauth2/AuthorizationServerConfig.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.oauth2.demo.security.UserDetailServiceImpl' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+27-06-2019 22:48:32  INFO, 22566 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+27-06-2019 22:48:32  INFO, 22566 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+27-06-2019 22:48:33 ERROR, 22566 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 2 of constructor in com.oauth2.demo.security.oauth2.AuthorizationServerConfig required a bean of type 'com.oauth2.demo.security.UserDetailServiceImpl' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.oauth2.demo.security.UserDetailServiceImpl' in your configuration.
+
+27-06-2019 22:49:33  INFO, 22749 --- [restartedMain] com.oauth2.demo.DemoApplication          : Starting DemoApplication on alexandreximenes with PID 22749 (started by alexandreximenes in /home/alexandreximenes/Documentos/DESENVOLVIMENTO/java/Autenticacao com Spring e OAuth2)
+27-06-2019 22:49:33  INFO, 22749 --- [restartedMain] com.oauth2.demo.DemoApplication          : The following profiles are active: dev
+27-06-2019 22:49:33  INFO, 22749 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+27-06-2019 22:49:33  INFO, 22749 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+27-06-2019 22:49:34  INFO, 22749 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+27-06-2019 22:49:35  INFO, 22749 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115ms. Found 2 repository interfaces.
+27-06-2019 22:49:36  INFO, 22749 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+27-06-2019 22:49:36  INFO, 22749 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+27-06-2019 22:49:36  INFO, 22749 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+27-06-2019 22:49:36  INFO, 22749 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+27-06-2019 22:49:36  INFO, 22749 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+27-06-2019 22:49:37  INFO, 22749 --- [cluster-ClusterId{value='5d1572303132d558dd1e40d5', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:7}] to localhost:27017
+27-06-2019 22:49:37  INFO, 22749 --- [cluster-ClusterId{value='5d1572303132d558dd1e40d5', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 3]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=14243642}
+27-06-2019 22:49:37  INFO, 22749 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+27-06-2019 22:49:38  WARN, 22749 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through method 'setFilterChainProxySecurityConfigurer' parameter 1; nested exception is org.springframework.beans.factory.BeanExpressionException: Expression parsing failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerSecurityConfiguration': Injection of autowired dependencies failed; nested exception is java.lang.NullPointerException
+27-06-2019 22:49:38  INFO, 22749 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+27-06-2019 22:49:38  INFO, 22749 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+27-06-2019 22:49:38 ERROR, 22749 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through method 'setFilterChainProxySecurityConfigurer' parameter 1; nested exception is org.springframework.beans.factory.BeanExpressionException: Expression parsing failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerSecurityConfiguration': Injection of autowired dependencies failed; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:676) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:843) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at com.oauth2.demo.DemoApplication.main(DemoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+Caused by: org.springframework.beans.factory.BeanExpressionException: Expression parsing failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerSecurityConfiguration': Injection of autowired dependencies failed; nested exception is java.lang.NullPointerException
+	at org.springframework.context.expression.StandardBeanExpressionResolver.evaluate(StandardBeanExpressionResolver.java:164) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.evaluateBeanDefinitionString(AbstractBeanFactory.java:1481) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1192) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1168) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:668) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerSecurityConfiguration': Injection of autowired dependencies failed; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:380) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:604) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:592) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.AutowiredWebSecurityConfigurersIgnoreParents.getWebSecurityConfigurers(AutowiredWebSecurityConfigurersIgnoreParents.java:53) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.expression.spel.support.ReflectiveMethodExecutor.execute(ReflectiveMethodExecutor.java:130) ~[spring-expression-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.expression.spel.ast.MethodReference.getValueInternal(MethodReference.java:138) ~[spring-expression-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.expression.spel.ast.MethodReference.access$000(MethodReference.java:54) ~[spring-expression-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.expression.spel.ast.MethodReference$MethodValueRef.getValue(MethodReference.java:390) ~[spring-expression-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:90) ~[spring-expression-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:109) ~[spring-expression-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:265) ~[spring-expression-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.expression.StandardBeanExpressionResolver.evaluate(StandardBeanExpressionResolver.java:161) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	... 28 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder.encode(BCryptPasswordEncoder.java:80) ~[spring-security-core-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at com.oauth2.demo.security.oauth2.AuthorizationServerConfig.configure(AuthorizationServerConfig.java:42) ~[classes/:na]
+	at org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerSecurityConfiguration.configure(AuthorizationServerSecurityConfiguration.java:58) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:708) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	... 50 common frames omitted
+
+27-06-2019 22:51:45  INFO, 22985 --- [restartedMain] com.oauth2.demo.DemoApplication          : Starting DemoApplication on alexandreximenes with PID 22985 (started by alexandreximenes in /home/alexandreximenes/Documentos/DESENVOLVIMENTO/java/Autenticacao com Spring e OAuth2)
+27-06-2019 22:51:45  INFO, 22985 --- [restartedMain] com.oauth2.demo.DemoApplication          : The following profiles are active: dev
+27-06-2019 22:51:45  INFO, 22985 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+27-06-2019 22:51:45  INFO, 22985 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+27-06-2019 22:51:48  INFO, 22985 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+27-06-2019 22:51:48  INFO, 22985 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124ms. Found 2 repository interfaces.
+27-06-2019 22:51:49  INFO, 22985 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+27-06-2019 22:51:49  INFO, 22985 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+27-06-2019 22:51:49  INFO, 22985 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+27-06-2019 22:51:49  INFO, 22985 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+27-06-2019 22:51:50  INFO, 22985 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+27-06-2019 22:51:50  INFO, 22985 --- [cluster-ClusterId{value='5d1572b63132d559c924c72c', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:8}] to localhost:27017
+27-06-2019 22:51:50  INFO, 22985 --- [cluster-ClusterId{value='5d1572b63132d559c924c72c', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 3]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=8382381}
+27-06-2019 22:51:50  INFO, 22985 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+27-06-2019 22:52:24  WARN, 22985 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through method 'setFilterChainProxySecurityConfigurer' parameter 1; nested exception is org.springframework.beans.factory.BeanExpressionException: Expression parsing failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerSecurityConfiguration': Injection of autowired dependencies failed; nested exception is java.lang.NullPointerException
+27-06-2019 22:52:24  INFO, 22985 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+27-06-2019 22:52:24  INFO, 22985 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+27-06-2019 22:52:24 ERROR, 22985 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Unsatisfied dependency expressed through method 'setFilterChainProxySecurityConfigurer' parameter 1; nested exception is org.springframework.beans.factory.BeanExpressionException: Expression parsing failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerSecurityConfiguration': Injection of autowired dependencies failed; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:676) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:843) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at com.oauth2.demo.DemoApplication.main(DemoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+Caused by: org.springframework.beans.factory.BeanExpressionException: Expression parsing failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerSecurityConfiguration': Injection of autowired dependencies failed; nested exception is java.lang.NullPointerException
+	at org.springframework.context.expression.StandardBeanExpressionResolver.evaluate(StandardBeanExpressionResolver.java:164) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.evaluateBeanDefinitionString(AbstractBeanFactory.java:1481) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1192) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1168) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:668) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerSecurityConfiguration': Injection of autowired dependencies failed; nested exception is java.lang.NullPointerException
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:380) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:604) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:592) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.AutowiredWebSecurityConfigurersIgnoreParents.getWebSecurityConfigurers(AutowiredWebSecurityConfigurersIgnoreParents.java:53) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.expression.spel.support.ReflectiveMethodExecutor.execute(ReflectiveMethodExecutor.java:130) ~[spring-expression-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.expression.spel.ast.MethodReference.getValueInternal(MethodReference.java:138) ~[spring-expression-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.expression.spel.ast.MethodReference.access$000(MethodReference.java:54) ~[spring-expression-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.expression.spel.ast.MethodReference$MethodValueRef.getValue(MethodReference.java:390) ~[spring-expression-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:90) ~[spring-expression-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:109) ~[spring-expression-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:265) ~[spring-expression-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.expression.StandardBeanExpressionResolver.evaluate(StandardBeanExpressionResolver.java:161) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	... 28 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder.encode(BCryptPasswordEncoder.java:80) ~[spring-security-core-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at com.oauth2.demo.security.oauth2.AuthorizationServerConfig.configure(AuthorizationServerConfig.java:42) ~[classes/:na]
+	at org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerSecurityConfiguration.configure(AuthorizationServerSecurityConfiguration.java:58) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:708) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	... 50 common frames omitted
+
+27-06-2019 23:00:13  INFO, 23816 --- [restartedMain] com.oauth2.demo.DemoApplication          : Starting DemoApplication on alexandreximenes with PID 23816 (started by alexandreximenes in /home/alexandreximenes/Documentos/DESENVOLVIMENTO/java/Autenticacao com Spring e OAuth2)
+27-06-2019 23:00:13  INFO, 23816 --- [restartedMain] com.oauth2.demo.DemoApplication          : The following profiles are active: dev
+27-06-2019 23:00:13  INFO, 23816 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+27-06-2019 23:00:13  INFO, 23816 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+27-06-2019 23:00:15  INFO, 23816 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+27-06-2019 23:00:15  INFO, 23816 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71ms. Found 2 repository interfaces.
+27-06-2019 23:00:15  INFO, 23816 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+27-06-2019 23:00:15  INFO, 23816 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+27-06-2019 23:00:15  INFO, 23816 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+27-06-2019 23:00:16  INFO, 23816 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+27-06-2019 23:00:16  INFO, 23816 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+27-06-2019 23:00:16  INFO, 23816 --- [cluster-ClusterId{value='5d1574b03132d55d081c8787', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:9}] to localhost:27017
+27-06-2019 23:00:16  INFO, 23816 --- [cluster-ClusterId{value='5d1574b03132d55d081c8787', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 3]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=6110250}
+27-06-2019 23:00:16  INFO, 23816 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+27-06-2019 23:02:02  WARN, 23816 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+27-06-2019 23:02:02  INFO, 23816 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+27-06-2019 23:02:02  INFO, 23816 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+27-06-2019 23:02:02 ERROR, 23816 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:307) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:843) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at com.oauth2.demo.DemoApplication.main(DemoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	... 26 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+	at org.springframework.security.oauth2.http.converter.jaxb.AbstractJaxbMessageConverter.<init>(AbstractJaxbMessageConverter.java:59) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.http.converter.jaxb.JaxbOAuth2ExceptionMessageConverter.<init>(JaxbOAuth2ExceptionMessageConverter.java:21) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.error.DefaultOAuth2ExceptionRenderer.geDefaultMessageConverters(DefaultOAuth2ExceptionRenderer.java:117) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.error.DefaultOAuth2ExceptionRenderer.<init>(DefaultOAuth2ExceptionRenderer.java:53) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.error.AbstractOAuth2SecurityExceptionHandler.<init>(AbstractOAuth2SecurityExceptionHandler.java:42) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.error.OAuth2AccessDeniedHandler.<init>(OAuth2AccessDeniedHandler.java:32) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer.<init>(AuthorizationServerSecurityConfigurer.java:60) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerSecurityConfiguration.configure(AuthorizationServerSecurityConfiguration.java:74) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.getHttp(WebSecurityConfigurerAdapter.java:231) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:322) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:92) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerSecurityConfiguration$$EnhancerBySpringCGLIB$$b5b6ddf3.init(<generated>) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.init(AbstractConfiguredSecurityBuilder.java:371) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:325) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:41) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:104) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$$EnhancerBySpringCGLIB$$4dda88f6.CGLIB$springSecurityFilterChain$1(<generated>) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$$EnhancerBySpringCGLIB$$4dda88f6$$FastClassBySpringCGLIB$$4269e468.invoke(<generated>) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$$EnhancerBySpringCGLIB$$4dda88f6.springSecurityFilterChain(<generated>) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	... 27 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.JAXBException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	... 53 common frames omitted
+
+27-06-2019 23:02:42  INFO, 24276 --- [restartedMain] com.oauth2.demo.DemoApplication          : Starting DemoApplication on alexandreximenes with PID 24276 (started by alexandreximenes in /home/alexandreximenes/Documentos/DESENVOLVIMENTO/java/Autenticacao com Spring e OAuth2)
+27-06-2019 23:02:42  INFO, 24276 --- [restartedMain] com.oauth2.demo.DemoApplication          : The following profiles are active: dev
+27-06-2019 23:02:43  INFO, 24276 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+27-06-2019 23:02:43  INFO, 24276 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+27-06-2019 23:02:44  INFO, 24276 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+27-06-2019 23:02:44  INFO, 24276 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63ms. Found 2 repository interfaces.
+27-06-2019 23:02:45  INFO, 24276 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+27-06-2019 23:02:45  INFO, 24276 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+27-06-2019 23:02:45  INFO, 24276 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+27-06-2019 23:02:45  INFO, 24276 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+27-06-2019 23:02:45  INFO, 24276 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+27-06-2019 23:02:45  INFO, 24276 --- [cluster-ClusterId{value='5d1575453132d55ed4fd4dfd', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:10}] to localhost:27017
+27-06-2019 23:02:45  INFO, 24276 --- [cluster-ClusterId{value='5d1575453132d55ed4fd4dfd', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 3]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=4288332}
+27-06-2019 23:02:45  INFO, 24276 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+27-06-2019 23:02:46  WARN, 24276 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+27-06-2019 23:02:46  INFO, 24276 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+27-06-2019 23:02:46  INFO, 24276 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+27-06-2019 23:02:46 ERROR, 24276 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:307) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:843) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at com.oauth2.demo.DemoApplication.main(DemoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	... 26 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+	at org.springframework.security.oauth2.http.converter.jaxb.AbstractJaxbMessageConverter.<init>(AbstractJaxbMessageConverter.java:59) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.http.converter.jaxb.JaxbOAuth2ExceptionMessageConverter.<init>(JaxbOAuth2ExceptionMessageConverter.java:21) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.error.DefaultOAuth2ExceptionRenderer.geDefaultMessageConverters(DefaultOAuth2ExceptionRenderer.java:117) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.error.DefaultOAuth2ExceptionRenderer.<init>(DefaultOAuth2ExceptionRenderer.java:53) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.error.AbstractOAuth2SecurityExceptionHandler.<init>(AbstractOAuth2SecurityExceptionHandler.java:42) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.error.OAuth2AccessDeniedHandler.<init>(OAuth2AccessDeniedHandler.java:32) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer.<init>(AuthorizationServerSecurityConfigurer.java:60) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerSecurityConfiguration.configure(AuthorizationServerSecurityConfiguration.java:74) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.getHttp(WebSecurityConfigurerAdapter.java:231) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:322) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:92) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerSecurityConfiguration$$EnhancerBySpringCGLIB$$6226605e.init(<generated>) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.init(AbstractConfiguredSecurityBuilder.java:371) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:325) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:41) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:104) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$$EnhancerBySpringCGLIB$$fa4a0b61.CGLIB$springSecurityFilterChain$1(<generated>) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$$EnhancerBySpringCGLIB$$fa4a0b61$$FastClassBySpringCGLIB$$9bc64d40.invoke(<generated>) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$$EnhancerBySpringCGLIB$$fa4a0b61.springSecurityFilterChain(<generated>) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	... 27 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.JAXBException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	... 53 common frames omitted
+
+27-06-2019 23:08:50  INFO, 24693 --- [restartedMain] com.oauth2.demo.DemoApplication          : Starting DemoApplication on alexandreximenes with PID 24693 (started by alexandreximenes in /home/alexandreximenes/Documentos/DESENVOLVIMENTO/java/Autenticacao com Spring e OAuth2)
+27-06-2019 23:08:50  INFO, 24693 --- [restartedMain] com.oauth2.demo.DemoApplication          : The following profiles are active: dev
+27-06-2019 23:08:50  INFO, 24693 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+27-06-2019 23:08:50  INFO, 24693 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+27-06-2019 23:08:53  INFO, 24693 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+27-06-2019 23:08:54  INFO, 24693 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 201ms. Found 2 repository interfaces.
+27-06-2019 23:08:55  INFO, 24693 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+27-06-2019 23:08:55  INFO, 24693 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+27-06-2019 23:08:55  INFO, 24693 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+27-06-2019 23:08:55  INFO, 24693 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+27-06-2019 23:08:56  INFO, 24693 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+27-06-2019 23:08:56  INFO, 24693 --- [cluster-ClusterId{value='5d1576b83132d560751432c6', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:11}] to localhost:27017
+27-06-2019 23:08:56  INFO, 24693 --- [cluster-ClusterId{value='5d1576b83132d560751432c6', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 3]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3742406}
+27-06-2019 23:08:56  INFO, 24693 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+27-06-2019 23:08:57  WARN, 24693 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+27-06-2019 23:08:57  INFO, 24693 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+27-06-2019 23:08:57  INFO, 24693 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+27-06-2019 23:08:57 ERROR, 24693 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:307) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:843) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at com.oauth2.demo.DemoApplication.main(DemoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	... 26 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+	at org.springframework.security.oauth2.http.converter.jaxb.AbstractJaxbMessageConverter.<init>(AbstractJaxbMessageConverter.java:59) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.http.converter.jaxb.JaxbOAuth2ExceptionMessageConverter.<init>(JaxbOAuth2ExceptionMessageConverter.java:21) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.error.DefaultOAuth2ExceptionRenderer.geDefaultMessageConverters(DefaultOAuth2ExceptionRenderer.java:117) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.error.DefaultOAuth2ExceptionRenderer.<init>(DefaultOAuth2ExceptionRenderer.java:53) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.error.AbstractOAuth2SecurityExceptionHandler.<init>(AbstractOAuth2SecurityExceptionHandler.java:42) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.error.OAuth2AccessDeniedHandler.<init>(OAuth2AccessDeniedHandler.java:32) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer.<init>(AuthorizationServerSecurityConfigurer.java:60) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerSecurityConfiguration.configure(AuthorizationServerSecurityConfiguration.java:74) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.getHttp(WebSecurityConfigurerAdapter.java:231) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:322) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:92) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerSecurityConfiguration$$EnhancerBySpringCGLIB$$25da6408.init(<generated>) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.init(AbstractConfiguredSecurityBuilder.java:371) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:325) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:41) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:104) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$$EnhancerBySpringCGLIB$$bdfe0f0b.CGLIB$springSecurityFilterChain$1(<generated>) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$$EnhancerBySpringCGLIB$$bdfe0f0b$$FastClassBySpringCGLIB$$f07f0714.invoke(<generated>) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$$EnhancerBySpringCGLIB$$bdfe0f0b.springSecurityFilterChain(<generated>) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	... 27 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.JAXBException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	... 53 common frames omitted
+
+27-06-2019 23:11:34  INFO, 25178 --- [restartedMain] com.oauth2.demo.DemoApplication          : Starting DemoApplication on alexandreximenes with PID 25178 (started by alexandreximenes in /home/alexandreximenes/Documentos/DESENVOLVIMENTO/java/Autenticacao com Spring e OAuth2)
+27-06-2019 23:11:34  INFO, 25178 --- [restartedMain] com.oauth2.demo.DemoApplication          : The following profiles are active: dev
+27-06-2019 23:11:34  INFO, 25178 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+27-06-2019 23:11:34  INFO, 25178 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+27-06-2019 23:11:35  INFO, 25178 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+27-06-2019 23:11:35  INFO, 25178 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66ms. Found 2 repository interfaces.
+27-06-2019 23:11:36  INFO, 25178 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+27-06-2019 23:11:36  INFO, 25178 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+27-06-2019 23:11:36  INFO, 25178 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+27-06-2019 23:11:36  INFO, 25178 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+27-06-2019 23:11:37  INFO, 25178 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+27-06-2019 23:11:37  INFO, 25178 --- [cluster-ClusterId{value='5d1577593132d5625a8133e9', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:12}] to localhost:27017
+27-06-2019 23:11:37  INFO, 25178 --- [cluster-ClusterId{value='5d1577593132d5625a8133e9', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 3]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=4814535}
+27-06-2019 23:11:37  INFO, 25178 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+27-06-2019 23:11:37  WARN, 25178 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+27-06-2019 23:11:38  INFO, 25178 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+27-06-2019 23:11:38  INFO, 25178 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+27-06-2019 23:11:38 ERROR, 25178 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:307) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:843) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at com.oauth2.demo.DemoApplication.main(DemoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	... 26 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+	at org.springframework.security.oauth2.http.converter.jaxb.AbstractJaxbMessageConverter.<init>(AbstractJaxbMessageConverter.java:59) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.http.converter.jaxb.JaxbOAuth2ExceptionMessageConverter.<init>(JaxbOAuth2ExceptionMessageConverter.java:21) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.error.DefaultOAuth2ExceptionRenderer.geDefaultMessageConverters(DefaultOAuth2ExceptionRenderer.java:117) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.error.DefaultOAuth2ExceptionRenderer.<init>(DefaultOAuth2ExceptionRenderer.java:53) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.error.AbstractOAuth2SecurityExceptionHandler.<init>(AbstractOAuth2SecurityExceptionHandler.java:42) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.error.OAuth2AccessDeniedHandler.<init>(OAuth2AccessDeniedHandler.java:32) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer.<init>(AuthorizationServerSecurityConfigurer.java:60) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerSecurityConfiguration.configure(AuthorizationServerSecurityConfiguration.java:74) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.getHttp(WebSecurityConfigurerAdapter.java:231) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:322) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:92) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerSecurityConfiguration$$EnhancerBySpringCGLIB$$ac387a4a.init(<generated>) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.init(AbstractConfiguredSecurityBuilder.java:371) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:325) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:41) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:104) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$$EnhancerBySpringCGLIB$$445c254d.CGLIB$springSecurityFilterChain$1(<generated>) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$$EnhancerBySpringCGLIB$$445c254d$$FastClassBySpringCGLIB$$72466ac.invoke(<generated>) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$$EnhancerBySpringCGLIB$$445c254d.springSecurityFilterChain(<generated>) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	... 27 common frames omitted
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.JAXBException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	... 53 common frames omitted
+
+27-06-2019 23:14:00  INFO, 25538 --- [restartedMain] com.oauth2.demo.DemoApplication          : Starting DemoApplication on alexandreximenes with PID 25538 (started by alexandreximenes in /home/alexandreximenes/Documentos/DESENVOLVIMENTO/java/Autenticacao com Spring e OAuth2)
+27-06-2019 23:14:00  INFO, 25538 --- [restartedMain] com.oauth2.demo.DemoApplication          : The following profiles are active: dev
+27-06-2019 23:14:00  INFO, 25538 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+27-06-2019 23:14:00  INFO, 25538 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+27-06-2019 23:14:02  INFO, 25538 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+27-06-2019 23:14:02  INFO, 25538 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65ms. Found 2 repository interfaces.
+27-06-2019 23:14:02  INFO, 25538 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+27-06-2019 23:14:02  INFO, 25538 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+27-06-2019 23:14:02  INFO, 25538 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+27-06-2019 23:14:02  INFO, 25538 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+27-06-2019 23:14:03  INFO, 25538 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+27-06-2019 23:14:03  INFO, 25538 --- [cluster-ClusterId{value='5d1577eb3132d563c2fae52f', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:13}] to localhost:27017
+27-06-2019 23:14:03  INFO, 25538 --- [cluster-ClusterId{value='5d1577eb3132d563c2fae52f', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 3]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3159667}
+27-06-2019 23:14:03  INFO, 25538 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+27-06-2019 23:14:04  WARN, 25538 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.RuntimeException: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+27-06-2019 23:14:04  INFO, 25538 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+27-06-2019 23:14:04  INFO, 25538 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+27-06-2019 23:14:04 ERROR, 25538 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.RuntimeException: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:307) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:843) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) ~[spring-boot-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at com.oauth2.demo.DemoApplication.main(DemoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.RuntimeException: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	... 26 common frames omitted
+Caused by: java.lang.RuntimeException: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+ - with linked exception:
+[java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory]
+	at org.springframework.security.oauth2.http.converter.jaxb.AbstractJaxbMessageConverter.<init>(AbstractJaxbMessageConverter.java:62) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.http.converter.jaxb.JaxbOAuth2ExceptionMessageConverter.<init>(JaxbOAuth2ExceptionMessageConverter.java:21) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.error.DefaultOAuth2ExceptionRenderer.geDefaultMessageConverters(DefaultOAuth2ExceptionRenderer.java:117) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.error.DefaultOAuth2ExceptionRenderer.<init>(DefaultOAuth2ExceptionRenderer.java:53) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.error.AbstractOAuth2SecurityExceptionHandler.<init>(AbstractOAuth2SecurityExceptionHandler.java:42) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.provider.error.OAuth2AccessDeniedHandler.<init>(OAuth2AccessDeniedHandler.java:32) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer.<init>(AuthorizationServerSecurityConfigurer.java:60) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerSecurityConfiguration.configure(AuthorizationServerSecurityConfiguration.java:74) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.getHttp(WebSecurityConfigurerAdapter.java:231) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:322) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:92) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerSecurityConfiguration$$EnhancerBySpringCGLIB$$9b5b9765.init(<generated>) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.init(AbstractConfiguredSecurityBuilder.java:371) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:325) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:41) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:104) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$$EnhancerBySpringCGLIB$$337f4268.CGLIB$springSecurityFilterChain$1(<generated>) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$$EnhancerBySpringCGLIB$$337f4268$$FastClassBySpringCGLIB$$6df1d3da.invoke(<generated>) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) ~[spring-context-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$$EnhancerBySpringCGLIB$$337f4268.springSecurityFilterChain(<generated>) ~[spring-security-config-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+	... 27 common frames omitted
+Caused by: javax.xml.bind.JAXBException: Implementation of JAXB-API has not been found on module path or classpath.
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:278) ~[jaxb-api-2.3.0.jar:2.3.0]
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:421) ~[jaxb-api-2.3.0.jar:2.3.0]
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:721) ~[jaxb-api-2.3.0.jar:2.3.0]
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:662) ~[jaxb-api-2.3.0.jar:2.3.0]
+	at org.springframework.security.oauth2.http.converter.jaxb.AbstractJaxbMessageConverter.<init>(AbstractJaxbMessageConverter.java:59) ~[spring-security-oauth2-2.3.4.RELEASE.jar:na]
+	... 52 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.sun.xml.internal.bind.v2.ContextFactory
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:583) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:148) ~[spring-boot-devtools-2.1.5.RELEASE.jar:2.1.5.RELEASE]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at javax.xml.bind.ServiceLoaderUtil.nullSafeLoadClass(ServiceLoaderUtil.java:122) ~[jaxb-api-2.3.0.jar:2.3.0]
+	at javax.xml.bind.ServiceLoaderUtil.safeLoadClass(ServiceLoaderUtil.java:155) ~[jaxb-api-2.3.0.jar:2.3.0]
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:276) ~[jaxb-api-2.3.0.jar:2.3.0]
+	... 56 common frames omitted
+
+27-06-2019 23:15:42  INFO, 25832 --- [restartedMain] com.oauth2.demo.DemoApplication          : Starting DemoApplication on alexandreximenes with PID 25832 (started by alexandreximenes in /home/alexandreximenes/Documentos/DESENVOLVIMENTO/java/Autenticacao com Spring e OAuth2)
+27-06-2019 23:15:42  INFO, 25832 --- [restartedMain] com.oauth2.demo.DemoApplication          : The following profiles are active: dev
+27-06-2019 23:15:43  INFO, 25832 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+27-06-2019 23:15:43  INFO, 25832 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+27-06-2019 23:15:44  INFO, 25832 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+27-06-2019 23:15:44  INFO, 25832 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90ms. Found 2 repository interfaces.
+27-06-2019 23:15:45  INFO, 25832 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+27-06-2019 23:15:45  INFO, 25832 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+27-06-2019 23:15:45  INFO, 25832 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+27-06-2019 23:15:45  INFO, 25832 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+27-06-2019 23:15:45  INFO, 25832 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+27-06-2019 23:15:46  INFO, 25832 --- [cluster-ClusterId{value='5d1578513132d564e891e432', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:14}] to localhost:27017
+27-06-2019 23:15:46  INFO, 25832 --- [cluster-ClusterId{value='5d1578513132d564e891e432', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 3]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=8282438}
+27-06-2019 23:15:46  INFO, 25832 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+27-06-2019 23:15:47  INFO, 25832 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b9d9e1c, org.springframework.security.web.context.SecurityContextPersistenceFilter@52d4d5e6, org.springframework.security.web.header.HeaderWriterFilter@e834d78, org.springframework.security.web.authentication.logout.LogoutFilter@6ad23a73, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7a98cb8c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e2d25d9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7cc947b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3119ea01, org.springframework.security.web.session.SessionManagementFilter@71dc73be, org.springframework.security.web.access.ExceptionTranslationFilter@5cbda07, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2b793ed6]
+27-06-2019 23:15:47  INFO, 25832 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@7323f6db, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2766e2d0, org.springframework.security.web.context.SecurityContextPersistenceFilter@203ed18b, org.springframework.security.web.header.HeaderWriterFilter@49d91983, org.springframework.security.web.authentication.logout.LogoutFilter@690fc9ab, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@40992bfc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@29be9e0e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@282a8fbb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b033865, org.springframework.security.web.session.SessionManagementFilter@285d2722, org.springframework.security.web.access.ExceptionTranslationFilter@779fd2d0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@21412de3]
+27-06-2019 23:15:47  INFO, 25832 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1066e9bd, org.springframework.security.web.context.SecurityContextPersistenceFilter@6cff889f, org.springframework.security.web.header.HeaderWriterFilter@6fd3db28, org.springframework.security.web.csrf.CsrfFilter@1760bd4, org.springframework.security.web.authentication.logout.LogoutFilter@3a08dfbd, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6ec7f11a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2aa30106, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@61afda1a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@53a51429, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@36d19ab6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@47aa1ddf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30b1a814, org.springframework.security.web.session.SessionManagementFilter@5d66004c, org.springframework.security.web.access.ExceptionTranslationFilter@aea13cd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@59f519a2]
+27-06-2019 23:15:48  INFO, 25832 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+27-06-2019 23:15:49  INFO, 25832 --- [restartedMain] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:15}] to localhost:27017
+27-06-2019 23:15:49  INFO, 25832 --- [restartedMain] com.oauth2.demo.config.BootstrapData     : return role already : ROLE_ADMIN
+27-06-2019 23:15:49  INFO, 25832 --- [restartedMain] com.oauth2.demo.config.BootstrapData     : return role already : ROLE_USER
+27-06-2019 23:15:49  INFO, 25832 --- [restartedMain] com.oauth2.demo.config.BootstrapData     : return user already : Alexandre
+27-06-2019 23:15:49  INFO, 25832 --- [restartedMain] com.oauth2.demo.config.BootstrapData     : return user already : Dayane
+27-06-2019 23:15:49  INFO, 25832 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/api'
+27-06-2019 23:15:49  INFO, 25832 --- [restartedMain] com.oauth2.demo.DemoApplication          : Started DemoApplication in 7.314 seconds (JVM running for 8.99)
+27-06-2019 23:16:50  INFO, 25832 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+27-06-2019 23:24:31  INFO, 25832 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+27-06-2019 23:24:31  INFO, 25832 --- [Thread-8] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:15}] to localhost:27017 because the pool has been closed.
+27-06-2019 23:24:38  INFO, 26481 --- [restartedMain] com.oauth2.demo.DemoApplication          : Starting DemoApplication on alexandreximenes with PID 26481 (started by alexandreximenes in /home/alexandreximenes/Documentos/DESENVOLVIMENTO/java/Autenticacao com Spring e OAuth2)
+27-06-2019 23:24:38  INFO, 26481 --- [restartedMain] com.oauth2.demo.DemoApplication          : The following profiles are active: dev
+27-06-2019 23:24:38  INFO, 26481 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+27-06-2019 23:24:38  INFO, 26481 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+27-06-2019 23:24:40  INFO, 26481 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+27-06-2019 23:24:40  INFO, 26481 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75ms. Found 2 repository interfaces.
+27-06-2019 23:24:40  INFO, 26481 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+27-06-2019 23:24:40  INFO, 26481 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+27-06-2019 23:24:40  INFO, 26481 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+27-06-2019 23:24:41  INFO, 26481 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+27-06-2019 23:24:41  INFO, 26481 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+27-06-2019 23:24:41  INFO, 26481 --- [cluster-ClusterId{value='5d157a693132d56771af0080', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:16}] to localhost:27017
+27-06-2019 23:24:41  INFO, 26481 --- [cluster-ClusterId{value='5d157a693132d56771af0080', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 3]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3052917}
+27-06-2019 23:24:42  INFO, 26481 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+27-06-2019 23:24:42  INFO, 26481 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@643833dd, org.springframework.security.web.context.SecurityContextPersistenceFilter@1da65e3c, org.springframework.security.web.header.HeaderWriterFilter@50c9e7b0, org.springframework.security.web.authentication.logout.LogoutFilter@7db451d6, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6a4dc28a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@408eda1e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@8970ce8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@32186f6e, org.springframework.security.web.session.SessionManagementFilter@207df2, org.springframework.security.web.access.ExceptionTranslationFilter@5e45b276, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@53064601]
+27-06-2019 23:24:42  INFO, 26481 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@39ee60f, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c46a651, org.springframework.security.web.context.SecurityContextPersistenceFilter@5c8e2265, org.springframework.security.web.header.HeaderWriterFilter@6b19a0af, org.springframework.security.web.authentication.logout.LogoutFilter@6f949481, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@1e7200a2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@29da3f9c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f60fed0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1ea51e63, org.springframework.security.web.session.SessionManagementFilter@136e7f52, org.springframework.security.web.access.ExceptionTranslationFilter@b5fdfcf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@12e0f9af]
+27-06-2019 23:24:42  INFO, 26481 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5728c577, org.springframework.security.web.context.SecurityContextPersistenceFilter@1393418f, org.springframework.security.web.header.HeaderWriterFilter@6e53f1eb, org.springframework.security.web.csrf.CsrfFilter@3175397d, org.springframework.security.web.authentication.logout.LogoutFilter@605bad97, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3394a276, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@69cd1618, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4678ff00, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2af1a8e4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3a0da52d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b20d72e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@506972ab, org.springframework.security.web.session.SessionManagementFilter@b353f45, org.springframework.security.web.access.ExceptionTranslationFilter@537f4911, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@468ae963]
+27-06-2019 23:24:43  INFO, 26481 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+27-06-2019 23:24:43  INFO, 26481 --- [restartedMain] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:17}] to localhost:27017
+27-06-2019 23:24:43  INFO, 26481 --- [restartedMain] com.oauth2.demo.config.BootstrapData     : return role already : ROLE_ADMIN
+27-06-2019 23:24:43  INFO, 26481 --- [restartedMain] com.oauth2.demo.config.BootstrapData     : return role already : ROLE_USER
+27-06-2019 23:24:43  INFO, 26481 --- [restartedMain] com.oauth2.demo.config.BootstrapData     : return user already : Alexandre
+27-06-2019 23:24:43  INFO, 26481 --- [restartedMain] com.oauth2.demo.config.BootstrapData     : return user already : Dayane
+27-06-2019 23:24:43  INFO, 26481 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/api'
+27-06-2019 23:24:43  INFO, 26481 --- [restartedMain] com.oauth2.demo.DemoApplication          : Started DemoApplication in 6.136 seconds (JVM running for 7.626)
+27-06-2019 23:29:16  INFO, 26481 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+27-06-2019 23:29:16  INFO, 26481 --- [Thread-8] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:17}] to localhost:27017 because the pool has been closed.
+27-06-2019 23:29:22  INFO, 28028 --- [restartedMain] com.oauth2.demo.DemoApplication          : Starting DemoApplication on alexandreximenes with PID 28028 (started by alexandreximenes in /home/alexandreximenes/Documentos/DESENVOLVIMENTO/java/Autenticacao com Spring e OAuth2)
+27-06-2019 23:29:22  INFO, 28028 --- [restartedMain] com.oauth2.demo.DemoApplication          : The following profiles are active: dev
+27-06-2019 23:29:22  INFO, 28028 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+27-06-2019 23:29:22  INFO, 28028 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+27-06-2019 23:29:23  INFO, 28028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+27-06-2019 23:29:24  INFO, 28028 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74ms. Found 2 repository interfaces.
+27-06-2019 23:29:24  INFO, 28028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+27-06-2019 23:29:24  INFO, 28028 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+27-06-2019 23:29:24  INFO, 28028 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.19]
+27-06-2019 23:29:24  INFO, 28028 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+27-06-2019 23:29:25  INFO, 28028 --- [restartedMain] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+27-06-2019 23:29:25  INFO, 28028 --- [cluster-ClusterId{value='5d157b853132d56d7c32614a', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:18}] to localhost:27017
+27-06-2019 23:29:25  INFO, 28028 --- [cluster-ClusterId{value='5d157b853132d56d7c32614a', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 3]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3729924}
+27-06-2019 23:29:25  INFO, 28028 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+27-06-2019 23:29:26  INFO, 28028 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@38c27ad, org.springframework.security.web.context.SecurityContextPersistenceFilter@1708c119, org.springframework.security.web.header.HeaderWriterFilter@20a0b9c7, org.springframework.security.web.authentication.logout.LogoutFilter@dd3ff1b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5e854941, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@12bffa26, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@31ddb1e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3332e06d, org.springframework.security.web.session.SessionManagementFilter@72817aab, org.springframework.security.web.access.ExceptionTranslationFilter@2b460bd9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1740f8f7]
+27-06-2019 23:29:26  INFO, 28028 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfiguration$NotOAuthRequestMatcher@2fdf924e, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33e2674, org.springframework.security.web.context.SecurityContextPersistenceFilter@47b75aa7, org.springframework.security.web.header.HeaderWriterFilter@314c1fd0, org.springframework.security.web.authentication.logout.LogoutFilter@4d0c45b9, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@4ca8ac18, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4551c55a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1432f0bf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@a9a5c9e, org.springframework.security.web.session.SessionManagementFilter@73e55050, org.springframework.security.web.access.ExceptionTranslationFilter@7bff2368, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@ecb0b06]
+27-06-2019 23:29:26  INFO, 28028 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a199965, org.springframework.security.web.context.SecurityContextPersistenceFilter@48130f71, org.springframework.security.web.header.HeaderWriterFilter@16ef338c, org.springframework.security.web.csrf.CsrfFilter@107eba48, org.springframework.security.web.authentication.logout.LogoutFilter@3d26b63c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@894d93, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6d1e5469, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3fa87290, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@49663e64, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7dc4cc31, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1258e356, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@75075523, org.springframework.security.web.session.SessionManagementFilter@2d5a5c68, org.springframework.security.web.access.ExceptionTranslationFilter@1e2568fa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@24723ec8]
+27-06-2019 23:29:26  INFO, 28028 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+27-06-2019 23:29:27  INFO, 28028 --- [restartedMain] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:19}] to localhost:27017
+27-06-2019 23:29:27  INFO, 28028 --- [restartedMain] com.oauth2.demo.config.BootstrapData     : return role already : ROLE_ADMIN
+27-06-2019 23:29:27  INFO, 28028 --- [restartedMain] com.oauth2.demo.config.BootstrapData     : return role already : ROLE_USER
+27-06-2019 23:29:27  INFO, 28028 --- [restartedMain] com.oauth2.demo.config.BootstrapData     : return user already : Alexandre
+27-06-2019 23:29:27  INFO, 28028 --- [restartedMain] com.oauth2.demo.config.BootstrapData     : return user already : Dayane
+27-06-2019 23:29:27  INFO, 28028 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/api'
+27-06-2019 23:29:27  INFO, 28028 --- [restartedMain] com.oauth2.demo.DemoApplication          : Started DemoApplication in 5.931 seconds (JVM running for 7.472)
+27-06-2019 23:36:33  INFO, 28028 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+27-06-2019 23:36:33  INFO, 28028 --- [Thread-8] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:2, serverValue:19}] to localhost:27017 because the pool has been closed.

@@ -1,8 +1,8 @@
 
-‡"squid:ClassVariableVisibilityCheck"TMake dateTime a static final constant or non-public and provide accessors if needed.(‹‚ÆÊşÿÿÿÿ
-"squid:ClassVariableVisibilityCheck"QMake datas a static final constant or non-public and provide accessors if needed.(ó»™
-"squid:ClassVariableVisibilityCheck"SMake message a static final constant or non-public and provide accessors if needed.(ÕÃØ·
 `squid:S1134="DTake the required action to fix the issue indicated by this comment.(úáŞ¯üÿÿÿÿ
->squid:S1948"'Make "datas" transient or serializable.(ó»™
+"squid:ClassVariableVisibilityCheck"QMake datas a static final constant or non-public and provide accessors if needed.(ó»™
 ‰"squid:ClassVariableVisibilityCheck"VMake pagination a static final constant or non-public and provide accessors if needed.(µÅ¸ñûÿÿÿÿ
+"squid:ClassVariableVisibilityCheck"SMake message a static final constant or non-public and provide accessors if needed.(ÕÃØ·
+‡"squid:ClassVariableVisibilityCheck"TMake dateTime a static final constant or non-public and provide accessors if needed.(‹‚ÆÊşÿÿÿÿ
+>squid:S1948"'Make "datas" transient or serializable.(ó»™
 `squid:S1134B"DTake the required action to fix the issue indicated by this comment.(Û¦’ûÿÿÿÿ

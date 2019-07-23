@@ -1,0 +1,18 @@
+
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(ú¡ôİøÿÿÿÿ8ÊÔÖ¾µ-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(ú¡ôİøÿÿÿÿ8ò€Ê¾µ-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(ú¡ôİøÿÿÿÿ8Â„Ì¾µ-
+isquid:S1764"KCorrect one of the identical sub-expressions on both sides of operator "!="(ÄÖŠ8Â„Ì¾µ-
+isquid:S1764"KCorrect one of the identical sub-expressions on both sides of operator "=="(ãáçŸ8¥ŒË¾µ-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(ú¡ôİøÿÿÿÿ8¥¨Å¾µ-
+msquid:S1764"JCorrect one of the identical sub-expressions on both sides of operator ">"(Õ¡…şÿÿÿÿ8 ùÄ¾µ-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(ú¡ôİøÿÿÿÿ8¢ÇÊ¾µ-
+isquid:S1764"KCorrect one of the identical sub-expressions on both sides of operator ">="(÷À©ş8ÊÔÖ¾µ-
+hsquid:S1764
+"JCorrect one of the identical sub-expressions on both sides of operator "<"(‚Óôâ8ÄòÈ¾µ-
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(§¥Ú

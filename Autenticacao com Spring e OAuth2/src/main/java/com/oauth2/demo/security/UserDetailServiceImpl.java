@@ -35,11 +35,11 @@ public class UserDetailServiceImpl implements UserDetailsService {
 
     }
 
-    public final Collection<? extends GrantedAuthority> getAuthorities(final Collection<Role> roles) {
+    public static final Collection<? extends GrantedAuthority> getMyAuthorities(final Collection<Role> roles) {
         return grantedAuthorityList(roles);
     }
 
-    private final List<GrantedAuthority> grantedAuthorityList(final Collection<Role> roles) {
+    private static final List<GrantedAuthority> grantedAuthorityList(final Collection<Role> roles) {
         return roles.parallelStream()
                 .filter(Objects::nonNull)
                 .map(role -> new SimpleGrantedAuthority(role.getName()))
@@ -54,7 +54,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
 
         @Override
         public Collection<? extends GrantedAuthority> getAuthorities() {
-            return getRoles();
+            return getMyAuthorities(getRoles());
         }
 
         @Override

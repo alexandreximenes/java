@@ -9,6 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = HibernateApplication.class)
@@ -52,6 +54,49 @@ public class HibernateApplicationTests {
         Course course = courseRepository.findById(1L);
         log.info("[deleteByIdCourseTest {} - {}]", course, null);
         Assert.assertNull(course);
+    }
+
+
+    @Test
+    @Transactional
+    public void findByNameLikeNameTest() {
+        List<Course> list = courseRepository.findByName();
+        log.info("[findByNameLikeNameTest {}]", list);
+        Assert.assertEquals(3, list.size());
+    }
+
+
+    @Test
+    @Transactional
+    public void findByNameNativeQueryTest() {
+        List<Course> list = courseRepository.findByAllNativeQuery();
+        log.info("[findByNameNativeQueryTest {}]", list);
+        Assert.assertEquals(3, list.size());
+    }
+
+    @Test
+    @Transactional
+    public void findByNameNativeQueryPositionTest() {
+        Course oneCourse = courseRepository.findByNameNativeQueryPosition();
+        log.info("[findByNameNativeQueryPositionTest {}]", oneCourse);
+        Assert.assertEquals("Hibernate course", oneCourse.getName());
+    }
+
+    @Test
+    @Transactional
+    public void findByNameParametter() {
+        Course oneCourse = courseRepository.findByNameParametter();
+        log.info("[findByNameParametter {}]", oneCourse);
+        Assert.assertEquals("Hibernate course", oneCourse.getName());
+    }
+
+    @Test
+    @Transactional
+    public void updateNameCourse() {
+        courseRepository.updateNameCourse("Hibernate2 course", 2L);
+        Course course = courseRepository.findById(2L);
+        log.info("[updateNameCourse {}]", course);
+        Assert.assertEquals("Hibernate2 course", course.getName());
     }
 
 }

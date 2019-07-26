@@ -22,6 +22,7 @@ public class HibernateApplication implements CommandLineRunner {
     @Override
     @Transactional
     public void run(String... args) throws Exception {
+
         if(repository.findAll().size() <= 0)
             new InitData(repository).start();
     }

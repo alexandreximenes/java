@@ -8,10 +8,10 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-@NamedQuery(name = "select_all_courses", query = "SELECT c FROM Course c")
+@NamedQuery(name = "select_all_review", query = "SELECT c FROM Passport c")
 @Entity
 @Data
-public class Course {
+public class Review {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,8 +21,10 @@ public class Course {
     @UpdateTimestamp
     private LocalDateTime updatedAt;
     private String uuid;
-    @Column(nullable = false, length = 191, unique = true)
-    private String name;
+    @Column(nullable = false, length = 191)
+    private String rating;
+    @Column(nullable = false, length = 191)
+    private String description;
 
     @PrePersist
     public void setUuid(){

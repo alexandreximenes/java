@@ -46,7 +46,7 @@ public class CourseRepository {
     }
 
     public List<Course> findByName() {
-        TypedQuery<Course> query = entityManager.createNamedQuery("select_all", Course.class);
+        TypedQuery<Course> query = entityManager.createNamedQuery("select_all_courses", Course.class);
         return query.getResultList();
     }
 

@@ -17,13 +17,30 @@ public class HibernateApplication implements CommandLineRunner {
     }
 
     @Autowired
-    private CourseRepository repository;
+    private CourseRepository cRepository;
+    @Autowired
+    private StudentRepository sRepository;
+    @Autowired
+    private PassportRepository pRepository;
+    @Autowired
+    private ReviewRepository rRepository;
 
     @Override
     @Transactional
     public void run(String... args) throws Exception {
 
-        if(repository.findAll().size() <= 0)
-            new InitData(repository).start();
+        if(cRepository.findAll().size() <= 0)
+            new InitData().startCourse(cRepository);
+
+        if(pRepository.findAll().size() <= 0)
+            new InitData().startPassport(pRepository);
+
+        if(sRepository.findAll().size() <= 0)
+            new InitData().startStudent(sRepository);
+
+        new InitData().startStudentOneToOnePassport(sRepository, pRepository);
+
+        if(rRepository.findAll().size() <= 0)
+            new InitData().startReview(rRepository);
     }
 }

@@ -1,6 +1,7 @@
 package com.treinamento.hibernate;
 
 import lombok.extern.slf4j.Slf4j;
+import org.hibernate.LazyInitializationException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,6 +19,10 @@ public class HibernateApplicationTests {
 
     @Autowired
     CourseRepository courseRepository;
+    @Autowired
+    StudentRepository studentRepository;
+    @Autowired
+    PassportRepository passportRepository;
 
     @Test
     @Transactional
@@ -96,7 +101,37 @@ public class HibernateApplicationTests {
         courseRepository.updateNameCourse("Hibernate2 course", 2L);
         Course course = courseRepository.findById(2L);
         log.info("[updateNameCourse {}]", course);
-        Assert.assertEquals("Hibernate2 course", course.getName());
+        Assert.assertEquals("Hibernate course", course.getName());
+    }
+
+
+    @Test
+    @Transactional
+    public void saveStudentWithPassport() {
+        Passport p = new Passport();
+        p.setNumber("X1");
+
+        Student s = new Student();
+        s.setName("Ximenes");
+        s.setPassport(p);
+
+        Student student = studentRepository.saveWithPassport(s);
+
+        log.info("[saveStudentWithPassport {}]", student);
+        Assert.assertEquals(s.getPassport().getId(), p.getId());
+    }
+
+    @Test(expected = LazyInitializationException.class)
+    public void findStudentLazyInitialization() {
+        Student student = studentRepository.findById(1L);
+        Assert.assertNull(student.getPassport());
+    }
+
+    @Test
+    @Transactional
+    public void findStudenWithTransactionAndtLazyInitialization() {
+        Student student = studentRepository.findById(1L);
+        Assert.assertNotNull(student.getPassport());
     }
 
 }

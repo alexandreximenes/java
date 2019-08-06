@@ -53,11 +53,11 @@ public class BootstrapData implements ApplicationListener<ContextRefreshedEvent>
                 .build();
     }
 
-    private User getUser(String firstName, String lastName, String email, String password, boolean enable) {
+    private User getUser(String firstName, String lastName, String username, String password, boolean enable) {
         return User.builder()
                 .firstName(firstName)
                 .lastName(lastName)
-                .email(email)
+                .username(username)
                 .password(bCryptPasswordEncoder.encode(password))
                 .enable(enable)
                 .build();
@@ -65,7 +65,7 @@ public class BootstrapData implements ApplicationListener<ContextRefreshedEvent>
 
     private User createUserIfNotExistsByEmail(User user) {
 
-        Optional<User> userByEmail = userRepository.findByEmail(user.getEmail());
+        Optional<User> userByEmail = userRepository.findByEmail(user.getUsername());
         if (userByEmail.isPresent()) {
             log.info("return user already : " + userByEmail.get().getFirstName());
             return userByEmail.get();

@@ -4,11 +4,16 @@ import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.validation.constraints.Email;
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 @Getter
 @Setter
@@ -25,7 +30,7 @@ public class User implements Serializable {
     private String firstName;
     private String lastName;
     @Email
-    private String email;
+    private String username;
     private String password;
     private boolean enable;
 
@@ -36,14 +41,14 @@ public class User implements Serializable {
         this.id = u.getId();
         this.firstName = u.getFirstName();
         this.lastName = u.getLastName();
-        this.email = u.getEmail();
+        this.username = u.getUsername();
     }
 
     public User(User u) {
         this.id = u.getId();
         this.firstName = u.getFirstName();
         this.lastName = u.getLastName();
-        this.email = u.getEmail();
+        this.username = u.getUsername();
         this.password = u.getPassword();
         this.enable = u.isEnable();
         this.roles = u.getRoles();
@@ -61,4 +66,52 @@ public class User implements Serializable {
     public int hashCode() {
         return Objects.hash(id);
     }
+
+    @Getter
+    @Setter
+    public final static class UserUserDetail extends User implements UserDetails {
+
+        public UserUserDetail(User user) {
+            super(user);
+        }
+
+        @Override
+        public Collection<? extends GrantedAuthority> getAuthorities() {
+            return this.getRoles().parallelStream()
+                    .filter(Objects::nonNull)
+                    .map(role -> new SimpleGrantedAuthority(role.getName()))
+                    .collect(Collectors.toList());
+        }
+
+        @Override
+        public String getPassword() {
+            return getPassword();
+        }
+
+        @Override
+        public String getUsername() {
+            return getUsername();
+        }
+
+        @Override
+        public boolean isAccountNonExpired() {
+            return true;
+        }
+
+        @Override
+        public boolean isAccountNonLocked() {
+            return true;
+        }
+
+        @Override
+        public boolean isCredentialsNonExpired() {
+            return true;
+        }
+
+        @Override
+        public boolean isEnabled() {
+            return true;
+        }
+    }
+
 }

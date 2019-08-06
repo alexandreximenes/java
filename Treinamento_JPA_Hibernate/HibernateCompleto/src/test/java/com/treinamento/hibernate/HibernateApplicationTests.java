@@ -134,4 +134,18 @@ public class HibernateApplicationTests {
         Assert.assertNotNull(student.getPassport());
     }
 
+    @Test
+    @Transactional
+    public void findStudenWithPassport() {
+        Student student = studentRepository.findById(1L);
+        Assert.assertNotNull(student.getPassport());
+    }
+
+    @Test
+    @Transactional
+    public void findPassportWithStuden() {
+        Passport passport = passportRepository.findById(1L);
+        Assert.assertNotNull(passport.getStudent());
+    }
+
 }

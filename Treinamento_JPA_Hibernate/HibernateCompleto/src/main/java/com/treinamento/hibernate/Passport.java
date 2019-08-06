@@ -24,6 +24,9 @@ public class Passport {
     @Column(nullable = false, length = 191)
     private String number;
 
+    @OneToOne(fetch = FetchType.LAZY)
+    private Student student;
+
     @PrePersist
     public void setUuid(){
         uuid = UUID.randomUUID().toString();

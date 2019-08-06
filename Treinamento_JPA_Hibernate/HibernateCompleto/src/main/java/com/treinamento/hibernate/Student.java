@@ -23,7 +23,7 @@ public class Student {
     private String uuid;
     @Column(nullable = false, length = 191)
     private String name;
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "student")
     private Passport passport;
 
     @PrePersist

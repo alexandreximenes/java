@@ -2,6 +2,8 @@ package com.treinamento.hibernate;
 
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
+
 @Service
 public class InitData {
 
@@ -29,14 +31,17 @@ public class InitData {
 
     public void startStudentOneToOnePassport(StudentRepository sr, PassportRepository pr) {
 
-        p = new Passport();
+        Student s = new Student();
+        s.setName("Alexandre Ximenes");
+        sr.save(s);
+
+        Passport p = new Passport();
         p.setNumber("X1");
+        p.setStudent(s);
         pr.save(p);
 
-        s = new Student();
-        s.setName("Ximenes");
-        s.setPassport(p);
-        sr.save(s);
+
+
 
 
 

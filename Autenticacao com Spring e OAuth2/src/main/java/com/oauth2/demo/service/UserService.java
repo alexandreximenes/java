@@ -36,8 +36,8 @@ public class UserService {
                 .parallelStream()
                 .filter(Objects::nonNull)
                 .map(UserDTO::new)
-                .filter(userDTO -> nonNull(userDTO.getEmail()))
-                .sorted(Comparator.comparing(UserDTO::getEmail))
+                .filter(userDTO -> nonNull(userDTO.getUsername()))
+                .sorted(Comparator.comparing(UserDTO::getUsername))
                 .collect(Collectors.toList());
     }
 
@@ -67,7 +67,7 @@ public class UserService {
         userDTO.setId(user.getId());
         if(nonNull(userDTO.getFirstName())) user.setFirstName(userDTO.getFirstName());
         if(nonNull(userDTO.getLastName())) user.setLastName(userDTO.getLastName());
-        if(nonNull(userDTO.getEmail())) user.setEmail(userDTO.getEmail());
+        if(nonNull(userDTO.getUsername())) user.setUsername(userDTO.getUsername());
         if (nonNull(userDTO.getPassword())) user.setPassword(bCryptPasswordEncoder.encode(userDTO.getPassword()));
         userDTO.setEnable(userDTO.isEnable() ? true : false);
 
@@ -80,4 +80,6 @@ public class UserService {
         userRepository.deleteById(userFound.getId());
 
     }
+
+
 }

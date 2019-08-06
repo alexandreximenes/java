@@ -1,7 +1,7 @@
 
+`squid:HiddenFieldCheck1">Rename "expiration" which hides the field declared at line 20.(‚š£¬
 Esquid:S1068")Remove this unused "token" private field.(°É©ñÿÿÿÿÿ
 psquid:S1450"TRemove the "token" field and declare it as a local variable in the relevant methods.(°É©ñÿÿÿÿÿ
-]squid:S1126)"AReplace this if-then-else statement by a single return statement.(–î–¼ùÿÿÿÿ
 ]squid:S11263"AReplace this if-then-else statement by a single return statement.(ìÓ­œþÿÿÿÿ
-`squid:HiddenFieldCheck1">Rename "expiration" which hides the field declared at line 20.(‚š£¬
 `squid:HiddenFieldCheckE"9Rename "token" which hides the field declared at line 26.(„ÑÕÚúÿÿÿÿ
+]squid:S1126)"AReplace this if-then-else statement by a single return statement.(–î–¼ùÿÿÿÿ

@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="770c082c-595d-482c-b9bf-77bfb895d601" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Treinamento_JPA_Hibernate/HibernateCompleto/src/main/java/com/treinamento/hibernate/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Treinamento_JPA_Hibernate/HibernateCompleto/src/main/java/com/treinamento/hibernate/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Treinamento_JPA_Hibernate/HibernateCompleto/src/main/java/com/treinamento/hibernate/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Treinamento_JPA_Hibernate/HibernateCompleto/src/main/java/com/treinamento/hibernate/CourseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Treinamento_JPA_Hibernate/HibernateCompleto/src/main/java/com/treinamento/hibernate/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Treinamento_JPA_Hibernate/HibernateCompleto/src/main/java/com/treinamento/hibernate/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Treinamento_JPA_Hibernate/HibernateCompleto/src/main/java/com/treinamento/hibernate/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Treinamento_JPA_Hibernate/HibernateCompleto/src/main/java/com/treinamento/hibernate/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Treinamento_JPA_Hibernate/HibernateCompleto/src/test/java/com/treinamento/hibernate/HibernateApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Treinamento_JPA_Hibernate/HibernateCompleto/src/test/java/com/treinamento/hibernate/HibernateApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../inventario/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../inventario/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../inventario/src/ProductTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/../inventario/src/ProductTester.java" afterDir="false" />
-    </list>
+    <list default="true" id="770c082c-595d-482c-b9bf-77bfb895d601" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PessoaDoSul.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="446">
+              <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
               <folding>
                 <element signature="e#72#73#0" expanded="true" />
                 <element signature="e#104#105#0" expanded="true" />
@@ -100,6 +92,12 @@
               <item name="exercicioJavaI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="exercicioJavaI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="exercicioJavaI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="PessoaDoSul.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -150,12 +148,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571619210239</updated>
-      <workItem from="1571620018828" duration="4208000" />
+      <workItem from="1571620018828" duration="4304000" />
     </task>
+    <task id="LOCAL-00001" summary="exercicio 1">
+      <created>1571625171128</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1571625171129</updated>
+    </task>
+    <task id="LOCAL-00002" summary="exercicio 1">
+      <created>1571625205549</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571625205549</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4208000" />
+    <option name="totallyTimeSpent" value="4304000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="742" extended-state="6" />
@@ -177,7 +190,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32956383" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32956383" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3990307" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3990307" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -195,6 +208,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="exercicio 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="exercicio 1" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="jrt:///usr/lib/jvm/java-1.11.0-openjdk-amd64!/java.base/java/lang/Math.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -205,8 +222,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PessoaDoSul.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="446">
+          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
           <folding>
             <element signature="e#72#73#0" expanded="true" />
             <element signature="e#104#105#0" expanded="true" />

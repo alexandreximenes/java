@@ -73,4 +73,6 @@ public class CourseRepository {
         nativeQuery.setParameter("id", 2);
         return (Course) nativeQuery.getSingleResult();
     }
+
+
 }

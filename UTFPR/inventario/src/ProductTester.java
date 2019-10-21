@@ -1,4 +1,4 @@
-public class ProductTester {
+/////////////public class ProductTester {
 
     public static void main(String[] args) {
 
@@ -18,7 +18,6 @@ public class ProductTester {
         Produto produto4 = new Produto("Play 3", 539.99, 4, 100);
         Produto produto5 = new Produto("Play 4", 1299.99, 5, 125);
         Produto produto6 = new Produto("Play 5", 1599.99, 6, 150);
-
 
         System.out.println(produto1);
         System.out.println(produto2);
@@ -55,7 +54,7 @@ public class ProductTester {
                     System.out.print(table[i][j] = 1);
                 } else {
                     System.out.print(table[i][j] = 0);
-                }
+               }
             }
             System.out.println();
         }
@@ -78,6 +77,10 @@ public class ProductTester {
         }
     System.out.println("7/8*5: "+ 7/8*5);
 
+        ----------++++
+
+
+                -------
 
         int num = 7;
         while(num >= 0)
@@ -88,3 +91,4 @@ public class ProductTester {
     }
 
 }
+-*

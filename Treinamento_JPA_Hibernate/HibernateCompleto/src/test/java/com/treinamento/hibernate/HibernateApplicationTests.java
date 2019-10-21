@@ -10,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
@@ -23,6 +24,8 @@ public class HibernateApplicationTests {
     StudentRepository studentRepository;
     @Autowired
     PassportRepository passportRepository;
+    @Autowired
+    ReviewRepository reviewRepository;
 
     @Test
     @Transactional
@@ -143,9 +146,33 @@ public class HibernateApplicationTests {
 
     @Test
     @Transactional
-    public void findPassportWithStuden() {
+    public void findPassportWithStudent() {
         Passport passport = passportRepository.findById(1L);
         Assert.assertNotNull(passport.getStudent());
+    }
+
+    @Test
+    @Transactional
+    public void saveCourseAndReviewManyToMany() {
+
+        List<Review> reviews = new ArrayList();
+        Review review4 = new Review("4", "Review 4");
+        reviews.add(review4);
+        Review review5 = new Review("5", "Review 5");
+        reviews.add(review5);
+
+
+        List<Course> courses = new ArrayList();
+        Course flutter_mobile = new Course("Flutter mobile");
+        courses.add(flutter_mobile);
+        Course flutter_web = new Course("Flutter web");
+        courses.add(flutter_web);
+
+        review4.addCourse(courses);
+        flutter_mobile.addReview(reviews);
+
+//        log.info("[saveStudentWithPassport {}]", student);
+//        Assert.assertEquals(s.getPassport().getId(), p.getId());
     }
 
 }

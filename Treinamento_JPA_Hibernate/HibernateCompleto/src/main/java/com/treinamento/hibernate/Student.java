@@ -24,6 +24,7 @@ public class Student {
     @Column(nullable = false, length = 191)
     private String name;
     @OneToOne(fetch = FetchType.LAZY, mappedBy = "student")
+    @JoinColumn(unique = true)
     private Passport passport;
 
     @PrePersist

@@ -1,0 +1,30 @@
+package produto;
+
+public class Produto {
+	
+	private String nome;
+	private Integer preco;
+	private FormaDePagamento formaDePagamento;
+	
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public Integer getPreco() {
+		return preco;
+	}
+	public void setPreco(Integer preco) {
+		this.preco = preco;
+	}
+	public FormaDePagamento getFormaDePagamento() {
+		return formaDePagamento;
+	}
+	public void setFormaDePagamento(FormaDePagamento formaDePagamento) {
+		this.formaDePagamento = formaDePagamento;
+	}
+	
+	
+
+}

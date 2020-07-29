@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><venda><produtos><produto><nome>Livro JAXB</nome><preco>100.0</preco></produto><produto><nome>Livro SOAP</nome><preco>200.0</preco></produto><produto><nome>Livro Spring boot com SOAP e JAXB</nome><preco>400.0</preco></produto></produtos></venda>

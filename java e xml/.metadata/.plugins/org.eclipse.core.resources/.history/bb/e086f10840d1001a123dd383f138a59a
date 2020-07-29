@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<venda>
+	<produtos>
+		<produto>
+			<nome>TV Samsung</nome>
+			<preco>3000.00</preco>
+		</produto>
+		<produto>
+			<nome>Notebook Dell i7 9500</nome>
+			<preco>5000.00</preco>
+		</produto>
+	</produtos>
+	<formasPagamento>
+		<tipo>Cartão de crédito</tipo>
+		<tipo>Cartão de débito</tipo>
+		<tipo>Dinheiro</tipo>
+		<tipo>Cheque</tipo>
+	</formasPagamento>
+</venda>

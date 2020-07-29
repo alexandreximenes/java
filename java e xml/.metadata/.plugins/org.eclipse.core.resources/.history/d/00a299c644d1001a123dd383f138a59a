@@ -1,0 +1,28 @@
+package produto;
+
+import java.util.List;
+
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class Venda {
+	
+	@XmlElementWrapper(name = "produtos")
+	private List<Produto> produtos;
+	private List<FormaDePagamento> formasDePagamento;
+	
+	public List<Produto> getProdutos() {
+		return produtos;
+	}
+	public void setProdutos(List<Produto> produtos) {
+		this.produtos = produtos;
+	}
+	public List<FormaDePagamento> getFormasDePagamento() {
+		return formasDePagamento;
+	}
+	public void setFormaDePagamento(List<FormaDePagamento> formasDePagamento) {
+		this.formasDePagamento = formasDePagamento;
+	}
+
+}

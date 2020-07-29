@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<venda>
+	<produtos>
+		<produto>
+			<nome>TV Samsung</nome>
+			<preco>5000.00</preco>
+		</produto>
+	</produtos>
+</venda>

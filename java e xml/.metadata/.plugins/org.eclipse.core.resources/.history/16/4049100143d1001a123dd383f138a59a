@@ -1,0 +1,12 @@
+package produto;
+
+import java.util.List;
+
+public class Venda {
+	
+	private List<Produto> produtos;
+	private List<FormaDePagamento> formaDePagamento;
+	
+	
+
+}

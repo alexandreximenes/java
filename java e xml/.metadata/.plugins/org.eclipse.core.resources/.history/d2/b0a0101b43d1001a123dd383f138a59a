@@ -1,0 +1,24 @@
+package produto;
+
+import java.util.List;
+
+public class Venda {
+	
+	private List<Produto> produtos;
+	private List<FormaDePagamento> formaDePagamento;
+	public List<Produto> getProdutos() {
+		return produtos;
+	}
+	public void setProdutos(List<Produto> produtos) {
+		this.produtos = produtos;
+	}
+	public List<FormaDePagamento> getFormaDePagamento() {
+		return formaDePagamento;
+	}
+	public void setFormaDePagamento(List<FormaDePagamento> formaDePagamento) {
+		this.formaDePagamento = formaDePagamento;
+	}
+	
+	
+
+}

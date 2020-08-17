@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://blog.caelum.com.br/entendendo-o-serialversionuid/ -->
+<html lang="pt-BR" prefix="og: http://ogp.me/ns#" style="" class=" js csstransforms3d csstransitions" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Entendendo o serialVersionUID - Blog da Caelum: desenvolvimento, web, mobile, UX e ScrumBlog da Caelum: desenvolvimento, web, mobile, UX e Scrum</title>
+
+<link rel="pingback" href="https://blog.caelum.com.br/xmlrpc.php">
+
+<!-- This site is optimized with the Yoast SEO plugin v10.0.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://blog.caelum.com.br/entendendo-o-serialversionuid/">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Entendendo o serialVersionUID - Blog da Caelum: desenvolvimento, web, mobile, UX e Scrum">
+<meta property="og:description" content="O serialVersionUID é uma dúvida constante entre muitos desenvolvedores. Afinal, quando e para que exatamente usá-lo? Devo gerar um número aleatório bem grande, ou um número qualquer? Essas perguntas são comuns, e ao desenvolvedor experiente …">
+<meta property="og:url" content="https://blog.caelum.com.br/entendendo-o-serialversionuid/">
+<meta property="og:site_name" content="Blog da Caelum: desenvolvimento, web, mobile, UX e Scrum">
+<meta property="article:tag" content="fj-31">
+<meta property="article:tag" content="InvalidClassException">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="java.io.InvalidClassException">
+<meta property="article:tag" content="serial">
+<meta property="article:tag" content="Serializable">
+<meta property="article:tag" content="serialização">
+<meta property="article:tag" content="serialization">
+<meta property="article:tag" content="serialVersionUID">
+<meta property="article:tag" content="version">
+<meta property="article:section" content="Programação">
+<meta property="article:published_time" content="2008-04-01T11:21:57-03:00">
+<meta property="article:modified_time" content="2017-03-06T15:40:56-03:00">
+<meta property="og:updated_time" content="2017-03-06T15:40:56-03:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="O serialVersionUID é uma dúvida constante entre muitos desenvolvedores. Afinal, quando e para que exatamente usá-lo? Devo gerar um número aleatório bem grande, ou um número qualquer? Essas perguntas são comuns, e ao desenvolvedor experiente […]">
+<meta name="twitter:title" content="Entendendo o serialVersionUID - Blog da Caelum: desenvolvimento, web, mobile, UX e Scrum">
+<div class="fit-vids-style">­<style>               .fluid-width-video-wrapper {                 width: 100%;                              position: relative;                       padding: 0;                            }                                                                                   .fluid-width-video-wrapper iframe,        .fluid-width-video-wrapper object,        .fluid-width-video-wrapper embed {           position: absolute;                       top: 0;                                   left: 0;                                  width: 100%;                              height: 100%;                          }                                       </style></div><script type="text/javascript" async="" src="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/analytics.js"></script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","url":"https://blog.caelum.com.br/","sameAs":[],"@id":"https://blog.caelum.com.br/#organization","name":"Caelum","logo":""}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://secure.gravatar.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Feed para Blog da Caelum: desenvolvimento, web, mobile, UX e Scrum »" href="https://blog.caelum.com.br/feed/">
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Blog da Caelum: desenvolvimento, web, mobile, UX e Scrum »" href="https://blog.caelum.com.br/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Blog da Caelum: desenvolvimento, web, mobile, UX e Scrum » Entendendo o serialVersionUID" href="https://blog.caelum.com.br/entendendo-o-serialversionuid/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/blog.caelum.com.br\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.2"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/wp-emoji-release.min.js" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="theme-stylesheet-css" href="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="woo-layout-css" href="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/layout.css" type="text/css" media="all">
+<link rel="stylesheet" id="prism-theme-css" href="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/prism-css.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="social-logos-css" href="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/social-logos.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack_css-css" href="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/jetpack.css" type="text/css" media="all">
+<script type="text/javascript" src="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/jquery.js"></script>
+<script type="text/javascript" src="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/jquery-migrate.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/related-posts.min.js"></script>
+<script type="text/javascript" src="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/fitvids.min.js"></script>
+<script type="text/javascript" src="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/modernizr.min.js"></script>
+<script type="text/javascript" src="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/general.js"></script>
+<link rel="https://api.w.org/" href="https://blog.caelum.com.br/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://blog.caelum.com.br/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://blog.caelum.com.br/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.4.2">
+<link rel="shortlink" href="https://wp.me/p8tqQy-3j">
+<link rel="alternate" type="application/json+oembed" href="https://blog.caelum.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.caelum.com.br%2Fentendendo-o-serialversionuid%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://blog.caelum.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.caelum.com.br%2Fentendendo-o-serialversionuid%2F&amp;format=xml">
+<link rel="stylesheet" type="text/css" href="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/all.css"><!--[if IE]><link rel="stylesheet" type="text/css" href="https://blog.caelum.com.br/wp-content/plugins/highlight-source-pro/ie.css" /><![endif]--><script type="text/javascript" data-cfasync="false">var _mmunch = {'front': false, 'page': false, 'post': false, 'category': false, 'author': false, 'search': false, 'attachment': false, 'tag': false};_mmunch['post'] = true; _mmunch['postData'] = {"ID":205,"post_name":"entendendo-o-serialversionuid","post_title":"Entendendo o serialVersionUID","post_type":"post","post_author":"2","post_status":"publish"}; _mmunch['postCategories'] = [{"term_id":1367,"name":"Programa\u00e7\u00e3o","slug":"programacao","term_group":0,"term_taxonomy_id":1440,"taxonomy":"category","description":"","parent":0,"count":301,"filter":"raw","cat_ID":1367,"category_count":301,"category_description":"","cat_name":"Programa\u00e7\u00e3o","category_nicename":"programacao","category_parent":0}]; _mmunch['postTags'] = [{"term_id":723,"name":"fj-31","slug":"fj-31","term_group":0,"term_taxonomy_id":799,"taxonomy":"post_tag","description":"","parent":0,"count":10,"filter":"raw"},{"term_id":121,"name":"InvalidClassException","slug":"invalidclassexception","term_group":0,"term_taxonomy_id":135,"taxonomy":"post_tag","description":"","parent":0,"count":1,"filter":"raw"},{"term_id":2,"name":"Java","slug":"java","term_group":0,"term_taxonomy_id":2,"taxonomy":"post_tag","description":"","parent":0,"count":228,"filter":"raw"},{"term_id":120,"name":"java.io.InvalidClassException","slug":"javaioinvalidclassexception","term_group":0,"term_taxonomy_id":134,"taxonomy":"post_tag","description":"","parent":0,"count":1,"filter":"raw"},{"term_id":118,"name":"serial","slug":"serial","term_group":0,"term_taxonomy_id":132,"taxonomy":"post_tag","description":"","parent":0,"count":1,"filter":"raw"},{"term_id":115,"name":"Serializable","slug":"serializable","term_group":0,"term_taxonomy_id":129,"taxonomy":"post_tag","description":"","parent":0,"count":2,"filter":"raw"},{"term_id":114,"name":"serializa\u00e7\u00e3o","slug":"serializacao","term_group":0,"term_taxonomy_id":128,"taxonomy":"post_tag","description":"","parent":0,"count":1,"filter":"raw"},{"term_id":117,"name":"serialization","slug":"serialization","term_group":0,"term_taxonomy_id":131,"taxonomy":"post_tag","description":"","parent":0,"count":1,"filter":"raw"},{"term_id":116,"name":"serialVersionUID","slug":"serialversionuid","term_group":0,"term_taxonomy_id":130,"taxonomy":"post_tag","description":"","parent":0,"count":1,"filter":"raw"},{"term_id":119,"name":"version","slug":"version","term_group":0,"term_taxonomy_id":133,"taxonomy":"post_tag","description":"","parent":0,"count":2,"filter":"raw"}]; _mmunch['postAuthor'] = {"name":"Paulo Silveira","ID":2};</script><script data-cfasync="false" src="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/site.js" id="mailmunch-script" data-plugin="mc_mm" data-mailmunch-site-id="400098" async=""></script>
+<link rel="dns-prefetch" href="https://v0.wordpress.com/">
+<link rel="dns-prefetch" href="https://i0.wp.com/">
+<link rel="dns-prefetch" href="https://i1.wp.com/">
+<link rel="dns-prefetch" href="https://i2.wp.com/">
+<style type="text/css">img#wpstats{display:none}</style>
+<!-- Theme version -->
+<meta name="generator" content="On Topic 1.1.2">
+<meta name="generator" content="WooFramework 5.5.5">
+
+<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<!--  Mobile viewport scale | Disable user zooming as the layout is optimised -->
+<meta content="initial-scale=1.0; maximum-scale=1.0; user-scalable=no" name="viewport">
+<!--[if lt IE 9]>
+<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+		<link rel="amphtml" href="https://blog.caelum.com.br/entendendo-o-serialversionuid/amp/"><style type="text/css" id="syntaxhighlighteranchor"></style>
+			<style type="text/css" id="wp-custom-css">
+				/*
+Você pode adicionar seu próprio CSS aqui.
+
+Clique no ícone de ajuda acima para saber mais.
+*/
+
+/* author Alex feat Mairo ajuste no blockquote */
+.post .entry blockquote {
+    border-left: 5px solid #ccc;
+    padding-left: 25px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+}
+
+.post .entry blockquote:before {
+	display: none;
+}
+
+.post .entry blockquote p {
+	margin: 0px
+}
+			</style>
+		
+<!-- Woo Custom Styling -->
+<style type="text/css">
+body { background: #ffffff !important; }
+.entry a, .home-tabber li a { color: #7D95A5 !important; }
+.entry a:hover, .home-tabber li a:hover { color: #5A7C92 !important; }
+a.button, a.comment-reply-link, #commentform #submit, #contact-page .submit { background: #7D95A5 !important; }
+a.button:hover, a.button.hover, a.button.active, a.comment-reply-link:hover, #commentform #submit:hover, #contact-page .submit:hover { background: #7D95A5 !important; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+</style>
+
+<!-- Google Webfonts -->
+<link href="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/css" rel="stylesheet" type="text/css">
+
+<!-- Woo Custom Typography -->
+<style type="text/css">
+body { font:normal 1.6em/1.9em 'Merriweather', arial, sans-serif;color:#1c1c1c; }
+#navigation ul.nav > li > a { font:300 1.1em/1em 'Varela', arial, sans-serif;color:#FFFFFF; }
+.page header h1 { font:bold italic 3.5em/1em 'Open Sans', arial, sans-serif;color:#000000; }
+.post header h1, .post header h1 a:link, .post header h1 a:visited { font:bold 3em/1em 'PT Sans', arial, sans-serif;color:#25343F; }
+.post header h1 a:link, .post header h1 a:visited { font:bold 0.7em/1em 'PT Sans', arial, sans-serif;color:#000000; }
+.post-meta { font:300 0.9em/1em 'Merriweather', arial, sans-serif;color:#828282; }
+.entry, .entry p { font:300 1em/1.5em 'Merriweather', arial, sans-serif;color:#1c1c1c; } h1, h2, h3, h4, h5, h6 { font-family: Merriweather, arial, sans-serif; }
+</style>
+
+<!-- Alt Stylesheet -->
+<link href="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/default.css" rel="stylesheet" type="text/css">
+
+<!-- Custom Favicon -->
+<link rel="shortcut icon" href="https://blog.caelum.com.br/wp-content/uploads/2006/08/favicon.ico">
+<!-- Options Panel Custom CSS -->
+<style type="text/css">
+.entry a, .home-tabber li a { color:#068AE0 !important; }
+
+</style>
+
+
+<!-- Woo Shortcodes CSS -->
+<link href="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/shortcodes.css" rel="stylesheet" type="text/css">
+
+<!-- Custom Stylesheet -->
+<link href="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/custom.css" rel="stylesheet" type="text/css">
+
+
+	<style>
+	
+		
+		#header  {
+			
+							background-color: #081c27;
+						
+							background-image: url(https://blog.caelum.com.br/wp-content/uploads/2006/08/bg-02.jpg);
+						
+							background-position: top left;
+						
+			background-repeat: no-repeat;
+			background-size: cover;
+			
+		}
+	
+				
+			@media only screen and (min-width: 768px) {
+				
+				.page #post-entries a, .single-post #post-entries a, .single-product #post-entries a  {
+					background-color: #081c27;
+				}
+				
+			}
+			
+			
+	</style>
+	
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-270161-5');
+</script>
+<meta id="dcngeagmmhegagicpcmpinaoklddcgon"><link rel="stylesheet" type="text/css" href="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/styles.css"></head>
+<body class="post-template-default single single-post postid-205 single-format-standard chrome alt-style-default layout-default" id="error-page">
+
+<div id="wrapper" class="loaded">
+	<div id="inner-wrapper">
+
+    
+	<header id="header">
+		
+	<a id="logo" href="https://blog.caelum.com.br/" title="Aprenda sobre tecnologia com a Caelum. Artigos de programação, web, mobile, ux e agile">
+						<img src="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/caelum-logo.png" alt="Blog da Caelum: desenvolvimento, web, mobile, UX e Scrum">
+			
+	</a>
+
+
+
+		<span class="nav-toggle"><a href="https://blog.caelum.com.br/entendendo-o-serialversionuid/#navigation"><span>Navigation</span></a></span>
+		
+		<!--
+	    <hgroup>
+			<h1 class="site-title"><a href="https://blog.caelum.com.br/">Blog da Caelum: desenvolvimento, web, mobile, UX e Scrum</a></h1>
+			<h2 class="site-description">Aprenda sobre tecnologia com a Caelum. Artigos de programação, web, mobile, ux e agile</h2>
+		</hgroup>
+		-->
+
+                
+        
+        <div class="search_main fix"><form role="search" class="searchform" method="get" id="searchform" action="https://blog.caelum.com.br/">
+				<div>
+					<label class="screen-reader-text" for="s">Pesquisar por:</label>
+					<input type="text" value="" name="s" class="field s" placeholder="Busca..." id="s">
+					<input type="submit" class="search-submit" id="searchsubmit" value="Pesquisar">
+				</div>
+			</form></div>
+		<nav id="navigation" class="col-full" role="navigation">
+
+			<section class="menus">
+
+			<a href="https://blog.caelum.com.br/" class="nav-home"><span>Home</span></a>
+			
+			<div class="menu-toggle"><h3>Categorias</h3><ul id="menu-categorias" class="nav main-nav"><li id="menu-item-8609" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-8609"><a href="https://blog.caelum.com.br/category/programacao/">Programação</a></li>
+<li id="menu-item-4145" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4145"><a href="https://blog.caelum.com.br/category/front-end/">Front-end</a></li>
+<li id="menu-item-8610" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8610"><a href="https://blog.caelum.com.br/category/mobile/">Mobile</a></li>
+<li id="menu-item-7474" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7474"><a href="https://blog.caelum.com.br/category/design-ux/">Design &amp; UX</a></li>
+<li id="menu-item-4143" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4143"><a href="https://blog.caelum.com.br/category/agile/">Agile</a></li>
+<li id="menu-item-4142" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4142"><a href="https://blog.caelum.com.br/category/arquitetura/">Arquitetura</a></li>
+<li id="menu-item-4141" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4141"><a href="https://blog.caelum.com.br/category/inovacao/">Inovação</a></li>
+</ul></div><div class="menu-toggle"><h3>Conheça também</h3><ul id="menu-sec-menu" class="nav main-nav"><li id="menu-item-6142" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6142"><a href="https://www.caelum.com.br/">Cursos Caelum</a></li>
+<li id="menu-item-6143" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6143"><a href="https://www.alura.com.br/">Cursos online Alura</a></li>
+<li id="menu-item-6144" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6144"><a href="https://www.casadocodigo.com.br/">Editora Casa do Código</a></li>
+</ul></div>	        <ul class="nav rss">
+	            
+				
+	        </ul>
+
+	    	</section><!--/.menus-->
+
+	    	 <div id="connect">
+<div class="social">
+<a href="https://blog.caelum.com.br/feed/" title="Subscribe to our RSS feed" class="subscribe"><span>Subscribe to our RSS feed</span></a>
+<a href="https://twitter.com/caelum" title="Follow Blog da Caelum: desenvolvimento, web, mobile, UX e Scrum on Twitter" class="twitter"><span>Follow Blog da Caelum: desenvolvimento, web, mobile, UX e Scrum on Twitter</span></a>
+<a href="https://www.facebook.com/caelumbr" title="Like Blog da Caelum: desenvolvimento, web, mobile, UX e Scrum on Facebook" class="facebook"><span>Like Blog da Caelum: desenvolvimento, web, mobile, UX e Scrum on Facebook</span></a>
+</div>
+</div>
+
+	        <!-- <a href="#top" class="nav-close"><span>Return to Content</span></a> -->
+
+		</nav><!-- /#navigation -->
+
+				
+	</header><!-- /#header -->
+
+	
+    <div id="content" class="col-full">
+
+    	
+		<section id="main">
+        			<article class="post-205 post type-post status-publish format-standard hentry category-programacao tag-fj-31 tag-invalidclassexception tag-java tag-javaioinvalidclassexception tag-serial tag-serializable tag-serializacao tag-serialization tag-serialversionuid tag-version">
+
+				
+                <header style="background-image: url(); background-size: cover; background-position: center center;">
+                
+                	<section class="header-content">
+
+	                	<h1>Entendendo o serialVersionUID</h1>
+                		<aside class="post-meta">
+	<span class="post-date">Postado dia 01/04/2008</span>
+	<span class="post-author">por Paulo Silveira</span>
+	<span class="post-category">em <a href="https://blog.caelum.com.br/category/programacao/" rel="category tag">Programação</a></span>
+	<span class="post-comments"><a href="https://blog.caelum.com.br/entendendo-o-serialversionuid/#comments">50</a></span>
+	</aside>
+
+                	</section>
+                	
+                	<!--
+                	<nav id="post-entries" class="fix">
+	        		    <div class="nav-prev fl"><a href="https://blog.caelum.com.br/novidades-do-ejb-31-do-futuro-java-ee-6/" rel="prev">Novidades do EJB 3.1 do futuro Java EE 6</a></div>
+	        		    <div class="nav-next fr"><a href="https://blog.caelum.com.br/evento-falando-em-java-2008/" rel="next">Evento Falando em Java 2008</a></div>
+	        		</nav>
+	        	-->
+                	
+                	                	
+<!--                 	<a href="#" title="#"><img src="" alt="" /></a> -->
+
+                </header>
+
+                <section class="entry fix">
+					
+                	<div class="mailmunch-forms-before-post" style="display: none !important;"></div><p>O <code>serialVersionUID</code> é uma dúvida constante entre muitos desenvolvedores. Afinal, quando e para que exatamente usá-lo? Devo gerar um número aleatório bem grande, ou um número qualquer? Essas perguntas são comuns, e ao desenvolvedor experiente é necessário conhecer a fundo esse detalhe do <a href="http://java.sun.com/javase/6/docs/platform/serialization/spec/serialTOC.html">processo de serialização do Java</a>.</p>
+<p>Quando um objeto é serializado no Java, essa sequência de bytes, além de conter seus atributos de instância não transientes, carrega consigo um número que indentifica a “versão” da classe que foi usada durante o processo. Esse é o chamado <code>serialVersionUID</code>, ou seja, o indentificador de versão de serialização de uma classe. Esse número é utilizado para saber se o objeto que estamos recuperando é de uma versão “compatível” com a versão da classe que foi utilizada quando serializamos o objeto: em outras palavras, os arquivos <code>.class</code> não precisam ser necessariamente os mesmos para que o processo de serialização ocorra com sucesso. </p>
+<p>Por exemplo, considere a seguinte classe <code>Usuario</code>:</p>
+<pre class="brush: java; title: ; notranslate" title="">package br.com.caelum;
+
+public class Usuario implements Serializable {
+  private String login;
+}
+</pre>
+<p>Essa classe possui o <code>serialVersionUID</code> igual a <code>2806421523585360625L</code>. <strong>Esse número não é aleatório</strong>! Ele é um hash (SHA) calculado em cima dos nomes dos seus atributos, e assinaturas dos métodos em uma ordem bem definida <a href="http://java.sun.com/javase/6/docs/platform/serialization/spec/class.html#4100">pela especificação do processo de serialização</a>.  E como eu sei esse número? O JDK vem com a ferramenta <code>serialver</code>, que implementa esse mesmo hash:</p>
+<p><code>serialver br.com.caelum.Usuario</code></p>
+<p>Se o <code>serialVersionUID</code> utilizado durante a serialização não bater exatamente com o <code>serialVersionUID</code> da classe que está sendo usada para recuperar essa informação, uma exception é lançada: <code>java.io.InvalidClassException</code>. </p>
+<p>Por exemplo, se adicionarmos um novo atributo na nossa classe <code>Usuario</code>:</p>
+<pre class="brush: java; title: ; notranslate" title="">public class Usuario implements Serializable {
+  private String login;
+  private String senha;
+}
+</pre>
+<p>Agora teremos o <code>serialVersionUID</code> valendo <code>416295346730660862L</code>. Caso você serialize um <code>Usuario</code> com a primeira classe aqui definida, e tentar recuperar essa informação usando essa nova versão de classe, receberemos a conhecida <code>java.io.InvalidClassException</code>. Esse é o comportamente que em muitos casos queremos, mas algumas vezes fazemos pequenas modificações na classe as quais  percebemos que não impactarão no processo de serialização, e precisamos manter compatibilidade com a versão antiga daquela classe. Para isso, basta definirmos explicitamente qual é o nosso <code>serialVersionUID</code>, e no caso de querer manter compatibilidade com a classe <code>Usuario</code> anterior, vamos utilizar o valor de <code>serialVersionUID</code> que seria gerado pela JVM: <code>2806421523585360625L</code>. O código ficaria:</p><div class="mailmunch-forms-in-post-middle" style="display: none !important;"></div>
+<pre class="brush: java; title: ; notranslate" title="">public class Usuario implements Serializable {
+  private static final long serialVersionUID = 2806421523585360625L;
+  private String login;
+  private String senha;
+}
+</pre>
+<p>Às vezes recebemos um warning do Eclipse, e ele pede para que seja definido o <code>serialVersionUID</code>  da classe em questão. Isso ocorre porque você implementa <code>Serializable</code> ou uma de suas mães a implementa. O Eclipse então te abre três opções: utilizar o <code>@SurpressWarnings</code> para você assumir o risco, usar um valor default, ou usar o valor gerado. O gerador de UIDs do Eclipse é exatamente o mesmo gerador utilizado pelo Java SE para criar os UIDs padrão! Reforçando, <strong>esse número não é um número aleatório</strong>!</p>
+<p>Quando alguém esquece de manter o mesmo <code>serialVersionUID</code> para duas versões compatíveis de uma classe, podemos ter problemas em usar diferentes versões do software que são teoricamente compatíveis. Isso muitas vezes acontece em servidores de aplicação, e se seu cliente esta desatualizado em relação a versão dos jars necessários pelo servidor, podemos ter alguns <code>InvalidClassException</code>s que poderiam ser facilmente evitados se o <code>serialVersionUID</code> tivesse sido corretamente aplicado. Claro que algumas outras vezes as versões realmente não são compatíveis e a exception procede.</p>
+<p>Esse grave problema pode acontecer mesmo usando classes do Java SE entre diferentes versões, como é o caso da classe <code><a href="http://java.sun.com/j2se/1.4.2/docs/api/java/text/AttributedCharacterIterator.Attribute.html">java.text.AttributedCharacterIterator.Attribute</a></code> (utilizada pela <code>java.awt.Font</code>). Do Java 1.3 para o Java 1.4 essa classe foi levemente alterada, e o <code>serialVersionUID</code> <a href="http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4365406">gerado pelo algoritmo da JVM desta classe mudou</a> de <code>-1514471214376796190L</code> para <code>-9142742483513960612L</code>.  Quando alguém serializava uma <code>java.awt.Font</code> em uma versão não podia desserializa-la em outra, sendo que as versões tecnicamente são compatíveis: a não definição explícita do <code>serialVersionUID</code> gerou um bug no Java SE. Como isto foi resolvido? Definiram o <code>serialVersionUID</code> como <code>-1514471214376796190L</code>, que é o valor que seria gerado pela JVM na versão anterior da classe.</p>
+<p>Como então devemos proceder para escolher um <code>serialVersionUID</code> apropriado? É muito simples: se essa classe está nascendo neste momento, você pode se dar ao luxo de utilizar um <code>serialVersionUID</code>, como por exemplo:</p>
+<pre class="brush: java; title: ; notranslate" title="">public class Usuario implements Serializable {
+  private static final long serialVersionUID = 1L;
+  private String login;
+}
+</pre>
+<p>Porém se você está definindo o <code>serialVersionUID</code> de uma classe já em produção, e sabe que a mudança que está fazendo é compatível com a versão anterior, você deve utilizar o <code>serialVersionUID</code> que seria gerado pela JVM na primeira versão, como foi o caso aqui quando adicionamos o atributo <code>senha</code> na classe <code>Usuario</code>, e também foi o caso da correção do bug da classe <code>java.text.AttributedCharacterIterator.Attribute</code>. Quando você fizer uma alteração onde percebe que o cliente precisará de atualização das classes envolvidas, basta definir um <code>serialVersionUID</code> diferente dos anteriormente utilizados.</p>
+<p>Para completar, implementar uma interface que não define métodos (<code>Serializable</code>) e ser forçado a escrever um atributo sem um contrato mais burocrático é um tanto estranho em uma linguagem como o Java. Sem dúvida, se esse mecanismo todo tivesse sido inventado já com a existência de anotações, <code>Serializable</code> seria uma anotação e <code>version</code> um atributo dela, talvez obrigatório, criando algo como <code>@Serializable(version=12345L)</code>. Boas serializações e invocações remotas!</p>
+<div class="mailmunch-forms-after-post" style="display: none !important;"></div><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><h3 class="sd-title">Compartilhe isso:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-205" class="share-twitter sd-button share-icon no-text" href="https://blog.caelum.com.br/entendendo-o-serialversionuid/?share=twitter" target="_blank" title="Clique para compartilhar no Twitter"><span></span><span class="sharing-screen-reader-text">Clique para compartilhar no Twitter(abre em nova janela)</span></a></li><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-205" class="share-facebook sd-button share-icon no-text" href="https://blog.caelum.com.br/entendendo-o-serialversionuid/?share=facebook" target="_blank" title="Clique para compartilhar no Facebook"><span></span><span class="sharing-screen-reader-text">Clique para compartilhar no Facebook(abre em nova janela)</span></a></li><li class="share-end"></li></ul></div></div></div>
+<div id="jp-relatedposts" class="jp-relatedposts" style="display: block;">
+	<h3 class="jp-relatedposts-headline"><em>Relacionado</em></h3>
+<div class="jp-relatedposts-items jp-relatedposts-items-minimal jp-relatedposts-grid "><p class="jp-relatedposts-post jp-relatedposts-post0" data-post-id="5441" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://blog.caelum.com.br/como-medir-a-coesao-lcom/" title="Como medir a coesão do seu código? A métrica LCOM
+
+Aqui no blog da Caelum já discutimos métricas como complexidade ciclomática e acoplamento, e chegamos em maneiras quantitativas de medi-las. Agora, uma boa pergunta é: como medir coesão? Mais claramente, como chegar em um número que diz o quão coesa uma classe é? Vamos estudar novamente o que é coesão.…" rel="nofollow" data-origin="205" data-position="0">Como medir a coesão do seu código? A métrica LCOM</a></span><span class="jp-relatedposts-post-date">23/01/2013</span><span class="jp-relatedposts-post-context">In “Arquitetura”</span></p><p class="jp-relatedposts-post jp-relatedposts-post1" data-post-id="5390" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://blog.caelum.com.br/diminua-suas-dependencias-com-os-eventos-do-cdi/" title="Diminua suas dependências com os eventos do CDI
+
+Já falamos de CDI aqui no blog da Caelum, tanto numa introdução pra você começar a usar o CDI quanto em tópicos mais avançados. E recentemente até abordei o tema em uma palestra sobre CDI no JavaOne, além de sempre falarmos dele no nosso curso de JSF e CDI. Fato…" rel="nofollow" data-origin="205" data-position="1">Diminua suas dependências com os eventos do CDI</a></span><span class="jp-relatedposts-post-date">11/12/2012</span><span class="jp-relatedposts-post-context">In “Programação”</span></p><p class="jp-relatedposts-post jp-relatedposts-post2" data-post-id="10" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://blog.caelum.com.br/nova-versao-do-xstream/" title="Nova versão do xstream
+
+A nova versão do xstream trará grandes novidades, entre elas a idéia de coleções persistentes. Isto é, imagine que você possui uma java.util.List na sua mão: E dentro do seu método você adicione um objeto a essa lista: Nesse momento, a sua lista escreveu um arquivo xml em disco, representando…" rel="nofollow" data-origin="205" data-position="2">Nova versão do xstream</a></span><span class="jp-relatedposts-post-date">27/07/2006</span><span class="jp-relatedposts-post-context">In “Programação”</span></p></div></div>					
+
+
+<a class="share-social" href="https://www.alura.com.br/" style="padding: 16px">
+<img src="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/alura-logo.1465499610.svg" alt="Alura" style="margin-right: 16px">
+<strong style="">Estude online na Alura</strong>
+<p style="margin: 12px 0 0 0">Programação, Mobile, Front-end, Design &amp; UX, Infraestrutura e Business</p>
+</a>
+
+					<div class="tags">Tags: <a href="https://blog.caelum.com.br/tag/fj-31/" rel="tag">fj-31</a>, <a href="https://blog.caelum.com.br/tag/invalidclassexception/" rel="tag">InvalidClassException</a>, <a href="https://blog.caelum.com.br/tag/java/" rel="tag">Java</a>, <a href="https://blog.caelum.com.br/tag/javaioinvalidclassexception/" rel="tag">java.io.InvalidClassException</a>, <a href="https://blog.caelum.com.br/tag/serial/" rel="tag">serial</a>, <a href="https://blog.caelum.com.br/tag/serializable/" rel="tag">Serializable</a>, <a href="https://blog.caelum.com.br/tag/serializacao/" rel="tag">serialização</a>, <a href="https://blog.caelum.com.br/tag/serialization/" rel="tag">serialization</a>, <a href="https://blog.caelum.com.br/tag/serialversionuid/" rel="tag">serialVersionUID</a>, <a href="https://blog.caelum.com.br/tag/version/" rel="tag">version</a></div>
+				</section>
+
+            </article><!-- .post -->
+
+						<aside id="post-author" class="fix">
+				<div class="profile-image">
+											<img src="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/paulo-silveira-90.jpg">
+									</div>
+				<div class="profile-content">
+					<h3 class="title">
+						Paulo Silveira						
+													<small>(<a rel="author" href="https://plus.google.com/107186798704105535569?rel=author">Google+</a>)</small>
+											</h3>
+
+											<div class="profile-link">
+							<a href="http://www.caelum.com.br/instrutores/paulo-silveira">
+								Mais sobre o autor
+							</a><br>
+							<a href="https://blog.caelum.com.br/author/peas">
+								Outros posts do autor
+							</a>
+						</div><!-- #profile-link	-->
+									</div><!-- .post-entries -->
+			</aside><!-- .post-author-box -->
+			
+			
+				
+            
+
+<!-- You can start editing here. -->
+
+
+<div id="comments">
+
+			<h3>50 Comentários</h3>
+
+		<ol class="commentlist">
+
+			
+		<li class="comment even thread-even depth-1">
+
+	    	<a name="comment-34482"></a>
+
+	      	<div id="li-comment-34482" class="comment-container">
+
+					                <div class="comment-avatar"><img alt="" src="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/c316083253cf28e496a8d4c347d3d6d1.jpeg" srcset="https://secure.gravatar.com/avatar/c316083253cf28e496a8d4c347d3d6d1?s=100&amp;r=g 2x" class="photo avatar avatar-50 photo" height="50" width="50"></div>
+	            
+		      	<div class="comment-head">
+
+	                <span class="name">
+
+
+	
+	<meta name="viewport" content="width=device-width">
+		<meta name="robots" content="noindex,follow">
+	<title>Erro › WordPress</title>
+	<style type="text/css">
+		html {
+			background: #f1f1f1;
+		}
+		body {
+			background: #fff;
+			color: #444;
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+			margin: 2em auto;
+			padding: 1em 2em;
+			max-width: 700px;
+			-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+		}
+		h1 {
+			border-bottom: 1px solid #dadada;
+			clear: both;
+			color: #666;
+			font-size: 24px;
+			margin: 30px 0 0 0;
+			padding: 0;
+			padding-bottom: 7px;
+		}
+		#error-page {
+			margin-top: 50px;
+		}
+		#error-page p,
+		#error-page .wp-die-message {
+			font-size: 14px;
+			line-height: 1.5;
+			margin: 25px 0 20px;
+		}
+		#error-page code {
+			font-family: Consolas, Monaco, monospace;
+		}
+		ul li {
+			margin-bottom: 10px;
+			font-size: 14px ;
+		}
+		a {
+			color: #0073aa;
+		}
+		a:hover,
+		a:active {
+			color: #00a0d2;
+		}
+		a:focus {
+			color: #124964;
+			-webkit-box-shadow:
+				0 0 0 1px #5b9dd9,
+				0 0 2px 1px rgba(30, 140, 190, 0.8);
+			box-shadow:
+				0 0 0 1px #5b9dd9,
+				0 0 2px 1px rgba(30, 140, 190, 0.8);
+			outline: none;
+		}
+		.button {
+			background: #f7f7f7;
+			border: 1px solid #ccc;
+			color: #555;
+			display: inline-block;
+			text-decoration: none;
+			font-size: 13px;
+			line-height: 2;
+			height: 28px;
+			margin: 0;
+			padding: 0 10px 1px;
+			cursor: pointer;
+			-webkit-border-radius: 3px;
+			-webkit-appearance: none;
+			border-radius: 3px;
+			white-space: nowrap;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing:    border-box;
+			box-sizing:         border-box;
+
+			-webkit-box-shadow: 0 1px 0 #ccc;
+			box-shadow: 0 1px 0 #ccc;
+			vertical-align: top;
+		}
+
+		.button.button-large {
+			height: 30px;
+			line-height: 2.15384615;
+			padding: 0 12px 2px;
+		}
+
+		.button:hover,
+		.button:focus {
+			background: #fafafa;
+			border-color: #999;
+			color: #23282d;
+		}
+
+		.button:focus {
+			border-color: #5b9dd9;
+			-webkit-box-shadow: 0 0 3px rgba(0, 115, 170, 0.8);
+			box-shadow: 0 0 3px rgba(0, 115, 170, 0.8);
+			outline: none;
+		}
+
+		.button:active {
+			background: #eee;
+			border-color: #999;
+			-webkit-box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5);
+			box-shadow: inset 0 2px 5px -3px rgba(0, 0, 0, 0.5);
+		}
+
+			</style>
+
+
+	<div class="wp-die-message"><p>Há um erro crítico no seu site.</p><p><a href="https://wordpress.org/support/article/debugging-in-wordpress/">Aprenda mais sobre depuração no WordPress.</a></p></div>
+
+	<script type="text/javascript" src="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/e-202032.js" async="async" defer="defer"></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:7.1.2',blog:'125225402',post:'205',tz:'-3',srv:'blog.caelum.com.br'} ]);
+	_stq.push([ 'clickTrackerInit', '125225402', '205' ]);
+</script>
+</span></div></div></li></ol></div></section></div></div></div><img src="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/g.gif" alt=":)" width="6" height="5" id="wpstats"><iframe src="./Entendendo o serialVersionUID - Blog da Caelum_ desenvolvimento, web, mobile, UX e ScrumBlog da Caelum_ desenvolvimento, web, mobile, UX e Scrum_files/iframe.html" width="1" height="1" style="visibility: hidden; display: none;"></iframe></body></html>

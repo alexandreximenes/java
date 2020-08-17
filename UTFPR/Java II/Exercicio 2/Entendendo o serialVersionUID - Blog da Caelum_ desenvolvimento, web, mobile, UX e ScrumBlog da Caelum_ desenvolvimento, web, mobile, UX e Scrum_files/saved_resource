@@ -1,0 +1,21 @@
+var _add_ctag = function() {
+    var tag = document.createElement('img');
+    tag.setAttribute('src', 'https://pixel.voltn.com/cc.gif?vcp=Cl1CKCRV&pdid=M411MCH0-18a66e434051718c21cbbafc8596def5&ccid=e2cb2dff-2df8-431f-8eb3-402458710a99');
+    tag.setAttribute('height', '1');
+    tag.setAttribute('width', '1');
+    tag.setAttribute('border', '0');
+    tag.setAttribute('alt', '');
+    tag.setAttribute('style', 'display: none;');
+    var body = document.getElementsByTagName('body')[0];
+    body.appendChild(tag);
+
+
+}
+var body = document.getElementsByTagName('body')[0];
+if (body) {
+  _add_ctag();
+ } else {
+  window.onload = function () {
+    _add_ctag();
+  }
+ }

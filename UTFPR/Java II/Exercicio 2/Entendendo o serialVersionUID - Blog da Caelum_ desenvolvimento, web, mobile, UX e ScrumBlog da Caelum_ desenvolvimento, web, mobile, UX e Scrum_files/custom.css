@@ -1,0 +1,365 @@
+/*
+WOO CUSTOM STYLESHEET
+---------------------
+
+Instructions:
+
+Add your custom styles in this file instead of style.css so it
+is easier to update the theme. Simply copy an existing style
+from style.css to this file, and modify it to your liking. */
+
+
+/*
+GLOBAL STYLES
+----------------
+Add styles beneath this line that you want to be applied across your entire site */
+
+
+b, strong {
+  font-weight: bold;
+}
+
+.entry, .entry p {
+	line-height:1.8em;
+}
+
+#header {
+	background:#0b2b3d;
+}
+
+.post header h1 {
+	line-height: .5em; 
+	padding-top: .4em;
+}
+
+.post header h1 a:link, .post header h1 a:visited {
+	color:#4B6170;
+	letter-spacing:-1px;
+}
+
+.single-post article header h1 {
+	letter-spacing:-2px;
+	line-height: 1.2em;
+}
+
+.menu-item-6014 {
+	margin-top: 2em;
+}
+
+.menu-item-6019 {
+	background: none;
+	border:none;
+	color: #fff;
+	text-transform: none;
+	text-shadow: none;
+}
+
+#navigation ul.nav > li > a {
+	font: 300 1em/1em 'Varela', arial, sans-serif;
+	color:#2C6288:;
+}
+
+#navigation ul.nav > li > a:hover {
+	color:#e0e0e0;
+}
+
+.post-meta {
+	font-family: Varela, arial, sans-serif;
+	font-weight:lighter;
+}
+
+#post-author .profile-image img {
+	width:90px;
+}
+
+/* Button */
+
+a.button, a.comment-reply-link, #commentform #submit, #contact-page .submit {
+	background:none !important;
+	border:2px solid #7D95A5;
+	color: #7D95A5;
+	font-family: Varela, arial, sans-serif;
+}
+
+a.button:hover, a.comment-reply-link:hover, #commentform #submit:hover, #contact-page .submit:hover {
+	color:#fff;
+}
+
+/* Social */
+
+.share-social {
+	background-color:#fafafa;
+	border-radius:3px;
+	display:inline-block;
+	height:auto;
+	margin:1em 0;
+	padding:20px 10px 10px;
+	width:100%;
+}
+
+.share-social h5 {
+	display:inline-block;
+	padding:0 20px;
+	margin-bottom:13px !important;
+}
+
+.share-social a, .share-social a:hover {
+	text-decoration: none;
+	color:white !important;
+}
+
+.btn-social {
+	border-radius:2px;
+	display:inline-block;
+	margin-right:5px;
+	padding:.2em 1em;
+	text-decoration:none;
+	opacity:.9;
+}
+
+.btn-social:hover {
+	opacity:1;
+}
+
+.btn-facebook, .btn-facebook:active {
+	background:#3b5998;
+}
+
+.btn-facebook:before {
+	background:url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2010.784%2020%22%3E%3Cdefs%3E%3CclipPath%3E%3Cpath%20d%3D%22M0%20320h240v-320h-240v320z%22%2F%3E%3C%2FclipPath%3E%3CclipPath%3E%3Cpath%20d%3D%22M82.073%20178.533h1.891v-37.698h-1.891v37.698z%22%2F%3E%3C%2FclipPath%3E%3CclipPath%3E%3Cpath%20d%3D%22M70.038%20173.254c-3.983%200-6.767-3.001-6.767-7.432v-3.283h-5.778v-5.356h5.778v-16.073h5.776v16.073h5.778v5.356h-5.778v4.311c0%20.879.949%201.13%201.446%201.13h4.332v5.274h-4.787z%22%2F%3E%3C%2FclipPath%3E%3CclipPath%3E%3Cpath%20d%3D%22M0%20320h240v-320h-240v320z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg%20transform%3D%22matrix%281.25%200%200%20-1.25%20-38.816%20268.846%29%22%3E%3Cpath%20d%3D%22M37.523%20212.452h2.157v2.625c-.974-.017-1.953.039-2.924-.039-1.349-.158-2.446-1.279-2.709-2.59-.194-.888-.094-1.803-.119-2.704h-2.876v-2.666h2.876v-8.001h2.876v8.001h2.876v2.666h-2.876c.013.765-.027%201.534.021%202.296.089.292.422.407.699.413z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+	width:14px;
+	height:25px;
+}
+
+.btn-facebook:before, .btn-twitter:before {
+	display: inline-block;
+	content:" ";
+	margin-right:10px;
+	vertical-align: middle;
+}
+
+.btn-twitter, .btn-twitter:active {
+	background:#00acee;
+}
+
+.btn-twitter:before {
+	background:url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024.61%2020%22%3E%3Cpath%20d%3D%22M17%20.094c-2.76%200-5%202.24-5%205%200%20.392.04.79.125%201.156-4.154-.208-7.847-2.226-10.313-5.25-.43.738-.656%201.615-.656%202.531%200%201.734.877%203.26%202.219%204.156-.819-.026-1.607-.251-2.281-.625v.063c0%202.422%201.745%204.447%204.031%204.906-.419.114-.888.156-1.344.156-.322%200-.632-.004-.938-.063.636%201.986%202.5%203.429%204.688%203.469-1.711%201.341-3.877%202.125-6.219%202.125-.403%200-.796-.016-1.188-.063%202.212%201.418%204.833%202.25%207.656%202.25%209.194%200%2014.219-7.613%2014.219-14.219v-.656c.977-.705%201.83-1.591%202.5-2.594-.896.398-1.864.66-2.875.781%201.032-.619%201.814-1.583%202.188-2.75-.966.573-2.049.995-3.188%201.219-.912-.972-2.187-1.594-3.625-1.594z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E');
+	width:30px;
+	height:25px;
+}
+
+
+/* Post */
+
+#post-author {
+	border-radius:5px;
+	border: 2px solid #fafafa;
+	margin:0 0 1.5em;
+	padding:1.2em;
+}
+
+#post-author .title, #post-author .profile-link, #post-author .profile-image {
+	margin:0;
+}
+
+#post-author .profile-image {
+	float:left;
+}
+
+#post-author .profile-content {
+	float:left;
+	margin:1em;
+}
+
+#comments .comment .comment-avatar {
+	float:left;
+}
+
+#comments .comment p {
+	font-size:.9em;
+	line-height: 1.8em;
+}
+
+#comments .comment .comment-container {
+	margin:0;
+	border-bottom:2px solid #FAFAFA;
+	border-radius:0;
+	padding:1.7em 1.5em .5em 1.5em;
+}
+
+#comments .comment .reply {
+	padding:0;
+}
+
+#comments .comment.bypostauthor > .comment-container {
+	border:none;
+	border: 2px solid #FFE8DD;
+	border-radius:5px;
+}
+
+#comments ol li:first-child  {
+	border-top:2px solid #FAFAFA;
+}
+
+#respond h3, #comments h3 {
+	border-bottom:0;
+
+}
+
+/*
+COLAPSE NO MENU EM RESOLUCAO < 630px/width
+----------------
+*/
+
+@media only screen and (max-height: 630px) {
+
+	.main-nav {
+		display:none;
+	}
+
+	.menu-toggle:hover > .main-nav, .menu-toggle:active > .main-nav {
+		display:block;
+	}
+	
+	#navigation .menus h3 {
+		cursor:pointer;
+		margin-top:0;
+	}
+
+	#navigation .menus h3:before {
+		content:'❯';
+		font-size:15px;
+		margin-right:5px;
+	}
+}
+
+
+
+/*
+DESKTOP STYLES
+-----------------
+Add styles inside the media query below that you only want to be applied to the desktop layout of your site */
+
+@media only screen and (min-width: 768px) {
+	/* Desktop styles go here */
+
+	.single-post #header .search_main { /* Sai campo de busca na interna */
+		display:none;
+	}
+
+	.single-post #header #menu-categorias {
+		display:none;
+	}
+
+	.single-post #header {
+		position: relative;
+	}
+
+	.single-post #header .menu-toggle:hover > #menu-categorias {
+		display:block;
+		position: absolute;
+		top: 100%;
+		left:4.5%;
+	}
+
+	.single-post #header #logo {
+		float: left;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.single-post #header #navigation {
+		float: right;
+		display: inline-block;
+		vertical-align: middle;	
+	}
+
+	.single-post #header .menus,
+	.single-post #header .menu-toggle  {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.single-post #header #connect, 
+	.single-post #header .social,
+	.single-post #header #connect .social a:before{
+		margin: 0 !important;
+	}
+
+	.single-post #header #connect {
+		float: none;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+	.single-post #navigation .menu-toggle:nth-child(3) > h3 {
+		display: none;
+	}
+
+	.single-post #navigation ul.nav li {
+		margin: 0;
+	}
+
+	.single-post #navigation ul.nav li a {
+		padding: 0;
+	}
+
+	.single-post #navigation .menus h3 {
+		display: inline-block;
+		margin-top: 0;
+	}
+
+	.single-post #navigation .menus h3:before {
+		display:inline-block;
+		content:"❯";
+		padding:0 15px;
+		transform:rotate(90deg);
+		-webkit-transform:rotate(90deg);
+	}
+	
+	.single-post #navigation .menu-toggle:nth-child(2) {
+		cursor: pointer;
+	}
+
+	.single-post #navigation .menu-toggle:nth-child(2) li {
+		float: none;
+		margin: 0;
+		background: #081C27;
+		padding: .5em .3em;
+	}
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 768px) {
+
+	#header {
+		margin:0 -1.244em 1.631em;
+	}
+
+	.single-post article header {
+		margin:0 -2.244em 1.631em;;
+	}
+
+	.single-post article header h1 {
+		font-size:2em;
+		letter-spacing:normal;
+	}
+
+	#respond #commentform .comment-form-author, #respond #commentform .comment-form-email, #respond #commentform .comment-form-url {
+		width:100%;
+		float:none;
+	}
+
+	input[type=text], input.input-text, textarea, input.txt, input[type=tel], input[type=email], input[type=password] {
+		padding:.436em .5em;
+	}
+
+}
+
+
+.wp-caption-text.wp-caption-text.wp-caption-text.wp-caption-text {
+   position: static;
+   width: 90%;
+   padding: 1em 5%;
+}

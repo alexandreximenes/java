@@ -1,0 +1,25 @@
+#download-feedback-modal { z-index: 200; width: 430px; max-width: 100%; background-color: white; border-radius: 5px; border: 1px solid #E9ECF3; box-shadow: 0 3px 6px rgba(37, 58, 68, 0.1); padding: 25px; box-sizing: border-box; font-family: Montserrat, sans-serif; position: fixed; bottom: 20px; right: -430px; opacity: 0; transition: all 0.4s ease, opacity 0.4s linear;}
+#download-feedback-modal.active { right: 20px; opacity: 1;}
+.feedback-close-icon:after { width: 20px; height: 20px; position: absolute; top: 0; left: 0; content: "\d7"; color: currentColor; font-size: 30px; line-height: 18px; padding: 2px;}
+.feedback-close-icon { height: 20px; width: 20px; position: absolute; top: 10px; right: 10px; color: #8795A2; cursor: pointer; transition: color .2s ease;}
+.feedback-close-icon:hover { color: #0AC5D4;}
+.feedback-modal-titulo { font-size: 14px; color: #8795A2;}
+.feedback-modal-conteudo { font-size: 13px; font-weight: 600; margin: 5px 0; color: #253A44;}
+.feedback-modal-conteudo a { color: inherit;}
+.feedback-like-area { margin: 15px 0;}
+.feedback-like-icon { height: 40px; width: 40px; margin-right: 15px; color: #01CD6A; background-color: currentColor; display: inline-flex; align-items: center; justify-content: center; border-radius: 50px; border: 1.5px solid currentColor; cursor: pointer; transition: all .2s linear;}
+.feedback-like-icon svg { height: 37px; width: 35px; stroke: white; fill: transparent; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8px;}
+.feedback-like-icon.disabled:not(:hover) { color: #dcdcdc;}
+.feedback-like-icon.dislike { transform: rotate(180deg); color: #FF1E63;}
+.feedback-like-icon:hover svg, .feedback-like-icon.active svg { stroke: currentColor;}
+.feedback-like-icon:hover, .feedback-like-icon.active { border-color: #dcdcdc; background-color: white;}
+.feedback-input-area { position: relative; margin: 25px 10px 0 0; display: flex; flex-direction: column; justify-content: center;}
+.feedback-input-area label { color: #8795A2; font-size: 13px; margin-bottom: 5px; display: block;}
+.feedback-input-area textarea { box-sizing: border-box; padding: 15px; background-color: #F5F6FA; border: 1px solid #E9ECF3; border-radius: 5px; max-width: 100%; max-height: 150px; min-width: 100%; min-height: 70px; font-size: 12px;}
+.feedback-input-area textarea::placeholder { color: #A2A9B9; font-style: italic;}
+.download-feedback-submit svg { stroke: transparent; fill: currentColor; stroke-linecap: round; stroke-linejoin: round;}
+.download-feedback-submit { height: 40px; width: 40px; border-radius: 50px; border: 1px solid currentColor; color: #0AC5D4; background-color: white; position: absolute; right: -19px; cursor: pointer; outline: none; padding: 8px; margin-top: 10px;}
+.feedback-input-area .feedback-required{border-color:red;}
+@media (max-width: 768px){
+    #download-feedback-modal{ display: none;}
+}

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        Formulario
+        <h:form>
+            <h:inputText value="#{jSFSomar.n1}"/>
+            <h:inputText value="#{jSFSomar.n2}"/>
+            <h:commandButton value="Somar" action="#{jSFSomar.somar()}"/>
+            <h:inputText value="#{jSFSomar.res}"/>
+        </h:form>
+    </h:body>
+</html>
+

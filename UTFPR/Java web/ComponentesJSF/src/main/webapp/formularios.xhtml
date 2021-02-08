@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Exemplo de processamento de formulário</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <a href="index.html">Início</a><br />
+            
+        <h:form>
+            <h1>Formulário de Login</h1>
+            <p>
+                <h:outputLabel for="login">Login: </h:outputLabel>
+                <h:inputText id="login" value="#{usuarioBean.login}" label="Login do usuário" required="true" requiredMessage="O campo login é obrigatório"></h:inputText>
+                <br /><h:message showSummary="true" showDetail="false" id="erro1" for="login"/>
+            </p>
+            <p>
+                <h:outputLabel for="senha">Senha: </h:outputLabel>
+                <h:inputSecret id="senha" value="#{usuarioBean.getSenha}" label="Senha de login" required="true"  requiredMessage="O campo senha é obrigatório"></h:inputSecret> 
+                <br /><h:message showSummary="true" showDetail="true" id="erro2" for="senha"/>
+            </p>
+            <h:commandButton value="Logar" action="formularios" />
+        </h:form>
+        
+        <h2>Dados informados</h2>
+            <p>
+        <h:outputFormat value="Usuário: {0} | Senha: {1}" rendered="#{usuarioBean.isLogged}">
+            <f:param value="#{usuarioBean.login}"/>
+            <f:param value="#{usuarioBean.senha}"/>
+        </h:outputFormat></p>
+        <hr />
+        
+        <h:form>
+            <h1>Dados adicionais de input</h1>
+            <h:inputHidden value="#{usuarioBean.codigo}" />
+            <p>
+                <h:outputLabel for="nome">Nome Completo: </h:outputLabel>
+                <h:inputText id="nome" value="#{usuarioBean.nome}" label="Nome do usuário"></h:inputText>
+            </p>
+            <p>
+                <h:outputLabel for="idade">Idade: </h:outputLabel>
+                <h:inputText id="idade" value="#{usuarioBean.idade}"></h:inputText>
+            </p>
+            <p>
+                <h:outputLabel for="descricao">Descrição: </h:outputLabel>
+                <h:inputTextarea id="senha" value="#{usuarioBean.descricao}" label="Descrição do usuário"  cols="50" rows="10"></h:inputTextarea>
+            </p>
+            <h:commandButton value="Salvar" action="formularios" />
+        </h:form>
+        
+        <hr />
+        <h2>Escolha única entre múltiplas opções</h2>
+        <h:form>
+            <p>
+            <h:outputLabel for="sexo">Sexo: </h:outputLabel>
+            <h:selectOneRadio id="sexo" value="#{usuarioBean.sexo}">
+                <f:selectItem itemValue="M" itemLabel="Masculino" />
+                <f:selectItem itemValue="F" itemLabel="Feminino" />
+                <f:selectItem itemValue="N" itemLabel="Não especificado" />
+            </h:selectOneRadio>
+            </p>
+            <p>
+            <h:outputLabel for="cor">Cor favorita: </h:outputLabel>
+            <h:selectOneMenu id="cor" value="#{usuarioBean.corFav}">
+                <f:selectItems value="#{usuarioBean.listaCores}"/>
+            </h:selectOneMenu>
+            </p>
+            <p>
+            <h:outputLabel for="faixaetaria">Faixa etária: </h:outputLabel>
+            <h:selectOneRadio id="faixaetaria" value="#{usuarioBean.faixaEtaria}">
+                <f:selectItems value="#{usuarioBean.listaFaixaEtaria}" var="c"
+                    itemLabel="#{c.label}" itemValue="#{c.value}" />
+            </h:selectOneRadio>
+            </p>
+            <h:commandButton value="Salvar" action="formularios" />
+        </h:form>
+        <hr />
+        
+        <h2>Múltiplas escolhas</h2>
+        <h:form>
+            <p>
+                <h:selectBooleanCheckbox value="#{usuarioBean.lembrarSenha}" id="lembrar"/> 
+                <h:outputLabel for="lembrar">Lembrar senha</h:outputLabel>
+            </p>
+            <p>
+                <h:outputLabel for="musical">Estilo musical:</h:outputLabel>
+                <h:selectManyCheckbox value="#{usuarioBean.estiloMusical}" id="musical">
+   			<f:selectItems value="#{usuarioBean.listaEstiloMusical}" />
+   		</h:selectManyCheckbox>
+            </p>
+            <h:commandButton value="Salvar" action="formularios" />
+        </h:form>
+            
+    </h:body>
+</html>

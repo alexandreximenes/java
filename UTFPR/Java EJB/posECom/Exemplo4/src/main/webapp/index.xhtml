@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h1>Exemplo de E-commerce</h1>
+        <h:form>
+            <h:dataTable value="#{jSFProduto.all}" var="prod">
+                <h:column>
+                    <h:outputText value="#{prod.codigo}" />
+                </h:column>
+                <h:column>
+                    <h:outputText value="#{prod.descricao}" />
+                </h:column>
+                <h:column>
+                    <h:commandLink value="add" action="#{jSFCompra.add(prod)}" />
+                </h:column>
+            </h:dataTable>
+        </h:form>
+        
+        <h2>Itens selecionados</h2>
+        <h:form>
+            <h:dataTable value="#{jSFCompra.itens}" var="item">
+                <h:column>
+                    <h:outputText value="#{item.produto.codigo}" />
+                </h:column>
+            
+                <h:column>
+                    <h:outputText value="#{item.produto.descricao}" />
+                </h:column>
+                
+                <h:column>
+                    <h:outputText value="#{item.quantidade}" />
+                </h:column>
+            </h:dataTable>
+            <h:commandButton value="fechar" action="#{jSFCompra.fechar()}" />
+        </h:form>
+    </h:body>
+</html>
+

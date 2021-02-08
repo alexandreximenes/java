@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <h:body>
+        <ui:composition template="./template.xhtml">
+            <ui:define name="top">
+                Cabeçalho do Template
+            </ui:define>
+
+            <ui:define name="left">
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li><h:outputLabel value="Item 3"/></li>
+                </ul>
+            </ui:define>
+
+            <ui:define name="content">
+                <h2><h:outputText value="Conteúdo principal vai aqui"/></h2>
+                <h:link value="Outro exemplo" outcome="exemplo" />
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+    
+    <h:head>
+        <meta http-equiv="Content-Type" 
+              content="text/html; charset=UTF-8" />
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" />
+        <title>Exemplo de template</title>
+    </h:head>
+    
+    <h:body>
+        <div id="top" class="container border border-primary">
+            <ui:insert name="top"><h1><a href='index.xhtml'>Cabeçalho</a></h1></ui:insert>
+        </div>
+        <div  class="container">
+            <div class="row">
+                <div id="left" class="col-3 bg-secondary text-white">
+                     <ui:insert name="left">Menu Esquerdo</ui:insert>
+                </div>
+                <div id="content" class="col-9 bg-light">
+                    <h2><ui:insert name="content">Conteúdo principal</ui:insert></h2>
+                </div>
+            </div>
+        </div>
+    </h:body>
+    
+</html>

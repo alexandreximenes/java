@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>Exemplo de processamento de formulário</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <a href="index.html">Início</a>
+        
+        <h1>Disciplinas</h1>
+        <ul>
+        <ui:repeat value="#{disciplinaBean.disciplinas}" var="disc">
+            <li>#{disc.codigo} - <h:outputText value="#{disc.nome}" /></li>
+        </ui:repeat>
+        </ul>
+        
+        <h1>Lista de Disciplinas</h1>
+        <h:dataTable value="#{disciplinaBean.disciplinas}" var="disc" border="1">
+            <h:column >
+		<f:facet name="header">Codigo</f:facet> 
+                #{disc.codigo}
+            </h:column>
+            <h:column>
+		<f:facet name="header">Nome</f:facet> 
+                #{disc.nome}
+            </h:column>
+            <h:column>
+		<f:facet name="header">Semestre</f:facet> 
+                #{disc.semestre}o Sem.
+            </h:column>
+            <h:column>
+		<f:facet name="header">Carga horária</f:facet> 
+                #{disc.cargaHoraria} h/s
+            </h:column>
+        </h:dataTable>
+    </h:body>
+</html>

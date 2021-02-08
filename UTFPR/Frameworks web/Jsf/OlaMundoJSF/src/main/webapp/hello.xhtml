@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core"
+xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Primeiro exemplo com JSF</title>
+    </h:head>
+    <h:body>
+        <h1>Diga um olá para o mundo JSF</h1>
+        <h:form>
+            Digite sua mensagem:
+            <h:inputText value="#{helloBean.mensagem}"></h:inputText>
+            <h:commandButton value="Enviar" action="mensagem"></h:commandButton>
+        </h:form>
+    </h:body>
+</html>

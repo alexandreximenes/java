@@ -1,6 +1,6 @@
 package ATernario;
 
-public class Simulado {
+public class ATernario {
     public static void main(String[] args) {
         var idade = 18;
         boolean condicional = false;

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="79898e54-d5b0-46f1-a5da-e613c2db804b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../Certificacao Java/Certificacao java 11/1 - basic/1 - basic.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../Certificacao Java/src/.idea/src.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java I/prova/Lista de exercicios 5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java II/Exercicio 2/Exercicio 2/out/production/Exercicio 2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java II/Exercicio 2/Exercicio 2/out/production/Exercicio 2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java II/Exercicio 2/Exercicio 2/out/production/Exercicio 2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java II/Exercicio 2/Exercicio 2/out/production/Exercicio 2/Exercicio 2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java II/Exercicio 2/Exercicio 2/out/production/Exercicio 2/JanelaCliente.form.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java II/Exercicio 2/Exercicio 2/out/production/Exercicio 2/arquivo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java II/Exercicio 2/Exercicio 2/out/production/Exercicio 2/src.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java II/Exercicio 2/Exercicio 2/src.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java II/Exercicio 2/Exercicio 2/src/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java II/Exercicio 2/Exercicio 2/src/Exercicio 2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java II/Exercicio 2/Exercicio 2/src/FileDemonstration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java II/Exercicio 2/Exercicio 2/src/FileDemonstrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java II/Exercicio 2/Exercicio 2/src/JanelaCliente.form.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java II/Exercicio 2/Exercicio 2/src/JanelaCliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java II/Exercicio 2/Exercicio 2/src/ManipulaTexto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java II/Exercicio 2/Exercicio 2/src/arquivo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java II/Exercicio 7/Exercicio 7/src/RandomCharacters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java II/Exercicio 7/Exercicio 7/src/RunnableObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java II/Exercicio 8/Abstract/src/Pessoa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java II/Exercicio 8/Exemplo interfaces/src/Curso.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java II/Exercicio 8/Pacotes/src/br/com/utfpr/Programa/Principal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java II/Exercicio 8/Pacotes/src/br/com/utfpr/biblioteca/Biblioteca.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java II/Exercicio 8/Pacotes/src/br/com/utfpr/cursos/Cursos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java II/Exercicio 8/Pacotes/src/br/com/utfpr/secretaria/Secretaria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/Exercicio 7.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/artifacts/exercicio5_war.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/artifacts/exercicio5_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__com_google_guava_guava_15_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__com_jolbox_bonecp_0_8_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__javax_javaee_web_api_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__org_aspectj_aspectjrt_1_9_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__org_dom4j_dom4j_2_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_10_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_4_10_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__org_javassist_javassist_3_24_0_GA.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__org_jboss_jandex_2_1_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_1_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__org_jvnet_staxex_stax_ex_1_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_1_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_1_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__org_springframework_spring_aop_5_1_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__org_springframework_spring_beans_5_1_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__org_springframework_spring_context_5_1_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__org_springframework_spring_core_5_1_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__org_springframework_spring_expression_5_1_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__org_springframework_spring_orm_5_1_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/libraries/Maven__org_springframework_spring_tx_5_1_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/Lidando com Transações.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/exercicio5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/lib/javax.jms.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/nb-configuration.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/src/main/java/com/mycompany/exercicio5/config/SpringDataConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/src/main/java/com/mycompany/exercicio5/domain/Contato.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/src/main/java/com/mycompany/exercicio5/domain/Endereco.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/src/main/java/com/mycompany/exercicio5/domain/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/src/main/java/com/mycompany/exercicio5/projection/CidadeTotal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/src/main/java/com/mycompany/exercicio5/projection/NomeCidade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/src/main/java/com/mycompany/exercicio5/projection/NomeCompleto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/src/main/java/com/mycompany/exercicio5/projection/SemEndereco.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/src/main/java/com/mycompany/exercicio5/repositories/ContatoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/src/main/java/com/mycompany/exercicio5/repositories/EnderecoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/src/main/java/com/mycompany/exercicio5/repositories/UsuarioRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/src/main/java/com/mycompany/exercicio5/service/ContatoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/src/main/webapp/META-INF/context.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/classes/com/mycompany/exercicio5/config/SpringDataConfiguration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/classes/com/mycompany/exercicio5/domain/Contato.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/classes/com/mycompany/exercicio5/domain/Endereco$TipoEndereco.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/classes/com/mycompany/exercicio5/domain/Endereco.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/classes/com/mycompany/exercicio5/projection/CidadeTotal.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/classes/com/mycompany/exercicio5/projection/NomeCidade.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/classes/com/mycompany/exercicio5/projection/NomeCompleto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/classes/com/mycompany/exercicio5/projection/SemEndereco.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/classes/com/mycompany/exercicio5/repositories/ContatoRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/classes/com/mycompany/exercicio5/repositories/EnderecoRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/classes/com/mycompany/exercicio5/service/ContatoService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/endorsed/javaee-endorsed-api-6.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/META-INF/context.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/classes/.netbeans_automatic_build" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/classes/com/mycompany/exercicio5/config/SpringDataConfiguration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/classes/com/mycompany/exercicio5/domain/Contato.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/classes/com/mycompany/exercicio5/domain/Endereco$TipoEndereco.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/classes/com/mycompany/exercicio5/domain/Endereco.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/classes/com/mycompany/exercicio5/projection/CidadeTotal.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/classes/com/mycompany/exercicio5/projection/NomeCidade.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/classes/com/mycompany/exercicio5/projection/NomeCompleto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/classes/com/mycompany/exercicio5/projection/SemEndereco.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/classes/com/mycompany/exercicio5/repositories/ContatoRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/classes/com/mycompany/exercicio5/repositories/EnderecoRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/classes/com/mycompany/exercicio5/service/ContatoService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/FastInfoset-1.2.15.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/antlr-2.7.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/aspectjrt-1.9.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/bonecp-0.8.0.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/byte-buddy-1.10.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/classmate-1.5.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/dom4j-2.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/guava-15.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/hibernate-commons-annotations-5.1.0.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/hibernate-core-5.4.10.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/hibernate-entitymanager-5.4.10.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/istack-commons-runtime-3.0.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/jandex-2.1.1.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/javassist-3.24.0-GA.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/javax.activation-api-1.2.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/javax.persistence-api-2.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/jaxb-api-2.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/jaxb-runtime-2.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/jboss-logging-3.3.2.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/mysql-connector-java-8.0.20.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/protobuf-java-3.6.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/slf4j-api-1.7.25.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/spring-aop-5.1.5.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/spring-beans-5.1.5.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/spring-context-5.1.5.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/spring-core-5.1.5.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/spring-data-commons-2.1.5.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/spring-data-jpa-2.1.5.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/spring-expression-5.1.5.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/spring-jcl-5.1.5.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/spring-jdbc-5.1.5.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/spring-orm-5.1.5.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/spring-tx-5.1.5.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/stax-ex-1.8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/WEB-INF/lib/txw2-2.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/exercicio5-1.0-SNAPSHOT/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Java e banco de dados/Exercicio 8/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exercicio 6.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exercicio 6/Exercicio 6.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exercicio 6/src/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exercicio 6/src/Servidor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exercicio 6/src/Validadora.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exercicio Votacao/Exercicio Votacao.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exercicio Votacao/src/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exercicio Votacao/src/IVoto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exercicio Votacao/src/Servidor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exercicio Votacao/src/Voto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Projeto06 - JavaRMI/.idea/Projeto06 - JavaRMI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Certificacao Java/Certificacao java 11/1 - basic/src/ATernario/ATernario.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Certificacao Java/Certificacao java 11/1 - basic/src/ATernario/ATernario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Certificacao Java/Certificacao java 11/1 - basic/src/Testes/HasTail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Certificacao Java/Certificacao java 11/1 - basic/src/Testes/HasTail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Certificacao Java/Certificacao java 11/1 - basic/src/Testes/Simulado.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Certificacao Java/Certificacao java 11/1 - basic/src/Testes/Simulado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Certificacao Java/src/A_Basic/HControleDeFluxo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Certificacao Java/src/A_Basic/HControleDeFluxo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Certificacao Java/src/A_Basic/IOperadorTernario.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Certificacao Java/src/A_Basic/IOperadorTernario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Certificacao Java/src/Testes/A.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Certificacao Java/src/Testes/A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java II - exercicio II/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java II - exercicio II/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java II - exercicio II/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java II - exercicio II/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java II - exercicio II/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java II - exercicio II/Java II - exercicio II.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java II - exercicio II/out/production/Java II - exercicio II/Cliente.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java II - exercicio II/out/production/Java II - exercicio II/JanelaCliente$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java II - exercicio II/out/production/Java II - exercicio II/JanelaCliente$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java II - exercicio II/out/production/Java II - exercicio II/JanelaCliente$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java II - exercicio II/out/production/Java II - exercicio II/JanelaCliente$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java II - exercicio II/out/production/Java II - exercicio II/JanelaCliente$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java II - exercicio II/out/production/Java II - exercicio II/JanelaCliente$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java II - exercicio II/out/production/Java II - exercicio II/JanelaCliente$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java II - exercicio II/out/production/Java II - exercicio II/JanelaCliente$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java II - exercicio II/out/production/Java II - exercicio II/JanelaCliente$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java II - exercicio II/out/production/Java II - exercicio II/JanelaCliente$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java II - exercicio II/out/production/Java II - exercicio II/JanelaCliente.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java II - exercicio II/out/production/Java II - exercicio II/ManipulaTexto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java II - exercicio II/src/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java II - exercicio II/src/JanelaCliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Java II - exercicio II/src/ManipulaTexto.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="1gS4yvJBesGMenug2bPG6rTeI8N" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Adm\Documents\projects\java\UTFPR\Java e redes de computadores\Exercicio 6\prova\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="JarApplication" nameIsGenerated="true">
+      <option name="WORKING_DIRECTORY" value="C:\Users\Adm\Documents\projects\java\UTFPR\Java e redes de computadores\Exercicio 6\Projeto06 - JavaRMI" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <module name="Projeto06 - JavaRMI" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="79898e54-d5b0-46f1-a5da-e613c2db804b" name="Default Changelist" comment="" />
+      <created>1598094917727</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598094917727</updated>
+      <workItem from="1598094919157" duration="330000" />
+      <workItem from="1599943540792" duration="232000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="114" key="#Project_Structure" timestamp="1599943681889">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state x="361" y="114" key="#Project_Structure/0.40.1536.824@0.40.1536.824" timestamp="1599943681889" />
+    <state x="223" y="110" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598095197293">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state x="223" y="110" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.40.1536.824@0.40.1536.824" timestamp="1598095197293" />
+    <state x="620" y="344" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1598094943072">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state x="620" y="344" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.40.1536.824@0.40.1536.824" timestamp="1598094943072" />
+    <state x="548" y="210" key="FileChooserDialogImpl" timestamp="1598095259346">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state x="548" y="210" key="FileChooserDialogImpl/0.40.1536.824@0.40.1536.824" timestamp="1598095259346" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1598095261907">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.40.1536.824@0.40.1536.824" timestamp="1598095261907" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1598095261907">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.40.1536.824@0.40.1536.824" timestamp="1598095261907" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1598095261907">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.40.1536.824@0.40.1536.824" timestamp="1598095261907" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1598095261907">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1598095261907" />
+    <state x="209" y="79" key="new project wizard" timestamp="1599943777182">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state x="209" y="79" key="new project wizard/0.40.1536.824@0.40.1536.824" timestamp="1599943777182" />
+  </component>
+</project>

@@ -1,14 +1,13 @@
 package Testes;
 
-public class Simulado2 {
-    public static void addToInt(int x, int amountToAdd) {
-        x = x + amountToAdd;
-    }
-
-    public static void main(String[] args) {
-        var a = 15;
-        var b = 10;
-        Simulado2.addToInt(a, b);
-        System.out.println(a);
-    }
+interface HasTail { int getTailLength(); }
+abstract class Puma implements HasTail {
+protected int getTailLength() { return 4; }
+}
+public class Cougar implements HasTail {
+public static void main(String[] args) {
+        var puma = new Puma();
+        System.out.println(puma.getTailLength());
+        }
+public int getTailLength(int length) { return 2; }
 }

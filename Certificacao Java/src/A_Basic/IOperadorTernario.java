@@ -29,5 +29,12 @@ public class IOperadorTernario {
 
         frase = idade > IDADE_NO_SISTEMA ? frasePositiva : fraseNegativa;
         System.out.println(frase);
+
+        boolean ok;
+        String status = (ok = false)  ? "adulto" : "juvenil" ;
+        System.out.println(status);
+
+        String status = idade >= 18  ? "adulto" : "juvenil" ;
+        System.out.println(status);
     }
 }

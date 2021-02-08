@@ -12,7 +12,7 @@ public class HControleDeFluxo {
        boolean decisaoIgualA = false;
 
         /**
-         * case 0
+         * case 1
          */
         if(idade > IDADE)
             System.out.println("cadastro desatualizado, atualizar sistema, idade maior");
@@ -22,7 +22,7 @@ public class HControleDeFluxo {
             System.out.println("cadastro desatualizado, atualizar sistema, idade menor");
 
         /**
-         * case 1
+         * case 2
          * decisaoIgualA (pegadinha) não esta fazendo comparação, esta sendo atrubuido true a decisaoIgualA;
          * 4==4 true
          * salario>4000f false
@@ -35,7 +35,7 @@ public class HControleDeFluxo {
         System.out.println("CASE 1, sempre vai executar");
 
         /**
-         * case 2
+         * case 3
          */
         if(decisaoIgualA = true && 4==4 && salario>4000f)
             System.out.println("CASE 2, decisão foi positiva");
@@ -43,8 +43,6 @@ public class HControleDeFluxo {
             System.out.println("CASE 2, devisão negativa");
 
         System.out.println("CASE 2, sempre vai executar");
-
-
 
     }
 }

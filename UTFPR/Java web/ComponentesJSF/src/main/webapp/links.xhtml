@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Exemplo de links</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+    
+        <h1>Links</h1>
+                
+        <h:outputLink value="formularios.xhtml">OutputLink para a página de formulário</h:outputLink><br/><br/>
+        
+        <h:link value="Link para a página de formulário" outcome="formularios" /> ou
+        <h:link outcome="formularios.xhtml">Link para a página de formulário</h:link>
+        <br/><br/>
+        
+        <h:form>
+            <h:commandLink value="CommandLink para a página de formulários" action="formularios"/> ou
+            <h:commandLink action="formularios">CommandLink para a página de formulários</h:commandLink>
+        </h:form>
+        
+        <h1>Links dinâmicos</h1>
+        <h:link value="Tabelas" outcome="#{paginaBean.page1}" /> | 
+        <h:link value="Formulário" outcome="#{paginaBean.getLink(1)}" /> |
+        <h:link value="Tabelas" outcome="#{paginaBean.getLink(2)}" /> | 
+        <h:link value="Links" outcome="#{paginaBean.getLink(3)}" />
+                
+        
+        <h1>Parâmetros</h1>
+        <h:form>
+            <h:commandLink action="#{paginaBean.submit}" value="Chamar método">
+                <f:param name="action" value="formularios" />
+            </h:commandLink>
+        </h:form>
+        
+    </h:body>
+</html>

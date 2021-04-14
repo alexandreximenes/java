@@ -1,0 +1,24 @@
+pipeline{
+  anget any
+  
+  stages{
+    stage("build"){
+      steps{
+        echo 'building...'
+      }
+    }
+    
+    stage("tests"){
+      steps{
+        echo 'testing...'
+      }
+    }
+    
+    stage("deploy"){
+      steps{
+        echo 'deploying...'
+      }
+    }
+  }
+  
+}
